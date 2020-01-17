@@ -1,0 +1,139 @@
+a {
+  color: #0da4d3;
+}
+.text-primary {
+  color: #0da4d3 !important;
+}
+
+.navbar-brand img {
+  height: 2rem;
+}
+.product-desc {
+  min-height: 86px;
+}
+.bg-gradient-lightest {
+  background-color: #f9fbfd;
+}
+.bg-gradient-lighter2 {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#f9fbfd),to(#fff));
+    background-image: linear-gradient(to bottom,#f9fbfd 0,#fff 100%);
+}
+.bg-gradient-info-2 {
+    background: linear-gradient(-145deg, #4ab5ca 0, #1171ef 100%) !important;
+}
+.border-bottom2 {
+  border-bottom: 1px solid #f1f4f8!important;
+}
+
+.border-top2 {
+  border-top: 1px solid #f1f4f8!important;
+}
+
+#navbar-main {
+  box-shadow: 0 1px 10px rgba(130, 130, 134, .1);
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  color: #0da4d3!important;
+}
+.headroom--not-top {
+  background-color: #fff !important;
+}
+
+
+.com {
+    color: #93a1a1
+}
+
+.lit {
+    color: #195f91
+}
+
+.clo,.opn,.pun {
+    color: #93a1a1
+}
+
+.fun {
+    color: #dc322f
+}
+
+.atv,.str {
+    color: #d14
+}
+
+.kwd,.prettyprint .tag {
+    color: #1e347b
+}
+
+.atn,.dec,.typ,.var {
+    color: teal
+}
+
+.pln {
+    color: #48484c
+}
+
+.prettyprint {
+    padding: 8px !important;
+    background-color: #f7f7f9 !important;
+    border: 1px solid #efefef !important;
+}
+
+.prettyprint.linenums {
+    -webkit-box-shadow: inset 40px 0 0 #fbfbfc,inset 41px 0 0 #ececf0 !important;
+    box-shadow: inset 40px 0 0 #fbfbfc,inset 41px 0 0 #ececf0 !important;
+}
+
+ol.linenums {
+    margin: 0 0 0 -10px ;
+}
+
+ol.linenums li {
+    padding-left: 12px ;
+    color: #bebec5 ;
+    line-height: 20px ;
+    text-shadow: 0 1px 0 #fff ;
+}
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.message-box {
+    color: #525f7f;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+.message-box i {
+    color: #ccc;
+}
+
+a.anchor-link {
+  position: absolute;
+  left: -16px;
+  color: #eee;
+  font-size: .8em!important;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 3px
+}
+
+h3:focus a.anchor-link, h3:hover a.anchor-link {
+  color: #4e4e4e
+}
+
+@media (max-width: 767px) {
+  a.anchor-link {
+      left:auto
+  }
+}

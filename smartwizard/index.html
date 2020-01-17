@@ -1,0 +1,793 @@
+<!--
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Tech Laboratory - Smart and free open-source jQuery plugins">
+  <meta name="author" content="Dipu Raj">
+
+  <title>Tech Laboratory - Smart and free open-source jQuery plugins</title>
+  <meta property="og:title" content="Tech Laboratory - Smart and free open-source jQuery plugins" />
+
+  <meta name="description" content="Smart and free open-source jQuery plugins" />
+  <meta property="og:description" content="Smart and free open-source jQuery plugins"/>
+  <meta property="og:image" content="../assets/images/TechLaboratory_logo.png" />
+  <link rel="image_src" href="../assets/images/TechLaboratory_logo.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://techlaboratory.net/" />
+  <meta property="og:site_name" content="TechLaboratory.net" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- define site's owner twitter id -->
+  <meta name="twitter:site" content="tlaboratory">
+  <!--<meta property="fb:admins" content="673048839" />-->
+  <meta property="fb:app_id" content="673048839" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#0da4d3">
+  <!-- Windows Phone -->
+  <meta name="msapplication-TileColor" content="#0da4d3">
+  <meta name="msapplication-navbutton-color" content="#0da4d3">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="../assets/images/TechLaboratory_logo.png">
+
+  <meta name="KEYWORDS" content="jQuery, shoppingcart, cart, smartcart, smartwizard, smarttab, step wizard, wizard, jcart, jwizard, shopping, plugin" />
+
+  <!-- Favicon -->
+  <link href="../assets/images/fav/favicon-16x16.png" rel="icon" type="image/png">
+  <link rel="icon" href="../assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/images/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/images/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/fav/favicon-16x16.png">
+  <meta name="msapplication-TileImage" content="../assets/images/fav/ms-icon-144x144.png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="../assets/css/argon.min.css" rel="stylesheet">
+  <link type="text/css" href="../assets/css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="http://techlaboratory.net">
+          <img src="../assets/images/TechLaboratory_40.png" alt="brand">
+        </a>
+        <button class="navbar-toggler text-muted" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="http://techlaboratory.net">
+                  <img src="../assets/images/TechLaboratory_logo_40.png" alt="brand">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a href="http://techlaboratory.net" class="nav-link" role="button">
+                <span class="nav-link-inner--text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Projects</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="../smartwizard" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery step wizard plugin with Bootstrap support</p>
+                    </div>
+                  </a>
+                  <a href="../smartcart" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Cart</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+                    </div>
+                  </a>
+                  <a href="../smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">Flexible jQuery Tab Control plug-in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://github.com/techlab" data-toggle="tooltip" title="Visit us on GitHub">
+                <i class="fa fa-github fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://www.paypal.me/dipuraj" data-toggle="tooltip" title="Donate on PayPal">
+                <i class="fa fa-paypal fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">Paypal</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-lg pb-5">
+      <div class="container">
+        <div class="row row-grid">
+
+          <div class="col-md-12">
+            <div class="mt-5">
+
+              <!-- <div class="card">
+                <img class="card-img " alt="Stylish new themes" src="http://techlaboratory.net/assets/media/products/SmartWizard43_1.png">
+              </div> -->
+
+
+              <h1 class="text-lg-left text-center">jQuery Smart Wizard</h1>
+              <p class="lead mt-0">The awesome jQuery step wizard plugin with Bootstrap support</p>
+              <hr class="mt-0" />
+              <div class="article-content">
+                <p>
+                    <strong>Smart Wizard</strong> is a flexible and heavily customizable <strong>jQuery</strong> step wizard plugin with <strong>Bootstrap</strong> support.
+                    Easy to implement and gives a neat and stylish interface for your forms, checkout screen, registration steps.
+                    Has a lot of features including the Bootstrap support, themes, customizable toolbars, customizable options, public methods,
+                    event support.
+                </p>
+                <p>
+                  <a href="https://travis-ci.org/techlab/SmartWizard"><img src="https://travis-ci.org/techlab/SmartWizard.svg?branch=master" alt="Build Status" height="18"></a>
+                  <a href="https://badge.fury.io/js/smartwizard"><img src="https://badge.fury.io/js/smartwizard.svg" alt="npm version" height="18"></a>
+                  <a href="https://badge.fury.io/bo/smartwizard"><img src="https://badge.fury.io/bo/smartwizard.svg" alt="Bower version" height="18"></a>
+                  <a href="https://packagist.org/packages/techlab/smartwizard"><img src="https://poser.pugx.org/techlab/smartwizard/v/stable" alt="Latest Stable Version" height="18"></a>
+                  <a href="https://raw.githubusercontent.com/techlab/SmartWizard/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+                  <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
+                </p>
+
+                <h3 id="downloads">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h6><a href="https://www.npmjs.com/package/smartwizard">NPM</a></h6>
+                <pre class="prettyprint lang-cl">npm install smartwizard</pre>
+
+                <h6><a href="https://yarn.pm/smartwizard">Yarn</a></h6>
+                <pre class="prettyprint lang-cl">yarn add smartwizard</pre>
+
+                <h6><a href="https://bower.io/">Bower</a></h6>
+                <pre class="prettyprint lang-cl">bower install smartwizard</pre>
+
+                <h6><a href="https://packagist.org/packages/techlab/smartwizard">Composer</a></h6>
+                <pre class="prettyprint lang-cl">composer require techlab smartwizard</pre>
+
+                <div class="alert alert-secondary message-box mt-3" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-github fa-lg"></i></span>
+                  <span class="alert-inner--text">You can do feature requests and bug reports on  <a href="https://github.com/techlab/SmartWizard/issues">GitHub Issue Tracker</a>  on the repository.</span>
+                </div>
+
+                <div class="alert alert-secondary message-box" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
+                  <span class="alert-inner--text">For help and support questions please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-wizard">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-wizard">smart-wizard</a> tag.</span>
+                </div>
+
+
+                <h3 id="downloads">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  <a href="https://github.com/techlab/SmartWizard/archive/master.zip" title="Download jQuery Smart Wizard 4 on GitHub" class="btn btn-primary btn-sm">
+                    <i class="fa fa-download"></i> Download jQuery Smart Wizard
+                  </a>
+                </p>
+
+                <h3 id="features">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul class="feature-list">
+                  <li>Bootstrap 3 &amp; 4 support</li>
+                  <li>Responsive themes</li>
+                  <li>Heavily customizable toolbar, option to add extra buttons</li>
+                  <li>Theme support with various themes included</li>
+                  <li>Customizable css styles</li>
+                  <li>Url navigation and step selection</li>
+                  <li>Public methods for external function call</li>
+                  <li>Enhanced event support</li>
+                  <li>In-built reset method</li>
+                  <li>Dynamically hide or disable steps</li>
+                  <li>Integratable to model window </li>
+                  <li>Ajax content loading with option to specify individual url for steps</li>
+                  <li>Keyboard navigation</li>
+                  <li>Easy navigation with step anchors and navigation buttons</li>
+                  <li>Multiple wizard instance on same page</li>
+                  <li>Auto content height adjustment</li>
+                  <li>Compatible with latest jQuery versions (jQuery 1.9+, jQuery 2+, jQuery 3+)</li>
+                  <li>Easy to implement, Minimal HTML required</li>
+                </ul>
+
+                <!-- <div class="alert alert-warning" role="alert">
+                  Please use jQuery full version (<em>jquery-3.3.x.min.js</em>) as the jQuery slim version (<em>jquery-3.3.x.slim.min.js</em>) is not yet supported.
+                </div> -->
+
+                <!-- <h3>Screenshots <a href="#screenshots" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+
+                <img class="img-thumbnail img-responsive img-rounded shadow mb-3" alt="Stylish new themes" src="http://techlaboratory.net/assets/media/products/SmartWizard43_1.png">
+                <img class="img-thumbnail img-responsive img-rounded shadow mb-3" alt="Bootstrap support" src="http://techlaboratory.net/assets/media/products/SmartWizard43_2.png">
+                <img class="img-thumbnail img-responsive img-rounded shadow mb-3" alt="A lot more features" src="http://techlaboratory.net/assets/media/products/SmartWizard43_3.png"> -->
+
+                <h3 id="demos">Demos <a href="#demos" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul>
+                  <li><a href="http://techlaboratory.net/smartwizard/demo/basic" title="Basic Example">Basic Example</a></li>
+                  <li><a href="http://techlaboratory.net/smartwizard/demo/ajax" title="Ajax Contents ">Ajax Contents </a></li>
+                  <li><a href="http://techlaboratory.net/smartwizard/demo/validation" title="Input Validation ">Input Validation </a></li>
+                  <li><a href="http://techlaboratory.net/smartwizard/demo/events" title="Events">Events</a></li>
+                  <li><a href="http://techlaboratory.net/smartwizard/demo/modal-dialog" title="With Modal Dialog">With Modal Dialog</a></li>
+                </ul>
+
+                <h3 id="how_to_use">Usage <a class="anchor-link" href="#how_to_use"><i class="fa fa-link"></i></a></h3>
+
+                <h5 id="requirements">Requirements <a class="anchor-link" href="#requirements"><i class="fa fa-link"></i></a></h5>
+                <ol class="feature-list">
+                  <li><a href="http://getbootstrap.com/getting-started/#download">Bootstrap 3+</a></li>
+                  <li><a href="http://jquery.com/">jQuery</a> (supports jQuery 1.9+, jQuery 2+, jQuery 3+)</li>
+                </ol>
+
+
+                <h5>Include Smart Wizard JavaScript & CSS files</h5>
+                <pre class="prettyprint linenums lang-html">
+&lt;link href="../dist/css/smart_wizard.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script src="../dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+                <small>Optionally, include the corresponding theme css</small>
+                <pre class="prettyprint linenums lang-html">
+&lt;link href="../dist/css/smart_wizard_theme_arrows.css" rel="stylesheet" type="text/css" /&gt;
+</pre>
+
+<h5>Initialize Smart Wizard</h5>
+<pre class="prettyprint linenums lang-js">
+$(document).ready(function(){
+  $('#smartwizard').smartWizard();
+});
+</pre>
+
+                <h5>The HTML Markup</h5>
+                This is the basic HTML markup for the Smart Wizard. You can customize it by adding your on steps contents.
+<pre class="prettyprint linenums lang-html">
+&lt;div id="smartwizard"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#step-1"&gt;Step Title&lt;br /&gt;&lt;small&gt;Step description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#step-2"&gt;Step Title&lt;br /&gt;&lt;small&gt;Step description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#step-3"&gt;Step Title&lt;br /&gt;&lt;small&gt;Step description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#step-4"&gt;Step Title&lt;br /&gt;&lt;small&gt;Step description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div&gt;
+        &lt;div id="step-1" class=""&gt;
+            Step Content
+        &lt;/div&gt;
+        &lt;div id="step-2" class=""&gt;
+            Step Content
+        &lt;/div&gt;
+        &lt;div id="step-3" class=""&gt;
+            Step Content
+        &lt;/div&gt;
+        &lt;div id="step-4" class=""&gt;
+            Step Content
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+That's it! You can now view the wizard on the page.<br /><br />
+
+<div class="alert alert-secondary message-box" role="alert">
+  <span class="alert-inner--icon"><i class="fa fa-info fa-lg"></i></span>
+  <span class="alert-inner--text">You can include all the JavaScripts just before the closing <code>&lt;/body&gt;</code> tag to improve the page load speed.</span>
+</div>
+
+<h3 id="paramdesc" class="subTitle">Parameter Description:</h3>
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th width="110px">Values</th>
+      <th>Default</th>
+    </tr>
+    <tr>
+      <th>selected</th> <td>specify the selected step on the first load</td>
+      <td>integer</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>keyNavigation</th>
+      <td>enable/disable key navigation.<br />left/right keys are used if enabled</td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>autoAdjustHeight</th>
+      <td>Automatically adjust content height</td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>cycleSteps</th>
+      <td>Allows to cycle the navigation of steps</td>
+      <td>true/false</td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <th>backButtonSupport</th>
+      <td>Enable the back button support</td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>useURLhash</th>
+      <td>Enable selection of the step based on url hash</td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>showStepURLhash</th>
+      <td>Show url hash based on step </td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>contentURL</th>
+      <td>Specify the ajax content url, setting null will disable ajax contents.
+      If you want to use ajax content only for a specific step just add a <code>data-content-url</code> with the anchor tag of the step header </td>
+      <td>null or a valid url</td>
+      <td>null</td>
+    </tr>
+    <tr>
+      <th>contentCache</th>
+      <td>On or Off caching of step contents on ajax calls, if false content is fetched always from ajax url</td>
+      <td>true/false</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>ajaxSettings</th>
+      <td>Provide extra settings for step ajax content calls</td>
+      <td>Object as per <a href="http://api.jquery.com/jquery.ajax/#jQuery-ajax-settings">jQuery.ajax( [settings ] )</a> </td>
+      <td>{}</td>
+    </tr>
+    <tr>
+      <th>disabledSteps</th>
+      <td>an array of step numbers to show as disabled</td>
+      <td>zero based array of step index<br />ex: [2,4]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>errorSteps</th>
+      <td>an array of step numbers to show as error steps</td>
+      <td>zero based array of step index<br />ex: [2,4]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>hiddenSteps</th>
+      <td>an array of step numbers to be hidden</td>
+      <td>zero based array of step index<br />ex: [2,4]</td>
+      <td>[]</td>
+    </tr>
+    <tr>
+      <th>theme</th>
+      <td>name of the theme to use. Remember to include the theme css also</td>
+      <td>String name of the theme</td>
+      <td>'default'</td>
+    </tr>
+    <tr>
+      <th>transitionEffect</th>
+      <td>Animation effect on step navigation</td>
+      <td>none/slide/fade</td>
+      <td>none</td>
+    </tr>
+    <tr>
+      <th>transitionSpeed</th>
+      <td>Number or String</td>
+      <td></td>
+      <td>400</td>
+    </tr>
+
+    <tr>
+      <th>toolbarSettings</th>
+      <td colspan="3">
+      An array with grouped settings for the toolbar
+      <br /><br />
+      <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+        <tbody><tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Default</th>
+        </tr>
+        <tr>
+            <th><code>toolbarPosition</code></th>
+            <td>Position of the toolbar (none, top, bottom, both)</td>
+            <td>bottom</td>
+        </tr>
+        <tr>
+            <th><code>toolbarButtonPosition</code></th>
+            <td>Position of the toolbar buttons (left, right)</td>
+            <td>right</td>
+        </tr>
+        <tr>
+            <th><code>showNextButton</code></th>
+            <td>show/hide a Next button</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <th><code>showPreviousButton</code></th>
+            <td>show/hide a Previous button</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <th><code>toolbarExtraButtons</code></th>
+            <td>Specify the extra buttons and its events to show on toolbar.</td>
+            <td>[]</td>
+        </tr>
+      </table>
+
+      </td>
+    </tr>
+
+    <tr>
+      <th>anchorSettings</th>
+      <td colspan="3">
+      An array with grouped settings for the anchor
+      <br /><br />
+      <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+        <tbody><tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Default</th>
+        </tr>
+        <tr>
+            <th><code>anchorClickable</code></th>
+            <td>Enable or disable the click option on the step header anchors</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <th><code>enableAllAnchors</code></th>
+            <td>Enable all anchors on load</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <th><code>markDoneStep</code></th>
+            <td>Make already visited steps as done</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <th><code>markAllPreviousStepsAsDone</code></th>
+            <td>When a step selected by url hash, all previous steps are marked done</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <th><code>removeDoneStepOnNavigateBack</code></th>
+            <td> While navigate back done step after active step will be cleared</td>
+            <td>false</td>
+        </tr>
+        <tr>
+            <th><code>enableAnchorOnDoneStep</code></th>
+            <td>Enable/Disable the done steps navigation</td>
+            <td>true</td>
+        </tr>
+      </table>
+
+      </td>
+    </tr>
+
+    <tr>
+      <th>lang</th>
+      <td colspan="3">
+      An array with language variables
+      <br /><br />
+      <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+        <tbody><tr>
+            <th>Parameter</th>
+            <th>Description</th>
+            <th>Default</th>
+        </tr>
+        <tr>
+            <th><code>next</code></th>
+            <td>Text for next button</td>
+            <td>next</td>
+        </tr>
+        <tr>
+            <th><code>previous</code></th>
+            <td>Text for next previous</td>
+            <td>previous</td>
+        </tr>
+      </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 class="subTitle">Example: Smart Wizard Initialize with all option parameters</h4>
+This example shows how to call Smart Wizard using all option parameters,
+but you can pass the only options that you want to set a different value than the default.
+<pre class="prettyprint linenums lang-js">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {
+
+      // Smart Wizard
+      $('#smartwizard').smartWizard({
+            selected: 0,  // Initial selected step, 0 = first step
+            keyNavigation:true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
+            autoAdjustHeight:true, // Automatically adjust content height
+            cycleSteps: false, // Allows to cycle the navigation of steps
+            backButtonSupport: true, // Enable the back button support
+            useURLhash: true, // Enable selection of the step based on url hash
+            lang: {  // Language variables
+                next: 'Next',
+                previous: 'Previous'
+            },
+            toolbarSettings: {
+                toolbarPosition: 'bottom', // none, top, bottom, both
+                toolbarButtonPosition: 'right', // left, right
+                showNextButton: true, // show/hide a Next button
+                showPreviousButton: true, // show/hide a Previous button
+                toolbarExtraButtons: [
+			$('&lt;button&gt;&lt;/button&gt;').text('Finish')
+					      .addClass('btn btn-info')
+					      .on('click', function(){
+						alert('Finsih button click');
+					      }),
+			$('&lt;button&gt;&lt;/button&gt;').text('Cancel')
+					      .addClass('btn btn-danger')
+					      .on('click', function(){
+						alert('Cancel button click');
+					      })
+                      ]
+            },
+            anchorSettings: {
+                anchorClickable: true, // Enable/Disable anchor navigation
+                enableAllAnchors: false, // Activates all anchors clickable all times
+                markDoneStep: true, // add done css
+                enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+            },
+            contentURL: null, // content url, Enables Ajax content loading. can set as data data-content-url on anchor
+            disabledSteps: [],    // Array Steps disabled
+            errorSteps: [],    // Highlight step with errors
+            theme: 'dots',
+            transitionEffect: 'fade', // Effect on navigation, none/slide/fade
+            transitionSpeed: '400'
+      });
+
+  });
+&lt;/script&gt;
+</pre>
+
+
+<h3 id="eventdesc" class="subTitle">Event Description:</h3>
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+  <tr>
+    <th nowrap="nowrap">Event</th>
+    <th>Description</th>
+    <th width="300px">Parameters</th>
+  </tr>
+  <tr>
+    <th>leaveStep</th>
+    <td>Triggers when leaving a step.<br />
+        This is a decision making event. based on its function return value (true/false)
+        the current step navigation can be cancelled.
+    </td>
+    <td><b>Object:</b> object of the step anchor element.<br />
+        <b>Int:</b> Index of the step.<br />
+	<b>String:</b> Direction of the navigation. ex. forward, backward.
+    </td>
+  </tr>
+  <tr>
+    <th>showStep</th>
+    <td>Triggers when showing a step.</td>
+    <td><b>Object:</b> object of the step anchor element.<br />
+        <b>Int:</b> Index of the step.<br />
+	<b>String:</b> Direction of the navigation. ex. forward, backward.
+	It will pass empty string on page load and reset since there is no direction associated.
+    </td>
+  </tr>
+  <tr>
+    <th>beginReset</th>
+    <td>Triggers when reset action starts.<br />
+	This is a decision making event. based on its function return value (true/false)
+        the reset action can be cancelled.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <th>endReset</th>
+    <td>Triggers when reset action ends.</td>
+    <td><b>String:</b> name of the theme.</td>
+  </tr>
+  <tr>
+    <th>themeChanged</th>
+    <td>Triggers when theme is changed.</td>
+    <td></td>
+  </tr>
+</table>
+</div>
+
+<h4 class="subTitle">Example: Event Initialize</h4>
+<pre class="prettyprint linenums lang-js">
+&lt;script type="text/javascript"&gt;
+  $(document).ready(function() {
+      // Initialize Smart Wizard
+      $('#smartwizard').smartWizard();
+
+      // Initialize the leaveStep event
+      $("#smartwizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
+         return confirm("Do you want to leave the step "+stepNumber+"?");
+      });
+
+      // Initialize the showStep event
+      $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection) {
+         alert("You are on step "+stepNumber+" now");
+      });
+
+      // Initialize the beginReset event
+      $("#smartwizard").on("beginReset", function(e) {
+	 return confirm("Do you want to reset the wizard?");
+      });
+
+      // Initialize the endReset event
+      $("#smartwizard").on("endReset", function(e) {
+	 alert("endReset called");
+      });
+
+      // Initialize the themeChanged event
+      $("#smartwizard").on("themeChanged", function(e, theme) {
+	 alert("Theme changed. New theme name: " + theme);
+      });
+
+  });
+&lt;/script&gt;
+</pre></div>
+
+                <h3 id="license">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>Released under the terms of the <a href="https://github.com/techlab/SmartWizard/blob/master/LICENSE">MIT License</a>
+                 (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+                <br>
+                 You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+
+
+
+
+ <!-- <div class="author-box">
+                         <div class="author-img">
+                         <a href="http://techlaboratory.net/author/dipuraj" title="Dipu Raj" rel="author"><img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=200&amp;d=mm" class="picture"></a>
+                         </div>
+                         <div class="author-desc">
+                             <h4 class="author-bio-title">
+                                 <a href="http://techlaboratory.net/author/dipuraj" title="Dipu Raj" rel="author">Dipu Raj</a>
+                             </h4>
+                             <span>Programmer in PHP and C# with added interest in jQuery, Bootstrap, HTML and CSS. Believes that the code should be as beautiful as the design.</span>
+                         </div>
+                     </div> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+
+    <section class="section section-lg pt-0">
+      <div class="container">
+        <div class="card bg-gradient-info-2 shadow-lg border-0">
+          <div class="p-5">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3 class="text-white">A little help is always a beautiful thing...</h3>
+                <p class="lead text-white mt-3">
+                  We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
+                </p>
+              </div>
+              <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
+                <a href="https://www.paypal.me/dipuraj" class="btn btn-secondary">
+                  <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-gradient-lighter2 border-top2">
+    <div class="container container-lg">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4 col-sm-12 text-lg-left text-center">
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="http://techlaboratory.net" target="_blank">Tech Laboratory</a>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12 text-lg-right text-center">
+          <ul class="nav nav-footer justify-content-end">
+            <li class="nav-item">
+              <a href="/" class="nav-link" target="_blank">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="smartwizard" class="nav-link" target="_blank">jQuery Smart Wizard</a>
+            </li>
+            <li class="nav-item">
+              <a href="smartcart" class="nav-link" target="_blank">jQuery Smart Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="smarttab" class="nav-link" target="_blank">jQuery Smart Tab</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="privacy" class="nav-link" target="_blank">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="../assets/js/headroom.min.js"></script>
+  <script src="../assets/js/argon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>
