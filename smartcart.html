@@ -1,0 +1,705 @@
+<!--
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Dipu Raj">
+
+  <title>jQuery Smart Cart - Tech Laboratory - Smart and free open-source jQuery plugins</title>
+  <meta property="og:title" content="jQuery Smart Cart - Tech Laboratory - Smart and free open-source jQuery plugins" />
+
+  <meta name="description" content="Smart and free open-source jQuery plugins" />
+  <meta property="og:description" content="Smart and free open-source jQuery plugins"/>
+  <meta property="og:image" content="assets/images/TechLaboratory_logo.png" />
+  <link rel="image_src" href="assets/images/TechLaboratory_logo.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://techlaboratory.net/" />
+  <meta property="og:site_name" content="TechLaboratory.net" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- define site's owner twitter id -->
+  <meta name="twitter:site" content="tlaboratory">
+  <!--<meta property="fb:admins" content="673048839" />-->
+  <meta property="fb:app_id" content="673048839" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#0da4d3">
+  <!-- Windows Phone -->
+  <meta name="msapplication-TileColor" content="#0da4d3">
+  <meta name="msapplication-navbutton-color" content="#0da4d3">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="assets/images/TechLaboratory_logo.png">
+
+  <meta name="KEYWORDS" content="jQuery, shoppingcart, cart, smartcart, smartwizard, smarttab, step wizard, wizard, jcart, jwizard, shopping, plugin" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/fav/favicon-16x16.png" type="image/png">
+  <link rel="icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileImage" content="assets/images/fav/favicon-96x96.png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Google Ads -->
+  <script data-ad-client="ca-pub-8226185437441708" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="./">
+          <img src="assets/images/TechLaboratory_40.png" alt="brand">
+        </a>
+        <button class="navbar-toggler text-muted" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="./">
+                  <img src="assets/images/TechLaboratory_logo_40.png" alt="brand">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a href="./" class="nav-link" role="button">
+                <span class="nav-link-inner--text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Projects</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="smartwizard" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery step wizard plugin with Bootstrap support</p>
+                    </div>
+                  </a>
+                  <a href="smartcart" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Cart</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+                    </div>
+                  </a>
+                  <a href="smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">Flexible jQuery Tab Control plug-in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://github.com/techlab" data-toggle="tooltip" title="Visit us on GitHub">
+                <i class="fa fa-github fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://www.paypal.me/dipuraj" data-toggle="tooltip" title="Donate on PayPal">
+                <i class="fa fa-paypal fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">Paypal</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-lg pb-5">
+      <div class="container">
+        <div class="row row-grid">
+
+          <div class="col-md-12">
+            <div class="mt-3">
+
+              <h1 class="text-lg-left text-center">jQuery Smart Cart</h1>
+              <p class="lead mt-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+              <hr class="mt-0" />
+              <div class="article-content">
+                <p>
+                    <strong>jQuery Smart Cart</strong> is a interactive and user friendly jQuery Shopping Cart plugin with PayPal payment support.
+                    Has built-in support for form submit, Ajax submit and PayPal submit of the cart items.
+                    Features include Bootstrap support, theme support, customizable toolbars, customization options, public methods, event support.
+                </p>
+
+                <p>
+                  <a href="https://travis-ci.org/techlab/SmartCart"><img src="https://travis-ci.org/techlab/SmartCart.svg?branch=master" alt="Build Status" height="18"></a>
+                  <a href="https://badge.fury.io/js/jquery-smartcart"><img src="https://badge.fury.io/js/jquery-smartcart.svg" alt="npm version" height="18"></a>
+                  <a href="https://badge.fury.io/bo/jquery-smartcart"><img src="https://badge.fury.io/bo/jquery-smartcart.svg" alt="Bower version" height="18"></a>
+                  <a href="https://packagist.org/packages/techlab/jquery-smartcart"><img src="https://poser.pugx.org/techlab/jquery-smartcart/v/stable" alt="Latest Stable Version" height="18"></a>
+                  <a href="https://raw.githubusercontent.com/techlab/SmartCart/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+                  <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
+                </p>
+
+
+                <h3 id="demo" class="mt-4 mb-4">Demo <a href="#demo" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul>
+                  <li><a href="http://techlaboratory.net/smartcart/demo/basic" title="Basic Example">Basic Example</a></li>
+                  <li><a href="http://techlaboratory.net/smartcart/demo/paypal" title="PayPal Cart Example">PayPal Cart Example</a></li>
+                </ul>
+
+                <!-- <h5 class="text-uppercase">Basic Example</h5>
+                <div class="demo-1">
+
+                </div> -->
+
+
+                <h3 id="downloads" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h6><a href="https://www.npmjs.com/package/jquery-smartcart">NPM</a></h6>
+                <pre class="prettyprint lang-cl">npm install jquery-smartcart</pre>
+
+                <h6><a href="https://yarn.pm/jquery-smartcart">Yarn</a></h6>
+                <pre class="prettyprint lang-cl">yarn add jquery-smartcart</pre>
+
+                <h6><a href="https://bower.io/">Bower</a></h6>
+                <pre class="prettyprint lang-cl">bower install jquery-smartcart</pre>
+
+                <h6><a href="https://packagist.org/packages/techlab/jquery-smartcart">Composer</a></h6>
+                <pre class="prettyprint lang-cl">composer require techlab/jquery-smartcart</pre>
+
+
+                <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  <a href="https://github.com/techlab/SmartCart/archive/master.zip" title="Download jQuery Smart Cart on GitHub" class="btn btn-primary btn-sm">
+                    <i class="fa fa-download"></i> Download jQuery Smart Cart
+                  </a>
+                </p>
+
+                <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul class="feature-list">
+                  <li>In-built PayPal, Ajax and form submit methods</li>
+                  <li>Bootstrap support</li>
+                  <li>Customizable toolbar and option to add extra buttons</li>
+                  <li>Theme support</li>
+                  <li>Customizable css styles</li>
+                  <li>Public methods for external function call</li>
+                  <li>Enhanced event support</li>
+                  <li>Latest jQuery version support (jQuery 1.9+, jQuery 2+, jQuery 3+)</li>
+                  <li>Clean and compact design</li>
+                  <li>Automatically calculates subtotal</li>
+                  <li>Quantity is editable from the cart list</li>
+                  <li>Product Image display</li>
+                  <li>Customizable cart templates</li>
+                  <li>Customizable currency formatting</li>
+                  <li>Pre-populate products on cart on load</li>
+                </ul>
+
+                <!-- <h3 class="mt-4 mb-4">Screenshots <a href="#screenshots" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+
+                <img class="thumbnail img-responsive img-rounded" alt="jQuery Smart Cart 3" src="http://techlaboratory.net/assets/media/products/SmartCart3-Normal.png" />
+                <img class="thumbnail img-responsive img-rounded" alt="jQuery Smart Cart 3 Paypal" src="http://techlaboratory.net/assets/media/products/SmartCart3-PayPal.png" /> -->
+
+                <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
+
+                <h5 id="requirements">Requirements</h5>
+                <ol class="feature-list">
+                  <li><a href="http://getbootstrap.com/getting-started/#download">Bootstrap 3+</a></li>
+                  <li><a href="http://jquery.com/">jQuery</a> (supports jQuery 1.9+, jQuery 2+, jQuery 3+)</li>
+                </ol>
+
+
+                <h5>Include Smart Cart JavaScript & CSS files</h5>
+                <pre class="prettyprint linenums lang-html">
+&lt;link href="../dist/css/smart_cart.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script type="text/javascript" src="../dist/js/jquery.smartCart.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<h5>Initialize Smart Cart</h5>
+<pre class="prettyprint linenums lang-js">
+$(document).ready(function() {
+  $('#smartcart').smartCart();
+});
+</pre>
+
+                <h5>The HTML Markup</h5>
+                <p>The HTML has two parts, product list and cart list.
+                The product list can be any design you prefer, Smart Cart will not managed it, but there is some setting need to do
+                so that Smart Cart can identify the "Add To Cart" buttons and the values of the product.
+                While the cart list is fully managed by Smart Cart ofcourse it is customizable too.</p>
+
+                <p>First we can look at the basic of the product list<br />
+                Things to note:
+                </p>
+                <ul>
+                  <li>Add to cart button is identified by searching for the elments with class name "sc-add-to-cart", and a click event is attached with it.</li>
+                  <li>Then the product container of a product is identified by the class name "sc-product-item"</li>
+                  <li>The product container must have the basic values for the product like <code>product_name</code>, <code>product_price</code> etc</li>
+                  <li>The product values like <code>product_price</code> is identified by searching for an element with attribute <code>name</code> or <code>data-name</code></li>
+                  <li>All the element values with attribute <code>name</code> or <code>data-name</code> will be added to product object</li>
+                </ul>
+
+<pre class="prettyprint linenums lang-html">
+&lt;div class="row"&gt;<br>
+    &lt;!-- BEGIN PRODUCTS --&gt;
+    &lt;div class="col-md-4 col-sm-6"&gt;<br>
+        &lt;!-- PRODUCT CONTAINER 1, identified by the class "sc-product-item"  --&gt;
+        &lt;div class="sc-product-item"&gt;<br>
+            &lt;!-- PRODUCT IMAGE, identified by data-name="product_image"  --&gt;
+            &lt;img data-name="product_image" src="http://placehold.it/250x150/2aabd2/ffffff?text=Product+1" alt="..."&gt;<br>
+            &lt;!-- PRODUCT NAME, identified by data-name="product_name" or can be an element with name="product_name"--&gt;
+            &lt;h4 data-name="product_name"&gt;Product 1&lt;/h4&gt;<br>
+            &lt;!-- PRODUCT DESCRIPTION, identified by data-name="product_desc" or can be an element with name="product_desc"--&gt;
+            &lt;p data-name="product_desc"&gt;Product details&lt;/p&gt;<br>
+            &lt;!-- PRODUCT PRICE, identified by name="product_price" or can be an element with data-name="product_price"--&gt;
+            &lt;input name="product_price" value="2990.50" type="hidden" /&gt;<br>
+            &lt;!-- PRODUCT ID, identified by name="product_id" or can be an element with data-name="product_id"--&gt;
+            &lt;input name="product_id" value="12" type="hidden" /&gt;<br>
+            &lt;!-- ADD TO CART BUTTON, identified by class="sc-add-to-cart"  --&gt;
+            &lt;button class="sc-add-to-cart btn btn-success"&gt;Add to cart&lt;/button&gt;<br>
+        &lt;/div&gt;
+        &lt;!-- END PRODUCT CONTAINER 1 --&gt;
+
+    &lt;/div&gt;<br>
+    &lt;div class="col-md-4 col-sm-6"&gt;<br>
+        &lt;!-- PRODUCT CONTAINER 2 --&gt;
+        &lt;div class="sc-product-item"&gt;
+            &lt;img data-name="product_image" src="http://placehold.it/250x150/2aabd2/ffffff?text=Product+2" alt="..."&gt;
+            &lt;h4 data-name="product_name"&gt;Product 2&lt;/h4&gt;
+            &lt;p data-name="product_desc"&gt;Product details&lt;/p&gt;
+            &lt;input name="product_price" value="320.75" type="hidden" /&gt;
+            &lt;input name="product_id" value="14" type="hidden" /&gt;
+            &lt;button class="sc-add-to-cart btn btn-success"&gt;Add to cart&lt;/button&gt;
+        &lt;/div&gt;
+
+    &lt;/div&gt;
+    &lt;!-- END PRODUCTS --&gt;
+
+&lt;/div&gt;
+</pre>
+                <p>
+                And the second part is the cart HTML which is simple.
+                A <code>div</code> element wrapped with a <code>form</code> element which we can used to submit the cart values
+                </p>
+<pre class="prettyprint linenums lang-html">
+&lt;form action="results.php" method="POST"&gt; <br>
+    &lt;!-- SmartCart element --&gt;
+    &lt;div id="smartcart"&gt;&lt;/div&gt;<br>
+&lt;/form&gt;
+</pre>
+
+                <h3 id="smartcart-paypal" class="mt-4 mb-4">Paypal Implementation <a class="anchor-link" href="#smartcart-paypal"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  Please see the above implementaion and here specifying only the part that need change, the cart html section and the cart invoke section.
+                </p>
+                <h5>HTML for the cart</h5>
+<pre class="prettyprint linenums lang-html">
+&lt;!-- Paypal Submit URL : https://www.paypal.com/cgi-bin/webscr --&gt;
+&lt;!-- Paypal Sandbox Submit URL: https://www.sandbox.paypal.com/cgi-bin/webscr --&gt;
+&lt;!-- Paypal Cart submit form --&gt;<br>
+&lt;form action="https://www.paypal.com/cgi-bin/webscr" method="POST"&gt;
+    &lt;!-- SmartCart element --&gt;
+    &lt;div id="smartcart"&gt;&lt;/div&gt;<br>
+    &lt;!-- Paypal required info, Please update based on your details --&gt;
+    &lt;input name="business" value="YOUR-PAYPAL-EMAIL-HERE" type="hidden"&gt;
+    &lt;input name="currency_code" value="USD" type="hidden"&gt;
+    &lt;input name="return" value="http://www.yourdomain.com/yoursuccessurl" type="hidden"&gt;
+    &lt;input name="cancel_return" value="http://www.yourdomain.com/yourcancelurl" type="hidden"&gt;
+    &lt;input name="cmd" value="_cart" type="hidden"&gt;
+    &lt;input name="upload" value="1" type="hidden"&gt;
+&lt;/form&gt;
+</pre>
+
+                <h5>Invoke the SmartCart with Paypal option</h5>
+<pre class="prettyprint linenums lang-js">
+$('#smartcart').smartCart({
+        submitSettings: {
+            submitType: 'paypal' // form, paypal, ajax
+        },
+        toolbarSettings: {
+            checkoutButtonStyle: 'paypal' // default, paypal, image
+        }
+    });
+});
+</pre>
+
+
+
+
+                <h3 id="paramdesc" class="mt-4 mb-4">Parameter Description:</h3>
+                <div class="table-responsive">
+                  <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                    <tbody>
+                      <tr>
+                        <th>Parameter</th>
+                        <th>Description</th>
+                        <th width="110px">Values</th>
+                        <th>Default</th>
+                      </tr>
+                      <tr>
+                        <th>cart</th>
+                        <td>initial products on cart</td>
+                        <td>Object Array</td>
+                        <td>[]</td>
+                      </tr>
+                      <tr>
+                        <th>resultName</th>
+                        <td>Submit name of the cart parameter</td>
+                        <td>String</td>
+                        <td>cart_list</td>
+                      </tr>
+                      <tr>
+                        <th>theme</th>
+                        <td>theme for the cart, related css need to include for other than default theme</td>
+                        <td>String</td>
+                        <td>default</td>
+                      </tr>
+                      <tr>
+                        <th>combineProducts</th>
+                        <td>Combine similar products on cart</td>
+                        <td>true/false</td>
+                        <td>true</td>
+                      </tr>
+                      <tr>
+                        <th>highlightEffect</th>
+                        <td>Highlight effect on adding/updating product in cart</td>
+                        <td>true/false</td>
+                        <td>true</td>
+                      </tr>
+                      <tr>
+                        <th>cartItemTemplate</th>
+                        <td>Template to show items in the cart</td>
+                        <td>String</td>
+                        <td>&lt;img class="img-responsive pull-left" src="{product_image}" /&gt;&lt;h4 class="list-group-item-heading"&gt;{product_name}&lt;/h4&gt;&lt;p class="list-group-item-text"&gt;{product_desc}&lt;/p&gt;</td>
+                      </tr>
+                      <tr>
+                        <th>cartItemQtyTemplate</th>
+                        <td>Template to show item quantity in the cart</td>
+                        <td>String</td>
+                        <td>{display_price} × {display_quantity} = {display_amount}</td>
+                      </tr>
+                      <tr>
+                        <th>productContainerSelector</th>
+                        <td>Selector used to identify the product container in the product list.</td>
+                        <td>String</td>
+                        <td><code>.sc-product-item</code></td>
+                      </tr>
+                      <tr>
+                        <th>productElementSelector</th>
+                        <td>Selector used to identify the elements whoes values to be included with the cart object</td>
+                        <td>String</td>
+                        <td><code>*</code></td>
+                      </tr>
+                      <tr>
+                        <th>addCartSelector</th>
+                        <td>Selector used to identify the "Add To Cart" Button</td>
+                        <td>String</td>
+                        <td><code>.sc-add-to-cart</code></td>
+                      </tr>
+                      <tr>
+                        <th>debug</th>
+                        <td>Enable/Disable debug mode</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                      </tr>
+                      <tr>
+                        <th>paramSettings</th>
+                        <td colspan="3">
+                        Map the paramters in the product list with the cart object
+                        <br /><br />
+                        <pre class="prettyprint lang-js">
+{
+    productPrice: 'product_price',
+    productQuantity: 'product_quantity',
+    productName: 'product_name',
+    productId: 'product_id',
+}</pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>lang</th>
+                        <td colspan="3">
+                        An object with language variables
+                        <br /><br />
+                        <pre class="prettyprint lang-js">
+{
+    cartTitle: "Shopping Cart",
+    checkout: 'Checkout',
+    clear: 'Clear',
+    subtotal: 'Subtotal:',
+    cartRemove:'×',
+    cartEmpty: 'Cart is Empty!&lt;br /&gt;Choose your products'
+}</pre>
+
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>submitSettings</th>
+                        <td colspan="3">
+                        An object with submit setting
+                        <br /><br />
+                        <pre class="prettyprint lang-js">
+{
+    submitType: 'form', // form, paypal, ajax
+    ajaxURL: '', // Ajax submit URL
+    ajaxSettings: {} // Ajax extra settings for submit call
+}</pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>currencySettings</th>
+                        <td colspan="3">
+                        An object with currency setting
+                        <br /><br />
+                        <pre class="prettyprint lang-js">
+{
+    locales: 'en-US', // A string with a BCP 47 language tag, or an array of such strings
+    currencyOptions:  {
+        style: 'currency',
+        currency: 'USD',
+        currencyDisplay: 'symbol'
+    } // extra settings for the currency formatter. Refer: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+}</pre>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <th>toolbarSettings</th>
+                        <td colspan="3">
+                        An object with toolbar setting
+                        <br /><br />
+                        <pre class="prettyprint lang-js">
+{
+    showToolbar: true,
+    showCheckoutButton: true,
+    showClearButton: true,
+    showCartSummary:true,
+    checkoutButtonStyle: 'default', // default, paypal, image
+    checkoutButtonImage: '', // image for the checkout button
+    toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+}</pre>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+
+
+                <h3 id="eventdesc" class="mt-4 mb-4">Event Description:</h3>
+                <div class="table-responsive">
+                  <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                    <tr>
+                      <th nowrap="nowrap">Event Name</th>
+                      <th>Description</th>
+                      <th width="300px">Parameters</th>
+                    </tr>
+
+                    <tr>
+                      <th>itemAdded</th>
+                      <td>Triggers when an item is added on the cart</td>
+                      <td><b>Object:</b> object of the product.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>itemUpdated</th>
+                      <td>Triggers when an item is updated on the cart</td>
+                      <td><b>Object:</b> object of the product.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>itemRemoved</th>
+                      <td>Triggers when an item is removed from the cart</td>
+                      <td><b>Object:</b> object of the product.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>cartCleared</th>
+                      <td>Triggers when the cart is cleared</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>quantityUpdated</th>
+                      <td>Triggers when an item quantity is updated on the cart</td>
+                      <td><b>Object:</b> object of the product.<br />
+                          <b>Integer:</b> new quantity value.
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>cartEmpty</th>
+                      <td>Triggers when the cart is empty</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <th>cartSubmitted</th>
+                      <td>Triggers when the cart is submitte</td>
+                      <td><b>Object:</b> object array of full cart.</td>
+                    </tr>
+                  </table>
+                </div>
+
+                <h5>Example: Event Initialize</h5>
+                <pre class="prettyprint linenums lang-js">
+// Initialize the leaveStep event
+$("#smartcart").on("cartEmpty", function(e) {
+   alert("Cart is empty");
+});
+
+// Initialize Smart Cart
+$('#smartcart').smartCart();
+</pre>
+
+
+                <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>Released under the terms of the <a href="https://github.com/techlab/SmartCart/blob/master/LICENSE">MIT License</a>
+                 (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+                 You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+
+               <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
+                 <div class="p-5">
+                   <div class="row align-items-center">
+                     <div class="col-lg-8">
+                       <h3 class="text-white">A little help is always a beautiful thing...</h3>
+                       <p class="lead text-white mt-3">
+                         We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
+                       </p>
+                     </div>
+                     <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
+                       <a href="https://www.paypal.me/dipuraj" class="btn btn-secondary">
+                         <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
+                       </a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+
+                <h3 id="help-us-improve" class="mt-4 mb-4">Help us improve <a href="#help-us-improve" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  jQuery Smart Cart is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
+                  Please help us finding bugs or issues on this project, or give us an idea for a feature.
+                  Also, you are most welcome to improve the code, please create a pull-request on the project repository on <a href="https://github.com/techlab/SmartCart">GitHub</a>.
+                </p>
+                <div class="alert alert-secondary message-box mt-3" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-github fa-lg"></i></span>
+                  <span class="alert-inner--text">Please do feature requests and bug reports on <a href="https://github.com/techlab/SmartCart/issues">GitHub Issue Tracker</a>  on the repository.</span>
+                </div>
+
+                <div class="alert alert-secondary message-box" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
+                  <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-cart">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-cart">smart-cart</a> tag.</span>
+                </div>
+
+                <div class="card mt-5 shadow">
+                 <div class="row no-gutters">
+                   <div class="col-md-2">
+                     <img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
+                   </div>
+                   <div class="col-md-10">
+                     <div class="card-body">
+                       <h4 class="card-title mb-1"><a href="http://dipuraj.me">Dipu Raj</a></h4>
+                       <p class="card-text text-muted-">
+                          Full-stack developer in JavaScript, PHP and C# with added interest in Angular, React, jQuery and Bootstrap.
+                          Believes the code should be as beautiful as the design.
+                      </p>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-gradient-lighter2 border-top2">
+    <div class="container container-lg">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4 col-sm-12 text-lg-left text-center">
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="http://techlaboratory.net">Tech Laboratory</a>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12">
+          <ul class="nav nav-footer  justify-content-center justify-content-lg-end text-lg-right text-center">
+            <li class="nav-item">
+              <a href="./" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="smartwizard" class="nav-link">jQuery Smart Wizard</a>
+            </li>
+            <li class="nav-item">
+              <a href="smartcart" class="nav-link">jQuery Smart Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="smarttab" class="nav-link">jQuery Smart Tab</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="privacy" class="nav-link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="assets/js/headroom.min.js"></script>
+  <script src="assets/js/argon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css"></script>
+</body>
+</html>

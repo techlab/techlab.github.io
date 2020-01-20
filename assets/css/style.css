@@ -140,30 +140,3 @@ h3:focus a.anchor-link, h3:hover a.anchor-link {
       left:auto
   }
 }
-
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #5e72e4;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #5e72e4;
-}
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #007bff;
-}
-.nav-pills .nav-link {
-    font-size: .875rem;
-    font-weight: 500;
-    padding: .75rem 1rem;
-    transition: all .15s ease;
-    color: #5e72e4;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
-}
-.nav-pills .nav-link {
-    border-radius: .25rem;
-}
