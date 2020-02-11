@@ -4,7 +4,7 @@
  * http://www.techlaboratory.net/smartcart
  *
  * Created by Dipu Raj
- * http://dipuraj.me
+ * http://dipu.me
  *
  * Licensed under the terms of the MIT License
  * https://github.com/techlab/SmartCart/blob/master/LICENSE

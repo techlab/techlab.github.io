@@ -1,0 +1,704 @@
+<!--
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Dipu Raj">
+
+  <title>Smart Grid - Tech Laboratory - A simple PHP datagrid control for CodeIgniter framework with Bootstrap</title>
+  <meta property="og:title" content="Smart Grid - Tech Laboratory - A simple PHP datagrid control for CodeIgniter framework with Bootstrap" />
+
+  <meta name="description" content="A simple PHP datagrid control for CodeIgniter framework with Bootstrap" />
+  <meta property="og:description" content="A simple PHP datagrid control for CodeIgniter framework with Bootstrap"/>
+  <meta property="og:image" content="assets/images/TechLaboratory_logo.png" />
+  <link rel="image_src" href="assets/images/TechLaboratory_logo.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://techlaboratory.net/" />
+  <meta property="og:site_name" content="TechLaboratory.net" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- define site's owner twitter id -->
+  <meta name="twitter:site" content="tlaboratory">
+  <!--<meta property="fb:admins" content="673048839" />-->
+  <meta property="fb:app_id" content="673048839" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#0da4d3">
+  <!-- Windows Phone -->
+  <meta name="msapplication-TileColor" content="#0da4d3">
+  <meta name="msapplication-navbutton-color" content="#0da4d3">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="assets/images/TechLaboratory_logo.png">
+
+  <meta name="KEYWORDS" content="CodeIgniter, jQuery, shoppingcart, cart, smartcart, smartwizard, smarttab, step wizard, wizard, jcart, jwizard, shopping, plugin, Bootstrap" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/fav/favicon-16x16.png" type="image/png">
+  <link rel="icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileImage" content="assets/images/fav/favicon-96x96.png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-18629864-3');
+  </script>
+
+  <!-- Google Ads -->
+  <script data-ad-client="ca-pub-8226185437441708" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="./">
+          <img src="assets/images/TechLaboratory_40.png" alt="brand">
+        </a>
+        <button class="navbar-toggler text-muted" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="./">
+                  <img src="assets/images/TechLaboratory_logo_40.png" alt="brand">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a href="./" class="nav-link" role="button">
+                <span class="nav-link-inner--text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Projects</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="smartwizard" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery step wizard plugin with Bootstrap support</p>
+                    </div>
+                  </a>
+                  <a href="smartcart" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Cart</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+                    </div>
+                  </a>
+                  <a href="smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">Flexible jQuery Tab Control plug-in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://github.com/techlab" data-toggle="tooltip" title="Visit us on GitHub">
+                <i class="fa fa-github fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://www.paypal.me/dipuraj" data-toggle="tooltip" title="Donate on PayPal">
+                <i class="fa fa-paypal fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">Paypal</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-lg pb-5">
+      <div class="container">
+        <div class="row row-grid">
+
+          <div class="col-md-12">
+            <div class="mt-3">
+
+              <h1 class="text-lg-left text-center">Smart Grid</h1>
+              <p class="lead mt-0">A simple PHP datagrid control for CodeIgniter framework with Bootstrap</p>
+              <hr class="mt-0" />
+
+              <div class="alert alert-warning message-box- mt-3" role="alert">
+                <span class="alert-inner--icon"><i class="fa fa-exclamation-triangle fa-lg"></i></span>
+                <span class="alert-inner--text">
+                  This project is not maintained anymore.
+                  You can still use the package but there won't be any bug fixes or updates.
+                </span>
+              </div>
+
+              <div class="article-content" itemprop="articleBody" itemscope="itemscope" itemtype="http://schema.org/Code">
+                <p>A simple PHP datagrid control for CodeIgniter framework with Bootstrap.
+                SmartGrid focus on data display than data manipulation.
+                We are starting with limited features to make the code very simple and robust,
+                yet we will be adding more feature on the go. The code is very simple and well documented, which make it easy for customization.
+                </p>
+
+
+                <h3 id="requirements" class="mt-4 mb-4">Requirements <a class="anchor-link" href="#requirements"><i class="fa fa-link"></i></a></h3>
+                <ol class="feature-list">
+                  <li><a href="https://codeigniter.com/download">CodeIgniter 3.x</a></li>
+                  <li><a href="http://getbootstrap.com/getting-started/#download">Bootstrap 3+</a></li>
+                </ol>
+
+                <h3 id="installation" class="mt-4 mb-4">Installation <a class="anchor-link" href="#installation"><i class="fa fa-link"></i></a></h3>
+                <ol class="feature-list">
+                  <li><a href="https://github.com/techlab/codeigniter-smartgrid/archive/master.zip">Download</a> the source files
+                  </li>
+                  <li>Copy the folder and files <code>application/libraries/SmartGrid/</code> to <code>application/libraries/</code> folder of your CodeIgniter installation
+                  </li>
+                  <li>That's it! Start using with the examples
+                  </li>
+                </ol>
+
+                <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  <a href="https://github.com/techlab/codeigniter-smartgrid/archive/master.zip" title="Download Smart Grid on GitHub" class="btn btn-primary"><i class="fa fa-download"></i> Download Smart Grid</a>
+                </p>
+
+                <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3><ul class="feature-list">
+                  <li>Simple datagrid for data display
+                  </li>
+                  <li>Accepts both MySQL query and array data
+                  </li>
+                  <li>Automatic Pagination
+                  </li>
+                  <li>Uses Twitter Bootstrap for styling, so easy to style with any bootstrap template
+                  </li>
+                  <li>No extra css or js files to include
+                  </li>
+                </ul>
+
+                <h3 id="limitations" class="mt-4 mb-4">Limitations <a class="anchor-link" href="#limitations"><i class="fa fa-link"></i></a></h3>
+                <ul class="feature-list">
+                  <li>Add, Edit, Del, Themes, Export, Search and Sort are not supported
+                  </li>
+                  <li>Search, Sort, Themes, Export features are on pipeline
+                  </li>
+                  <li>Database support: MySQL only for now
+                  </li>
+                  <li>Language support: English only for now
+                  </li>
+                  <li>Ajax is not support now
+                  </li>
+                </ul>
+
+                <h3 class="mt-4 mb-4">Screenshots <a href="#screenshots" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <img class="img-fluid shadow-sm" alt="Smart Grid" src="assets/media/SmartGrid1.png" />
+
+                <h3 id="example_usage" class="mt-4 mb-4">Example usage <a class="anchor-link" href="#example_usage"><i class="fa fa-link"></i></a></h3>
+
+                on your controller:
+                <pre class="prettyprint linenums">
+// Load the SmartGrid Library
+$this->load->library('SmartGrid/Smartgrid');
+
+// MySQL Query to get data
+$sql = "SELECT * FROM employee";
+
+// Column settings
+$columns = array("employee_id"=>array("header"=>"Employee ID", "type"=>"label"),
+                 "employee_name"=>array("header"=>"Name", "type"=>"label"),
+                 "employee_designation"=>array("header"=>"Designation", "type"=>"label")
+		);
+
+// Set the grid
+$this->smartgrid->set_grid($sql, $columns);
+
+// Render the grid and assign to data array, so it can be print to on the view
+$data['grid_html'] = $this->smartgrid->render_grid();
+
+// Load view
+$this->load->view('example_smartgrid', $data);</pre>
+
+                and then, on your view:
+                <pre class="prettyprint linenums">
+&lt;!-- For styling, refer the bootstrap from CDN or from your server.
+Ignore this if you already have included in main view --&gt;<br>
+
+&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"&gt;</pre>
+
+                and on the same view:
+                <pre class="prettyprint linenums">
+// Print the grid html
+echo $grid_html;</pre>
+
+
+<h3 id="details_on_usage" class="mt-4 mb-4">Detailed description of usage <a class="anchor-link" href="#details_on_usage"><i class="fa fa-link"></i></a></h3>
+
+Let's break the above usage to get more idea on what is happening.
+
+<br>First thing we do is load the SmartGrid library to the controller,
+the following line will do that pretty well.
+
+<pre class="prettyprint lang-php linenums">
+$this->load->library('SmartGrid/Smartgrid');
+</pre>
+
+Now we have the SmartGrid library loaded on our controller,
+we will be able to call the functions in it.
+
+<br><br>1.First we have to initialize SmartGrid with datasource, column details and optionally with extra configuration.
+SmartGrid has 'set_grid' function for that,
+
+<pre class="prettyprint lang-php linenums">
+$this->smartgrid->set_grid($sql_or_array, $columns, $config);
+</pre>
+
+set_grid function takes 3 parameters while the last two are optional.
+<br /><code>$sql_or_array</code>: You can pass a MySQl query or a multi-dimensional array with data.
+<br /><code>$columns</code>: The details of the columns to be shown on the grid, if you set the 'auto_generate_columns'  to 'true'
+it will automatically assigned.
+<br /><code>$config</code>: The configuration settings for SmartGrid. This is optional
+
+<br /><br />
+2. Now we will be able to get the html of the datagrid by calling 'render_grid'
+
+<pre class="prettyprint lang-php linenums">
+$data['grid_html'] = $this->smartgrid->render_grid();
+</pre>
+
+and you can pass the '$data' array to your view and will be able to print it there
+
+<pre class="prettyprint lang-php linenums">
+echo $grid_html;
+</pre>
+
+If you are not seeing a stylish grid you may have missed to include bootstrap correctly.
+
+<div class="alert alert-secondary message-box mt-3" role="alert">
+  <span class="alert-inner--icon"><i class="fa fa-info-circle fa-lg"></i></span>
+  <span class="alert-inner--text">
+    You can customize the style of the SmartGrid by adding your own css styles, follow the
+    <a href="http://getbootstrap.com/css/#tables">Bootstrap's Table styles</a>
+  </span>
+</div>
+
+<h3 id="config_parameters" class="mt-4 mb-4">Configuration Parameters <a class="anchor-link" href="#config_parameters"><i class="fa fa-link"></i></a></h3>
+
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+        <th>Parameter Name</th>
+        <th>Description</th>
+        <th>Default Value</th>
+    </tr>
+    <tr>
+        <th><code>auto_generate_columns</code></th>
+        <td>Autogenerate columns based on result set</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <th><code>paging_enabled</code></th>
+        <td>Enable/Disable paging</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <th><code>toolbar_position</code></th>
+        <td>Paging toolbar position. Allowed values top/bottom/both/none</td>
+        <td>'both'</td>
+    </tr>
+    <tr>
+        <th><code>page_size</code></th>
+        <td>Maximum rows per page</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <th><code>grid_name</code></th>
+        <td>Grid name, used to identify grid if there are multiple grids on same page</td>
+        <td>'sg_1'</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+Example configuration array
+<pre class="prettyprint lang-php linenums">
+$config = array("page_size"=> 5,
+                "grid_name"=> "sg_1",
+                "toolbar_position"=> 'both');
+</pre>
+
+To assign the configuration you can use any of the following methods
+
+<br /><br />While loading the SmartGrid Library, pass <code>$config</code> as a second parameter
+<pre class="prettyprint lang-php linenums">
+$this->load->library('SmartGrid/Smartgrid', $config);
+</pre>
+
+Call the <code>set_configs</code> function directly, it should be called before <code>set_grid</code> to take in effect
+<pre class="prettyprint lang-php linenums">
+$this->smartgrid->set_configs($config);
+</pre>
+
+While calling the <code>set_grid</code>, pass <code>$config</code> as a third parameter
+<pre class="prettyprint lang-php linenums">
+$this->smartgrid->set_grid($sql, $columns, $config);
+</pre>
+
+
+<h3 id="column_types" class="mt-4 mb-4">Column Types <a class="anchor-link" href="#column_types"><i class="fa fa-link"></i></a></h3>
+
+
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+    <tr>
+        <th>label</th>
+        <td>Displays the field values as it is.
+        </td>
+    </tr>
+    <tr>
+        <th>link</th>
+        <td>Displays the anchor link, where you can customize the url based on the field values.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>href</code></th>
+                    <td>The url of the link, the url will be parsed with row data.
+                        You will be able give pseudo-variables to replace it with any value in the row.
+                        <br />Ex: 'https://www.google.co.in/webhp?#q={company_name}' will be replaced with the 'company_name' field value in that row.
+                        Uses CodeIgniter's <a href="https://www.codeigniter.com/userguide3/libraries/parser.html">Template Parser Class</a>
+                    </td>
+                    <td>empty string</td>
+                </tr>
+                <tr>
+                    <th><code>link_name</code></th>
+                    <td>Optional, If specified, shown as the text of the column on grid else the field value</td>
+                    <td>empty string</td>
+                </tr>
+                <tr>
+                    <th><code>target</code></th>
+                    <td>Optional, target for the anchor element</td>
+                    <td>empty string</td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <th>date</th>
+        <td>Convert and displays the date formated as specified.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>date_format</code></th>
+                    <td>Optional, date format to display on column
+                    </td>
+                    <td>empty string</td>
+                </tr>
+                <tr>
+                    <th><code>date_format_from</code></th>
+                    <td>Optional, format of the original data</td>
+                    <td>Y-m-d H:i:s</td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <th>relativedate</th>
+        <td>Calculates and displays the relative date based on current date</td>
+    </tr>
+    <tr>
+        <th>image</th>
+        <td>Displays the date formated as specified.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>date_format</code></th>
+                    <td>Optional, date format to display on column
+                    </td>
+                    <td>empty string</td>
+                </tr>
+                <tr>
+                    <th><code>date_format_from</code></th>
+                    <td>Optional, format of the original data</td>
+                    <td>Y-m-d H:i:s</td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <th>custom</th>
+        <td>
+            Substitute pseudo-variables in the field value with any of the values in that row.
+            <br />Ex: 'Hello {employee_name}' in the field value will display by replacing 'employee_name' with the real data in that row.
+            Uses CodeIgniter's <a href="https://www.codeigniter.com/userguide3/libraries/parser.html">Template Parser Class</a>
+        </td>
+    </tr>
+    <tr>
+        <th>money</th>
+        <td>Displays the money as specified. Uses PHP <a href="http://php.net/manual/en/function.number-format.php">number_format</a> function.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>sign</code></th>
+                    <td>Optional, sign of the currency. Ex. <code>$</code>
+                    </td>
+                    <td>empty string</td>
+                </tr>
+                <tr>
+                    <th><code>decimal_places</code></th>
+                    <td>Optional, number of decimal points.</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th><code>decimal_separator</code></th>
+                    <td>Optional, separator for the decimal point
+                    </td>
+                    <td>.</td>
+                </tr>
+                <tr>
+                    <th><code>thousands_separator</code></th>
+                    <td>Optional, thousands separator</td>
+                    <td>,</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <th>enum</th>
+        <td>Displays the data from an array source provided, assumes the field value as the key.
+            If the key not found, displays the field value itself.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>source</code></th>
+                    <td>Source array data
+                    </td>
+                    <td>empty string</td>
+                </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <th>html</th>
+        <td>Displays HTML by converting field value to HTML entities. Uses PHP <a href="http://php.net/manual/en/function.htmlentities.php">htmlentities</a> function.</td>
+    </tr>
+    <tr>
+        <th>password/mask</th>
+        <td>Displays mask characters instead of field value, but shows same string length.
+            <br /><br />Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>symbol</code></th>
+                    <td>Optional, mask character to show</td>
+                    <td>*</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <th>progressbar</th>
+        <td>Displays progressbar based on the field value. Assumes the field value is a percentage value.
+            Extra Parameters:
+            <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Parameter Name</th>
+                    <th>Description</th>
+                    <th>Default Value</th>
+                </tr>
+                <tr>
+                    <th><code>maximum_value</code></th>
+                    <td>Optional, percentage value to calculate with</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <th><code>show_value</code></th>
+                    <td>Optional, Whether to show value also</td>
+                    <td>false</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</div>
+
+
+Example Usage of Column Settings array:
+<pre class="prettyprint lang-php linenums">
+$columns = array(
+    "employee_id"=>array("header"=>"Employee ID", "type"=>"label", "align"=>"left", "width"=>"100px"),
+    "employee_name"=>array("header"=>"Employee Name", "type"=>"label", "align"=>"left", "width"=>"150px"),
+    "employee_dob"=>array("header"=>"Date of Birth", "type"=>"date", "align"=>"center", "width"=>"150px", "date_format"=>"Y-m-d", "date_format_from"=>"Y-m-d H:i:s"),
+    "employee_join_date"=>array("header"=>"Join Date", "type"=>"relativedate", "align"=>"left", "width"=>"150px"),
+    "employee_gender"=>array("header"=>"Gender", "type"=>"enum", "source"=>$gender_list, "align"=>"center", "width"=>"100px"),
+    "employee_salary"=>array("header"=>"Salary", "type"=>"money", "sign"=>"$", "align"=>"right", "width"=>"100px"),
+    "performance_index"=>array("header"=>"Performance", "type"=>"progressbar", "align"=>"center", "width"=>"100px"),
+    "employee_img_url"=>array("header"=>"Image", "type"=>"image", "align"=>"center", "width"=>"50px", "image_width"=>"50px"),
+);
+</pre>
+
+And it should passed to <code>set_grid</code> function
+<pre class="prettyprint lang-php linenums">
+$this->smartgrid->set_grid($sql, $columns);
+</pre>
+</div>
+
+                <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>Released under the terms of the <a href="https://github.com/techlab/codeigniter-smartgrid/blob/master/LICENSE">MIT License</a>
+                 (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+                You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+
+
+                <div class="card mt-5 shadow">
+                 <div class="row no-gutters">
+                   <div class="col-md-2">
+                     <img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
+                   </div>
+                   <div class="col-md-10">
+                     <div class="card-body">
+                       <h4 class="card-title mb-1"><a href="http://dipu.me">Dipu Raj</a></h4>
+                       <p class="card-text text-muted-">
+                          Full-stack developer in JavaScript, PHP and C# with added interest in Angular, React, jQuery and Bootstrap.
+                          Believes the code should be as beautiful as the design.
+                      </p>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-gradient-lighter2 border-top2">
+    <div class="container container-lg">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4 col-sm-12 text-lg-left text-center">
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="./">Tech Laboratory</a>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12">
+          <ul class="nav nav-footer  justify-content-center justify-content-lg-end text-lg-right text-center">
+            <li class="nav-item">
+              <a href="./" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="smartwizard" class="nav-link">jQuery Smart Wizard</a>
+            </li>
+            <li class="nav-item">
+              <a href="smartcart" class="nav-link">jQuery Smart Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="smarttab" class="nav-link">jQuery Smart Tab</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="privacy" class="nav-link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="assets/js/headroom.min.js"></script>
+  <script src="assets/js/argon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css"></script>
+</body>
+</html>
