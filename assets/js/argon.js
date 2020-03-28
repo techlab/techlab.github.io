@@ -19,6 +19,15 @@
 "use strict";
 $(document).ready(function() {
 
+    // Load random images
+    var frontImages = [
+      "assets/images/front/undraw_dev_focus_b9xo.svg",
+      "assets/images/front/undraw_destinations_fpv7.svg",
+      "assets/images/front/undraw_progress_overview_2dik.svg"
+    ];
+    var x = Math.floor(frontImages.length * Math.random());
+    $('#frontImage').attr('src', frontImages[x]);
+
     // Collapse navigation
     $('.navbar-main .collapse').on('hide.bs.collapse', function () {
         var $this = $(this);
