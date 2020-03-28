@@ -70,7 +70,10 @@ a {
   #navbar-main .dropdown-menu a:hover {
     color: #666!important;
     background-color: #f5f5f5!important;
+  }
 
+  #navbar-main .nav-item .media {
+    margin-bottom: 0 !important;
   }
 }
 
