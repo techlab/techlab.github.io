@@ -17,3 +17,8 @@ body {
 .pull-right{
   float: right;
 }
+
+.container {
+  padding-right: 5%;
+  padding-left: 5%;
+}
