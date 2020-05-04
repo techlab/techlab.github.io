@@ -66,6 +66,9 @@
   <!-- Icons -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
 
+  <!-- Demo files -->
+  <link href="projects/demo/jquery-smart-tab/v3/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" />
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
   <script>
@@ -170,22 +173,156 @@
             <div class="mt-3">
 
               <h1 class="text-lg-left text-center">jQuery Smart Tab</h1>
-              <p class="lead mt-0">flexible jQuery Tab Control plug-in</p>
+              <p class="lead mt-0">The flexible jQuery tab control plugin</p>
               <hr class="mt-0" />
               <div class="article-content">
                 <p>
-                  <strong>jQuery Smart Tab</strong> is a <a href="http://jquery.com/">jQuery</a> plugin for tabbed interface.
-                  It is flexible and very easy to implement. It has a lot of features that you will love and it is completely open source.
-                  It can load ajax contents, have a verity of themes, cool animation effects, event supports, easy to customize.
+                  <strong>jQuery Smart Tab</strong> is a jQuery plugin for easy implemetaion of tab interface.
+                  Flexible and easy to implement with a lot of features that you will love like Ajax contents, verity of themes, cool animation effects, event support, easy to customize.
+                </p>
+
+                <p>
+                  <a href="https://travis-ci.org/techlab/jquery-smarttab.svg?branch=master"><img src="https://travis-ci.org/techlab/jquery-smarttab.svg?branch=master" alt="Build Status" height="18"></a>
+                  <a href="https://badge.fury.io/js/jquery-smarttab"><img src="https://badge.fury.io/js/jquery-smarttab.svg" alt="npm version" height="18"></a>
+                  <a href="https://packagist.org/packages/techlab/jquery-smarttab"><img src="https://poser.pugx.org/techlab/jquery-smarttab/v/stable" alt="Latest Stable Version" height="18"></a>
+                  <a href="https://github.com/techlab/jquery-smarttab/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+                  <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
                 </p>
 
                 <h3 id="demo" class="mt-4 mb-4">Demo <a href="#demo" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+
+                <h5 class="text-uppercase">Live Example</h5>
+                <div class="demo-1">
+                  <!-- External Buttons -->
+                  <div class="row mb-3 align-items-center valign-items-center ">
+                      <div class="col-auto ">
+                          <label>Theme:</label>
+                          <select id="theme_selector" class="form-control" >
+                                <option value="default" selected>Default</option>
+                                <option value="classic">Classic</option>
+                                <option value="dark">Dark</option>
+                                <option value="brick">Brick</option>
+                                <option value="bstabs">Bootstrap Tabs</option>
+                                <option value="bspills">Bootstrap Pills</option>
+                                <option value="">No Theme</option>
+                          </select>
+                        </div>
+                        <div class="col-auto ">
+                          <label>Animation:</label>
+                          <select id="animation" class="form-control">
+                                <option value="none">None</option>
+                                <option value="fade">Fade</option>
+                                <option value="slide-horizontal">Slide Horizontal</option>
+                                <option value="slide-vertical">Slide Vertical</option>
+                                <option value="slide-swing">Slide Swing</option>
+                          </select>
+                        </div>
+                        <div class="col-auto ">
+                            <label>Go To:</label>
+                            <select id="got_to_tab" class="form-control">
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                            </select>
+                        </div>
+
+                        <div class="col-auto ">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="is_vertical" value="1" />
+                            <label class="custom-control-label" for="is_vertical">Vertical</label>
+                          </div>
+                        </div>
+                        <div class="col-auto ">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="is_justified" value="1" checked />
+                            <label class="custom-control-label" for="is_justified">Justified</label>
+                          </div>
+                        </div>
+                  </div>
+
+                  <!-- SmartTab html -->
+                  <div id="smarttab">
+
+                      <ul class="nav">
+                          <li>
+                            <a class="nav-link" href="#tab-1">
+                              <strong>Tab 1</strong> This is tab description
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#tab-2">
+                              <strong>Tab 2</strong> This is tab description
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#tab-3">
+                              <strong>Tab 3</strong> This is tab description
+                            </a>
+                          </li>
+                          <li>
+                            <a class="nav-link" href="#tab-4">
+                              <strong>Tab 4</strong> This is tab description
+                            </a>
+                          </li>
+                      </ul>
+
+                      <div class="tab-content">
+                          <div id="tab-1" class="tab-pane" role="tabpanel">
+                              <h3>Tab 1 Content</h3>
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </div>
+                          <div id="tab-2" class="tab-pane" role="tabpanel">
+                              <h3>Tab 2 Content</h3>
+                              <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+                          </div>
+                          <div id="tab-3" class="tab-pane" role="tabpanel">
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </div>
+                          <div id="tab-4" class="tab-pane" role="tabpanel">
+                              <h3>Tab 4 Content</h3>
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                          </div>
+                      </div>
+                  </div>
+
+                </div>
+
+                <br />
                 <ul>
-                  <li><a href="projects/demo/jquery-smart-tab/v2/basic" title="Basic Layout">Basic Layout</a></li>
-                  <li><a href="projects/demo/jquery-smart-tab/v2/smarttab-bottom" title="Bottom Layout">Bottom Layout</a></li>
-                  <li><a href="projects/demo/jquery-smart-tab/v2/smarttab-vertical" title="Vertical Layout">Vertical Layout</a></li>
-                  <li><a href="projects/demo/jquery-smart-tab/v2/smarttab-multiple" title="Multiple Tab">Multiple Tab</a></li>
+                  <li><a href="projects/demo/jquery-smart-tab/v3" title="Basic">Basic example</a></li>
+                  <li><a href="projects/demo/jquery-smart-tab/v3/ajax" title="Ajax">Ajax example</a></li>
+                  <li><a href="projects/demo/jquery-smart-tab/v3/multiple" title="Multiple Tab">Multiple Tab</a></li>
                 </ul>
+
+                <h3 id="installation" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h6><a href="https://www.npmjs.com/package/jquery-smarttab">NPM</a></h6>
+                <pre class="prettyprint lang-cl">npm install jquery-smarttab</pre>
+
+                <h6><a href="https://yarn.pm/jquery-smarttab">Yarn</a></h6>
+                <pre class="prettyprint lang-cl">yarn add jquery-smarttab</pre>
+
+                <h6><a href="https://packagist.org/packages/techlab/jquery-smarttab">Composer</a></h6>
+                <pre class="prettyprint lang-cl">composer require techlab/jquery-smarttab</pre>
+
+                <h6><a href="https://www.jsdelivr.com/package/npm/jquery-smarttab">CDN - jsDelivr</a></h6>
+<pre class="prettyprint lang-html">
+&lt;!-- CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.0/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.0/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+
+<h6><a href="https://unpkg.com">CDN - UNPKG</a></h6>
+<pre class="prettyprint lang-html">
+&lt;!-- CSS --&gt;
+&lt;link href="https://unpkg.com/jquery-smarttab@3.0.0/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;!-- JavaScript --&gt;
+&lt;script src="https://unpkg.com/jquery-smarttab@3.0.0/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
 
                 <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <p>
@@ -196,136 +333,381 @@
 
                 <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <ul class="feature-list">
-                  <li>Ajax Contents: It can load ajax contents</li>
-                  <li>Browser Support: Support all modern browsers</li>
-                  <li>Auto Height: Automatically adjust the content height</li>
-                  <li>Save State: Automatically saves the current tab position and regain on page load</li>
-                  <li>Auto Progress: option for automatic navigation of tabs.</li>
-                  <li>Keyboard Navigation: Use left/right keyboard keys to navigate through tabs </li>
-                  <li>Transition Effects:- Cool transition effects (hslide/vslide/slide/fade )on tab transition.</li>
-                  <li>Easy to implement, Minimal HTML required.</li>
-                  <li>Customizable Easily customisable theme and tab anchors</li>
-                  <li>Event Support: OnLeaveTab and OnShowTab events</li>
-                  <li>External anchors: External anchors can be used for tab navigation</li>
+                  <li>Responsive design</li>
+                  <li>Standalone CSS</li>
+                  <li>Bootstrap compatible</li>
+                  <li>Various themes included</li>
+                  <li>Customizable CSS</li>
+                  <li>URL navigation and tab selection</li>
+                  <li>Event support</li>
+                  <li>Ajax content loading support</li>
+                  <li>Keyboard navigation</li>
+                  <li>Auto content height adjustment</li>
+                  <li>Compatible with all jQuery versions (jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
+                  <li>Easy to implement and minimal HTML required</li>
+                  <li>Supports all modern browsers</li>
+                  <li>Auto Progress (automatic navigation of tabs)</li>
+                  <li>Cool transition animations (fade/slide-horizontal/slide-vertical/slide-swing)</li>
+                  <li>External anchor support</li>
                 </ul>
-
-                <!-- <h3 class="mt-4 mb-4">Screenshots <a href="#screenshots" class="anchor-link"><i class="fa fa-link"></i></a></h3>
-              -->
 
                 <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
 
                 <h5 id="requirements">Requirements</h5>
                 <ol class="feature-list">
-                  <li><a href="http://jquery.com/">jQuery</a></li>
+                  <li><a href="http://jquery.com/">jQuery</a> (supports jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
                 </ol>
 
 
-                <h5>Include Smart Tab JavaScript & CSS files</h5>
+                <h5>Include jQuery SmartTab CSS</h5>
                 <pre class="prettyprint linenums lang-html">
-&lt;script type="text/javascript" src="js/jquery.smartTab.min.js"&gt;&lt;/script&gt;
-&lt;link href="styles/smart_tab.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="../dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css"&gt;
 </pre>
 
-<h5>Initialize Smart Tab</h5>
+<h5>The HTML Markup</h5>
+<pre class="prettyprint linenums lang-html">
+&lt;div id=&quot;smarttab&quot;&gt;
+
+ &lt;ul class=&quot;nav&quot;&gt;
+   &lt;li&gt;
+     &lt;a class=&quot;nav-link&quot; href=&quot;#tab-1&quot;&gt;
+      Tab 1
+     &lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+     &lt;a class=&quot;nav-link&quot; href=&quot;#tab-2&quot;&gt;
+      Tab 2
+     &lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+     &lt;a class=&quot;nav-link&quot; href=&quot;#tab-3&quot;&gt;
+      Tab 3
+     &lt;/a&gt;
+   &lt;/li&gt;
+   &lt;li&gt;
+     &lt;a class=&quot;nav-link&quot; href=&quot;#tab-4&quot;&gt;
+      Tab 4
+     &lt;/a&gt;
+   &lt;/li&gt;
+ &lt;/ul&gt;
+
+ &lt;div class=&quot;tab-content&quot;&gt;
+   &lt;div id=&quot;tab-1&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+    Tab content
+   &lt;/div&gt;
+   &lt;div id=&quot;tab-2&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+    Tab content
+   &lt;/div&gt;
+   &lt;div id=&quot;tab-3&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+    Tab content
+   &lt;/div&gt;
+   &lt;div id=&quot;tab-4&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+    Tab content
+   &lt;/div&gt;
+ &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+<h5>Include jQuery (ignore this if you have already included on the page)</h5>
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<h5>Include jQuery SmartTab JavaScript</h5>
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript" src="../dist/js/jquery.smartTab.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<h5>Initialize the jQuery SmartTab</h5>
 <pre class="prettyprint linenums lang-js">
 $(document).ready(function(){
-  $('#tabs').smartTab();
+
+  // SmartTab initialize
+  $('#smarttab').smartTab();
+
 });
-</pre>
-
-                <h5>The HTML Markup</h5>
-
-<pre class="prettyprint linenums lang-html">
-&lt;div id="tabs"&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href="#tabs-1"&gt;Tab 1&lt;br /&gt;&lt;small&gt;This is tab's description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#tabs-2"&gt;Tab 2&lt;br /&gt;&lt;small&gt;This is tab's description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#tabs-3"&gt;Tab 3&lt;br /&gt;&lt;small&gt;This is tab's description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#tabs-4"&gt;Tab 4&lt;br /&gt;&lt;small&gt;This is tab's description&lt;/small&gt;&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-
-  &lt;div id="tabs-1"&gt;
-      &lt;h2&gt;Tab 1 Content&lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div id="tabs-2"&gt;
-      &lt;h2&gt;Tab 2 Content&lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div id="tabs-3"&gt;
-      &lt;h2&gt;Tab 3 Content&lt;/h2&gt;
-  &lt;/div&gt;
-  &lt;div id="tabs-4"&gt;
-      &lt;h2&gt;Tab 4 Content&lt;/h2&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 </pre>
 
 That is it!
 
-<h3 id="more-options" class="mt-4 mb-4">More Options <a class="anchor-link" href="#more-options"><i class="fa fa-link"></i></a></h3>
+<h3 id="advanced-options" class="mt-4 mb-4">Advanced Options <a class="anchor-link" href="#advanced-options"><i class="fa fa-link"></i></a></h3>
 
-<h5>With Parameters</h5>
+<h5>with all optional parameters</h5>
 <pre class="prettyprint linenums lang-js">
-$('#tabs').smartTab({
-    selected: 0,  // Selected Tab, 0 = first tab
-    saveState:true, // Remembers tab selection
-    contentURL:null, // content url, Enables Ajax content loading. ex: 'service.php'
-    contentCache:true, // Cache Ajax content
-    keyNavigation:true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
-    autoProgress:false, // Auto navigate tabs on interval
-    progressInterval: 3500, // Auto navigate Interval (used only if "autoProgress" is set to true)
-    stopOnFocus:false, // Stop auto navigation on focus and resume on outfocus
-    transitionEffect:'none', // Effect on navigation, none/hslide/vslide/slide/fade
-    transitionSpeed:'400', // Transition animation speed
-    transitionEasing:'easeInOutExpo', // Transition animation easing
-    autoHeight:true, // Automatically adjust content height
-    onLeaveTab: null, // triggers when leaving a tab
-    onShowTab: null  // triggers when showing a tab
+$('#smarttab').smartTab({
+  selected: 0, // Initial selected tab, 0 = first tab
+  theme: 'default', // theme for the tab, related css need to include for other than default theme
+  orientation: 'horizontal', // Nav menu orientation. horizontal/vertical
+  justified: true, // Nav menu justification. true/false
+  autoAdjustHeight: true, // Automatically adjust content height
+  backButtonSupport: true, // Enable the back button support
+  enableURLhash: true, // Enable selection of the tab based on url hash
+  transition: {
+      animation: 'none', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
+      speed: '400', // Transion animation speed
+      easing:'' // Transition animation easing. Not supported without a jQuery easing plugin
+  },
+  autoProgress: { // Auto navigate tabs on interval
+      enabled: false, // Enable/Disable Auto navigation
+      interval: 3500, // Auto navigate Interval (used only if "autoProgress" is set to true)
+      stopOnFocus: true, // Stop auto navigation on focus and resume on outfocus
+  },
+  keyboardSettings: {
+      keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
+      keyLeft: [37], // Left key code
+      keyRight: [39] // Right key code
+  }
 });
 </pre>
 
-<h5 class="subTitle">Ajax Contents</h5>
+<h5 class="subTitle">Implement Ajax Contents</h5>
+<p>
+    There is no in built ajax calls, instead you can listen to <code>tabContent</code> event.
+    The event can accept Promise as return or you can return the string as the content of the tab.
+    The event will be passed with two parameters, <code>anchorObject</code> the jQuery object of the selected tab
+    and <code>stepIndex</code> the zero based index number of the tabs.
+
+    Here is an ajax call example with Promise.
+</p>
 
 <pre class="prettyprint linenums lang-js">
-$('#tabs').smartTab({
-  contentURL: 'service.php',
-  contentCache: false
+// Ajax content loading with "tabContent" event
+$("#smarttab").on("tabContent", function(e, anchorObject, stepIndex) {
+
+    var repo    = anchorObject.data('repo');
+    var ajaxURL = "https://api.npms.io/v2/package/" + repo;
+
+    // Return a promise object
+    return new Promise((resolve, reject) => {
+
+      // Ajax call to fetch your content
+      $.ajax({
+          method  : "GET",
+          url     : ajaxURL,
+          beforeSend: function( xhr ) {
+              // Show the loader
+              $('#smarttab').smartTab("loader", "show");
+          }
+      }).done(function( res ) {
+
+          var html = 'Ajax data about ' + repo + ' loaded from GitHub';
+          html += 'URL:' + ajaxURL;
+          html += 'Name: ' + res.collected.metadata.name;
+
+          // Resolve the Promise with the tab content
+          resolve(html);
+
+          // Hide the loader
+          $('#smarttab').smartTab("loader", "hide");
+      }).fail(function(err) {
+
+        // Reject the Promise with error message to show as tab content
+        reject( "An error loading the resource" );
+
+        // Hide the loader
+        $('#smarttab').smartTab("loader", "hide");
+      });
+
+    });
+
 });
+
+
+// SmartTab initialize
+$('#smarttab').smartTab();
 </pre>
 
-<h5 class="subTitle">Events</h5>
 
+
+<h3 id="parameters" class="mt-4 mb-4">Parameter Description:</h3>
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Default</th>
+    </tr>
+    <tr>
+      <th>selected</th>
+      <td><code>(integer)</code> Specify the selected tab on the first load</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>theme</th>
+      <td><code>(string)</code> Theme for the tab</td>
+      <td><code>'default'</code></td>
+    </tr>
+    <tr>
+      <th>orientation</th>
+      <td><code>(string)</code> Nav menu orientation</td>
+      <td><code>'horizontal'</code></td>
+    </tr>
+    <tr>
+      <th>justified</th>
+      <td><code>(boolean)</code> Nav menu justification</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>autoAdjustHeight</th>
+      <td><code>(boolean)</code> Automatically adjust content height</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>backButtonSupport</th>
+      <td><code>(boolean)</code> Enable the back button support</td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <th>enableURLhash</th>
+      <td><code>(boolean)</code> Enable selection of the step based on url hash</td>
+      <td>true</td>
+    </tr>
+
+    <tr>
+      <th>transition</th>
+      <td colspan="3">
+        <code>(object)</code> with settings for the transition
+        <br /><br />
+        <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+          <tr>
+              <th>animation</th>
+              <td><code>(string)</code> Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing</td>
+              <td><code>'none'</code></td>
+          </tr>
+          <tr>
+              <th>speed</th>
+              <td><code>(number)</code> Transion animation speed</td>
+              <td><code>'400'</code></td>
+          </tr>
+          <tr>
+              <th>easing</th>
+              <td><code>(string)</code> Transition animation easing. Not supported without a jQuery easing plugin</td>
+              <td>''</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>autoProgress</th>
+      <td colspan="3">
+        <code>(object)</code> with settings for the auto navigate tabs on interval
+        <br /><br />
+        <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+          <tr>
+              <th>enabled</th>
+              <td><code>(boolean)</code> Enable/Disable Auto navigation</td>
+              <td><code>false</code></td>
+          </tr>
+          <tr>
+              <th>interval</th>
+              <td><code>(number)</code> Auto navigate Interval (used only if "autoProgress" is enabled)</td>
+              <td><code>3500</code></td>
+          </tr>
+          <tr>
+              <th>stopOnFocus</th>
+              <td><code>(boolean)</code> Stop auto navigation on focus and resume on outfocus (used only if "autoProgress" is enabled)</td>
+              <td><code>true</code></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>keyboardSettings</th>
+      <td colspan="3">
+        <code>(object)</code> with settings for the keyboard navigation
+        <br /><br />
+        <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+          <tr>
+              <th>keyNavigation</th>
+              <td><code>(boolean)</code> Enable/Disable keyboard navigation</td>
+              <td><code>true</code></td>
+          </tr>
+          <tr>
+              <th>keyLeft</th>
+              <td><code>(array)</code> Left key code</td>
+              <td><code>[37]</code></td>
+          </tr>
+          <tr>
+              <th>keyRight</th>
+              <td><code>(array)</code> Right key code</td>
+              <td><code>[39]</code></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+</table>
+</div>
+
+<h3 id="events" class="mt-4 mb-4">Event Description</h3>
+<div class="table-responsive">
+<table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
+  <tr>
+    <th nowrap="nowrap">Event</th>
+    <th>Description</th>
+    <th width="300px">Parameters</th>
+  </tr>
+  <tr>
+    <th>leaveTab</th>
+    <td>Triggers when leaving a tab.<br />
+        This is a decision making event. based on its function return value (true/false)
+        the current step navigation can be cancelled.
+    </td>
+    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
+        <b>Int:</b> Index of the tab.<br />
+    </td>
+  </tr>
+
+  <tr>
+    <th>showTab</th>
+    <td>Triggers after a tab is loaded with content.
+    </td>
+    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
+        <b>Int:</b> Index of the tab.<br />
+    </td>
+  </tr>
+
+  <tr>
+    <th>tabContent</th>
+    <td>Triggers when a tab is about to load.<br />
+        This event will allow you to pass a string value as return parameter.
+        The string value will be used as the content of the tab.
+        You can also pass a Promise object
+        and on Promise completion the result will be used as the content of the tab.
+        This is usefull to load ajax contents and give you more control on the ajax calls.
+    </td>
+    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
+        <b>Int:</b> Index of the tab.<br />
+    </td>
+  </tr>
+
+</table>
+</div>
+
+<h4 class="subTitle">Event Initialize Examples</h4>
 <pre class="prettyprint linenums lang-js">
-$('#tabs').smartTab({
-    onLeaveTab: function(){ alert("Tab is leaving") },
-    onShowTab: function(){ alert("Tab is shown") }
-});
-</pre>
-
-<h5 class="subTitle">Using External Anchors</h5>
-<pre class="prettyprint linenums lang-js">
-// Smart Tab
-$('#tabs').smartTab({
-  autoProgress: false,
-  stopOnFocus:true,
-  transitionEffect:'vSlide'
+// Initialize the leaveTab event
+$("#smarttab").on("leaveTab", function(e, anchorObject, stepIndex) {
+   return confirm("Do you want to leave the tab "+stepIndex+"?");
 });
 
-function showST(tab_index) {
-  $('#tabs').smartTab('showTab', tab_index);
-}
-</pre>
+// Initialize the showTab event
+$("#smarttab").on("showTab", function(e, anchorObject, stepIndex) {
+   alert("You are on tab "+stepIndex+" now");
+});
 
-<pre class="prettyprint linenums lang-html">
-&lt;a class="stLinks" onclick="showST(0);" href="#"&gt;Show Tab 1&lt;/a&gt;
-&lt;a class="stLinks" onclick="showST(1);" href="#"&gt;Show Tab 2&lt;/a&gt;
-&lt;a class="stLinks" onclick="showST(2);" href="#"&gt;Show Tab 3&lt;/a&gt;
-&lt;a class="stLinks" onclick="showST(3);" href="#"&gt;Show Tab 4&lt;/a&gt;
-</pre>
+// Initialize Smart Tab
+$('#smarttab').smartTab();
+</pre></div>
 
-                <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
-                <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smarttab/blob/master/MIT-LICENSE.txt">MIT License</a>
-                 (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
-                 You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+              <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+              <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smarttab/blob/master/MIT-LICENSE.txt">MIT License</a>
+               (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+               You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
 
                <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
                  <div class="p-5">
@@ -361,6 +743,13 @@ function showST(tab_index) {
                   <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
                   <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-tab">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-tab">smart-tab</a> tag.</span>
                 </div>
+
+                <h3 id="archive" class="mt-4 mb-4">Archive <a href="#archive" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  Please see the older versions archive of this plugin.
+                </p>
+
+                <a href="archive/jquery-smart-tab/v2" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Tab v2</a>
 
                 <div class="card mt-5 shadow">
                  <div class="row no-gutters">
@@ -432,6 +821,77 @@ function showST(tab_index) {
 
   <script src="assets/js/headroom.min.js"></script>
   <script src="assets/js/argon.js"></script>
+
+  <!-- Include SmartTab JavaScript source -->
+  <script type="text/javascript" src="projects/demo/jquery-smart-tab/v3/js/jquery.smartTab.min.js"></script>
+
+  <script type="text/javascript">
+      $(document).ready(function() {
+
+          // SmartTab initialize
+          $('#smarttab').smartTab({
+            backButtonSupport: false, // Enable the back button support
+            enableURLhash: false,
+            autoProgress: { // Auto navigate tabs on interval
+                enabled: false, // Enable/Disable Auto navigation
+                interval: 3500, // Auto navigate Interval (used only if "autoProgress" is set to true)
+                stopOnFocus: true, // Stop auto navigation on focus and resume on outfocus
+            }
+          });
+
+
+          // Demo Button Events
+          $("#got_to_tab").on("change", function() {
+              // Go to tab
+              var tab_index = $(this).val() - 1;
+              $('#smarttab').smartTab("goToTab", tab_index);
+              return true;
+          });
+
+          $("#is_vertical").on("click", function() {
+              // Change Orientation
+              var options = {
+                orientation: ($(this).prop("checked") == true) ? 'vertical' : 'horizontal'
+              };
+              $('#smarttab').smartTab("setOptions", options);
+              return true;
+          });
+
+          $("#is_justified").on("click", function() {
+              // Change Justify
+              var options = {
+                justified: $(this).prop("checked")
+              };
+
+              $('#smarttab').smartTab("setOptions", options);
+              return true;
+          });
+
+          $("#animation").on("change", function() {
+              // Change theme
+              var options = {
+                transition: {
+                    animation: $(this).val()
+                },
+              };
+              $('#smarttab').smartTab("setOptions", options);
+              return true;
+          });
+
+          $("#theme_selector").on("change", function() {
+              // Change theme
+              var options = {
+                theme: $(this).val()
+              };
+              $('#smarttab').smartTab("setOptions", options);
+              return true;
+          });
+
+          // Set selected theme on page refresh
+          $("#theme_selector").change();
+
+      });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css"></script>
 </body>
