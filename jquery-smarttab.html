@@ -463,8 +463,9 @@ $('#smarttab').smartTab({
 
 <h5 class="subTitle">Implement Ajax Contents</h5>
 <p>
-    There is no in built ajax calls, instead you can listen to <code>tabContent</code> event.
-    The event can accept Promise as return or you can return the string as the content of the tab.
+    Ajax is not built-in, instead you can listen to <code>tabContent</code> event and provide the ajax contents.
+    This is usefull to load ajax contents and give you full control on the ajax calls.
+    The <code>tabContent</code> event can accept Promise as return or you can return the string as the content of the tab.
     The event will be passed with two parameters, <code>anchorObject</code> the jQuery object of the selected tab
     and <code>stepIndex</code> the zero based index number of the tabs.
 
@@ -518,6 +519,58 @@ $("#smarttab").on("tabContent", function(e, anchorObject, stepIndex) {
 $('#smarttab').smartTab();
 </pre>
 
+<h5 class="subTitle">Public functions</h5>
+<p>
+  There are public methods that are handy to do certain functions
+</p>
+
+<h6>goToTab</h6>
+<p>
+  Allow you to go to a certain tab.
+</p>
+<pre class="prettyprint linenums lang-js">
+// Go to tab
+$('#smarttab').smartTab("goToTab", 3);
+</pre>
+
+<h6>setOptions</h6>
+<p>
+  Allow you to set the options dynamically.
+</p>
+<pre class="prettyprint linenums lang-js">
+// Change theme
+var options = {
+  theme: 'dark'
+};
+$('#smarttab').smartTab("setOptions", options);
+
+// Change Orientation and Justify
+var options = {
+  orientation: 'vertical',
+  justified: false
+};
+$('#smarttab').smartTab("setOptions", options);
+
+// Change animation
+var options = {
+  transition: {
+      animation: 'slide-h'
+  },
+};
+$('#smarttab').smartTab("setOptions", options);
+</pre>
+
+<h6>loader</h6>
+<p>
+  Allow you to show/hide the built-n loader animation.
+</p>
+<pre class="prettyprint linenums lang-js">
+// Show the loader
+$('#smarttab').smartTab("loader", "show");
+
+// Hide the loader
+$('#smarttab').smartTab("loader", "hide");
+</pre>
 
 
 <h3 id="parameters" class="mt-4 mb-4">Parameter Description:</h3>
