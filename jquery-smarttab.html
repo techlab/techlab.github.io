@@ -309,19 +309,19 @@
                 <h6><a href="https://www.jsdelivr.com/package/npm/jquery-smarttab">CDN - jsDelivr</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.0/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.0/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.1/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
 <h6><a href="https://unpkg.com">CDN - UNPKG</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://unpkg.com/jquery-smarttab@3.0.0/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://unpkg.com/jquery-smarttab@3.0.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://unpkg.com/jquery-smarttab@3.0.0/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/jquery-smarttab@3.0.1/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
                 <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
@@ -428,6 +428,23 @@ $(document).ready(function(){
 </pre>
 
 That is it!
+<br /> <br />
+<h5 id="css-selection">CSS Files Selection  <a class="anchor-link" href="#css-selection"><i class="fa fa-link"></i></a></h5>
+<p>
+You can see many CSS files at <code>dist/css/</code> folder and may be confused about which one to use.
+The answer is you can use any of them, all the CSS files are standalone.
+</p>
+<p>
+The only difference in the files is the theme.
+The file <code>../dist/css/smart_tab_all.css</code> contains all the themes,
+while the <code>../dist/css/smart_tab.css</code> only contains the default theme.
+Also other files are theme-specific file named with the respective theme names, like <code>../dist/css/smart_tab_(theme name).css</code>.
+</p>
+<p>
+All these files have corresponding min files that compressed for size reduction,
+those files are recommended unless you don't want to customize the CSS yourself.
+Ex. <code>../dist/css/smart_tab_all.min.css</code>
+</p>
 
 <h3 id="advanced-options" class="mt-4 mb-4">Advanced Options <a class="anchor-link" href="#advanced-options"><i class="fa fa-link"></i></a></h3>
 

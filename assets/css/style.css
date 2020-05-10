@@ -169,7 +169,12 @@ a.anchor-link {
   padding-top: 3px
 }
 
-h3:focus a.anchor-link, h3:hover a.anchor-link {
+h1:focus a.anchor-link, h1:hover a.anchor-link,
+h2:focus a.anchor-link, h2:hover a.anchor-link,
+h3:focus a.anchor-link, h3:hover a.anchor-link,
+h4:focus a.anchor-link, h4:hover a.anchor-link,
+h5:focus a.anchor-link, h5:hover a.anchor-link,
+h6:focus a.anchor-link, h6:hover a.anchor-link {
   color: #4e4e4e
 }
 
