@@ -20,13 +20,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Dipu Raj">
 
-  <title>jQuery Smart Tab - The flexible jQuery tab control plugin - Tech Laboratory</title>
-  <meta property="og:title" content="jQuery Smart Tab - The flexible jQuery tab control plugin - Tech Laboratory" />
+  <title>jQuery Smart Wizard - The awesome jQuery step wizard plugin - Tech Laboratory</title>
+  <meta property="og:title" content="jQuery Smart Wizard - The awesome jQuery step wizard plugin - Tech Laboratory" />
 
-  <meta name="description" content="The flexible jQuery tab control plugin" />
-  <meta property="og:description" content="The flexible jQuery tab control plugin"/>
-  <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-tab/smarttab-v3-default.png" />
-  <link rel="image_src" href="http://techlaboratory.net/assets/media/jquery-smart-tab/smarttab-v3-default.png" />
+  <meta name="description" content="The awesome jQuery step wizard plugin" />
+  <meta property="og:description" content="The awesome jQuery step wizard plugin"/>
+  <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png" />
+  <link rel="image_src" href="http://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png" />
 
   <meta property="og:type" content="article" />
   <meta property="og:url" content="http://techlaboratory.net/" />
@@ -47,7 +47,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-startup-image" href="assets/images/TechLaboratory_logo.png">
 
-  <meta name="KEYWORDS" content="jQuery, shoppingcart, cart, smartcart, smartwizard, smarttab, step wizard, wizard, jcart, jwizard, shopping, plugin" />
+  <meta name="KEYWORDS" content="jQuery, smartwizard, step wizard, wizard, jwizard, plugin" />
 
   <!-- Favicon -->
   <link rel="icon" href="assets/images/fav/favicon-16x16.png" type="image/png">
@@ -64,10 +64,10 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <!-- Icons -->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Demo files -->
-  <link href="projects/demo/jquery-smart-tab/v3/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" />
+  <link href="projects/demo/jquery-smart-wizard/v5/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
@@ -172,20 +172,21 @@
           <div class="col-md-12">
             <div class="mt-3">
 
-              <h1 class="text-lg-left text-center">jQuery Smart Tab</h1>
-              <p class="lead mt-0">The flexible jQuery tab control plugin</p>
+              <h1 class="text-lg-left text-center">jQuery Smart Wizard</h1>
+              <p class="lead mt-0">The awesome jQuery step wizard plugin</p>
               <hr class="mt-0" />
               <div class="article-content">
                 <p>
-                  <strong>jQuery Smart Tab</strong> is a jQuery plugin for easy implemetaion of tab interface.
-                  Flexible and easy to implement with a lot of features that you will love like Ajax contents, verity of themes, cool animation effects, event support, easy to customize.
+                  <strong>jQuery Smart Wizard</strong> is a step wizard plugin for jQuery.
+                  Provides a neat and stylish interface for your forms, checkout screen, registration steps, etc.
+                  Easy implementation,  Bootstrap compatiblity, customizable toolbars, themes, events and Ajax support are few of the features.
                 </p>
 
                 <p>
-                  <a href="https://travis-ci.org/techlab/jquery-smarttab.svg?branch=master"><img src="https://travis-ci.org/techlab/jquery-smarttab.svg?branch=master" alt="Build Status" height="18"></a>
-                  <a href="https://badge.fury.io/js/jquery-smarttab"><img src="https://badge.fury.io/js/jquery-smarttab.svg" alt="npm version" height="18"></a>
-                  <a href="https://packagist.org/packages/techlab/jquery-smarttab"><img src="https://poser.pugx.org/techlab/jquery-smarttab/v/stable" alt="Latest Stable Version" height="18"></a>
-                  <a href="https://github.com/techlab/jquery-smarttab/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+                  <a href="https://travis-ci.org/techlab/jquery-smartwizard.svg?branch=master"><img src="https://travis-ci.org/techlab/jquery-smartwizard.svg?branch=master" alt="Build Status" height="18"></a>
+                  <a href="https://badge.fury.io/js/smartwizard"><img src="https://badge.fury.io/js/smartwizard.svg" alt="npm version" height="18"></a>
+                  <a href="https://packagist.org/packages/techlab/smartwizard"><img src="https://poser.pugx.org/techlab/smartwizard/v/stable" alt="Latest Stable Version" height="18"></a>
+                  <a href="https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
                   <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
                 </p>
 
@@ -198,13 +199,10 @@
                       <div class="col-auto ">
                           <label>Theme:</label>
                           <select id="theme_selector" class="form-control" >
-                                <option value="default" selected>Default</option>
-                                <option value="classic">Classic</option>
-                                <option value="dark">Dark</option>
-                                <option value="brick">Brick</option>
-                                <option value="bstabs">Bootstrap Tabs</option>
-                                <option value="bspills">Bootstrap Pills</option>
-                                <option value="">No Theme</option>
+                            <option value="default">Default</option>
+                            <option value="arrows" selected>Arrows</option>
+                            <option value="dots">Dots</option>
+                            <option value="dark">Dark</option>
                           </select>
                         </div>
                         <div class="col-auto ">
@@ -212,14 +210,14 @@
                           <select id="animation" class="form-control">
                                 <option value="none">None</option>
                                 <option value="fade">Fade</option>
-                                <option value="slide-horizontal">Slide Horizontal</option>
+                                <option value="slide-horizontal" selected>Slide Horizontal</option>
                                 <option value="slide-vertical">Slide Vertical</option>
                                 <option value="slide-swing">Slide Swing</option>
                           </select>
                         </div>
                         <div class="col-auto ">
                             <label>Go To:</label>
-                            <select id="got_to_tab" class="form-control">
+                            <select id="got_to_step" class="form-control">
                                   <option value="1">1</option>
                                   <option value="2">2</option>
                                   <option value="3">3</option>
@@ -229,58 +227,61 @@
 
                         <div class="col-auto ">
                           <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="is_vertical" value="1" />
-                            <label class="custom-control-label" for="is_vertical">Vertical</label>
-                          </div>
-                        </div>
-                        <div class="col-auto ">
-                          <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" id="is_justified" value="1" checked />
                             <label class="custom-control-label" for="is_justified">Justified</label>
                           </div>
                         </div>
+
+                        <div class="col-auto ">
+                          <label>External Buttons:</label><br>
+                          <div class="btn-group" role="group">
+                            <button class="btn btn-secondary btn-sm-" id="prev-btn" type="button">Go Previous</button>
+                            <button class="btn btn-secondary btn-sm-" id="next-btn" type="button">Go Next</button>
+                            <button class="btn btn-danger btn-sm-" id="reset-btn" type="button">Reset Wizard</button>
+                          </div>
+                        </div>
                   </div>
 
-                  <!-- SmartTab html -->
-                  <div id="smarttab">
+                  <!-- SmartWizard html -->
+                  <div id="smartwizard">
 
                       <ul class="nav">
-                          <li>
-                            <a class="nav-link" href="#tab-1">
-                              <strong>Tab 1</strong> This is tab description
+                          <li class="nav-item">
+                            <a class="nav-link" href="#step-1">
+                              <strong>Step 1</strong> <br>This is step description
                             </a>
                           </li>
-                          <li>
-                            <a class="nav-link" href="#tab-2">
-                              <strong>Tab 2</strong> This is tab description
+                          <li class="nav-item">
+                            <a class="nav-link" href="#step-2">
+                              <strong>Step 2</strong> <br>This is step description
                             </a>
                           </li>
-                          <li>
-                            <a class="nav-link" href="#tab-3">
-                              <strong>Tab 3</strong> This is tab description
+                          <li class="nav-item">
+                            <a class="nav-link" href="#step-3">
+                              <strong>Step 3</strong> <br>This is step description
                             </a>
                           </li>
-                          <li>
-                            <a class="nav-link" href="#tab-4">
-                              <strong>Tab 4</strong> This is tab description
+                          <li class="nav-item">
+                            <a class="nav-link" href="#step-4">
+                              <strong>Step 4</strong> <br>This is step description
                             </a>
                           </li>
                       </ul>
 
                       <div class="tab-content">
-                          <div id="tab-1" class="tab-pane" role="tabpanel">
-                              <h3>Tab 1 Content</h3>
+                          <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+                              <h3>Step 1 Content</h3>
                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                           </div>
-                          <div id="tab-2" class="tab-pane" role="tabpanel">
-                              <h3>Tab 2 Content</h3>
+                          <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+                              <h3>Step 2 Content</h3>
                               <div>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
                           </div>
-                          <div id="tab-3" class="tab-pane" role="tabpanel">
+                          <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                           </div>
-                          <div id="tab-4" class="tab-pane" role="tabpanel">
-                              <h3>Tab 4 Content</h3>
+                          <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                              <h3>Step 4 Content</h3>
                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                           </div>
@@ -289,66 +290,68 @@
 
                 </div>
 
-                <br />
+                <h5 class="text-uppercase mt-3">More Examples</h5>
                 <ul>
-                  <li><a href="projects/demo/jquery-smart-tab/v3" title="Basic">Basic example</a></li>
-                  <li><a href="projects/demo/jquery-smart-tab/v3/ajax" title="Ajax">Ajax example</a></li>
-                  <li><a href="projects/demo/jquery-smart-tab/v3/multiple" title="Multiple Tab">Multiple Tab</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v5" title="Basic">Basic example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v5/ajax" title="Ajax">Ajax example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v5/multiple" title="Multiple">Multiple Wizards</a></li>
                 </ul>
 
                 <h3 id="installation" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
-                <h6><a href="https://www.npmjs.com/package/jquery-smarttab">NPM</a></h6>
-                <pre class="prettyprint lang-cl">npm install jquery-smarttab</pre>
+                <h6><a href="https://www.npmjs.com/package/smartwizard">NPM</a></h6>
+                <pre class="prettyprint lang-cl">npm install smartwizard</pre>
 
-                <h6><a href="https://yarn.pm/jquery-smarttab">Yarn</a></h6>
-                <pre class="prettyprint lang-cl">yarn add jquery-smarttab</pre>
+                <h6><a href="https://yarn.pm/smartwizard">Yarn</a></h6>
+                <pre class="prettyprint lang-cl">yarn add smartwizard</pre>
 
-                <h6><a href="https://packagist.org/packages/techlab/jquery-smarttab">Composer</a></h6>
-                <pre class="prettyprint lang-cl">composer require techlab/jquery-smarttab</pre>
+                <h6><a href="https://packagist.org/packages/techlab/smartwizard">Composer</a></h6>
+                <pre class="prettyprint lang-cl">composer require techlab/smartwizard</pre>
 
-                <h6><a href="https://www.jsdelivr.com/package/npm/jquery-smarttab">CDN - jsDelivr</a></h6>
+                <h6><a href="https://www.jsdelivr.com/package/npm/smartwizard">CDN - jsDelivr</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@5.0.0/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@3.0.1/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/smartwizard@5.0.0/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
 <h6><a href="https://unpkg.com">CDN - UNPKG</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://unpkg.com/jquery-smarttab@3.0.1/dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://unpkg.com/smartwizard@5.0.0/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://unpkg.com/jquery-smarttab@3.0.1/dist/js/jquery.smartTab.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/smartwizard@5.0.0/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
                 <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <p>
-                  <a href="https://github.com/techlab/jquery-smarttab/archive/master.zip" title="Download jQuery Smart Tab on GitHub" class="btn btn-primary btn-sm">
-                    <i class="fa fa-download"></i> Download jQuery Smart Tab
+                  <a href="https://github.com/techlab/jquery-smartwizard/archive/master.zip" title="Download jQuery Smart Wizard on GitHub" class="btn btn-primary btn-sm">
+                    <i class="fa fa-download"></i> Download jQuery Smart Wizard
                   </a>
                 </p>
 
                 <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <ul class="feature-list">
-                  <li>Responsive design</li>
                   <li>Standalone CSS</li>
                   <li>Bootstrap compatible</li>
                   <li>Various themes included</li>
                   <li>Customizable CSS</li>
-                  <li>URL navigation and tab selection</li>
+                  <li>URL navigation and selection</li>
                   <li>Event support</li>
                   <li>Ajax content loading support</li>
                   <li>Keyboard navigation</li>
                   <li>Auto content height adjustment</li>
-                  <li>Compatible with all jQuery versions (jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
-                  <li>Easy to implement and minimal HTML required</li>
-                  <li>Supports all modern browsers</li>
-                  <li>Auto Progress (automatic navigation of tabs)</li>
                   <li>Cool transition animations (fade/slide-horizontal/slide-vertical/slide-swing)</li>
                   <li>External anchor support</li>
+                  <li>Easy to implement and minimal HTML required</li>
+                  <li>Customizable toolbar, option to add extra buttons</li>
+                  <li>Compatible with all jQuery versions (jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
+                  <li>Supports all modern browsers</li>
+                  <li>Responsive design</li>
+                  <li>In-built reset method</li>
+                  <li>Easy navigation with step anchors and navigation buttons</li>
                 </ul>
 
                 <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
@@ -359,49 +362,49 @@
                 </ol>
 
 
-                <h5>Include jQuery SmartTab CSS</h5>
+                <h5>Include jQuery SmartWizard CSS</h5>
                 <pre class="prettyprint linenums lang-html">
-&lt;link href="../dist/css/smart_tab_all.min.css" rel="stylesheet" type="text/css"&gt;
+&lt;link href="../dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css"&gt;
 </pre>
 
 <h5>The HTML Markup</h5>
 <pre class="prettyprint linenums lang-html">
-&lt;div id=&quot;smarttab&quot;&gt;
+&lt;div id=&quot;smartwizard&quot;&gt;
     &lt;ul class=&quot;nav&quot;&gt;
        &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#tab-1&quot;&gt;
-              Tab 1
+           &lt;a class=&quot;nav-link&quot; href=&quot;#step-1&quot;&gt;
+              Step 1
            &lt;/a&gt;
        &lt;/li&gt;
        &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#tab-2&quot;&gt;
-              Tab 2
+           &lt;a class=&quot;nav-link&quot; href=&quot;#step-2&quot;&gt;
+              Step 2
            &lt;/a&gt;
        &lt;/li&gt;
        &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#tab-3&quot;&gt;
-              Tab 3
+           &lt;a class=&quot;nav-link&quot; href=&quot;#step-3&quot;&gt;
+              Step 3
            &lt;/a&gt;
        &lt;/li&gt;
        &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#tab-4&quot;&gt;
-              Tab 4
+           &lt;a class=&quot;nav-link&quot; href=&quot;#step-4&quot;&gt;
+              Step 4
            &lt;/a&gt;
        &lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;div class=&quot;tab-content&quot;&gt;
-       &lt;div id=&quot;tab-1&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Tab content
+       &lt;div id=&quot;step-1&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+          Step content
        &lt;/div&gt;
-       &lt;div id=&quot;tab-2&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Tab content
+       &lt;div id=&quot;step-2&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+          Step content
        &lt;/div&gt;
-       &lt;div id=&quot;tab-3&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Tab content
+       &lt;div id=&quot;step-3&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+          Step content
        &lt;/div&gt;
-       &lt;div id=&quot;tab-4&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Tab content
+       &lt;div id=&quot;step-4&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
+          Step content
        &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
@@ -412,17 +415,17 @@
 &lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
 </pre>
 
-<h5>Include jQuery SmartTab JavaScript</h5>
+<h5>Include jQuery SmartWizard JavaScript</h5>
 <pre class="prettyprint linenums lang-html">
-&lt;script type="text/javascript" src="../dist/js/jquery.smartTab.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../dist/js/jquery.smartWizard.min.js"&gt;&lt;/script&gt;
 </pre>
 
-<h5>Initialize the jQuery SmartTab</h5>
+<h5>Initialize the jQuery SmartWizard</h5>
 <pre class="prettyprint linenums lang-js">
 $(document).ready(function(){
 
-  // SmartTab initialize
-  $('#smarttab').smartTab();
+  // SmartWizard initialize
+  $('#smartwizard').smartWizard();
 
 });
 </pre>
@@ -436,61 +439,80 @@ The answer is you can use any of them, all the CSS files are standalone.
 </p>
 <p>
 The only difference in the files is the theme.
-The file <code>../dist/css/smart_tab_all.css</code> contains all the themes,
-while the <code>../dist/css/smart_tab.css</code> only contains the default theme.
-Also other files are theme-specific file named with the respective theme names, like <code>../dist/css/smart_tab_(theme name).css</code>.
+The file <code>../dist/css/smart_wizard_all.css</code> contains all the themes,
+while the <code>../dist/css/smart_wizard.css</code> only contains the default theme.
+Also other files are theme-specific file named with the respective theme names, like <code>../dist/css/smart_wizard_(theme name).css</code>.
 </p>
 <p>
 All these files have corresponding min files that compressed for size reduction,
 those files are recommended unless you don't want to customize the CSS yourself.
-Ex. <code>../dist/css/smart_tab_all.min.css</code>
+Ex. <code>../dist/css/smart_wizard_all.min.css</code>
 </p>
 
 <h3 id="advanced-options" class="mt-4 mb-4">Advanced Options <a class="anchor-link" href="#advanced-options"><i class="fa fa-link"></i></a></h3>
 
 <h5>with all optional parameters</h5>
 <pre class="prettyprint linenums lang-js">
-$('#smarttab').smartTab({
-  selected: 0, // Initial selected tab, 0 = first tab
-  theme: 'default', // theme for the tab, related css need to include for other than default theme
-  orientation: 'horizontal', // Nav menu orientation. horizontal/vertical
+$('#smartwizard').smartWizard({
+  selected: 0, // Initial selected step, 0 = first step
+  theme: 'default', // theme for the wizard, related css need to include for other than default theme
   justified: true, // Nav menu justification. true/false
   autoAdjustHeight: true, // Automatically adjust content height
+  cycleSteps: false, // Allows to cycle the navigation of steps
   backButtonSupport: true, // Enable the back button support
-  enableURLhash: true, // Enable selection of the tab based on url hash
+  enableURLhash: true, // Enable selection of the step based on url hash
   transition: {
       animation: 'none', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
       speed: '400', // Transion animation speed
       easing:'' // Transition animation easing. Not supported without a jQuery easing plugin
   },
-  autoProgress: { // Auto navigate tabs on interval
-      enabled: false, // Enable/Disable Auto navigation
-      interval: 3500, // Auto navigate Interval (used only if "autoProgress" is set to true)
-      stopOnFocus: true, // Stop auto navigation on focus and resume on outfocus
+  toolbarSettings: {
+      toolbarPosition: 'bottom', // none, top, bottom, both
+      toolbarButtonPosition: 'right', // left, right, center
+      showNextButton: true, // show/hide a Next button
+      showPreviousButton: true, // show/hide a Previous button
+      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+  },
+  anchorSettings: {
+      anchorClickable: true, // Enable/Disable anchor navigation
+      enableAllAnchors: false, // Activates all anchors clickable all times
+      markDoneStep: true, // Add done css
+      markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+      removeDoneStepOnNavigateBack: false, // While navigate back done step after active step will be cleared
+      enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
   },
   keyboardSettings: {
       keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
       keyLeft: [37], // Left key code
       keyRight: [39] // Right key code
-  }
+  },
+  lang: { // Language variables for button
+      next: 'Next',
+      previous: 'Previous'
+  },
+  disabledSteps: [], // Array Steps disabled
+  errorSteps: [], // Highlight step with errors
+  hiddenSteps: [] // Hidden steps
 });
 </pre>
 
 <h5 class="subTitle">Implement Ajax Contents</h5>
 <p>
-    Ajax is not built-in, instead you can listen to <code>tabContent</code> event and provide the ajax contents.
+    Ajax is not built-in, instead you can listen to <code>stepContent</code> event and provide the ajax contents.
     This is usefull to load ajax contents and give you full control on the ajax calls.
-    The <code>tabContent</code> event can accept Promise as return or you can return the string as the content of the tab.
-    The event will be passed with two parameters, <code>anchorObject</code> the jQuery object of the selected tab
-    and <code>tabIndex</code> the zero based index number of the tabs.
+    The <code>stepContent</code> event can accept Promise as return or you can return the string as the content of the step.
+    The event will be passed with three parameters, <code>anchorObject</code> the jQuery object of the selected step,
+    <code>stepIndex</code> the zero based index number of the steps
+    and <code>stepDirection</code> to give the direction of navigation.
 
     Here is an ajax call example with Promise.
 </p>
 
 <pre class="prettyprint linenums lang-js">
-// Ajax content loading with "tabContent" event
-$("#smarttab").on("tabContent", function(e, anchorObject, tabIndex) {
+// Ajax content loading with "stepContent" event
+$("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDirection) {
 
+    // Read data value from the anchor element
     var repo    = anchorObject.data('repo');
     var ajaxURL = "https://api.npms.io/v2/package/" + repo;
 
@@ -503,35 +525,33 @@ $("#smarttab").on("tabContent", function(e, anchorObject, tabIndex) {
           url     : ajaxURL,
           beforeSend: function( xhr ) {
               // Show the loader
-              $('#smarttab').smartTab("loader", "show");
+              $('#smartwizard').smartWizard("loader", "show");
           }
       }).done(function( res ) {
-
           var html = 'Ajax data about ' + repo + ' loaded from GitHub';
           html += 'URL:' + ajaxURL;
-          html += 'Name: ' + res.collected.metadata.name;
+          html += 'Name:' + res.collected.metadata.name;
 
-          // Resolve the Promise with the tab content
+          // Resolve the Promise with the content
           resolve(html);
 
           // Hide the loader
-          $('#smarttab').smartTab("loader", "hide");
+          $('#smartwizard').smartWizard("loader", "hide");
       }).fail(function(err) {
 
-        // Reject the Promise with error message to show as tab content
-        reject( "An error loading the resource" );
+          // Reject the Promise with error message to show as content
+          reject( "An error loading the resource" );
 
-        // Hide the loader
-        $('#smarttab').smartTab("loader", "hide");
+          // Hide the loader
+          $('#smartwizard').smartWizard("loader", "hide");
       });
 
     });
-
 });
 
 
-// SmartTab initialize
-$('#smarttab').smartTab();
+// SmartWizard initialize
+$('#smartwizard').smartWizard();
 </pre>
 
 <h5 class="subTitle">Public functions</h5>
@@ -539,13 +559,13 @@ $('#smarttab').smartTab();
   There are public methods that are handy to do certain functions
 </p>
 
-<h6>goToTab</h6>
+<h6>goToStep</h6>
 <p>
-  Allow you to go to a certain tab.
+  Allow you to go to a certain step.
 </p>
 <pre class="prettyprint linenums lang-js">
-// Go to tab
-$('#smarttab').smartTab("goToTab", 3);
+// Go to step
+$('#smartwizard').smartWizard("goToStep", 3);
 </pre>
 
 <h6>setOptions</h6>
@@ -557,14 +577,7 @@ $('#smarttab').smartTab("goToTab", 3);
 var options = {
   theme: 'dark'
 };
-$('#smarttab').smartTab("setOptions", options);
-
-// Change Orientation and Justify
-var options = {
-  orientation: 'vertical',
-  justified: false
-};
-$('#smarttab').smartTab("setOptions", options);
+$('#smartwizard').smartWizard("setOptions", options);
 
 // Change animation
 var options = {
@@ -572,7 +585,55 @@ var options = {
       animation: 'slide-h'
   },
 };
-$('#smarttab').smartTab("setOptions", options);
+$('#smartwizard').smartWizard("setOptions", options);
+</pre>
+
+<h6>next</h6>
+<p>
+  Navigates to next step
+</p>
+<pre class="prettyprint linenums lang-js">
+// Navigate next
+$('#smartwizard').smartWizard("next");
+</pre>
+
+<h6>prev</h6>
+<p>
+  Navigates to previous step
+</p>
+<pre class="prettyprint linenums lang-js">
+// Navigate previous
+$('#smartwizard').smartWizard("prev");
+</pre>
+
+<h6>reset</h6>
+<p>
+  Reset the wizard to initial state
+</p>
+<pre class="prettyprint linenums lang-js">
+// Reset wizard
+$('#smartwizard').smartWizard("reset");
+</pre>
+
+<h6>stepState</h6>
+<p>
+  Change the state of a step
+</p>
+<pre class="prettyprint linenums lang-js">
+// Disable step
+$('#smartwizard').smartWizard("stepState", [1,3], "disable");
+
+// Hide step
+$('#smartwizard').smartWizard("stepState", [2], "hide");
+</pre>
+
+<h6>getStepIndex</h6>
+<p>
+  Gets the current step index
+</p>
+<pre class="prettyprint linenums lang-js">
+// Get current step index
+var stepIndex = $('#smartwizard').smartWizard("getStepIndex");
 </pre>
 
 <h6>loader</h6>
@@ -581,10 +642,10 @@ $('#smarttab').smartTab("setOptions", options);
 </p>
 <pre class="prettyprint linenums lang-js">
 // Show the loader
-$('#smarttab').smartTab("loader", "show");
+$('#smartwizard').smartWizard("loader", "show");
 
 // Hide the loader
-$('#smarttab').smartTab("loader", "hide");
+$('#smartwizard').smartWizard("loader", "hide");
 </pre>
 
 
@@ -599,38 +660,38 @@ $('#smarttab').smartTab("loader", "hide");
     </tr>
     <tr>
       <th>selected</th>
-      <td><code>(integer)</code> Specify the selected tab on the first load</td>
-      <td>0</td>
+      <td><code>(integer)</code> Specify the selected step on the first load</td>
+      <td><code>0</code></td>
     </tr>
     <tr>
       <th>theme</th>
-      <td><code>(string)</code> Theme for the tab</td>
+      <td><code>(string)</code> Theme</td>
       <td><code>'default'</code></td>
-    </tr>
-    <tr>
-      <th>orientation</th>
-      <td><code>(string)</code> Nav menu orientation</td>
-      <td><code>'horizontal'</code></td>
     </tr>
     <tr>
       <th>justified</th>
       <td><code>(boolean)</code> Nav menu justification</td>
-      <td>true</td>
+      <td><code>true</code></td>
     </tr>
     <tr>
       <th>autoAdjustHeight</th>
       <td><code>(boolean)</code> Automatically adjust content height</td>
-      <td>true</td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <th>cycleSteps</th>
+      <td><code>(boolean)</code> Keep the navigation cycle through</td>
+      <td><code>true</code></td>
     </tr>
     <tr>
       <th>backButtonSupport</th>
       <td><code>(boolean)</code> Enable the back button support</td>
-      <td>true</td>
+      <td><code>true</code></td>
     </tr>
     <tr>
       <th>enableURLhash</th>
-      <td><code>(boolean)</code> Enable selection of the tab based on url hash</td>
-      <td>true</td>
+      <td><code>(boolean)</code> Enable selection of the step based on url hash</td>
+      <td><code>true</code></td>
     </tr>
 
     <tr>
@@ -659,24 +720,75 @@ $('#smarttab').smartTab("loader", "hide");
     </tr>
 
     <tr>
-      <th>autoProgress</th>
+      <th>toolbarSettings</th>
       <td colspan="3">
-        <code>(object)</code> with settings for the auto navigate tabs on interval
+        <code>(object)</code> with settings for the toolbar
         <br /><br />
         <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
           <tr>
-              <th>enabled</th>
-              <td><code>(boolean)</code> Enable/Disable Auto navigation</td>
+              <th>toolbarPosition</th>
+              <td><code>(string)</code> Position of the toolbar (none, top, bottom, both)</td>
+              <td><code>bottom</code></td>
+          </tr>
+          <tr>
+              <th>toolbarButtonPosition</th>
+              <td><code>(string)</code> Button alignment of the toolbar (left, right, center)</td>
+              <td><code>right</code></td>
+          </tr>
+          <tr>
+              <th>showNextButton</th>
+              <td><code>(boolean)</code> show/hide a Next button</td>
+              <td><code>true</code></td>
+          </tr>
+          <tr>
+              <th>showPreviousButton</th>
+              <td><code>(boolean)</code> show/hide a Previous button</td>
+              <td><code>true</code></td>
+          </tr>
+          <tr>
+              <th>toolbarExtraButtons</th>
+              <td><code>(array of jQuery object)</code> Extra buttons to show on toolbar, array of jQuery input/buttons elements</td>
+              <td><code>[]</code></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>anchorSettings</th>
+      <td colspan="3">
+        <code>(object)</code> with settings for the anchor
+        <br /><br />
+        <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+          <tr>
+              <th>anchorClickable</th>
+              <td><code>(boolean)</code> Enable/Disable anchor navigation</td>
+              <td><code>true</code></td>
+          </tr>
+          <tr>
+              <th>enableAllAnchors</th>
+              <td><code>(boolean)</code> Activates all anchors clickable all times</td>
               <td><code>false</code></td>
           </tr>
           <tr>
-              <th>interval</th>
-              <td><code>(number)</code> Auto navigate Interval (used only if "autoProgress" is enabled)</td>
-              <td><code>3500</code></td>
+              <th>markDoneStep</th>
+              <td><code>(boolean)</code> Add done state on navigation</td>
+              <td><code>true</code></td>
+          </tr>
+
+          <tr>
+              <th>markAllPreviousStepsAsDone</th>
+              <td><code>(boolean)</code> When a step selected by url hash, all previous steps are marked done</td>
+              <td><code>true</code></td>
           </tr>
           <tr>
-              <th>stopOnFocus</th>
-              <td><code>(boolean)</code> Stop auto navigation on focus and resume on outfocus (used only if "autoProgress" is enabled)</td>
+              <th>removeDoneStepOnNavigateBack</th>
+              <td><code>(boolean)</code> While navigate back done step after active step will be cleared</td>
+              <td><code>false</code></td>
+          </tr>
+          <tr>
+              <th>enableAnchorOnDoneStep</th>
+              <td><code>(boolean)</code> Enable/Disable the done steps navigation</td>
               <td><code>true</code></td>
           </tr>
         </table>
@@ -708,6 +820,41 @@ $('#smarttab').smartTab("loader", "hide");
       </td>
     </tr>
 
+    <tr>
+      <th>lang</th>
+      <td colspan="3">
+        <code>(object)</code> Language variables for button
+        <br /><br />
+        <table class="table" cellspacing="0" cellpadding="3" border="0" align="left">
+          <tr>
+              <th>next</th>
+              <td><code>(string)</code> Next button label</td>
+              <td><code>'Next'</code></td>
+          </tr>
+          <tr>
+              <th>previous</th>
+              <td><code>(string)</code> Previous button label</td>
+              <td><code>'Previous'</code></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <th>disabledSteps</th>
+      <td><code>(array)</code> Steps disabled</td>
+      <td><code>[]</code></td>
+    </tr>
+    <tr>
+      <th>errorSteps</th>
+      <td><code>(array)</code> Step with errors</td>
+      <td><code>[]</code></td>
+    </tr>
+    <tr>
+      <th>hiddenSteps</th>
+      <td><code>(array)</code> Hidden steps</td>
+      <td><code>[]</code></td>
+    </tr>
 </table>
 </div>
 
@@ -720,36 +867,40 @@ $('#smarttab').smartTab("loader", "hide");
     <th width="300px">Parameters</th>
   </tr>
   <tr>
-    <th>leaveTab</th>
-    <td>Triggers when leaving a tab.<br />
+    <th>leaveStep</th>
+    <td>Triggers when leaving a step.<br />
         This is a decision making event. based on its function return value (true/false)
         the current navigation can be cancelled.
     </td>
-    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
-        <b>Int:</b> Index of the tab.<br />
+    <td><b>Object:</b> jQuery object of the anchor element.<br />
+        <b>Int:</b> Index of the step.<br />
+        <b>String:</b> Step direction.<br />
     </td>
   </tr>
 
   <tr>
-    <th>showTab</th>
-    <td>Triggers after a tab is loaded with content.
+    <th>showStep</th>
+    <td>Triggers after a step is loaded with content.
     </td>
-    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
-        <b>Int:</b> Index of the tab.<br />
+    <td><b>Object:</b> jQuery object of the step anchor element.<br />
+        <b>Int:</b> Index of the step.<br />
+        <b>String:</b> Step direction.<br />
+        <b>String:</b> Step position.<br />
     </td>
   </tr>
 
   <tr>
-    <th>tabContent</th>
-    <td>Triggers when a tab is about to load.<br />
+    <th>stepContent</th>
+    <td>Triggers when a step is about to load.<br />
         This event will allow you to pass a string value as return parameter.
-        The string value will be used as the content of the tab.
+        The string value will be used as the content of the step.
         You can also pass a Promise object
-        and on Promise completion the result will be used as the content of the tab.
+        and on Promise completion the result will be used as the content of the step.
         This is usefull to load ajax contents and give you more control on the ajax calls.
     </td>
-    <td><b>Object:</b> jQuery object of the tab anchor element.<br />
-        <b>Int:</b> Index of the tab.<br />
+    <td><b>Object:</b> jQuery object of the step anchor element.<br />
+        <b>Int:</b> Index of the step.<br />
+        <b>String:</b> Step direction.<br />
     </td>
   </tr>
 
@@ -758,22 +909,22 @@ $('#smarttab').smartTab("loader", "hide");
 
 <h4 class="subTitle">Event Initialize Examples</h4>
 <pre class="prettyprint linenums lang-js">
-// Initialize the leaveTab event
-$("#smarttab").on("leaveTab", function(e, anchorObject, tabIndex) {
-   return confirm("Do you want to leave the tab "+tabIndex+"?");
+// Initialize the leaveStep event
+$("#smartwizard").on("leaveStep", function(e, anchorObject, stepIndex, stepDirection) {
+   return confirm("Do you want to leave the step "+stepIndex+"?");
 });
 
-// Initialize the showTab event
-$("#smarttab").on("showTab", function(e, anchorObject, tabIndex) {
-   alert("You are on tab "+tabIndex+" now");
+// Initialize the showStep event
+$("#smartwizard").on("showStep", function(e, anchorObject, stepIndex, stepDirection, stepPosition) {
+   alert("You are on step "+stepIndex+" now");
 });
 
-// Initialize Smart Tab
-$('#smarttab').smartTab();
+// Initialize Smart Wizard
+$('#smartwizard').smartWizard();
 </pre></div>
 
               <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
-              <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smarttab/blob/master/MIT-LICENSE.txt">MIT License</a>
+              <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smartwizard/blob/master/MIT-LICENSE.txt">MIT License</a>
                (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
                You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
 
@@ -798,18 +949,18 @@ $('#smarttab').smartTab();
 
                 <h3 id="help-us-improve" class="mt-4 mb-4">Help us improve <a href="#help-us-improve" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <p>
-                  jQuery Smart Tab is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
+                  jQuery Smart Wizard is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
                   Please help us finding bugs or issues on this project, or give us an idea for a feature.
-                  Also, you are most welcome to improve the code, please create a pull-request on the project repository on <a href="https://github.com/techlab/jquery-smarttab">GitHub</a>.
+                  Also, you are most welcome to improve the code, please create a pull-request on the project repository on <a href="https://github.com/techlab/jquery-smartwizard">GitHub</a>.
                 </p>
                 <div class="alert alert-secondary message-box mt-3" role="alert">
                   <span class="alert-inner--icon"><i class="fa fa-github fa-lg"></i></span>
-                  <span class="alert-inner--text">Please do feature requests and bug reports on <a href="https://github.com/techlab/jquery-smarttab/issues">GitHub Issue Tracker</a>  on the repository.</span>
+                  <span class="alert-inner--text">Please do feature requests and bug reports on <a href="https://github.com/techlab/jquery-smartwizard/issues">GitHub Issue Tracker</a>  on the repository.</span>
                 </div>
 
                 <div class="alert alert-secondary message-box" role="alert">
                   <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
-                  <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-tab">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-tab">smart-tab</a> tag.</span>
+                  <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-wizard">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-wizard">smart-wizard</a> tag.</span>
                 </div>
 
                 <h3 id="archive" class="mt-4 mb-4">Archive <a href="#archive" class="anchor-link"><i class="fa fa-link"></i></a></h3>
@@ -817,7 +968,9 @@ $('#smarttab').smartTab();
                   Please see the older versions archive of this plugin.
                 </p>
 
-                <a href="archive/jquery-smart-tab/v2" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Tab v2</a>
+                <a href="archive/jquery-smart-wizard/v4" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Wizard v4</a>
+                <a href="archive/jquery-smart-wizard/v2" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Wizard v2</a>
+
 
                 <div class="card mt-5 shadow">
                  <div class="row no-gutters">
@@ -890,38 +1043,64 @@ $('#smarttab').smartTab();
   <script src="assets/js/headroom.min.js"></script>
   <script src="assets/js/argon.js"></script>
 
-  <!-- Include SmartTab JavaScript source -->
-  <script type="text/javascript" src="projects/demo/jquery-smart-tab/v3/js/jquery.smartTab.min.js"></script>
+  <!-- Include SmartWizard JavaScript source -->
+  <script type="text/javascript" src="projects/demo/jquery-smart-wizard/v5/js/jquery.smartWizard.min.js"></script>
 
   <script type="text/javascript">
-      $(document).ready(function() {
+      $(document).ready(function(){
 
-          // SmartTab initialize
-          $('#smarttab').smartTab({
-            backButtonSupport: false, // Enable the back button support
-            enableURLhash: false,
-            autoProgress: { // Auto navigate tabs on interval
-                enabled: false, // Enable/Disable Auto navigation
-                interval: 3500, // Auto navigate Interval (used only if "autoProgress" is set to true)
-                stopOnFocus: true, // Stop auto navigation on focus and resume on outfocus
-            }
+          // Step show event
+          $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
+              $("#prev-btn").removeClass('disabled');
+              $("#next-btn").removeClass('disabled');
+              if(stepPosition === 'first') {
+                  $("#prev-btn").addClass('disabled');
+              } else if(stepPosition === 'last') {
+                  $("#next-btn").addClass('disabled');
+              } else {
+                  $("#prev-btn").removeClass('disabled');
+                  $("#next-btn").removeClass('disabled');
+              }
+          });
+
+          // Smart Wizard
+          $('#smartwizard').smartWizard({
+              selected: 0,
+              theme: 'arrows',
+              transition: {
+                  animation: 'slide-horizontal', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
+              },
+              toolbarSettings: {
+                  toolbarPosition: 'bottom', // both bottom
+                  toolbarButtonPosition: 'center', // both bottom
+              }
+          });
+
+          // External Button Events
+          $("#reset-btn").on("click", function() {
+              // Reset wizard
+              $('#smartwizard').smartWizard("reset");
+              return true;
+          });
+
+          $("#prev-btn").on("click", function() {
+              // Navigate previous
+              $('#smartwizard').smartWizard("prev");
+              return true;
+          });
+
+          $("#next-btn").on("click", function() {
+              // Navigate next
+              $('#smartwizard').smartWizard("next");
+              return true;
           });
 
 
           // Demo Button Events
-          $("#got_to_tab").on("change", function() {
-              // Go to tab
-              var tab_index = $(this).val() - 1;
-              $('#smarttab').smartTab("goToTab", tab_index);
-              return true;
-          });
-
-          $("#is_vertical").on("click", function() {
-              // Change Orientation
-              var options = {
-                orientation: ($(this).prop("checked") == true) ? 'vertical' : 'horizontal'
-              };
-              $('#smarttab').smartTab("setOptions", options);
+          $("#got_to_step").on("change", function() {
+              // Go to step
+              var step_index = $(this).val() - 1;
+              $('#smartwizard').smartWizard("goToStep", step_index);
               return true;
           });
 
@@ -931,7 +1110,7 @@ $('#smarttab').smartTab();
                 justified: $(this).prop("checked")
               };
 
-              $('#smarttab').smartTab("setOptions", options);
+              $('#smartwizard').smartWizard("setOptions", options);
               return true;
           });
 
@@ -942,7 +1121,7 @@ $('#smarttab').smartTab();
                     animation: $(this).val()
                 },
               };
-              $('#smarttab').smartTab("setOptions", options);
+              $('#smartwizard').smartWizard("setOptions", options);
               return true;
           });
 
@@ -951,12 +1130,9 @@ $('#smarttab').smartTab();
               var options = {
                 theme: $(this).val()
               };
-              $('#smarttab').smartTab("setOptions", options);
+              $('#smartwizard').smartWizard("setOptions", options);
               return true;
           });
-
-          // Set selected theme on page refresh
-          $("#theme_selector").change();
 
       });
   </script>
