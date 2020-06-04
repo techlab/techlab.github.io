@@ -56,6 +56,34 @@
   <link rel="shortcut icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
   <meta name="msapplication-TileImage" content="assets/images/fav/favicon-96x96.png">
 
+  <script type="text/javascript">
+    function resolveURL() {
+      var url         = window.location.href;
+
+      // Try to resolve the URL
+      var redirectTo  = '';
+      if (url.indexOf('/smartwizard') !== -1) {
+        redirectTo  += 'jquery-smartwizard';
+      } else if (url.indexOf('/smarttab') !== -1) {
+        redirectTo  += 'jquery-smarttab';
+      } else if (url.indexOf('/smartcart') !== -1) {
+        redirectTo  += 'smartcart';
+      }
+
+      if (redirectTo.length > 0) {
+        if (url.indexOf('/demo') !== -1) {
+          redirectTo  += '#demo';
+        } else if (url.indexOf('/documentation') !== -1) {
+          redirectTo  += '#documentation';
+        }
+
+        window.location = redirectTo;
+      }
+    }
+
+    resolveURL();
+  </script>
+
   <!-- Argon CSS -->
   <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
   <link type="text/css" href="assets/css/style.css" rel="stylesheet">
