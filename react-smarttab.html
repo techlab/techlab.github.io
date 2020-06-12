@@ -1,0 +1,366 @@
+<!--
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Dipu Raj">
+
+  <title>React Smart Tab - The awesome react tab control plugin - Tech Laboratory</title>
+  <meta property="og:title" content="React Smart Tab - The awesome react tab control plugin - Tech Laboratory" />
+
+  <meta name="description" content="The awesome react tab control plugin" />
+  <meta property="og:description" content="The awesome react tab control plugin"/>
+  <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-tab/smarttab-v3-default.png" />
+  <link rel="image_src" href="http://techlaboratory.net/assets/media/jquery-smart-tab/smarttab-v3-default.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="http://techlaboratory.net/" />
+  <meta property="og:site_name" content="TechLaboratory.net" />
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- define site's owner twitter id -->
+  <meta name="twitter:site" content="tlaboratory">
+  <!--<meta property="fb:admins" content="673048839" />-->
+  <meta property="fb:app_id" content="673048839" />
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#0da4d3">
+  <!-- Windows Phone -->
+  <meta name="msapplication-TileColor" content="#0da4d3">
+  <meta name="msapplication-navbutton-color" content="#0da4d3">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-startup-image" href="assets/images/TechLaboratory_logo.png">
+
+  <meta name="KEYWORDS" content="React, Component, Library, smarttab, step wizard, wizard, tab" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/fav/favicon-16x16.png" type="image/png">
+  <link rel="icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileImage" content="assets/images/fav/favicon-96x96.png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-18629864-3');
+  </script>
+
+  <!-- Google Ads -->
+  <script data-ad-client="ca-pub-8226185437441708" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand mr-lg-5" href="./">
+          <img src="assets/images/TechLaboratory_40.png" alt="brand">
+        </a>
+        <button class="navbar-toggler text-muted" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="./">
+                  <img src="assets/images/TechLaboratory_logo_40.png" alt="brand">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a href="./" class="nav-link" role="button">
+                <span class="nav-link-inner--text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">Projects</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="jquery-smartwizard" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
+                      <p class="description d-md-inline-block mb-0">The awesome jQuery step wizard plugin</p>
+                    </div>
+                  </a>
+                  <a href="smartcart" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Cart</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+                    </div>
+                  </a>
+                  <a href="jquery-smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">Flexible jQuery Tab Control plug-in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://github.com/techlab" data-toggle="tooltip" title="Visit us on GitHub">
+                <i class="fa fa-github fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon pt-0 pb-0 text-primary" href="https://www.paypal.me/dipuraj" data-toggle="tooltip" title="Donate on PayPal">
+                <i class="fa fa-paypal fa-border- shadow"></i>
+                <span class="nav-link-inner--text d-lg-none">Paypal</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-lg pb-5">
+      <div class="container">
+        <div class="row row-grid">
+
+          <div class="col-md-12">
+            <div class="mt-3">
+
+              <h1 class="text-lg-left text-center">React Smart Tab</h1>
+              <p class="lead mt-0">The awesome react tab control plugin</p>
+              <hr class="mt-0" />
+              <div class="article-content">
+                <p>
+                  <strong>React Smart Tab</strong> is a React component library for easy implementation of tab interface.
+                </p>
+
+                <div  class="alert alert-secondary" role="alert">
+                  If you think it is cool, you should also check it's sibling <a href="http://techlaboratory.net/jquery-smarttab">jQuery Smart Tab</a>
+                </div>
+
+                <p>
+                  <a href="https://travis-ci.org/techlab/react-smarttab.svg?branch=master"><img src="https://travis-ci.org/techlab/react-smarttab.svg?branch=master" alt="Build Status" height="18"></a>
+                  <a href="https://badge.fury.io/js/react-smarttab"><img src="https://badge.fury.io/js/react-smarttab.svg" alt="npm version" height="18"></a>
+                  <a href="https://github.com/techlab/react-smarttab/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+                  <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
+                </p>
+
+                <h3 id="installation" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h6><a href="https://www.npmjs.com/package/react-smarttab">NPM</a></h6>
+                <pre class="prettyprint lang-cl">npm install react-smarttab --save</pre>
+
+                <h6><a href="https://yarn.pm/react-smarttab">Yarn</a></h6>
+                <pre class="prettyprint lang-cl">yarn add react-smarttab</pre>
+
+                <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul class="feature-list">
+                  <li>Responsive design</li>
+                  <li>Standalone CSS</li>
+                  <li>Bootstrap compatible</li>
+                  <li>Various themes included</li>
+                  <li>Customizable CSS</li>
+                  <li>Easy to implement</li>
+                  <li>Supports all modern browsers</li>
+                </ul>
+
+                <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
+
+                <h5>Usage</h5>
+
+<pre class="prettyprint linenums lang-jsx">
+import React from 'react'
+
+import { Tabs, TabNav, TabNavItem, TabContent, TabPanel } from 'react-smarttab'
+import 'react-smarttab/dist/index.css'
+
+const App = () => {
+
+  return (
+      &#x3C;Tabs selected=&#x27;tab-1&#x27; theme=&#x27;dark&#x27; orientation=&#x27;vertical&#x27;&#x3E;
+        &#x3C;TabNav&#x3E;
+          &#x3C;TabNavItem tab=&#x22;tab-1&#x22;&#x3E;Tab 1&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem tab=&#x22;tab-2&#x22;&#x3E;Tab 2&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem tab=&#x22;tab-3&#x22;&#x3E;Tab 3&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem tab=&#x22;tab-4&#x22;&#x3E;Tab 4&#x3C;/TabNavItem&#x3E;
+        &#x3C;/TabNav&#x3E;
+
+        &#x3C;TabContent&#x3E;
+          &#x3C;TabPanel id=&#x22;tab-1&#x22;&#x3E;
+            Tab 1 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel id=&#x22;tab-2&#x22;&#x3E;
+            Tab 2 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel id=&#x22;tab-3&#x22;&#x3E;
+            Tab 3 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel id=&#x22;tab-4&#x22;&#x3E;
+            Tab 4 Content
+          &#x3C;/TabPanel&#x3E;
+        &#x3C;/TabContent&#x3E;
+      &#x3C;/Tabs&#x3E;
+  )
+}
+
+export default App
+</pre>
+
+
+              <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+              <p>Released under the terms of the <a href="https://github.com/techlab/react-smarttab/blob/master/MIT-LICENSE.txt">MIT License</a>
+               (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+               You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+
+               <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
+                 <div class="p-5">
+                   <div class="row align-items-center">
+                     <div class="col-lg-8">
+                       <h3 class="text-white">A little help is always a beautiful thing...</h3>
+                       <p class="lead text-white mt-3">
+                         We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
+                       </p>
+                     </div>
+                     <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
+                       <a href="https://www.paypal.me/dipuraj" class="btn btn-secondary">
+                         <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
+                       </a>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+
+
+                <h3 id="help-us-improve" class="mt-4 mb-4">Help us improve <a href="#help-us-improve" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <p>
+                  React Smart Tab is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
+                  Please help us finding bugs or issues on this project, or give us an idea for a feature.
+                  Also, you are most welcome to improve the code, please create a pull-request on the project repository on <a href="https://github.com/techlab/react-smarttab">GitHub</a>.
+                </p>
+                <div class="alert alert-secondary message-box mt-3" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-github fa-lg"></i></span>
+                  <span class="alert-inner--text">Please do feature requests and bug reports on <a href="https://github.com/techlab/react-smarttab/issues">GitHub Issue Tracker</a>  on the repository.</span>
+                </div>
+
+                <div class="alert alert-secondary message-box" role="alert">
+                  <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
+                  <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-tab">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-tab">smart-tab</a> tag.</span>
+                </div>
+
+                <div class="card mt-5 shadow">
+                 <div class="row no-gutters">
+                   <div class="col-md-2">
+                     <img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
+                   </div>
+                   <div class="col-md-10">
+                     <div class="card-body">
+                       <h4 class="card-title mb-1"><a href="http://dipu.me">Dipu Raj</a></h4>
+                       <p class="card-text text-muted-">
+                          Full-stack developer in JavaScript, PHP and C# with added interest in Angular, React, jQuery and Bootstrap.
+                          Believes the code should be as beautiful as the design.
+                      </p>
+                     </div>
+                   </div>
+                 </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+
+  </main>
+
+  <footer class="footer bg-gradient-lighter2 border-top2">
+    <div class="container container-lg">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4 col-sm-12 text-lg-left text-center">
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="./">Tech Laboratory</a>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12">
+          <ul class="nav nav-footer  justify-content-center justify-content-lg-end text-lg-right text-center">
+            <li class="nav-item">
+              <a href="./" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="jquery-smartwizard" class="nav-link">jQuery Smart Wizard</a>
+            </li>
+            <li class="nav-item">
+              <a href="smartcart" class="nav-link">jQuery Smart Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="jquery-smarttab" class="nav-link">jQuery Smart Tab</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="privacy" class="nav-link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="assets/js/headroom.min.js"></script>
+  <script src="assets/js/argon.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=css"></script>
+</body>
+</html>
