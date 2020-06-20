@@ -103,3 +103,41 @@ function getProgessClass(score) {
 
   return css;
 }
+
+function getNpmDownloads(projs) {
+  var projStr = projs.join(',');
+
+  var ajaxURL = "https://api.npmjs.org/downloads/point/last-month/" + projStr;
+
+  // Ajax call to fetch your content
+  $.ajax({
+      method  : "GET",
+      url     : ajaxURL,
+      beforeSend: function( xhr ) {
+
+      }
+  }).done(function( res ) {
+      console.log(res);
+
+      var html = '';
+      html += '<div class="card bg-primary- mb-4 mx-1 order-1">';
+      html += '<div class="card-body ">';
+
+      $.each(projs, function( index, name ) {
+        var packRes = res[name];
+        html += '<h3 class="card-title mb-0 pb-1 pt-4">' + packRes.package + '</h3>';
+        html += '<hr class="m-0 pt-1 pb-3" />';
+        html += '<h6 class="mb-1">Downloads: ' + packRes.downloads + '</h6>';
+        html += '<p class="card-text"><small class="text-muted">Date: ' + packRes.start + ' - ' + packRes.end + '</small></p>';
+      });
+
+      html += '</div>';
+      html += '</div>';
+
+      $('#projectList').append(html);
+
+  }).fail(function(err) {
+    console.error(err);
+  });
+
+}

@@ -47,7 +47,6 @@ $(document).ready(function() {
         setTimeout(function(){
             $this.removeClass('close');
         }, 200);
-
     });
 
     // Headroom - show/hide navbar on scroll
