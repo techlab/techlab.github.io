@@ -184,7 +184,7 @@
             <div class="mt-3">
 
               <h1 class="text-lg-left text-center">React Smart Tab</h1>
-              <p class="lead mt-0">The awesome react tab control plugin</p>
+              <p class="lead mt-0">The awesome react tab component for ReactJS</p>
               <hr class="mt-0" />
               <div class="article-content">
                 <p>
@@ -202,6 +202,11 @@
                   <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
                 </p>
 
+                <h3 id="demo" class="mt-4 mb-4">Demo <a href="#demo" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <ul>
+                  <li><a href="projects/demo/react-smart-tab/v2" title="Example">View Example</a></li>
+                </ul>
+
                 <h3 id="installation" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
                 <h6><a href="https://www.npmjs.com/package/react-smarttab">NPM</a></h6>
                 <pre class="prettyprint lang-cl">npm install react-smarttab --save</pre>
@@ -218,6 +223,7 @@
                   <li>Customizable CSS</li>
                   <li>Easy to implement</li>
                   <li>Supports all modern browsers</li>
+                  <li>Callback event support</li>
                 </ul>
 
                 <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
@@ -233,25 +239,25 @@ import 'react-smarttab/dist/index.css'
 const App = () => {
 
   return (
-      &#x3C;Tabs selected=&#x27;tab-1&#x27; theme=&#x27;dark&#x27; orientation=&#x27;vertical&#x27;&#x3E;
+      &#x3C;Tabs&#x3E;
         &#x3C;TabNav&#x3E;
-          &#x3C;TabNavItem tab=&#x22;tab-1&#x22;&#x3E;Tab 1&#x3C;/TabNavItem&#x3E;
-          &#x3C;TabNavItem tab=&#x22;tab-2&#x22;&#x3E;Tab 2&#x3C;/TabNavItem&#x3E;
-          &#x3C;TabNavItem tab=&#x22;tab-3&#x22;&#x3E;Tab 3&#x3C;/TabNavItem&#x3E;
-          &#x3C;TabNavItem tab=&#x22;tab-4&#x22;&#x3E;Tab 4&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 1&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 2&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 3&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 4&#x3C;/TabNavItem&#x3E;
         &#x3C;/TabNav&#x3E;
 
         &#x3C;TabContent&#x3E;
-          &#x3C;TabPanel id=&#x22;tab-1&#x22;&#x3E;
+          &#x3C;TabPanel&#x3E;
             Tab 1 Content
           &#x3C;/TabPanel&#x3E;
-          &#x3C;TabPanel id=&#x22;tab-2&#x22;&#x3E;
+          &#x3C;TabPanel&#x3E;
             Tab 2 Content
           &#x3C;/TabPanel&#x3E;
-          &#x3C;TabPanel id=&#x22;tab-3&#x22;&#x3E;
+          &#x3C;TabPanel&#x3E;
             Tab 3 Content
           &#x3C;/TabPanel&#x3E;
-          &#x3C;TabPanel id=&#x22;tab-4&#x22;&#x3E;
+          &#x3C;TabPanel&#x3E;
             Tab 4 Content
           &#x3C;/TabPanel&#x3E;
         &#x3C;/TabContent&#x3E;
@@ -260,6 +266,110 @@ const App = () => {
 }
 
 export default App
+</pre>
+
+
+<h3 id="advanced-options" class="mt-4 mb-4">Advanced Options <a class="anchor-link" href="#advanced-options"><i class="fa fa-link"></i></a></h3>
+
+<h5>Optional parameters</h5>
+
+<pre class="prettyprint linenums lang-jsx">
+import React from 'react'
+
+import { Tabs, TabNav, TabNavItem, TabContent, TabPanel } from 'react-smarttab'
+import 'react-smarttab/dist/index.css'
+
+const App = () => {
+
+  return (
+      &#x3C;Tabs
+        tabName=&#x22;tab1&#x22;
+        selected={tabSettings.selected}
+        theme={tabSettings.theme}
+        orientation={tabSettings.vertical ? &#x27;vertical&#x27; : &#x27;horizontal&#x27;}
+        justified={tabSettings.justified.toString()}
+        enableURLhash={true}
+        onLeaveTab={(currentIndex, nextIndex) =&#x3E; { console.log(&#x22;leaveTab&#x22;, currentIndex, nextIndex) }}
+        onShowTab={(e) =&#x3E; { console.log(&#x22;showTab&#x22;, e) }}
+        &#x3E;
+        &#x3C;TabNav&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 1&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 2&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 3&#x3C;/TabNavItem&#x3E;
+          &#x3C;TabNavItem&#x3E;Tab 4&#x3C;/TabNavItem&#x3E;
+        &#x3C;/TabNav&#x3E;
+
+        &#x3C;TabContent&#x3E;
+          &#x3C;TabPanel&#x3E;
+            Tab 1 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel&#x3E;
+            Tab 2 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel&#x3E;
+            Tab 3 Content
+          &#x3C;/TabPanel&#x3E;
+          &#x3C;TabPanel&#x3E;
+            Tab 4 Content
+          &#x3C;/TabPanel&#x3E;
+        &#x3C;/TabContent&#x3E;
+      &#x3C;/Tabs&#x3E;
+  )
+}
+
+export default App
+</pre>
+
+<h3 id="parameter-description" class="mt-4 mb-4">Parameter Description <a class="anchor-link" href="#parameter-description"><i class="fa fa-link"></i></a></h3>
+
+<h5 id="param-selected">selected
+  <a class="anchor-link" href="#param-selected"><i class="fa fa-link"></i></a></h5>
+<p>
+  Zero based index of the tab to be selected.
+</p>
+
+<h5 id="param-tabname">tabName
+  <a class="anchor-link" href="#param-tabname"><i class="fa fa-link"></i></a></h5>
+<p>
+  Name of the tab. Used to prefix the URL hash
+</p>
+
+<h5 id="param-theme">theme
+  <a class="anchor-link" href="#param-theme"><i class="fa fa-link"></i></a></h5>
+<p>
+  The theme of the tab. Built in themes are (default, classic, dark, brick, round, pills, github, sourceforge)
+</p>
+
+<h5 id="param-orientation">orientation
+  <a class="anchor-link" href="#param-orientation"><i class="fa fa-link"></i></a></h5>
+<p>
+  Orientation of the tab anchors. <code>'vertical'</code> or <code>'horizontal'</code>
+</p>
+<h5 id="param-justified">justified
+  <a class="anchor-link" href="#param-justified"><i class="fa fa-link"></i></a></h5>
+<p>
+  justify the tab anchors. <code>'true'</code> or <code>'false'</code>
+</p>
+
+<h5 id="param-onleavetab">onLeaveTab
+  <a class="anchor-link" href="#param-onleavetab"><i class="fa fa-link"></i></a></h5>
+<p>
+  Callback function invoked when a tab is about to leave.
+  <code>currentIndex</code> and <code>nextIndex</code> are passed to the function.
+  The navigation can be cancelled by passing <code>false</code> to this function.
+</p>
+<pre class="prettyprint linenums lang-jsx">
+  onLeaveTab={(currentIndex, nextIndex) => { console.log("leaveTab", currentIndex, nextIndex) }}
+</pre>
+
+<h5 id="param-onshowtab">onShowTab
+  <a class="anchor-link" href="#param-onshowtab"><i class="fa fa-link"></i></a></h5>
+<p>
+  Callback function invoked when a tab is shown.
+  <code>currentIndex</code> are passed to the function.
+</p>
+<pre class="prettyprint linenums lang-jsx">
+  onShowTab={(currentIndex) => { console.log("showTab", currentIndex) }}
 </pre>
 
 
