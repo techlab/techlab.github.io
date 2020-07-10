@@ -93,42 +93,6 @@ a {
   margin-right: auto !important;
 }
 
-@media (min-width: 992px) {
-  #navbar-main .dropdown-menu {
-    top: 56px!important;
-    left: auto!important;
-    right: -20px!important;
-    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    box-shadow: 0 6px 12px rgba(0,0,0,.175);
-    padding: 0;
-    border-radius: 0;
-  }
-  #navbar-main .dropdown-menu:before {
-    display: none!important;
-  }
-  #navbar-main .dropdown-menu-inner {
-    padding: 0;
-  }
-  #navbar-main .dropdown-menu a {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    border-radius: .25rem;
-  }
-  #navbar-main .dropdown-menu a:hover {
-    color: #666!important;
-    background-color: #f5f5f5!important;
-  }
-  #navbar-main .dropdown:hover a.nav-link {
-    background-color: #f5f5f5!important;
-  }
-  #navbar-main .nav-item .media {
-    margin-bottom: 0 !important;
-  }
-
-  a.anchor-link {
-    left:auto
-  }
-}
 
 .headroom--not-top {
   background-color: #fff !important;
@@ -212,6 +176,28 @@ pre {
     color: #ccc;
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #090910;
+}
+
+/* New Anchor */
+.anchor a {
+  position: relative;
+  color: #090910
+}
+.anchor a::before {
+  content: "#";
+  position: absolute;
+  left: 100%;
+  margin: auto 5px;
+  font-weight: 400;
+  color: #ccc;
+}
+.anchor:focus a::before, .anchor:hover a::before {
+  color: #0da4d3;
+}
+
+/* Old Anchor */
 a.anchor-link {
   position: absolute;
   left: -16px;
@@ -229,4 +215,46 @@ h4:focus a.anchor-link, h4:hover a.anchor-link,
 h5:focus a.anchor-link, h5:hover a.anchor-link,
 h6:focus a.anchor-link, h6:hover a.anchor-link {
   color: #4e4e4e
+}
+
+
+@media (min-width: 992px) {
+  #navbar-main .dropdown-menu {
+    top: 56px!important;
+    left: auto!important;
+    right: -20px!important;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    padding: 0;
+    border-radius: 0;
+  }
+  #navbar-main .dropdown-menu:before {
+    display: none!important;
+  }
+  #navbar-main .dropdown-menu-inner {
+    padding: 0;
+  }
+  #navbar-main .dropdown-menu a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .25rem;
+  }
+  #navbar-main .dropdown-menu a:hover {
+    color: #666!important;
+    background-color: #f5f5f5!important;
+  }
+  #navbar-main .dropdown:hover a.nav-link {
+    background-color: #f5f5f5!important;
+  }
+  #navbar-main .nav-item .media {
+    margin-bottom: 0 !important;
+  }
+
+  .anchor a::before {
+    left: unset;
+    right: 100%;
+  }
+  a.anchor-link {
+    left:auto;
+  }
 }

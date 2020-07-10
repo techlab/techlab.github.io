@@ -117,7 +117,7 @@
 
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
             <li class="nav-item">
-              <a href="./" class="nav-link" role="button" data-toggle="tooltip" title="Go to home page">
+              <a href="./" class="nav-link" role="button">
                 <span class="nav-link-inner--text">Home</span>
               </a>
             </li>
@@ -205,13 +205,13 @@
                   <a href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
                 </p>
 
-                <h3 id="demo" class="mt-4 mb-4">Demo <a href="#demo" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="demo" class="anchor mt-4 mb-4"><a href="#demo">Demo</a></h3>
                 <ul>
                   <li><a href="projects/demo/jquery-smart-cart/v3/basic" title="Basic Example">Basic Example</a></li>
                   <li><a href="projects/demo/jquery-smart-cart/v3/paypal" title="PayPal Cart Example">PayPal Cart Example</a></li>
                 </ul>
 
-                <h3 id="downloads" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="installation" class="anchor mt-4 mb-4"><a href="#installation">Installation</a></h3>
                 <h6><a href="https://www.npmjs.com/package/jquery-smartcart">NPM</a></h6>
                 <pre class="prettyprint lang-cl">npm install jquery-smartcart</pre>
 
@@ -224,15 +224,14 @@
                 <h6><a href="https://packagist.org/packages/techlab/jquery-smartcart">Composer</a></h6>
                 <pre class="prettyprint lang-cl">composer require techlab/jquery-smartcart</pre>
 
-
-                <h3 id="downloads" class="mt-4 mb-4">Downloads <a href="#downloads" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="downloads" class="anchor mt-4 mb-4"><a href="#downloads">Downloads</a></h3>
                 <p>
                   <a href="https://github.com/techlab/jquery-smartcart/archive/master.zip" title="Download jQuery Smart Cart on GitHub" class="btn btn-primary btn-sm">
                     <i class="fa fa-download"></i> Download jQuery Smart Cart
                   </a>
                 </p>
 
-                <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="features" class="anchor mt-4 mb-4"><a href="#features">Features</a></h3>
                 <ul class="feature-list">
                   <li>In-built PayPal, Ajax and form submit methods</li>
                   <li>Bootstrap support</li>
@@ -251,29 +250,38 @@
                   <li>Pre-populate products on cart on load</li>
                 </ul>
 
-                <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
+                <h3 id="documentation" class="anchor mt-4 mb-4"><a href="#documentation">Documentation</a></h3>
 
-                <h5 id="requirements">Requirements</h5>
+                <h5 id="requirements" class="anchor"><a href="#requirements">Requirements</a></h5>
                 <ol class="feature-list">
                   <li><a href="http://getbootstrap.com/getting-started/#download">Bootstrap 3+</a></li>
                   <li><a href="http://jquery.com/">jQuery</a> (supports jQuery 1.9+, jQuery 2+, jQuery 3+)</li>
                 </ol>
 
+                <h5 id="include_css" class="anchor"><a href="#include_css">Include jQuery SmartCart CSS</a></h5>
+<pre class="prettyprint linenums lang-html">
+&lt;link href="../dist/css/smart_cart.min.css" rel="stylesheet" type="text/css"&gt;
+</pre>
 
-                <h5>Include Smart Cart JavaScript & CSS files</h5>
-                <pre class="prettyprint linenums lang-html">
-&lt;link href="../dist/css/smart_cart.min.css" rel="stylesheet" type="text/css" /&gt;
+<h5 id="include_jquery" class="anchor"><a href="#include_jquery">Include jQuery (ignore this if you have already included on the page)</a></h5>
+<pre class="prettyprint linenums lang-html">
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+</pre>
+
+<h5 id="include_smartcart" class="anchor"><a href="#include_smartcart">Include jQuery SmartCart JavaScript</a></h5>
+<pre class="prettyprint linenums lang-html">
 &lt;script type="text/javascript" src="../dist/js/jquery.smartCart.min.js"&gt;&lt;/script&gt;
 </pre>
 
-<h5>Initialize Smart Cart</h5>
+
+<h5 id="initialize_smartcart" class="anchor"><a href="#initialize_smartcart">Initialize the jQuery SmartCart</a></h5>
 <pre class="prettyprint linenums lang-js">
 $(document).ready(function() {
   $('#smartcart').smartCart();
 });
 </pre>
 
-                <h5>The HTML Markup</h5>
+                <h5 id="include_html" class="anchor"><a href="#include_html">The HTML Markup</a></h5>
                 <p>The HTML has two parts, product list and cart list.
                 The product list can be any design you prefer, Smart Cart will not managed it, but there is some setting need to do
                 so that Smart Cart can identify the "Add To Cart" buttons and the values of the product.
@@ -339,11 +347,11 @@ $(document).ready(function() {
 &lt;/form&gt;
 </pre>
 
-                <h3 id="smartcart-paypal" class="mt-4 mb-4">Paypal Implementation <a class="anchor-link" href="#smartcart-paypal"><i class="fa fa-link"></i></a></h3>
+                <h3 id="smartcart-paypal" class="anchor mt-4 mb-4"><a href="#smartcart-paypal">Paypal Implementation</a></h3>
                 <p>
                   Please see the above implementaion and here specifying only the part that need change, the cart html section and the cart invoke section.
                 </p>
-                <h5>HTML for the cart</h5>
+                <h5 id="smartcart-paypal-html" class="anchor mt-4 mb-4"><a href="#smartcart-paypal-html">HTML for the cart</a></h5>
 <pre class="prettyprint linenums lang-html">
 &lt;!-- Paypal Submit URL : https://www.paypal.com/cgi-bin/webscr --&gt;
 &lt;!-- Paypal Sandbox Submit URL: https://www.sandbox.paypal.com/cgi-bin/webscr --&gt;
@@ -361,7 +369,7 @@ $(document).ready(function() {
 &lt;/form&gt;
 </pre>
 
-                <h5>Invoke the SmartCart with Paypal option</h5>
+<h5 id="smartcart-paypal-invoke" class="anchor mt-4 mb-4"><a href="#smartcart-paypal-invoke">Invoke the SmartCart with Paypal option</a></h5>
 <pre class="prettyprint linenums lang-js">
 $('#smartcart').smartCart({
         submitSettings: {
@@ -377,7 +385,8 @@ $('#smartcart').smartCart({
 
 
 
-                <h3 id="paramdesc" class="mt-4 mb-4">Parameter Description:</h3>
+
+<h3 id="parameters" class="anchor mt-4 mb-4"><a href="#parameters">Parameters</a></h3>
                 <div class="table-responsive">
                   <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
                     <tbody>
@@ -540,7 +549,7 @@ $('#smartcart').smartCart({
 
 
 
-                <h3 id="eventdesc" class="mt-4 mb-4">Event Description:</h3>
+                <h3 id="events" class="anchor mt-4 mb-4"><a href="#events">Events</a></h3>
                 <div class="table-responsive">
                   <table class="table" align="left" border="0" cellpadding="3" cellspacing="0">
                     <tr>
@@ -604,7 +613,7 @@ $('#smartcart').smartCart();
 </pre>
 
 
-                <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="license" class="anchor mt-4 mb-4"><a href="#license">License</a></h3>
                 <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smartcart/blob/master/LICENSE">MIT License</a>
                  (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
                  You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
@@ -628,7 +637,7 @@ $('#smartcart').smartCart();
                </div>
 
 
-                <h3 id="help-us-improve" class="mt-4 mb-4">Help us improve <a href="#help-us-improve" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="help-us-improve" class="anchor mt-4 mb-4"><a href="#help-us-improve">Help us improve</a></h3>
                 <p>
                   jQuery Smart Cart is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
                   Please help us finding bugs or issues on this project, or give us an idea for a feature.
@@ -645,7 +654,7 @@ $('#smartcart').smartCart();
                 </div>
 
 
-                <h3 id="archive" class="mt-4 mb-4">Archive <a href="#archive" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="archive" class="anchor mt-4 mb-4"><a href="#archive">Archive</a></h3>
                 <p>
                   Please see the older versions archive of this plugin.
                 </p>

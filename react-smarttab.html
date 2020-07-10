@@ -117,7 +117,7 @@
 
           <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
             <li class="nav-item">
-              <a href="./" class="nav-link" role="button" data-toggle="tooltip" title="Go to home page">
+              <a href="./" class="nav-link" role="button">
                 <span class="nav-link-inner--text">Home</span>
               </a>
             </li>
@@ -205,19 +205,19 @@
                   If you think it is cool, you should also check it's sibling <a href="http://techlaboratory.net/jquery-smarttab">jQuery Smart Tab</a>
                 </div>
 
-                <h3 id="demo" class="mt-4 mb-4">Demo <a href="#demo" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="demo" class="anchor mt-4 mb-4"><a href="#demo">Demo</a></h3>
                 <ul>
                   <li><a href="projects/demo/react-smart-tab/v2" title="Example">View Example</a></li>
                 </ul>
 
-                <h3 id="installation" class="mt-4 mb-4">Installation <a href="#installation" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="installation" class="anchor mt-4 mb-4"><a href="#installation">Installation</a></h3>
                 <h6><a href="https://www.npmjs.com/package/react-smarttab">NPM</a></h6>
                 <pre class="prettyprint lang-cl">npm install react-smarttab --save</pre>
 
                 <h6><a href="https://yarn.pm/react-smarttab">Yarn</a></h6>
                 <pre class="prettyprint lang-cl">yarn add react-smarttab</pre>
 
-                <h3 id="features" class="mt-4 mb-4">Features <a href="#features" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="features" class="anchor mt-4 mb-4"><a href="#features">Features</a></h3>
                 <ul class="feature-list">
                   <li>Responsive design</li>
                   <li>Standalone CSS</li>
@@ -229,9 +229,9 @@
                   <li>Callback event support</li>
                 </ul>
 
-                <h3 id="documentation" class="mt-4 mb-4">Documentation <a class="anchor-link" href="#documentation"><i class="fa fa-link"></i></a></h3>
+                <h3 id="documentation" class="anchor mt-4 mb-4"><a href="#documentation">Documentation</a></h3>
 
-                <h5>Usage</h5>
+                <h5 id="usage" class="anchor"><a href="#usage">Usage</a></h5>
 
 <pre class="prettyprint linenums lang-jsx">
 import React from 'react'
@@ -272,9 +272,9 @@ export default App
 </pre>
 
 
-<h3 id="advanced-options" class="mt-4 mb-4">Advanced Options <a class="anchor-link" href="#advanced-options"><i class="fa fa-link"></i></a></h3>
+<h3 id="advanced-options" class="anchor mt-4 mb-4"><a href="#advanced-options">Advanced Options</a></h3>
 
-<h5>Optional parameters</h5>
+<h5 id="optional-parameters" class="anchor"><a href="#optional-parameters">Optional parameters</a></h5>
 
 <pre class="prettyprint linenums lang-jsx">
 import React from 'react'
@@ -323,39 +323,36 @@ const App = () => {
 export default App
 </pre>
 
-<h3 id="parameter-description" class="mt-4 mb-4">Parameter Description <a class="anchor-link" href="#parameter-description"><i class="fa fa-link"></i></a></h3>
+<h3 id="parameters" class="anchor mt-4 mb-4"><a href="#parameters">Parameters</a></h3>
 
-<h5 id="param-selected">selected
-  <a class="anchor-link" href="#param-selected"><i class="fa fa-link"></i></a></h5>
+<h5 id="param-selected" class="anchor mt-4 mb-2"><a href="#param-selected">selected</a></h5>
 <p>
   Zero based index of the tab to be selected.
 </p>
 
-<h5 id="param-tabname">tabName
-  <a class="anchor-link" href="#param-tabname"><i class="fa fa-link"></i></a></h5>
+<h5 id="param-tabname" class="anchor mt-4 mb-2"><a href="#param-tabname">tabName</a></h5>
 <p>
   Name of the tab. Used to prefix the URL hash
 </p>
 
-<h5 id="param-theme">theme
-  <a class="anchor-link" href="#param-theme"><i class="fa fa-link"></i></a></h5>
+<h5 id="param-theme" class="anchor mt-4 mb-2"><a href="#param-theme">theme</a></h5>
 <p>
   The theme of the tab. Built in themes are (default, classic, dark, brick, round, pills, github, sourceforge)
 </p>
 
-<h5 id="param-orientation">orientation
-  <a class="anchor-link" href="#param-orientation"><i class="fa fa-link"></i></a></h5>
+<h5 id="param-orientation" class="anchor mt-4 mb-2"><a href="#param-orientation">orientation</a></h5>
 <p>
   Orientation of the tab anchors. <code>'vertical'</code> or <code>'horizontal'</code>
 </p>
-<h5 id="param-justified">justified
-  <a class="anchor-link" href="#param-justified"><i class="fa fa-link"></i></a></h5>
+
+<h5 id="param-justified" class="anchor mt-4 mb-2"><a href="#param-justified">justified</a></h5>
 <p>
   justify the tab anchors. <code>'true'</code> or <code>'false'</code>
 </p>
 
-<h5 id="param-onleavetab">onLeaveTab
-  <a class="anchor-link" href="#param-onleavetab"><i class="fa fa-link"></i></a></h5>
+<h3 id="events" class="anchor mt-4 mb-4"><a href="#events">Events</a></h3>
+
+<h5 id="event-onleavetab" class="anchor mt-4 mb-2"><a href="#event-onleavetab">onLeaveTab</a></h5>
 <p>
   Callback function invoked when a tab is about to leave.
   <code>currentIndex</code> and <code>nextIndex</code> are passed to the function.
@@ -365,8 +362,7 @@ export default App
   onLeaveTab={(currentIndex, nextIndex) => { console.log("leaveTab", currentIndex, nextIndex) }}
 </pre>
 
-<h5 id="param-onshowtab">onShowTab
-  <a class="anchor-link" href="#param-onshowtab"><i class="fa fa-link"></i></a></h5>
+<h5 id="event-onshowtab" class="anchor mt-4 mb-2"><a href="#event-onshowtab">onShowTab</a></h5>
 <p>
   Callback function invoked when a tab is shown.
   <code>currentIndex</code> are passed to the function.
@@ -376,8 +372,8 @@ export default App
 </pre>
 
 
-              <h3 id="license" class="mt-4 mb-4">License <a href="#license" class="anchor-link"><i class="fa fa-link"></i></a></h3>
-              <p>Released under the terms of the <a href="https://github.com/techlab/react-smarttab/blob/master/MIT-LICENSE.txt">MIT License</a>
+              <h3 id="license" class="anchor mt-4 mb-4"><a href="#license">License</a></h3>
+              <p>Released under the terms of the <a href="https://github.com/techlab/react-smarttab/blob/master/LICENSE">MIT License</a>
                (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
                You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
 
@@ -400,7 +396,7 @@ export default App
                </div>
 
 
-                <h3 id="help-us-improve" class="mt-4 mb-4">Help us improve <a href="#help-us-improve" class="anchor-link"><i class="fa fa-link"></i></a></h3>
+                <h3 id="help-us-improve" class="anchor mt-4 mb-4"><a href="#help-us-improve">Help us improve</a></h3>
                 <p>
                   React Smart Tab is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
                   Please help us finding bugs or issues on this project, or give us an idea for a feature.
