@@ -1,0 +1,487 @@
+<!--
+
+=========================================================
+* Argon Design System - v1.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-design-system
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Dipu Raj">
+
+  <title>create-jquery-plugin - CLI for creating smart, modern jQuery Plugins - Tech Laboratory</title>
+
+  <!-- Social metadata -->
+  <meta property="og:title" content="create-jquery-plugin - CLI for creating smart, modern jQuery Plugins">
+  <meta property="og:description" content="CLI for creating smart, modern jQuery Plugins">
+  <meta property="og:url" content="http://techlaboratory.net/create-jquery-plugin">
+  <!-- <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png"> -->
+
+  <meta property="og:site_name" content="TechLaboratory">
+  <meta name="twitter:site" content="@tlaboratory">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="KEYWORDS" content="create-jquery-plugin, cli, util, gulp, jQuery, jquery-plugin, jquery-plugin-boilerplate, package, jwizard, plugin">
+
+  <meta name="theme-color" content="#0da4d3">
+  <meta name="msapplication-TileColor" content="#0da4d3">
+  <meta name="msapplication-navbutton-color" content="#0da4d3">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/fav/favicon-16x16.png" type="image/png">
+  <link rel="icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/fav/favicon.ico" type="image/x-icon">
+  <meta name="msapplication-TileImage" content="assets/images/fav/favicon-96x96.png">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="assets/css/argon.min.css" rel="stylesheet">
+  <link type="text/css" href="assets/css/style.css?v=4" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <script src="https://kit.fontawesome.com/e660a0efed.js" crossorigin="anonymous"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-18629864-3');
+  </script>
+
+  <!-- Google Ads -->
+  <script data-ad-client="ca-pub-8226185437441708" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+<body>
+  <header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
+      <div class="container">
+        <a class="navbar-brand" href="./">
+          <img src="assets/images/TechLaboratory_40.png" alt="Tech Laboratory">
+        </a>
+        <button class="navbar-toggler text-muted" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-bars fa-lg"></i>
+        </button>
+        <div class="navbar-collapse collapse" id="navbar_global">
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand">
+                <a href="./">
+                  <img src="assets/images/TechLaboratory_logo_40.png" alt="Tech Laboratory">
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="navbar-nav navbar-nav-hover ml-lg-4 navbar-icons-panel align-items-lg-left">
+            <li class="nav-item">
+              <a class="nav-link" role="button" href="https://www.paypal.me/dipuraj" data-toggle="tooltip" title="Donate on PayPal">
+                <i class="fab fa-lg- fa-paypal"></i>
+                <span class="nav-link-inner--text sr-only">Paypal</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" role="button" href="https://github.com/techlab" data-toggle="tooltip" title="Visit us on GitHub">
+                <i class="fab fa-lg- fa-github"></i>
+                <span class="nav-link-inner--text sr-only">GitHub</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" role="button" href="https://www.npmjs.com/~dipuraj" data-toggle="tooltip" title="Visit us on Npm">
+                <i class="fab fa-lg- fa-npm"></i>
+                <span class="nav-link-inner--text sr-only">Npm</span>
+              </a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a href="./" class="nav-link" role="button">
+                <span class="nav-link-inner--text">Home</span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">React Components</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="react-smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-lg-3">
+                      <h6 class="text-primary mb-md-1">React Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">The awesome react tab component for ReactJS</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link" data-toggle="dropdown" role="button">
+                <i class="ni ni-ui-04 d-lg-none"></i>
+                <span class="nav-link-inner--text">jQuery Plugins</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-xl">
+                <div class="dropdown-menu-inner">
+                  <a href="create-jquery-plugin" class="media d-flex align-items-center">
+                    <div class="media-body ml-lg-3">
+                      <h6 class="text-primary mb-md-1">create-jquery-plugin</h6>
+                      <p class="description d-md-inline-block mb-0">CLI for creating smart, modern jQuery Plugins</p>
+                    </div>
+                  </a>
+                  <a href="jquery-smartwizard" class="media d-flex align-items-center">
+                    <div class="media-body ml-lg-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
+                      <p class="description d-md-inline-block mb-0">The awesome jQuery step wizard plugin</p>
+                    </div>
+                  </a>
+                  <a href="smartcart" class="media d-flex align-items-center">
+                    <div class="media-body ml-lg-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Cart</h6>
+                      <p class="description d-md-inline-block mb-0">jQuery Shopping Cart plugin with PayPal payment support</p>
+                    </div>
+                  </a>
+                  <a href="jquery-smarttab" class="media d-flex align-items-center">
+                    <div class="media-body ml-lg-3">
+                      <h6 class="text-primary mb-md-1">jQuery Smart Tab</h6>
+                      <p class="description d-md-inline-block mb-0">Flexible jQuery Tab Control plug-in</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section section-lg pb-5">
+      <div class="container">
+        <div class="row row-grid">
+
+          <div class="col-md-12">
+            <div class="mt-3">
+
+  <h1 class="text-lg-left text-center">create-jquery-plugin</h1>
+  <p class="lead mt-0">CLI for creating ready-to-start modern jQuery Plugins</p>
+  <hr class="mt-0" />
+  <div class="article-content">
+    <p>
+      <strong>create-jquery-plugin</strong> is a CLI tool for creating a ready-to-start jQuery plugin development environment with modern configurations.
+      It will create a development environment with a pre-configured build system. So you can get started immediately with your plugin development.
+      Also, it is easily customizable that allows you to add or remove any tools or setup.
+      The development setup will include the boilerplate project for the jQuery plugin development, pre-configured gulp tasks for JavaScript transpile,
+      CSS/SCSS building, test/lint scripts, hot loading, example page, readme, etc.
+    </p>
+
+  <p>
+    <a title="Travis Build Status" href="https://travis-ci.org/techlab/create-jquery-plugin.svg?branch=master"><img src="https://travis-ci.org/techlab/create-jquery-plugin.svg?branch=master" alt="Build Status" height="18"></a>
+    <a title="NPM Version" href="https://www.npmjs.com/package/create-jquery-plugin"><img src="https://badge.fury.io/js/create-jquery-plugin.svg" alt="npm version" height="18"></a>
+    <a title="NPM Monthly Downloads" href="https://www.npmjs.com/package/create-jquery-plugin"><img src="https://badgen.net/npm/dm/create-jquery-plugin?icon=npm" alt="Npm Downloads" height="18"></a>
+    <a title="GitHub License" href="https://github.com/techlab/create-jquery-plugin/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
+    <a title="GitHub Repository" href="https://github.com/techlab/create-jquery-plugin"><img src="https://badgen.net/badge/icon/create-jquery-plugin?icon=github&label=&color=0da4d3" alt="GitHub Repo" height="18"></a>
+    <a title="Donate on Paypal" href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
+  </p>
+
+  <h3 id="usage" class="anchor mt-4 mb-4"><a href="#usage">Usage</a></h3>
+  <p>
+    The command will walk you through a few simple prompts and creates a ready to start local development setup for your new jQuery plugin.
+  </p>
+  <pre class="prettyprint lang-bash">npx create-jquery-plugin</pre>
+
+  <p>
+    Or, fast track with default settings, just pass your plugin name.
+  </p>
+  <pre class="prettyprint lang-bsh">npx create-jquery-plugin jquery-my-plugin</pre>
+
+  <p>
+    It will create a directory with the name of your package with all the tools installed.
+  </p>
+
+  <h3 id="features" class="anchor mt-4 mb-4"><a href="#features">Features</a></h3>
+  <ul class="feature-list">
+    <li>Easy-to-use CLI.</li>
+    <li>CSS and SCSS templates.</li>
+    <li>Creates ready-to-start local development environment.</li>
+    <li>Unit testing with <a href="https://jasmine.github.io/">Jasmine</a> and <a href="https://karma-runner.github.io/">Karma</a>.</li>
+  </ul>
+
+  <h3 id="development" class="anchor mt-4 mb-4"><a href="#development">How to start the development</a></h3>
+  <p>
+    To start the development process, <code>cd</code> to your new plugin directory and run <code>npm start</code> or <code>yarn start</code>.
+    For example, if your new plugin is <code>jquery-my-plugin</code>, just run
+  </p>
+
+  <pre class="prettyprint lang-bash">
+cd jquery-my-plugin
+npm start</pre>
+
+  <p>
+    It will open the <code>example/index.html</code> file with <a href="http://browserify.org/">Browserify</a> sync. You can start coding on the directory <code>src</code>, the example page will hot load as you make changes.
+  </p>
+
+  <h3 id="directory-structure" class="anchor mt-4 mb-4"><a href="#directory-structure">Directory Structure</a></h3>
+  <p>
+    The project boilerplate is from <a href="https://github.com/techlab/jquery-plugin-boilerplate">https://github.com/techlab/jquery-plugin-boilerplate</a>
+  </p>
+
+  <pre class="prettyprint lang-bash">
+jquery-my-plugin
+├── examples
+│   └── index.html
+├── node_modules
+├── src
+│   ├── js
+│   │   └── jquery-plugin-boilerplate.js
+│   └── scss
+│       └── jquery-plugin-boilerplate.scss
+├── test
+│   ├── test-template.html
+│   └── test.js
+├── .gitignore
+├── .npmignore
+├── CONTRIBUTING.md
+├── gulpfile.js
+├── karma.conf.js
+├── LICENSE
+├── package.json
+└── README.md</pre>
+
+
+  <h3 id="unit-test" class="anchor mt-4 mb-4"><a href="#unit-test">How to do unit testing</a></h3>
+  <p>
+    The development environment has pre-configured unit testing with <a href="https://jasmine.github.io/">Jasmine</a> and <a href="https://karma-runner.github.io/">Karma</a>.
+    The test scripts are under the <code>test</code> directory.
+    You can add new test cases there.
+    You can also configure the tests online on <a href="https://travis-ci.org/">Travis CI</a>.
+  </p>
+
+  <p>To run the unit testing:</p>
+  <pre class="prettyprint lang-bash">npm test</pre>
+
+  <h3 id="parameters" class="anchor mt-4 mb-4"><a href="#parameters">Parameters</a></h3>
+  <p>
+    Details on the parameters and settings on the <strong>create-jquery-plugin</strong> CLI tool.
+  </p>
+
+  <h5 id="param-package-name" class="anchor mt-4 mb-2"><a href="#param-package-name">Package Name</a></h5>
+  <p>
+    Package Name is the only required parameter on the tool.
+    You can provide it when tool prompts for it or you can pass as a first argument.
+    If you pass as an argument, the tool will work as a fast track mode and will not prompt for any other settings.
+    All other settings will be the default settings or the previous setting you have provided.
+  </p>
+
+  <h5 id="param-description" class="anchor mt-4 mb-2"><a href="#param-description">Description</a></h5>
+  <p>
+    It is the description of your package and it will be added to the README, package.json, and to the plugin files.
+    You can change it any time after you start the development.
+    Default is "Made with create-jquery-plugin".
+  </p>
+
+  <h5 id="param-version" class="anchor mt-4 mb-2"><a href="#param-version">Version</a></h5>
+  <p>
+    It is the version of your package and it will be added to the README, package.json, and to the plugin files.
+    You can change it any time after you start the development.
+    Default is "1.0.0".
+  </p>
+
+  <h5 id="param-author" class="anchor mt-4 mb-2"><a href="#param-author">Author</a></h5>
+  <p>
+    It is the author of your package and it will be added to the package.json, and to the plugin files.
+    You can change it any time after you start the development.
+    The tool will try to read it from the git if available otherwise it will be empty as default.
+  </p>
+
+  <h5 id="param-repository" class="anchor mt-4 mb-2"><a href="#param-repository">Repository</a></h5>
+  <p>
+    It is the repository URL of your package and it will be added to the package.json, and on plugin files.
+    You can change it any time after you start the development.
+    Default is empty.
+  </p>
+
+  <h5 id="param-license" class="anchor mt-4 mb-2"><a href="#param-license">License</a></h5>
+  <p>
+    It is the license of your package and it will be added to the README, package.json, and on plugin files.
+    You can change it any time after you start the development.
+    Default is "MIT".
+  </p>
+
+  <h5 id="param-package-manager" class="anchor mt-4 mb-2"><a href="#param-package-manager">Package Manager</a></h5>
+  <p>
+    It is the package-manager of your choice.
+    You can choose npm or yarn.
+    If you choose yarn, make sure you are <a href="https://classic.yarnpkg.com/en/docs/install/">installed yarn</a> already.
+    Default is npm.
+  </p>
+
+  <h5 id="param-template" class="anchor mt-4 mb-2"><a href="#param-template">Template</a></h5>
+  <p>
+    The plugin template to be used to setup your development environment.
+    You can choose "JavaScript with CSS" or "JavaScript with Sass".
+    The only differece between the two template is the later support SCSS while the first is CSS.
+    Default is "JavaScript with CSS".
+  </p>
+
+  <h3 id="acknowledgements" class="anchor mt-4 mb-4"><a href="#acknowledgements">Acknowledgements</a></h3>
+  <p>
+    Grateful to the authors and contributers of <a href="https://www.npmjs.com/package/create-react-library">create-react-library</a>
+    and <a href="https://github.com/facebook/create-react-app">create-react-app</a> from which this project is inspired.
+    Thankful to the <a href="https://github.com/techlab/jquery-plugin-boilerplate">jquery-plugin-boilerplate</a> for providing the project templates.
+    Also, thanks to the authors and contributors of the amazing Node.js tools used in this project.
+  </p>
+
+
+  <h3 id="license" class="anchor mt-4 mb-4"><a href="#license">License</a></h3>
+  <p>Released under the terms of the <a href="https://github.com/techlab/create-jquery-plugin/blob/master/LICENSE">MIT License</a>
+   (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
+   You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+
+   <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
+     <div class="p-5">
+       <div class="row align-items-center">
+         <div class="col-lg-8">
+           <h3 class="text-white">A little help is always a beautiful thing...</h3>
+           <p class="lead text-white mt-3">
+             We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
+           </p>
+         </div>
+         <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
+           <a href="https://www.paypal.me/dipuraj" class="btn btn-secondary">
+             <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
+           </a>
+         </div>
+       </div>
+     </div>
+   </div>
+
+
+  <h3 id="help-us-improve" class="anchor mt-4 mb-4"><a href="#help-us-improve">Help us improve</a></h3>
+  <p>
+    create-jquery-plugin is a free and open-source project, and we are trying hard to improve the project as per the feedback from you.
+    Please help us finding bugs or issues on this project, or give us an idea for a feature.
+    Also, you are most welcome to improve the code, please create a pull-request on the project repository on <a href="https://github.com/techlab/create-jquery-plugin">GitHub</a>.
+  </p>
+  <div class="alert alert-secondary message-box mt-3" role="alert">
+    <span class="alert-inner--icon"><i class="fa fa-github fa-lg"></i></span>
+    <span class="alert-inner--text">Please do feature requests and bug reports on <a href="https://github.com/techlab/create-jquery-plugin/issues">GitHub Issue Tracker</a>  on the repository.</span>
+  </div>
+
+            <div class="card mt-5 shadow">
+             <div class="row no-gutters">
+               <div class="col-md-2">
+                 <img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
+               </div>
+               <div class="col-md-10">
+                 <div class="card-body">
+                   <h4 class="card-title mb-1"><a href="http://dipu.me">Dipu Raj</a></h4>
+                   <p class="card-text text-muted-">
+                      Full-stack developer in JavaScript, PHP and C# with added interest in Angular, React, jQuery and Bootstrap.
+                      Believes the code should be as beautiful as the design.
+                  </p>
+                 </div>
+               </div>
+             </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+</main>
+
+  <footer class="footer bg-gradient-lighter2 border-top2">
+    <div class="container container-lg">
+      <div class="row align-items-center justify-content-md-between">
+        <div class="col-md-4 col-sm-12 text-lg-left text-center">
+          <div class="copyright">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>
+            <a href="./">Tech Laboratory</a>
+          </div>
+        </div>
+
+        <div class="col-md-8 col-sm-12">
+          <ul class="nav nav-footer justify-content-center justify-content-md-end text-md-right text-center">
+            <li class="nav-item">
+              <a href="./" class="nav-link">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="privacy" class="nav-link">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-12">
+          <ul class="nav nav-footer justify-content-center text-center">
+
+            <li class="nav-item">
+              <a href="react-smarttab" class="nav-link">React Smart Tab</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="jquery-smartwizard" class="nav-link">jQuery Smart Wizard</a>
+            </li>
+            <li class="nav-item">
+              <a href="smartcart" class="nav-link">jQuery Smart Cart</a>
+            </li>
+            <li class="nav-item">
+              <a href="jquery-smarttab" class="nav-link">jQuery Smart Tab</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12 justify-content-center text-center">
+          <img class="footer-logo" src="assets/images/TechLaboratory_logo_40.png" alt="Tech Laboratory">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <script src="assets/js/headroom.min.js"></script>
+  <script src="assets/js/argon.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=bsh"></script>
+</body>
+</html>
