@@ -20,11 +20,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Dipu Raj">
 
-  <title>create-jquery-plugin - CLI for creating smart, modern jQuery Plugins - Tech Laboratory</title>
+  <title>create-jquery-plugin - CLI for creating ready-to-start modern jQuery Plugins - Tech Laboratory</title>
 
   <!-- Social metadata -->
-  <meta property="og:title" content="create-jquery-plugin - CLI for creating smart, modern jQuery Plugins">
-  <meta property="og:description" content="CLI for creating smart, modern jQuery Plugins">
+  <meta property="og:title" content="create-jquery-plugin - CLI for creating ready-to-start modern jQuery Plugins">
+  <meta property="og:description" content="CLI for creating ready-to-start modern jQuery Plugins">
   <meta property="og:url" content="http://techlaboratory.net/create-jquery-plugin">
   <!-- <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png"> -->
 
@@ -149,7 +149,7 @@
                   <a href="create-jquery-plugin" class="media d-flex align-items-center">
                     <div class="media-body ml-lg-3">
                       <h6 class="text-primary mb-md-1">create-jquery-plugin</h6>
-                      <p class="description d-md-inline-block mb-0">CLI for creating smart, modern jQuery Plugins</p>
+                      <p class="description d-md-inline-block mb-0">CLI for creating ready-to-start modern jQuery Plugins</p>
                     </div>
                   </a>
                   <a href="jquery-smartwizard" class="media d-flex align-items-center">
@@ -195,7 +195,7 @@
   <div class="article-content">
     <p>
       <strong>create-jquery-plugin</strong> is a CLI tool for creating a ready-to-start jQuery plugin development environment with modern configurations.
-      It will create a development environment with a pre-configured build system. So you can get started immediately with your plugin development.
+      It will create a development environment with a pre-configured build system and you can get started immediately with your plugin development.
       Also, it is easily customizable that allows you to add or remove any tools or setup.
       The development setup will include the boilerplate project for the jQuery plugin development, pre-configured gulp tasks for JavaScript transpile,
       CSS/SCSS building, test/lint scripts, hot loading, example page, readme, etc.
@@ -212,7 +212,7 @@
 
   <h3 id="usage" class="anchor mt-4 mb-4"><a href="#usage">Usage</a></h3>
   <p>
-    The command will walk you through a few simple prompts and creates a ready to start local development setup for your new jQuery plugin.
+    The command will walk you through a few simple prompts and creates a ready-to-start local development setup for your new jQuery plugin.
   </p>
   <pre class="prettyprint lang-bash">npx create-jquery-plugin</pre>
 
@@ -247,6 +247,26 @@ npm start</pre>
     It will open the <code>example/index.html</code> file with <a href="http://browserify.org/">Browserify</a> sync. You can start coding on the directory <code>src</code>, the example page will hot load as you make changes.
   </p>
 
+  <h3 id="unit-test" class="anchor mt-4 mb-4"><a href="#unit-test">How to do unit testing</a></h3>
+  <p>
+    The development environment has pre-configured unit testing with <a href="https://jasmine.github.io/">Jasmine</a> and <a href="https://karma-runner.github.io/">Karma</a>.
+    The test scripts are under the <code>test</code> directory.
+    You can add new test cases there.
+    You can also configure the tests online on <a href="https://travis-ci.org/">Travis CI</a>.
+  </p>
+
+  <p>To run the unit testing:</p>
+  <pre class="prettyprint lang-bash">npm test</pre>
+
+  <h3 id="unit-test" class="anchor mt-4 mb-4"><a href="#unit-test">How to publish to npm</a></h3>
+  <p>
+    You can publish your new jQuery plugin to npm just like any other project.
+    Just run the <a href="https://docs.npmjs.com/creating-and-publishing-unscoped-public-packages#publishing-unscoped-public-packages">publish command</a> (you should be <a href="https://docs.npmjs.com/creating-a-new-npm-user-account#testing-your-new-account-with-npm-login">logged in to npm</a>)
+  </p>
+
+  <p>To publish:</p>
+  <pre class="prettyprint lang-bash">npm publish</pre>
+
   <h3 id="directory-structure" class="anchor mt-4 mb-4"><a href="#directory-structure">Directory Structure</a></h3>
   <p>
     The project boilerplate is from <a href="https://github.com/techlab/jquery-plugin-boilerplate">https://github.com/techlab/jquery-plugin-boilerplate</a>
@@ -274,17 +294,6 @@ jquery-my-plugin
 ├── package.json
 └── README.md</pre>
 
-
-  <h3 id="unit-test" class="anchor mt-4 mb-4"><a href="#unit-test">How to do unit testing</a></h3>
-  <p>
-    The development environment has pre-configured unit testing with <a href="https://jasmine.github.io/">Jasmine</a> and <a href="https://karma-runner.github.io/">Karma</a>.
-    The test scripts are under the <code>test</code> directory.
-    You can add new test cases there.
-    You can also configure the tests online on <a href="https://travis-ci.org/">Travis CI</a>.
-  </p>
-
-  <p>To run the unit testing:</p>
-  <pre class="prettyprint lang-bash">npm test</pre>
 
   <h3 id="parameters" class="anchor mt-4 mb-4"><a href="#parameters">Parameters</a></h3>
   <p>
@@ -448,11 +457,16 @@ jquery-my-plugin
       <div class="row mt-3">
         <div class="col-12">
           <ul class="nav nav-footer justify-content-center text-center">
-
             <li class="nav-item">
               <a href="react-smarttab" class="nav-link">React Smart Tab</a>
             </li>
 
+            <li class="nav-item">
+              <a href="create-jquery-plugin" class="nav-link">create-jquery-plugin</a>
+            </li>
+          </ul>
+
+          <ul class="nav nav-footer justify-content-center text-center">
             <li class="nav-item">
               <a href="jquery-smartwizard" class="nav-link">jQuery Smart Wizard</a>
             </li>

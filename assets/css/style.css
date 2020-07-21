@@ -192,6 +192,7 @@ pre {
   margin: auto 5px;
   font-weight: 400;
   color: #ccc;
+  bottom: 0;
 }
 .anchor:focus a::before, .anchor:hover a::before {
   color: #0da4d3;
