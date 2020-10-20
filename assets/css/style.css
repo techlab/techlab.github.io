@@ -219,14 +219,13 @@ h6:focus a.anchor-link, h6:hover a.anchor-link {
 }
 
 .flag-forkme {
+  display: none;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 1040;
   width: 149px;
   height: 149px;
-  transform: rotate(270deg);
-  opacity: 0.6;
 }
 
 .flag-forkme:hover, .flag-forkme:focus{
@@ -274,9 +273,38 @@ h6:focus a.anchor-link, h6:hover a.anchor-link {
   }
 
   .flag-forkme {
-    left: unset;
-    right: 0;
-    transform: none;
-    opacity: 1;
+    display: block;
   }
+}
+
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(20px)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateX(0)
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  -moz-animation-name: fadeInRight;
+  -ms-animation-name: fadeInRight;
+  -o-animation-name: fadeInRight;
+  animation-name: fadeInRight
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
