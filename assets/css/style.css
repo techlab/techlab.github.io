@@ -218,6 +218,20 @@ h6:focus a.anchor-link, h6:hover a.anchor-link {
   color: #4e4e4e
 }
 
+.flag-forkme {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 149px;
+  height: 149px;
+  transform: rotate(270deg);
+  opacity: 0.6;
+}
+
+.flag-forkme:hover, .flag-forkme:focus{
+  opacity: 1;
+}
 
 @media (min-width: 992px) {
   #navbar-main .dropdown-menu {
@@ -257,5 +271,12 @@ h6:focus a.anchor-link, h6:hover a.anchor-link {
   }
   a.anchor-link {
     left:auto;
+  }
+
+  .flag-forkme {
+    left: unset;
+    right: 0;
+    transform: none;
+    opacity: 1;
   }
 }
