@@ -20,19 +20,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Dipu Raj">
 
-  <title>jQuery Smart Wizard - The awesome jQuery step wizard plugin - Tech Laboratory</title>
+  <title>jQuery Smart Wizard - The awesome step wizard plugin for jQuery - Tech Laboratory</title>
 
   <!-- Social metadata -->
-  <meta property="og:title" content="jQuery Smart Wizard - The awesome jQuery step wizard plugin">
-  <meta property="og:description" content="jQuery Smart Wizard is an awesome step wizard plugin for jQuery">
-  <meta property="og:url" content="http://techlaboratory.net/jquery-smartwizard">
-  <meta property="og:image" content="http://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png">
+  <meta property="og:title" content="jQuery Smart Wizard - The awesome step wizard plugin for jQuery">
+  <meta property="og:description" content="The awesome step wizard plugin for jQuery">
+  <meta property="og:url" content="https://techlaboratory.net/jquery-smartwizard">
+  <meta property="og:image" content="https://techlaboratory.net/assets/media/jquery-smart-wizard/jquery-smartwizard-v5-arrows.png">
 
   <meta property="og:site_name" content="TechLaboratory">
   <meta name="twitter:site" content="@tlaboratory">
   <meta name="twitter:card" content="summary_large_image">
 
-  <meta name="KEYWORDS" content="jQuery, smartwizard, step wizard, wizard, jwizard, plugin">
+  <meta name="KEYWORDS" content="jQuery, smartwizard, step wizard, wizard, jwizard, plugin, bootstrap, JavaScript, jswizard, jQuery Wizard">
 
   <meta name="theme-color" content="#0da4d3">
   <meta name="msapplication-TileColor" content="#0da4d3">
@@ -54,7 +54,10 @@
   <script src="https://kit.fontawesome.com/e660a0efed.js" crossorigin="anonymous"></script>
 
   <!-- Demo files -->
-  <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+  
+  <!-- Animate CSS for the css animation support if needed -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18629864-3"></script>
@@ -158,7 +161,7 @@
                   <a href="jquery-smartwizard" class="media d-flex align-items-center">
                     <div class="media-body ml-lg-3">
                       <h6 class="text-primary mb-md-1">jQuery Smart Wizard</h6>
-                      <p class="description d-md-inline-block mb-0">The awesome jQuery step wizard plugin</p>
+                      <p class="description d-md-inline-block mb-0">The awesome step wizard plugin for jQuery</p>
                     </div>
                   </a>
                   <a href="smartcart" class="media d-flex align-items-center">
@@ -196,8 +199,8 @@
           <div class="col-md-12">
             <div class="mt-3">
 
-              <h1 class="text-lg-left text-center">jQuery Smart Wizard</h1>
-              <p class="lead mt-0">The awesome jQuery step wizard plugin</p>
+              <h1 class="text-lg-left text-center">jQuery Smart Wizard <span class="text-muted">v6</span></h1>
+              <p class="lead mt-0">The awesome step wizard plugin for jQuery</p>
               <hr class="mt-0" />
               <div class="article-content">
                 <p>
@@ -209,124 +212,165 @@
                 <p>
                   <a title="Travis Build Status" href="https://travis-ci.org/techlab/jquery-smartwizard.svg?branch=master"><img src="https://travis-ci.org/techlab/jquery-smartwizard.svg?branch=master" alt="Build Status" height="18"></a>
                   <a title="NPM Version" href="https://www.npmjs.com/package/smartwizard"><img src="https://badge.fury.io/js/smartwizard.svg" alt="npm version" height="18"></a>
-                  <a title="Packagist Version" href="https://packagist.org/packages/techlab/smartwizard"><img src="https://badgen.net/packagist/v/techlab/smartwizard" alt="Packagist Version" height="18"></a>
-                  <a title="NPM Monthly Downloads" href="https://www.npmjs.com/package/smartwizard"><img src="https://badgen.net/npm/dm/smartwizard?icon=npm" alt="Npm Downloads" height="18"></a>
                   <a title="jsDelivr Monthly Hits" href="https://www.jsdelivr.com/package/npm/smartwizard"><img src="https://data.jsdelivr.com/v1/package/npm/smartwizard/badge?style=rounded" alt="jsDelivr Hits" height="18"></a>
+                  <a title="NPM Monthly Downloads" href="https://www.npmjs.com/package/smartwizard"><img src="https://badgen.net/npm/dm/smartwizard?icon=npm" alt="Npm Downloads" height="18"></a>
                   <a title="GitHub License" href="https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="GitHub license" height="18"></a>
                   <a title="GitHub Repository" href="https://github.com/techlab/jquery-smartwizard"><img src="https://badgen.net/badge/icon/jquery-smartwizard?icon=github&label=&color=0da4d3" alt="GitHub Repo" height="18"></a>
-                  <a title="Donate on Paypal" href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg" alt="Donate on Paypal" height="18"></a>
+                  <a title="GitHub Sponsor" href="https://github.com/sponsors/techlab"><img src="https://img.shields.io/badge/Sponsor-techlab-blue.svg?logo=github" alt="GitHub Sponsor" height="18"></a>
+                  <a title="Donate on Paypal" href="https://www.paypal.me/dipuraj"><img src="https://img.shields.io/badge/PayPal-dipuraj-blue.svg?logo=paypal" alt="Donate on Paypal" height="18"></a>
                 </p>
+
+                <!-- <h3 id="screens" class="anchor mt-4 mb-4"><a href="#demo">Screens</a></h3>
+                <div class="row row-grid align-items-center">
+                  <div class="col-md-6">
+                    <div class="card bg-default shadow border-0">
+                      <img data-src="assets/media/jquery-smart-wizard/v6/gif/sw-6-validation.gif" class="card-img-top lazyloaded" alt="Smart Wizard" src="assets/media/jquery-smart-wizard/v6/gif/sw-6-validation.gif">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="card bg-default shadow border-0">
+                      <img data-src="assets/media/jquery-smart-wizard/v6/gif/sw-6-basic-green.gif" class="card-img-top lazyloaded" alt="Smart Wizard" src="assets/media/jquery-smart-wizard/v6/gif/sw-6-basic-green.gif">
+                    </div>
+                  </div>
+                </div> -->
 
                 <h3 id="demo" class="anchor mt-4 mb-4"><a href="#demo">Demo</a></h3>
 
                 <h5 id="live_example" class="anchor text-uppercase"><a href="#live_example">Live Example</a></h5>
                 <div class="demo-1">
                   <!-- External Buttons -->
-                  <div class="row mb-3 align-items-center valign-items-center ">
-                      <div class="col-auto ">
-                          <label>Theme:</label>
-                          <select id="theme_selector" class="form-control" >
-                            <option value="default">Default</option>
-                            <option value="arrows" selected>Arrows</option>
-                            <option value="dots">Dots</option>
-                            <option value="progress">Progress</option>
-                          </select>
-                        </div>
-                        <div class="col-auto ">
-                          <label>Animation:</label>
-                          <select id="animation" class="form-control">
-                                <option value="none">None</option>
-                                <option value="fade">Fade</option>
-                                <option value="slide-horizontal" selected>Slide Horizontal</option>
-                                <option value="slide-vertical">Slide Vertical</option>
-                                <option value="slide-swing">Slide Swing</option>
-                          </select>
-                        </div>
-                        <div class="col-auto ">
-                            <label>Go To:</label>
-                            <select id="got_to_step" class="form-control">
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                            </select>
-                        </div>
+                  <div class="row mb-4 align-items-center valign-items-center ">
+                    <div class="col-auto ">
+                      <label>Theme:</label>
+                      <select id="theme_selector" class="form-control form-control-sm" >
+                        <option value="basic">Basic (Default)</option>
+                        <option value="arrows" selected>Arrows</option>
+                        <option value="square">Square</option>
+                        <option value="round">Round</option>
+                        <option value="dots">Dots</option>
+                      </select>
+                    </div>
 
-                        <div class="col-auto ">
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="is_justified" value="1" checked />
-                            <label class="custom-control-label" for="is_justified">Justified</label>
-                          </div>
+                    <div class="col-auto">
+                      <label>Transition:</label>
+                      <select id="animation" class="form-control form-control-sm">
+                        <optgroup label="Buit-in Animations">
+                          <option value="none">None</option>
+                          <option value="fade">Fade</option>
+                          <option value="slideHorizontal" selected>Slide Horizontal</option>
+                          <option value="slideVertical">Slide Vertical</option>
+                          <option value="slideSwing">Slide Swing</option>
+                        </optgroup>
+                        <optgroup label="CSS Animations (External Plugin)">
+                          <option value="cssSlideH">Slide Horizontal</option>
+                          <option value="cssSlideV">Slide Vertical</option>
+                          <option value="cssFade">Fade</option>
+                          <option value="cssFadeSlideH">Fade + Slide Horizontal</option>
+                          <option value="cssFadeSlideV">Fade + Slide Vertical</option>
+                          <option value="cssFadeSlideCorner1">Fade + Slide Corner 1</option>
+                          <option value="cssFadeSlideCorner2">Fade + Slide Corner 2</option>
+                          <option value="cssBounce">Bounce</option>
+                          <option value="cssBounceSlideH">Bounce + Slide Horizontal</option>
+                          <option value="cssBounceSlideV">Bounce + Slide Vertical</option>
+                          <option value="cssBackSlideH">Back + Slide Horizontal</option>
+                          <option value="cssBackSlideV">Back + Slide Vertical</option>
+                          <option value="cssFlipH">Flip Horizontal</option>
+                          <option value="cssFlipV">Flip Vertical</option>
+                          <option value="cssLightspeed">Lightspeed</option>
+                          <option value="cssRotate">Rotate</option>
+                          <option value="cssRotateClock">Rotate Clockwise</option>
+                          <option value="cssRotateAntiClock">Rotate Anti Clockwise</option>
+                          <option value="cssZoom">Zoom</option>
+                        </optgroup>
+                      </select>
+                    </div>
 
-                          <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="dark_mode" value="1" />
-                            <label class="custom-control-label" for="dark_mode">Dark Mode</label>
-                          </div>
-                        </div>
+                    <div class="col-auto ">
+                      <label>Colors:</label>
+                      <select id="theme_colors" class="form-control form-control-sm" aria-label="">
+                      </select>
+                    </div>
 
-                        <div class="col-auto ">
-                          <label>External Buttons:</label><br>
-                          <div class="btn-group" role="group">
-                            <button class="btn btn-secondary btn-sm-" id="prev-btn" type="button">Go Previous</button>
-                            <button class="btn btn-secondary btn-sm-" id="next-btn" type="button">Go Next</button>
-                            <button class="btn btn-danger btn-sm-" id="reset-btn" type="button">Reset Wizard</button>
-                          </div>
-                        </div>
+                    <div class="col-auto">
+                      <div class="custom-control mt-2 custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="is_justified" value="1" checked />
+                        <label class="custom-control-label" for="is_justified">Justified</label>
+                      </div>
+                    </div>
+
+                    <div class="col-auto ">
+                      <label>External Buttons:</label><br>
+                      <div class="btn-group" role="group">
+                        <button class="btn btn-secondary btn-sm-" id="prev-btn" type="button">Previous</button>
+                        <button class="btn btn-secondary btn-sm-" id="next-btn" type="button">Next</button>
+                        <button class="btn btn-danger btn-sm-" id="reset-btn" type="button">Reset</button>
+                      </div>
+                    </div>
                   </div>
 
                   <!-- SmartWizard html -->
                   <div id="smartwizard">
+                    <ul class="nav nav-progress">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#step-1">
+                            <div class="num">1</div>
+                            Customer Details
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#step-2">
+                            <span class="num">2</span>
+                            Products Details
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#step-3">
+                            <span class="num">3</span>
+                            Shipping Details
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="#step-4">
+                            <span class="num">4</span>
+                            Confirm Order
+                          </a>
+                        </li>
+                    </ul>
 
-                      <ul class="nav">
-                          <li class="nav-item">
-                            <a class="nav-link" href="#step-1">
-                              <strong>Step 1</strong> <br>This is step description
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#step-2">
-                              <strong>Step 2</strong> <br>This is step description
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#step-3">
-                              <strong>Step 3</strong> <br>This is step description
-                            </a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#step-4">
-                              <strong>Step 4</strong> <br>This is step description
-                            </a>
-                          </li>
-                      </ul>
-
-                      <div class="tab-content">
-                          <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
-                              <h3>Step 1 Content</h3>
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </div>
-                          <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
-                              <h3>Step 2 Content</h3>
-                              <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
-                          </div>
-                          <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </div>
-                          <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
-                              <h3>Step 4 Content</h3>
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                          </div>
+                    <div class="tab-content">
+                      <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+                          <h3>Step 1 Content</h3>
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                       </div>
-                  </div>
+                      <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+                        <h3>Step 2 Content</h3>
+                        <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+                      </div>
+                        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+                            <h3>Step 4 Content</h3>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                    </div>
 
+                    <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
                 </div>
 
                 <h5 id="more_example" class="anchor text-uppercase mt-5"><a href="#more_example">More Examples</a></h5>
                 <ul>
-                  <li><a href="projects/demo/jquery-smart-wizard/v5" title="Basic">Basic example</a></li>
-                  <li><a href="projects/demo/jquery-smart-wizard/v5/ajax" title="Ajax">Ajax example</a></li>
-                  <li><a href="projects/demo/jquery-smart-wizard/v5/multiple" title="Multiple">Multiple Wizards</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6">Basic example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6/validation">Form Validation Example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6/ajax">Ajax Content Example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6/multiple">Multiple Wizard Example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6/bootstrap-modal">Bootstrap Modal Example</a></li>
+                  <li><a href="projects/demo/jquery-smart-wizard/v6/rtl" title="Basic">Right-to-left Language(RTL) Example</a></li>
                 </ul>
 
                 <h3 id="installation" class="anchor mt-4 mb-4"><a href="#installation">Installation</a></h3>
@@ -336,25 +380,22 @@
                 <h6><a href="https://yarn.pm/smartwizard">Yarn</a></h6>
                 <pre class="prettyprint lang-cl">yarn add smartwizard</pre>
 
-                <h6><a href="https://packagist.org/packages/techlab/smartwizard">Composer</a></h6>
-                <pre class="prettyprint lang-cl">composer require techlab/smartwizard</pre>
-
                 <h6><a href="https://www.jsdelivr.com/package/npm/smartwizard">CDN - jsDelivr</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
 <h6><a href="https://unpkg.com/browse/smartwizard/">CDN - UNPKG</a></h6>
 <pre class="prettyprint lang-html">
 &lt;!-- CSS --&gt;
-&lt;link href="https://unpkg.com/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://unpkg.com/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
 
 &lt;!-- JavaScript --&gt;
-&lt;script src="https://unpkg.com/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://unpkg.com/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
                 <h3 id="downloads" class="anchor mt-4 mb-4"><a href="#downloads">Downloads</a></h3>
@@ -366,90 +407,103 @@
 
                 <h3 id="features" class="anchor mt-4 mb-4"><a href="#features">Features</a></h3>
                 <ul class="feature-list">
-                  <li>Standalone CSS</li>
-                  <li>Accessible controls</li>
-                  <li>Bootstrap compatible</li>
-                  <li>Cool themes included</li>
-                  <li>Dark mode</li>
-                  <li>URL navigation and selection</li>
-                  <li>Event support</li>
-                  <li>Ajax content support</li>
-                  <li>Keyboard navigation</li>
-                  <li>Auto height adjustment</li>
-                  <li>Cool animations (fade/slide-horizontal/slide-vertical/slide-swing)</li>
-                  <li>External anchor support</li>
-                  <li>Customizable toolbar, option to add extra buttons</li>
-                  <li>Responsive design</li>
-                  <li>reset option</li>
-                  <li>Easy navigation with step anchors and navigation buttons</li>
                   <li>Easy to implement and minimal HTML required</li>
                   <li>Supports all modern browsers</li>
-                  <li>Compatible with all jQuery versions (jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
+                  <li>Responsive CSS design</li>
+                  <li>Bootstrap compatible</li>
+                  <li>Cool themes included and can be easly customize</li>
+                  <li>Easy color cusomization using CSS variables</li>
+                  <li>Built-in transition animations (none|fade|slideHorizontal|slideVertical|slideSwing|css)</li>
+                  <li>Transition animations can be added easly by extending</li>
+                  <li>CSS Animations support for transition animations (supports Animate.css)</li>
+                  <li>Form validation support</li>
+                  <li>RTL(Right-to-left language) support</li>
+                  <li>Accessible controls</li>
+                  <li>External controls support</li>
+                  <li>Easy ajax content integration</li>
+                  <li>Keyboard navigation</li>
+                  <li>Auto content height adjustment</li>
+                  <li>Customizable toolbar and option to provide extra HTML</li>
+                  <li>Buit-in progressbar</li>
+                  <li>Buit-in loader</li>
+                  <li>Buit-in events</li>
+                  <li>UMD (Universal Module Definition) support</li>
+                  <li>Compatible with all jQuery versions (jQuery 1.11.1+, jQuery 3.6+, and jQuery Slim)</li>
                 </ul>
 
                 <h3 id="documentation" class="anchor mt-4 mb-4"><a href="#documentation">Documentation</a></h3>
 
                 <h5 id="requirements" class="anchor"><a href="#requirements">Requirements</a></h5>
-                <ol class="feature-list">
-                  <li><a href="http://jquery.com/">jQuery</a> (supports jQuery 1.11.1+, jQuery 2+, jQuery 3.5+)</li>
-                </ol>
+                <ul class="feature-list">
+                  <li><a href="https://jquery.com/">jQuery</a></li>
+                </ul>
 
                 <h5 id="include_css" class="anchor"><a href="#include_css">Include jQuery SmartWizard CSS</a></h5>
                 <pre class="prettyprint linenums lang-html">
-&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
 </pre>
 
 <h5 id="include_html" class="anchor"><a href="#include_html">The HTML Markup</a></h5>
 <pre class="prettyprint linenums lang-html">
+&lt;!-- SmartWizard html --&gt;
 &lt;div id=&quot;smartwizard&quot;&gt;
     &lt;ul class=&quot;nav&quot;&gt;
-       &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#step-1&quot;&gt;
-              Step 1
-           &lt;/a&gt;
-       &lt;/li&gt;
-       &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#step-2&quot;&gt;
-              Step 2
-           &lt;/a&gt;
-       &lt;/li&gt;
-       &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#step-3&quot;&gt;
-              Step 3
-           &lt;/a&gt;
-       &lt;/li&gt;
-       &lt;li&gt;
-           &lt;a class=&quot;nav-link&quot; href=&quot;#step-4&quot;&gt;
-              Step 4
-           &lt;/a&gt;
-       &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link&quot; href=&quot;#step-1&quot;&gt;
+            &lt;div class=&quot;num&quot;&gt;1&lt;/div&gt;
+            Step Title
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link&quot; href=&quot;#step-2&quot;&gt;
+            &lt;span class=&quot;num&quot;&gt;2&lt;/span&gt;
+            Step Title
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link&quot; href=&quot;#step-3&quot;&gt;
+            &lt;span class=&quot;num&quot;&gt;3&lt;/span&gt;
+            Step Title
+          &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;nav-item&quot;&gt;
+          &lt;a class=&quot;nav-link &quot; href=&quot;#step-4&quot;&gt;
+            &lt;span class=&quot;num&quot;&gt;4&lt;/span&gt;
+            Step Title
+          &lt;/a&gt;
+        &lt;/li&gt;
     &lt;/ul&gt;
 
     &lt;div class=&quot;tab-content&quot;&gt;
-       &lt;div id=&quot;step-1&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Step content
-       &lt;/div&gt;
-       &lt;div id=&quot;step-2&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Step content
-       &lt;/div&gt;
-       &lt;div id=&quot;step-3&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Step content
-       &lt;/div&gt;
-       &lt;div id=&quot;step-4&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot;&gt;
-          Step content
-       &lt;/div&gt;
+        &lt;div id=&quot;step-1&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;step-1&quot;&gt;
+            Step content
+        &lt;/div&gt;
+        &lt;div id=&quot;step-2&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;step-2&quot;&gt;
+            Step content
+        &lt;/div&gt;
+        &lt;div id=&quot;step-3&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;step-3&quot;&gt;
+            Step content
+        &lt;/div&gt;
+        &lt;div id=&quot;step-4&quot; class=&quot;tab-pane&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;step-4&quot;&gt;
+            Step content
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
+
+    &lt;!-- Include optional progressbar HTML --&gt;
+    &lt;div class=&quot;progress&quot;&gt;
+      &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 0%&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  
 </pre>
 
 <h5 id="include_jquery" class="anchor"><a href="#include_jquery">Include jQuery (ignore this if you have already included on the page)</a></h5>
 <pre class="prettyprint linenums lang-html">
-&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;
 </pre>
 
 <h5 id="include_smartwizard" class="anchor"><a href="#include_smartwizard">Include jQuery SmartWizard JavaScript</a></h5>
 <pre class="prettyprint linenums lang-html">
-&lt;script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
 <h5 id="initialize_smartwizard" class="anchor"><a href="#initialize_smartwizard">Initialize the jQuery SmartWizard</a></h5>
@@ -468,9 +522,7 @@ That is it!
 <p>
 You can see many CSS files at <code>dist/css/</code> folder and may be confused about which one to use.
 The answer is you can use any of them, all the CSS files are standalone.
-</p>
-<p>
-The only difference in the files is the theme.
+Only difference in these files is the theme.
 The file <code>../dist/css/smart_wizard_all.css</code> contains all the themes,
 while the <code>../dist/css/smart_wizard.css</code> only contains the default theme.
 Also other files are theme-specific file named with the respective theme names, like <code>../dist/css/smart_wizard_(theme name).css</code>.
@@ -489,32 +541,34 @@ $('#smartwizard').smartWizard({
   selected: 0, // Initial selected step, 0 = first step
   theme: 'default', // theme for the wizard, related css need to include for other than default theme
   justified: true, // Nav menu justification. true/false
-  darkMode:false, // Enable/disable Dark Mode if the theme supports. true/false
   autoAdjustHeight: true, // Automatically adjust content height
-  cycleSteps: false, // Allows to cycle the navigation of steps
   backButtonSupport: true, // Enable the back button support
-  enableURLhash: true, // Enable selection of the step based on url hash
+  enableUrlHash: true, // Enable selection of the step based on url hash
   transition: {
-      animation: 'none', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-      speed: '400', // Transion animation speed
-      easing:'' // Transition animation easing. Not supported without a jQuery easing plugin
+      animation: 'none', // Animation effect on navigation, none|fade|slideHorizontal|slideVertical|slideSwing|css(Animation CSS class also need to specify)
+      speed: '400', // Animation speed. Not used if animation is 'css'
+      easing: '', // Animation easing. Not supported without a jQuery easing plugin. Not used if animation is 'css'
+      prefixCss: '', // Only used if animation is 'css'. Animation CSS prefix
+      fwdShowCss: '', // Only used if animation is 'css'. Step show Animation CSS on forward direction
+      fwdHideCss: '', // Only used if animation is 'css'. Step hide Animation CSS on forward direction
+      bckShowCss: '', // Only used if animation is 'css'. Step show Animation CSS on backward direction
+      bckHideCss: '', // Only used if animation is 'css'. Step hide Animation CSS on backward direction
   },
-  toolbarSettings: {
-      toolbarPosition: 'bottom', // none, top, bottom, both
-      toolbarButtonPosition: 'right', // left, right, center
+  toolbar: {
+      position: 'bottom', // none|top|bottom|both
       showNextButton: true, // show/hide a Next button
       showPreviousButton: true, // show/hide a Previous button
-      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+      extraHtml: '' // Extra html to show on toolbar
   },
-  anchorSettings: {
-      anchorClickable: true, // Enable/Disable anchor navigation
-      enableAllAnchors: false, // Activates all anchors clickable all times
-      markDoneStep: true, // Add done state on navigation
-      markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
-      removeDoneStepOnNavigateBack: false, // While navigate back done step after active step will be cleared
-      enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
+  anchor: {
+      enableNavigation: true, // Enable/Disable anchor navigation 
+      enableNavigationAlways: false, // Activates all anchors clickable always
+      enableDoneState: true, // Add done state on visited steps
+      markPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
+      unDoneOnBackNavigation: false, // While navigate back, done state will be cleared
+      enableDoneStateNavigation: true // Enable/Disable the done state navigation
   },
-  keyboardSettings: {
+  keyboard: {
       keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
       keyLeft: [37], // Left key code
       keyRight: [39] // Right key code
@@ -524,102 +578,208 @@ $('#smartwizard').smartWizard({
       previous: 'Previous'
   },
   disabledSteps: [], // Array Steps disabled
-  errorSteps: [], // Highlight step with errors
-  hiddenSteps: [] // Hidden steps
+  errorSteps: [], // Array Steps error
+  warningSteps: [], // Array Steps warning
+  hiddenSteps: [], // Hidden steps
+  getContent: null // Callback function for content loading
 });
 </pre>
 
-<h5 id="ajax_contents" class="anchor"><a href="#ajax_contents">Implement Ajax Contents</a></h5>
+<h5 id="ajax_contents" class="anchor mt-3"><a href="#ajax_contents">Ajax content implementation </a></h5>
 <p>
-    Ajax is not built-in, instead you can listen to <code>stepContent</code> event and provide the ajax contents.
-    This is usefull to load ajax contents and give you full control on the ajax calls.
-    The <code>stepContent</code> event can accept Promise as return or you can return the string as the content of the step.
-    The event will be passed with three parameters, <code>anchorObject</code> the jQuery object of the selected step,
-    <code>stepIndex</code> the zero based index number of the steps
-    and <code>stepDirection</code> to give the direction of navigation.
+    External ajax based contents are supported using <code>getContent</code> callback function which is called before showing each step.
 
-    Here is an ajax call example with Promise.
+    The <code>getContent</code> callback function will receive 5 parameters which are:
+    <ul>
+      <li><b>stepIndex</b> - <code>(integer)</code> zero based index number of the steps</li>
+      <li><b>stepDirection</b> - <code>(string)</code> step direction (forward/backward)</li>
+      <li><b>stepPosition</b> - <code>(string)</code> step position (first/last/middle)</li>
+      <li><b>selStep</b> - <code>(object)</code> jQuery object of the anchor element to show</li>
+      <li><b>callback</b> - <code>(function)</code> the callback function which accepts HTML content as string</li>
+    </ul>
+
+    See the ajax call <a href="projects/demo/jquery-smart-wizard/v6/ajax">live example</a> and code example below:
 </p>
 
 <pre class="prettyprint linenums lang-js">
-// Ajax content loading with "stepContent" event
-$("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDirection) {
+// Function to fetch the ajax content
+function provideContent(idx, stepDirection, stepPosition, selStep, callback) {
 
-    // Read data value from the anchor element
-    var repo    = anchorObject.data('repo');
-    var ajaxURL = "https://api.npms.io/v2/package/" + repo;
+  // You can use stepDirection to get ajax content on the forward movement and stepPosition to identify the step position
+  if (stepDirection == 'forward' && stepPosition == 'middle') {
+    let ajaxURL = "YOUR AJAX URL";
 
-    // Return a promise object
-    return new Promise((resolve, reject) => {
+    // Ajax call to fetch your content
+    $.ajax({
+        method  : "GET",
+        url     : ajaxURL,
+        beforeSend: function( xhr ) {
+            // Show the loader
+            $('#smartwizard').smartWizard("loader", "show");
+        }
+    }).done(function( res ) {
+        // Build the content HTML
+        let html = `&lt;div class=&quot;card w-100&quot; &gt;
+                        &lt;div class=&quot;card-body&quot;&gt;
+                            &lt;p class=&quot;card-text&quot;&gt;${res}&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;`;
 
-      // Ajax call to fetch your content
-      $.ajax({
-          method  : "GET",
-          url     : ajaxURL,
-          beforeSend: function( xhr ) {
-              // Show the loader
-              $('#smartwizard').smartWizard("loader", "show");
-          }
-      }).done(function( res ) {
-          var html = 'Ajax data about ' + repo + ' loaded from GitHub';
-          html += 'URL:' + ajaxURL;
-          html += 'Name:' + res.collected.metadata.name;
+        // Resolve the Promise with the tab content
+        callback(html);
 
-          // Resolve the Promise with the content
-          resolve(html);
+        // Hide the loader
+        $('#smartwizard').smartWizard("loader", "hide");
+    }).fail(function(err) {
+        // Handle ajax error
 
-          // Hide the loader
-          $('#smartwizard').smartWizard("loader", "hide");
-      }).fail(function(err) {
-
-          // Reject the Promise with error message to show as content
-          reject( "An error loading the resource" );
-
-          // Hide the loader
-          $('#smartwizard').smartWizard("loader", "hide");
-      });
-
+        // Hide the loader
+        $('#smartwizard').smartWizard("loader", "hide");
     });
+  }
+
+  // The callback must called in any case to procced the steps
+  // The empty callback will not apply any dynamic contents to the steps
+  callback();
+}
+
+
+// SmartWizard initialize with step content callback
+$('#smartwizard').smartWizard({
+  getContent: provideContent
+});
+</pre>
+
+<h5 id="rtl-support" class="anchor mt-3"><a href="#rtl-support">RTL (Right-to-left language) support</a></h5>
+<p>
+    jQuery Smart Wizard has built in right-to-left language support. Please see <a href="projects/demo/jquery-smart-wizard/v6/rtl" title="Basic">Right-to-left Language(RTL) example</a>.
+    You can enable RTL support either by adding the HTML parameter <code>dir="rtl"</code> on the the HTML tag or the wizard main element.
+
+
+</p>
+<pre class="prettyprint linenums lang-html">
+  &lt;!-- SmartWizard html --&gt;
+  &lt;div id=&quot;smartwizard&quot; dir=&quot;rtl&quot;&gt;
+    ...
+  &lt;/div&gt;
+</pre>
+OR 
+<pre class="prettyprint linenums lang-html">
+  &lt;html dir=&quot;rtl&quot;&gt;
+</pre>  
+
+<h5 id="progressbar-support" class="anchor mt-3"><a href="#progressbar-support">Progressbar support</a></h5>
+<p>
+    jQuery Smart Wizard has built in progressbar support. You can simply add this by adding the Bootstrap style progressbar HTML inside the wizard HTML. 
+</p>
+
+<pre class="prettyprint linenums lang-html">
+&lt;div id=&quot;smartwizard&quot;&gt;
+    &lt;ul class=&quot;nav&quot;&gt;
+        ...
+    &lt;/ul&gt;
+
+    &lt;div class=&quot;tab-content&quot;&gt;
+        ...
+    &lt;/div&gt;
+
+    &lt;!-- Include optional progressbar HTML --&gt;
+    &lt;div class=&quot;progress&quot;&gt;
+      &lt;div class=&quot;progress-bar&quot; role=&quot;progressbar&quot; style=&quot;width: 0%&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;  
+</pre>
+
+<p>
+  Also themes Square and Dots have progressbar on the navigation element itself (It doesnt support multiple wizards ona single page for now).
+  You can enable this by adding ` nav-progress` CSS Class on the `nav` element
+</p>
+<pre class="prettyprint linenums lang-html">  
+  &lt;div id=&quot;smartwizard&quot;&gt;
+      &lt;ul class=&quot;nav nav-progress&quot;&gt; &lt;!-- <= Check here --&gt;
+          ...
+      &lt;/ul&gt;
+      ...
+  &lt;/div&gt;  
+  </pre>
+
+  <h5 id="color-support" class="anchor mt-3"><a href="#color-support">Set colors using CSS variables</a></h5>
+  <p>
+      The colors on the jQuery Smart Wizard is cusomizable using CSS variables. You can overwrite the css variables by applying your own colors.
+      Add the CSS colors on root element after including the jQuery Smart Wizard CSS.
+  </p>
+<pre class="prettyprint linenums lang-css">
+&lt;link href="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" /&gt;
+
+&lt;style&gt;
+  :root {
+    --sw-border-color:  #eeeeee;
+    --sw-toolbar-btn-color:  #ffffff;
+    --sw-toolbar-btn-background-color:  #009EF7;
+    --sw-anchor-default-primary-color:  #f8f9fa;
+    --sw-anchor-default-secondary-color:  #b0b0b1;
+    --sw-anchor-active-primary-color:  #009EF7;
+    --sw-anchor-active-secondary-color:  #ffffff;
+    --sw-anchor-done-primary-color:  #90d4fa;
+    --sw-anchor-done-secondary-color:  #fefefe;
+    --sw-anchor-disabled-primary-color:  #f8f9fa;
+    --sw-anchor-disabled-secondary-color:  #dbe0e5;
+    --sw-anchor-error-primary-color:  #dc3545;
+    --sw-anchor-error-secondary-color:  #ffffff;
+    --sw-anchor-warning-primary-color:  #ffc107;
+    --sw-anchor-warning-secondary-color:  #ffffff;
+    --sw-progress-color:  #009EF7;
+    --sw-progress-background-color:  #f8f9fa;
+    --sw-loader-color:  #009EF7;
+    --sw-loader-background-color:  #f8f9fa;
+    --sw-loader-background-wrapper-color:  rgba(255, 255, 255, 0.7);
+  }
+&lt;style/&gt;</pre>
+
+<h5 id="transition-extend" class="anchor mt-3"><a href="#transition-extend">Extend transition animations</a></h5>
+<p>
+    Moreover built-in animations jQuery Smart Wizard supports extending the transition animations with your own.
+    Just add your function to <code>$.fn.smartWizard.transitions</code> variable. 
+    The paramters receives on the functions are:
+</p>
+<ul>
+  <li><b>elmToShow</b> - <code>(object)</code> tabContentObject of the element to show</li>
+  <li><b>elmToHide</b> - <code>(object)</code> tabContentObject of the element to hide</li>
+  <li><b>stepDirection</b> - <code>(string)</code> The direction of the navigation</li>
+  <li><b>wizardObj</b> - <code>(object)</code> Object of the main element</li>
+  <li><b>callback</b> - <code>(function)</code> The callback function to call when the animation is finished. Pass false if an error on processing the animation, the wizard will take the default options to continue.</li>
+</ul>
+
+<pre class="prettyprint linenums lang-js">
+// Smart Wizard initialize using custom transition animation
+$('#smartwizard').smartWizard({
+    transition: {
+      animation:'myAnimation'
+    }}
 });
 
+// Add your custom animation function
+$.fn.smartWizard.transitions.myAnimation = (elmToShow, elmToHide, stepDirection, wizardObj, callback) => {
+  if (!$.isFunction(elmToShow.fadeOut)) { callback(false); return; }
 
-// SmartWizard initialize
-$('#smartwizard').smartWizard();
+  if (elmToHide) {
+      elmToHide.fadeOut(wizardObj.options.transition.speed, wizardObj.options.transition.easing, () => {
+          elmToShow.fadeIn(wizardObj.options.transition.speed, wizardObj.options.transition.easing, () => {
+              callback();
+          });
+      });
+  } else {
+      elmToShow.fadeIn(wizardObj.options.transition.speed, wizardObj.options.transition.easing, () => {
+          callback();
+      });
+  }
+}
 </pre>
 
 <h3 id="public_functions" class="anchor mt-4 mb-4"><a href="#public_functions">Public functions</a></h3>
 <p>
-  There are public methods that are handy to do certain functions
+  jQuery SmartWizard have public methods that helps to handle the Wizard from external controls.
 </p>
-
-<h5 id="func-gotostep" class="anchor"><a href="#func-gotostep">goToStep</a></h5>
-<p>
-  Allow you to go to a certain step.
-</p>
-<pre class="prettyprint linenums lang-js">
-// Go to step
-$('#smartwizard').smartWizard("goToStep", 3);
-</pre>
-
-<h5 id="func-setoptions" class="anchor"><a href="#func-setoptions">setOptions</a></h5>
-<p>
-  Allow you to set the options dynamically.
-</p>
-<pre class="prettyprint linenums lang-js">
-// Change theme
-var options = {
-  theme: 'dark'
-};
-$('#smartwizard').smartWizard("setOptions", options);
-
-// Change animation
-var options = {
-  transition: {
-      animation: 'slide-h'
-  },
-};
-$('#smartwizard').smartWizard("setOptions", options);
-</pre>
 
 <h5 id="func-next" class="anchor"><a href="#func-next">next</a></h5>
 <p>
@@ -648,25 +808,82 @@ $('#smartwizard').smartWizard("prev");
 $('#smartwizard').smartWizard("reset");
 </pre>
 
-<h5 id="func-stepstate" class="anchor"><a href="#func-stepstate">stepState</a></h5>
+<h5 id="func-gotostep" class="anchor"><a href="#func-gotostep">goToStep</a></h5>
 <p>
-  Change the state of a step
+  Allow you to go to a certain step. The function will accepts 2 parameters:
+
+  <ul>
+    <li><b>stepIndex</b> - <code>(integer)</code> zero based index number of the steps to which to go</li>
+    <li><b>force</b> - <code>(bolean)</code> it will forcefuly navigate to the step witout checking if it is a visited step or not</li>
+  </ul>
+</p>
+<pre class="prettyprint linenums lang-js">
+// Go to step without force
+$('#smartwizard').smartWizard("goToStep", 3);
+
+// Go to step with force
+$('#smartwizard').smartWizard("goToStep", 3, true);
+</pre>
+
+<h5 id="func-setoptions" class="anchor"><a href="#func-setoptions">setOptions</a></h5>
+<p>
+  Allow you to set the options dynamically.
+</p>
+<pre class="prettyprint linenums lang-js">
+// Change theme
+var options = {
+  theme: 'arrows'
+};
+$('#smartwizard').smartWizard("setOptions", options);
+
+// Change animation
+var options = {
+  transition: {
+      animation: 'slideHorizontal'
+  },
+};
+$('#smartwizard').smartWizard("setOptions", options);
+</pre>
+
+<h5 id="func-getoptions" class="anchor"><a href="#func-getoptions">getOptions</a></h5>
+<p>
+  Gets the jQuery SmartWizard options 
+</p>
+<pre class="prettyprint linenums lang-js">
+  let options = $('#smartwizard').smartWizard("getOptions");
+  console.log(options);
+</pre>
+
+<h5 id="func-getstepinfo" class="anchor"><a href="#func-getstepinfo">getStepInfo</a></h5>
+<p>
+  Gets the jQuery SmartWizard step info. Ex: 
+
+  <code>{
+      currentStep: 1,
+      totalSteps: 4
+  }</code>
+</p>
+<pre class="prettyprint linenums lang-js">
+  let stepInfo = $('#smartwizard').smartWizard("getStepInfo");
+  console.log(stepInfo);
+</pre>
+
+<h5 id="func-setstate" class="anchor"><a href="#func-setstate">setState</a></h5>
+<p>
+  Set the state of a step. Parameters are array of step index and name of state (default/active/done/disable/hidden/error/warning).
 </p>
 <pre class="prettyprint linenums lang-js">
 // Disable step
-$('#smartwizard').smartWizard("stepState", [1,3], "disable");
-
-// Hide step
-$('#smartwizard').smartWizard("stepState", [2], "hide");
+$('#smartwizard').smartWizard("setState", [1,3], "disable");
 </pre>
 
-<h5 id="func-getstepindex" class="anchor"><a href="#func-getstepindex">getStepIndex</a></h5>
+<h5 id="func-unsetstate" class="anchor"><a href="#func-unsetstate">unsetState</a></h5>
 <p>
-  Gets the current step index
+  Unset the state of a step. Parameters are array of step index and name of state (default/active/done/disable/hidden/error/warning).
 </p>
 <pre class="prettyprint linenums lang-js">
-// Get current step index
-var stepIndex = $('#smartwizard').smartWizard("getStepIndex");
+// Disable step
+$('#smartwizard').smartWizard("unsetState", [1,3], "disable");
 </pre>
 
 <h5 id="func-loader" class="anchor"><a href="#func-loader">loader</a></h5>
@@ -681,6 +898,15 @@ $('#smartwizard').smartWizard("loader", "show");
 $('#smartwizard').smartWizard("loader", "hide");
 </pre>
 
+<h5 id="func-fixheight" class="anchor"><a href="#func-fixheight">fixHeight</a></h5>
+<p>
+  Adjust the content height of the current step.
+</p>
+<pre class="prettyprint linenums lang-js">
+// Fix the content height of the current step
+$('#smartwizard').smartWizard("fixHeight");
+</pre>
+
 
 <h3 id="parameters" class="anchor mt-4 mb-4"><a href="#parameters">Parameters</a></h3>
 
@@ -693,7 +919,7 @@ $('#smartwizard').smartWizard("loader", "hide");
 <h5 id="param-theme" class="anchor mt-4 mb-2"><a href="#param-theme">theme</a></h5>
 <p>
   <code>(string)</code> Theme for the wizard.
-  Default value is <code>'default'</code>.
+  Default value is <code>'basic'</code>. Buit-in themes basic/arrows/square/round/dots. You may need to include corresponding CSS for the theme.
 </p>
 
 <h5 id="param-justified" class="anchor mt-4 mb-2"><a href="#param-justified">justified</a></h5>
@@ -702,21 +928,9 @@ $('#smartwizard').smartWizard("loader", "hide");
   Default value is <code>true</code>.
 </p>
 
-<h5 id="param-darkmode" class="anchor mt-4 mb-2"><a href="#param-darkmode">darkMode</a></h5>
-<p>
-  <code>(boolean)</code> Enable/disable Dark Mode if the theme supports.
-  Default value is <code>false</code>.
-</p>
-
 <h5 id="param-autoadjustheight" class="anchor mt-4 mb-2"><a href="#param-autoadjustheight">autoAdjustHeight</a></h5>
 <p>
   <code>(boolean)</code> Automatically adjust content height.
-  Default value is <code>true</code>.
-</p>
-
-<h5 id="param-cyclesteps" class="anchor mt-4 mb-2"><a href="#param-cyclesteps">cycleSteps</a></h5>
-<p>
-  <code>(boolean)</code> Keep the navigation cycle through.
   Default value is <code>true</code>.
 </p>
 
@@ -736,62 +950,80 @@ $('#smartwizard').smartWizard("loader", "hide");
 <p>
   <code>(object)</code> Settings for the transition with the following options:
   <ul>
-    <li><b>animation</b> - <code>(string)</code> Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing</li>
-    <li><b>speed</b> - <code>(number)</code> Transion animation speed</li>
-    <li><b>easing</b> - <code>(string)</code> Transition animation easing. Not supported without a jQuery easing plugin</li>
+    <li><b>animation</b> - <code>(string)</code> Effect on navigation, none|fade|slideHorizontal|slideVertical|slideSwing|css(Animation CSS class also need to specify)</li>
+    <li><b>speed</b> - <code>(number)</code> Animation speed. Not used if animation is 'css'</li>
+    <li><b>easing</b> - <code>(string)</code> Animation easing. Not supported without a jQuery easing plugin. Not used if animation is 'css'</li>
+    <li><b>prefixCss</b> - <code>(string)</code> Only used if animation is 'css'. Animation CSS prefix</li>
+    <li><b>fwdShowCss</b> - <code>(string)</code> Only used if animation is 'css'. Step show Animation CSS on forward direction</li>
+    <li><b>fwdHideCss</b> - <code>(string)</code> Only used if animation is 'css'. Step hide Animation CSS on forward direction</li>
+    <li><b>bckShowCss</b> - <code>(string)</code> Only used if animation is 'css'. Step show Animation CSS on backward direction</li>
+    <li><b>bckHideCss</b> - <code>(string)</code> Only used if animation is 'css'. Step hide Animation CSS on backward direction</li>
   </ul>
 </p>
 <span class="text-uppercase text-muted">Example Usage</span>
 <pre class="prettyprint linenums lang-js">
+// Using an built-in transition animation
 $('#smartwizard').smartWizard({
   transition: {
-      animation: 'none', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-      speed: '400', // Transion animation speed
-      easing:'' // Transition animation easing. Not supported without a jQuery easing plugin
+      animation: 'slideHorizontal', // Effect on navigation, none|fade|slideHorizontal|slideVertical|slideSwing|css(Animation CSS class also need to specify)
+  }
+});
+
+// Using an css transition animation. You need to include Animate.css 
+$('#smartwizard').smartWizard({
+  transition: {
+      animation: 'css', // Effect on navigation, none|fade|slideHorizontal|slideVertical|slideSwing|css(Animation CSS class also need to specify)
+      prefixCss: 'animate__animated animate__faster',
+      fwdShowCss: 'animate__bounceIn',
+      fwdHideCss: 'animate__bounceOut',
+      bckShowCss: 'animate__bounceIn',
+      bckHideCss: 'animate__bounceOut'
   }
 });
 </pre>
 
-<h5 id="param-toolbarsettings" class="anchor mt-4 mb-2"><a href="#param-toolbarsettings">toolbarSettings</a></h5>
+<h5 id="param-toolbar" class="anchor mt-4 mb-2"><a href="#param-toolbar">toolbar</a></h5>
 <p>
   <code>(object)</code> Settings for the toolbar with the following options:
   <ul>
-    <li><b>toolbarPosition</b> - <code>(string)</code> Position of the toolbar (none, top, bottom, both)</li>
-    <li><b>toolbarButtonPosition</b> - <code>(string)</code> Button alignment of the toolbar (left, right, center)</li>
+    <li><b>position</b> - <code>(string)</code> Position of the toolbar (none|top|bottom|both)</li>
     <li><b>showNextButton</b> - <code>(boolean)</code> show/hide a Next button</li>
     <li><b>showPreviousButton</b> - <code>(boolean)</code> show/hide a Previous button</li>
-    <li><b>toolbarExtraButtons</b> - <code>(array of jQuery object)</code> Extra buttons to show on toolbar, array of jQuery input/buttons elements</li>
+    <li><b>extraHtml</b> - <code>(string)</code> Extra html to show on toolbar</li>
   </ul>
 </p>
 <span class="text-uppercase text-muted">Example Usage</span>
 <pre class="prettyprint linenums lang-js">
+function onFinish(){ alert('Finish Clicked'); }
+function onCancel(){ $('#smartwizard').smartWizard("reset"); }
+
 $('#smartwizard').smartWizard({
-  toolbarSettings: {
-      toolbarPosition: 'bottom', // none, top, bottom, both
-      toolbarButtonPosition: 'right', // left, right, center
-      showNextButton: true, // show/hide a Next button
-      showPreviousButton: true, // show/hide a Previous button
-      toolbarExtraButtons: [] // Extra buttons to show on toolbar, array of jQuery input/buttons elements
+  toolbar: {
+    showNextButton: true, // show/hide a Next button
+    showPreviousButton: true, // show/hide a Previous button
+    position: 'both', // none|top|bottom|both
+    extraHtml: `&lt;button class=&quot;btn btn-success&quot; onclick=&quot;onFinish()&quot;&gt;Finish&lt;/button&gt;
+                &lt;button class=&quot;btn btn-secondary&quot; onclick=&quot;onCancel()&quot;&gt;Cancel&lt;/button&gt;`
   }
 });
 </pre>
 
-<h5 id="param-anchorsettings" class="anchor mt-4 mb-2"><a href="#param-anchorsettings">anchorSettings</a></h5>
+<h5 id="param-anchor" class="anchor mt-4 mb-2"><a href="#param-anchor">anchor</a></h5>
 <p>
   <code>(object)</code> Settings for the anchor with the following options:
   <ul>
-    <li><b>anchorClickable</b> - <code>(boolean)</code> Enable/Disable anchor navigation</li>
-    <li><b>enableAllAnchors</b> - <code>(boolean)</code> Activates all anchors clickable all times</li>
-    <li><b>markDoneStep</b> - <code>(boolean)</code> Add done state on navigation</li>
-    <li><b>markAllPreviousStepsAsDone</b> - <code>(boolean)</code> When a step selected by url hash, all previous steps are marked done</li>
-    <li><b>removeDoneStepOnNavigateBack</b> - <code>(boolean)</code> While navigate back done step after active step will be cleared</li>
-    <li><b>enableAnchorOnDoneStep</b> - <code>(boolean)</code> Enable/Disable the done steps navigation</li>
+    <li><b>enableNavigation</b> - <code>(boolean)</code> Enable/Disable anchor navigation</li>
+    <li><b>enableNavigationAlways</b> - <code>(boolean)</code> Activates all anchors clickable all times</li>
+    <li><b>enableDoneState</b> - <code>(boolean)</code> Add done state on navigation</li>
+    <li><b>markPreviousStepsAsDone</b> - <code>(boolean)</code> When a step selected by url hash, all previous steps are marked done</li>
+    <li><b>unDoneOnBackNavigation</b> - <code>(boolean)</code> While navigate back done step after active step will be cleared</li>
+    <li><b>enableDoneStateNavigation</b> - <code>(boolean)</code> Enable/Disable the done steps navigation</li>
   </ul>
 </p>
 <span class="text-uppercase text-muted">Example Usage</span>
 <pre class="prettyprint linenums lang-js">
 $('#smartwizard').smartWizard({
-  anchorSettings: {
+  anchor: {
       anchorClickable: true, // Enable/Disable anchor navigation
       enableAllAnchors: false, // Activates all anchors clickable all times
       markDoneStep: true, // Add done state on navigation
@@ -802,7 +1034,7 @@ $('#smartwizard').smartWizard({
 });
 </pre>
 
-<h5 id="param-keyboardsettings" class="anchor mt-4 mb-2"><a href="#param-keyboardsettings">keyboardSettings</a></h5>
+<h5 id="param-keyboard" class="anchor mt-4 mb-2"><a href="#param-keyboard">keyboard</a></h5>
 <p>
   <code>(object)</code> Settings for the keyboard with the following options:
   <ul>
@@ -814,7 +1046,7 @@ $('#smartwizard').smartWizard({
 <span class="text-uppercase text-muted">Example Usage</span>
 <pre class="prettyprint linenums lang-js">
 $('#smartwizard').smartWizard({
-  keyboardSettings: {
+  keyboard: {
       keyNavigation: true, // Enable/Disable keyboard navigation(left and right keys are used if enabled)
       keyLeft: [37], // Left key code
       keyRight: [39] // Right key code
@@ -836,6 +1068,40 @@ $('#smartwizard').smartWizard({
   lang: { // Language variables for button
       next: 'Next',
       previous: 'Previous'
+  }
+});
+</pre>
+
+<h5 id="param-style" class="anchor mt-4 mb-2"><a href="#param-style">style</a></h5>
+<p>
+  <code>(object)</code> The CSS class names are configurable but normally you don't have to change this.  
+</p>
+<span class="text-uppercase text-muted">Example Usage</span>
+<pre class="prettyprint linenums lang-js">
+$('#smartwizard').smartWizard({
+  style: { // CSS Class settings
+    mainCss: 'sw',
+    navCss: 'nav',
+    navLinkCss: 'nav-link',
+    contentCss: 'tab-content',
+    contentPanelCss: 'tab-pane',
+    themePrefixCss: 'sw-theme-',
+    anchorDefaultCss: 'default',
+    anchorDoneCss: 'done',
+    anchorActiveCss: 'active',
+    anchorDisabledCss: 'disabled',
+    anchorHiddenCss: 'hidden',
+    anchorErrorCss: 'error',
+    anchorWarningCss: 'warning',
+    justifiedCss: 'sw-justified',
+    btnCss: 'sw-btn',
+    btnNextCss: 'sw-btn-next',
+    btnPrevCss: 'sw-btn-prev',
+    loaderCss: 'sw-loading',
+    progressCss: 'progress',
+    progressBarCss: 'progress-bar',
+    toolbarCss: 'toolbar',
+    toolbarPrefixCss: 'toolbar-',
   }
 });
 </pre>
@@ -865,6 +1131,19 @@ $('#smartwizard').smartWizard({
 });
 </pre>
 
+<h5 id="param-warningsteps" class="anchor mt-4 mb-2"><a href="#param-warningsteps">warningSteps</a></h5>
+<p>
+  <code>(array)</code> Step with warnings.
+  Default value is <code>[]</code>.
+</p>
+
+<span class="text-uppercase text-muted">Example Usage</span>
+<pre class="prettyprint linenums lang-js">
+$('#smartwizard').smartWizard({
+  warningSteps: [1] // Highlight step with warnings
+});
+</pre>
+
 <h5 id="param-hiddensteps" class="anchor mt-4 mb-2"><a href="#param-hiddensteps">hiddenSteps</a></h5>
 <p>
   <code>(array)</code> Hidden steps.
@@ -878,8 +1157,48 @@ $('#smartwizard').smartWizard({
 });
 </pre>
 
+<h5 id="param-getcontent" class="anchor mt-4 mb-2"><a href="#param-getcontent">getContent</a></h5>
+<p>
+  <code>(function)</code> Callback function to provide step content. Please see the <a href="#ajax_contents">example here</a>.
+  Default value is <code>null</code>.
+</p>
+
+<span class="text-uppercase text-muted">Example Usage</span>
+<pre class="prettyprint linenums lang-js">
+function provideContent(idx, stepDirection, stepPosition, selStep, callback) {
+  callback();
+}
+
+$('#smartwizard').smartWizard({
+  getContent: provideContent
+});
+</pre>
 
 <h3 id="events" class="anchor mt-4 mb-4"><a href="#events">Events</a></h3>
+
+<h5 id="event-initialized" class="anchor mb-2"><a href="#event-initialized">initialized</a></h5>
+<p>
+  The <code>initialized</code> event triggers when the jQuery Smart Wizard is initialized.
+</p>
+<span class="text-uppercase text-muted">Event Example</span>
+<pre class="prettyprint linenums lang-js">
+// Initialize event
+$("#smartwizard").on("initialized", function(e) {
+  console.log("initialized");
+});
+</pre>
+
+<h5 id="event-loaded" class="anchor mb-2"><a href="#event-loaded">loaded</a></h5>
+<p>
+  The <code>loaded</code> event triggers when the jQuery Smart Wizard is fully loaded.
+</p>
+<span class="text-uppercase text-muted">Event Example</span>
+<pre class="prettyprint linenums lang-js">
+// loaded event
+$("#smartwizard").on("loaded", function(e) {
+  console.log("loaded");
+});
+</pre>
 
 <h5 id="event-leavestep" class="anchor mb-2"><a href="#event-leavestep">leaveStep</a></h5>
 <p>
@@ -891,8 +1210,8 @@ $('#smartwizard').smartWizard({
   The event will receive the following parameters:
   <ul>
     <li><b>anchorObject</b> - <code>(object)</code> jQuery object of the anchor element.</li>
-    <li><b>currentStepNumber</b> - <code>(integer)</code> Index of the step.</li>
-    <li><b>nextStepNumber</b> - <code>(integer)</code> Index of the step.</li>
+    <li><b>currentStepIndex</b> - <code>(integer)</code> Index of the current step.</li>
+    <li><b>nextStepIndex</b> - <code>(integer)</code> Index of the next step.</li>
     <li><b>stepDirection</b> - <code>(string)</code> Step direction.</li>
   </ul>
 </p>
@@ -915,64 +1234,40 @@ $("#smartwizard").on("leaveStep", function(e, anchorObject, currentStepIndex, ne
     <li><b>anchorObject</b> - <code>(object)</code> jQuery object of the anchor element.</li>
     <li><b>stepIndex</b> <code>(integer)</code> Index of the step.</li>
     <li><b>stepDirection</b> - <code>(string)</code> Step direction.</li>
+    <li><b>stepPosition</b> - <code>(string)</code> Step position.</li>
   </ul>
 </p>
 <span class="text-uppercase text-muted">Event Example</span>
 <pre class="prettyprint linenums lang-js">
 // Initialize the showStep event
-$("#smartwizard").on("showStep", function(e, anchorObject, stepIndex, stepDirection) {
+$("#smartwizard").on("showStep", function(e, anchorObject, stepIndex, stepDirection, stepPosition) {
    alert("You are on step "+stepIndex+" now");
-});
-</pre>
-
-<h5 id="event-stepcontent" class="anchor mt-4 mb-2"><a href="#event-stepcontent">stepContent</a></h5>
-<p>
-  The <code>stepContent</code> event triggers when a step content is about to load.
-  This event will allow to pass a string value as return parameter to be used as the content of the step.
-  You can also pass a Promise object and on the Promise completion the result will be used as the content of the step.
-  This is usefull to load ajax contents and give more control on the ajax calls.
-  Please see the <a href="#ajax_contents">ajax example</a>.
-</p>
-<span class="text-uppercase text-muted">Event Parameters</span>
-<p>
-  The event will receive the following parameters:
-  <ul>
-    <li><b>anchorObject</b> - <code>(object)</code> jQuery object of the anchor element.</li>
-    <li><b>stepIndex</b> <code>(integer)</code> Index of the step.</li>
-    <li><b>stepDirection</b> - <code>(string)</code> Step direction.</li>
-  </ul>
-</p>
-<span class="text-uppercase text-muted">Event Example</span>
-<pre class="prettyprint linenums lang-js">
-// Initialize the stepContent event
-$("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDirection) {
-   return "Here is the content for step " + stepIndex;
 });
 </pre>
 
   <h3 id="license" class="anchor mt-4 mb-4"><a href="#license">License</a></h3>
   <p>Released under the terms of the <a href="https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE">MIT License</a>
-   (<a href="http://en.wikipedia.org/wiki/MIT_License">more</a>).
-   You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
+    (<a href="https://en.wikipedia.org/wiki/MIT_License">more</a>).
+    You are free to use on both personal and commercial environment as long as the copyright header is left intact.</p>
 
-   <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
-     <div class="p-5">
-       <div class="row align-items-center">
-         <div class="col-lg-8">
-           <h3 class="text-white">A little help is always a beautiful thing...</h3>
-           <p class="lead text-white mt-3">
-             We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
-           </p>
-         </div>
-         <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
-           <a href="https://www.paypal.me/dipuraj" class="btn btn-secondary">
-             <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
-           </a>
-         </div>
-       </div>
-     </div>
-   </div>
-
+    <div class="card bg-gradient-info-2 shadow-lg border-0 mt-5 mb-5">
+      <div class="p-5">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h3 class="text-white">A little help is always a beautiful thing...</h3>
+            <p class="lead text-white mt-3">
+              We are committed to deliver free and open source projects. Your support keep us on the track and make us deliver bigger things for you.
+            </p>
+          </div>
+          <div class="col-lg-3 ml-lg-auto text-lg-left text-center">
+              <iframe src="https://github.com/sponsors/techlab/button" title="Sponsor techlab" height="35" width="116" style="border: 0;"></iframe>
+              <a href="https://www.paypal.me/dipuraj">
+                <img alt="PayPal - The safer, easier way to pay online!" src="https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png">
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <h3 id="help-us-improve" class="anchor mt-4 mb-4"><a href="#help-us-improve">Help us improve</a></h3>
   <p>
@@ -987,7 +1282,7 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
 
   <div class="alert alert-secondary message-box" role="alert">
     <span class="alert-inner--icon"><i class="fa fa-stack-overflow fa-lg"></i></span>
-    <span class="alert-inner--text">For help and support questions, please ask or search on <a href="http://stackoverflow.com/questions/tagged/smart-wizard">StackOverflow</a> with <a href="http://stackoverflow.com/questions/tagged/smart-wizard">smart-wizard</a> tag.</span>
+    <span class="alert-inner--text">For help and support questions, please ask or search on <a href="https://stackoverflow.com/questions/tagged/smart-wizard">StackOverflow</a> with <a href="https://stackoverflow.com/questions/tagged/smart-wizard">smart-wizard</a> tag.</span>
   </div>
 
   <h3 id="archive" class="anchor mt-4 mb-4"><a href="#archive">Archive</a></h3>
@@ -995,6 +1290,7 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
     Please see the older versions archive of this plugin.
   </p>
 
+  <a href="archive/jquery-smart-wizard/v5" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Wizard v5</a>
   <a href="archive/jquery-smart-wizard/v4" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Wizard v4</a>
   <a href="archive/jquery-smart-wizard/v2" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">jQuery Smart Wizard v2</a>
 
@@ -1002,11 +1298,11 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
             <div class="card mt-5 shadow">
              <div class="row no-gutters">
                <div class="col-md-2">
-                 <img src="http://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
+                 <img src="https://www.gravatar.com/avatar/488b32c3a59f67ff35b1d15037fd6749?s=400&d=mm" class="card-img " alt="Dipu Raj">
                </div>
                <div class="col-md-10">
                  <div class="card-body">
-                   <h4 class="card-title mb-1"><a href="http://dipu.me">Dipu Raj</a></h4>
+                   <h4 class="card-title mb-1"><a href="https://dipu.me">Dipu Raj</a></h4>
                    <p class="card-text text-muted-">
                       Full-stack developer in JavaScript, PHP and C# with added interest in Angular, React, jQuery and Bootstrap.
                       Believes the code should be as beautiful as the design.
@@ -1093,37 +1389,348 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
   <script src="assets/js/argon.js"></script>
 
   <!-- Include SmartWizard JavaScript source -->
-  <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
 
   <script type="text/javascript">
-      $(document).ready(function(){
+      // External Animations
+      const cssAnimationList = {
+          cssSlideH: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__slideInLeft',
+            fwdHideCss: 'animate__slideOutRight',
+            bckShowCss: 'animate__slideInRight',
+            bckHideCss: 'animate__slideOutLeft',
+          },
+          cssSlideV: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__slideInDown',
+            fwdHideCss: 'animate__slideOutDown',
+            bckShowCss: 'animate__slideInUp',
+            bckHideCss: 'animate__slideOutUp',
+          },
+          cssFade: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__fadeIn',
+            fwdHideCss: 'animate__fadeOut',
+            bckShowCss: 'animate__fadeIn',
+            bckHideCss: 'animate__fadeOut',
+          },
+          cssFadeSlideH: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__fadeInLeft',
+            fwdHideCss: 'animate__fadeOutRight',
+            bckShowCss: 'animate__fadeInRight',
+            bckHideCss: 'animate__fadeOutLeft',
+          },
+          cssFadeSlideV: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__fadeInDown',
+            fwdHideCss: 'animate__fadeOutDown',
+            bckShowCss: 'animate__fadeInUp',
+            bckHideCss: 'animate__fadeOutUp',
+          },
+          cssFadeSlideCorner1: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__fadeInTopLeft',
+            fwdHideCss: 'animate__fadeOutBottomRight',
+            bckShowCss: 'animate__fadeInBottomRight',
+            bckHideCss: 'animate__fadeOutTopLeft',
+          },
+          cssFadeSlideCorner2: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__fadeInBottomLeft',
+            fwdHideCss: 'animate__fadeOutTopRight',
+            bckShowCss: 'animate__fadeInTopRight',
+            bckHideCss: 'animate__fadeOutBottomLeft',
+          },
+          cssBounce: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__bounceIn',
+            fwdHideCss: 'animate__bounceOut',
+            bckShowCss: 'animate__bounceIn',
+            bckHideCss: 'animate__bounceOut',
+          },
+          cssBounceSlideH: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__bounceInLeft',
+            fwdHideCss: 'animate__bounceOutRight',
+            bckShowCss: 'animate__bounceInRight',
+            bckHideCss: 'animate__bounceOutLeft',
+          },
+          cssBounceSlideV: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__bounceInDown',
+            fwdHideCss: 'animate__bounceOutDown',
+            bckShowCss: 'animate__bounceInUp',
+            bckHideCss: 'animate__bounceOutUp',
+          },
+          cssBackSlideH: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__backInLeft',
+            fwdHideCss: 'animate__backOutRight',
+            bckShowCss: 'animate__backInRight',
+            bckHideCss: 'animate__backOutLeft',
+          },
+          cssBackSlideV: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__backInDown',
+            fwdHideCss: 'animate__backOutDown',
+            bckShowCss: 'animate__backInUp',
+            bckHideCss: 'animate__backOutUp',
+          },
+          cssFlipH: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__flipInY',
+            fwdHideCss: 'animate__flipOutY',
+            bckShowCss: 'animate__flipInY',
+            bckHideCss: 'animate__flipOutY',
+          },
+          cssFlipV: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__flipInX',
+            fwdHideCss: 'animate__flipOutX',
+            bckShowCss: 'animate__flipInX',
+            bckHideCss: 'animate__flipOutX',
+          },
+          cssLightspeed: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__lightSpeedInLeft',
+            fwdHideCss: 'animate__lightSpeedOutRight',
+            bckShowCss: 'animate__lightSpeedInRight',
+            bckHideCss: 'animate__lightSpeedOutLeft',
+          },
+          cssRotate: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__rotateIn',
+            fwdHideCss: 'animate__rotateOut',
+            bckShowCss: 'animate__rotateIn',
+            bckHideCss: 'animate__rotateOut',
+          },
+          cssRotateClock: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__rotateInDownLeft',
+            fwdHideCss: 'animate__rotateOutDownLeft',
+            bckShowCss: 'animate__rotateInUpLeft',
+            bckHideCss: 'animate__rotateOutUpLeft',
+          },
+          cssRotateAntiClock: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__rotateInDownRight',
+            fwdHideCss: 'animate__rotateOutDownRight',
+            bckShowCss: 'animate__rotateInUpRight',
+            bckHideCss: 'animate__rotateOutUpRight',
+          },
+          cssZoom: {
+            prefixCss: 'animate__animated animate__faster',
+            fwdShowCss: 'animate__zoomIn',
+            fwdHideCss: 'animate__zoomOut',
+            bckShowCss: 'animate__zoomIn',
+            bckHideCss: 'animate__zoomOut',
+          }
+      }
 
+      const cssColors = [ 
+        "--sw-border-color",
+        "--sw-toolbar-btn-color",
+        "--sw-toolbar-btn-background-color",
+        "--sw-anchor-default-primary-color",
+        "--sw-anchor-default-secondary-color",
+        "--sw-anchor-active-primary-color",
+        "--sw-anchor-active-secondary-color",
+        "--sw-anchor-done-primary-color",
+        "--sw-anchor-done-secondary-color",
+        "--sw-anchor-disabled-primary-color",
+        "--sw-anchor-disabled-secondary-color",
+        "--sw-anchor-anchor-error-primary-color",
+        "--sw-anchor-anchor-error-secondary-color",
+        "--sw-anchor-anchor-warning-primary-color",
+        "--sw-anchor-anchor-warning-secondary-color",
+        "--sw-progress-color",
+        "--sw-progress-background-color",
+        "--sw-loader-color",
+        "--sw-loader-background-color",
+        "--sw-loader-background-wrapper-color"
+      ];
+
+      const presetColors = {  
+        "Blue (Default)": {
+          "--sw-toolbar-btn-background-color": "#009EF7",
+          "--sw-anchor-default-primary-color": "#f8f9fa",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#009EF7",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#90d4fa",
+          "--sw-anchor-done-secondary-color": "#fefefe",
+          "--sw-progress-color": "#009EF7",
+          "--sw-loader-color": "#009EF7",
+        },
+        "Green": {
+          "--sw-border-color": "#eeeeee",
+          "--sw-toolbar-btn-color": "#ffffff",
+          "--sw-toolbar-btn-background-color": "#008931",
+          "--sw-anchor-default-primary-color": "#f8f9fa",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#78c043",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#588835",
+          "--sw-anchor-done-secondary-color": "#c2c2c2",
+          "--sw-anchor-disabled-primary-color": "#f8f9fa",
+          "--sw-anchor-disabled-secondary-color": "#dbe0e5",
+          "--sw-anchor-error-primary-color": "#dc3545",
+          "--sw-anchor-error-secondary-color": "#ffffff",
+          "--sw-anchor-warning-primary-color": "#ffc107",
+          "--sw-anchor-warning-secondary-color": "#ffffff",
+          "--sw-progress-color": "#78c043",
+          "--sw-progress-background-color": "#f8f9fa",
+          "--sw-loader-color": "#78c043",
+          "--sw-loader-background-color": "#f8f9fa",
+          "--sw-loader-background-wrapper-color": "rgba(255, 255, 255, 0.7)",
+        },
+        "Yellow": {
+          "--sw-border-color": "#eeeeee",
+          "--sw-toolbar-btn-color": "#ffffff",
+          "--sw-toolbar-btn-background-color": "#e4a707",
+          "--sw-anchor-default-primary-color": "#f8f9fa",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#fbbd19",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#e4a707",
+          "--sw-anchor-done-secondary-color": "#dbe0e5",
+          "--sw-anchor-disabled-primary-color": "#f8f9fa",
+          "--sw-anchor-disabled-secondary-color": "#dbe0e5",
+          "--sw-anchor-error-primary-color": "#dc3545",
+          "--sw-anchor-error-secondary-color": "#ffffff",
+          "--sw-anchor-warning-primary-color": "#ffc107",
+          "--sw-anchor-warning-secondary-color": "#ffffff",
+          "--sw-progress-color": "#fbbd19",
+          "--sw-progress-background-color": "#f8f9fa",
+          "--sw-loader-color": "#fbbd19",
+          "--sw-loader-background-color": "#f8f9fa",
+          "--sw-loader-background-wrapper-color": "rgba(255, 255, 255, 0.7)",
+        },  
+        "Red": {
+          "--sw-border-color": "#eeeeee",
+          "--sw-toolbar-btn-color": "#ffffff",
+          "--sw-toolbar-btn-background-color": "#f44336",
+          "--sw-anchor-default-primary-color": "#f8f9fa",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#f44336",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#f8877f",
+          "--sw-anchor-done-secondary-color": "#fefefe",
+          "--sw-anchor-disabled-primary-color": "#f8f9fa",
+          "--sw-anchor-disabled-secondary-color": "#dbe0e5",
+          "--sw-anchor-error-primary-color": "#dc3545",
+          "--sw-anchor-error-secondary-color": "#ffffff",
+          "--sw-anchor-warning-primary-color": "#ffc107",
+          "--sw-anchor-warning-secondary-color": "#ffffff",
+          "--sw-progress-color": "#f44336",
+          "--sw-progress-background-color": "#f8f9fa",
+          "--sw-loader-color": "#f44336",
+          "--sw-loader-background-color": "#f8f9fa",
+          "--sw-loader-background-wrapper-color": "rgba(255, 255, 255, 0.7)",
+        },
+        "Lite Blue": {
+          "--sw-border-color": "#eeeeee",
+          "--sw-toolbar-btn-color": "#ffffff",
+          "--sw-toolbar-btn-background-color": "#0cb6d8",
+          "--sw-anchor-default-primary-color": "#f8f9fa",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#00d5ff",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#0cb6d8",
+          "--sw-anchor-done-secondary-color": "#dbe0e5",
+          "--sw-anchor-disabled-primary-color": "#f8f9fa",
+          "--sw-anchor-disabled-secondary-color": "#dbe0e5",
+          "--sw-anchor-error-primary-color": "#dc3545",
+          "--sw-anchor-error-secondary-color": "#ffffff",
+          "--sw-anchor-warning-primary-color": "#ffc107",
+          "--sw-anchor-warning-secondary-color": "#ffffff",
+          "--sw-progress-color": "#0dcaf0",
+          "--sw-progress-background-color": "#f8f9fa",
+          "--sw-loader-color": "#0dcaf0",
+          "--sw-loader-background-color": "#f8f9fa",
+          "--sw-loader-background-wrapper-color": "rgba(255, 255, 255, 0.7)",
+        },
+        "Dark": {
+          "--sw-border-color": "#eeeeee",
+          "--sw-toolbar-btn-color": "#ffffff",
+          "--sw-toolbar-btn-background-color": "#0a2730",
+          "--sw-anchor-default-primary-color": "#757575",
+          "--sw-anchor-default-secondary-color": "#b0b0b1",
+          "--sw-anchor-active-primary-color": "#000000",
+          "--sw-anchor-active-secondary-color": "#ffffff",
+          "--sw-anchor-done-primary-color": "#333333",
+          "--sw-anchor-done-secondary-color": "#aaaaaa",
+          "--sw-anchor-disabled-primary-color": "#f8f9fa",
+          "--sw-anchor-disabled-secondary-color": "#dbe0e5",
+          "--sw-anchor-error-primary-color": "#dc3545",
+          "--sw-anchor-error-secondary-color": "#ffffff",
+          "--sw-anchor-warning-primary-color": "#ffc107",
+          "--sw-anchor-warning-secondary-color": "#ffffff",
+          "--sw-progress-color": "#0a2730",
+          "--sw-progress-background-color": "#f8f9fa",
+          "--sw-loader-color": "#0a2730",
+          "--sw-loader-background-color": "#f8f9fa",
+          "--sw-loader-background-wrapper-color": "rgba(255, 255, 255, 0.7)",
+        }
+      }
+
+      function loadColorList() {
+        $.each(presetColors, function(key, objColors) {
+            $('#theme_colors').append($('<option/>', {
+                value: key,
+                text : key,
+                'data-colors': window.btoa(JSON.stringify(objColors))
+            }));
+        });
+      }
+
+      function applyColors(colorObj) {
+         colorObj = JSON.parse(window.atob(colorObj));
+        $.each(colorObj, function(key, val) {
+            document.documentElement.style.setProperty(key, val);
+        });
+
+        displayColors();
+      }
+
+      $(function() {
+          // Load color list
+          loadColorList();
+          
           // Step show event
-          $("#smartwizard").on("showStep", function(e, anchorObject, stepNumber, stepDirection, stepPosition) {
-              $("#prev-btn").removeClass('disabled');
-              $("#next-btn").removeClass('disabled');
-              if(stepPosition === 'first') {
-                  $("#prev-btn").addClass('disabled');
-              } else if(stepPosition === 'last') {
-                  $("#next-btn").addClass('disabled');
-              } else {
-                  $("#prev-btn").removeClass('disabled');
-                  $("#next-btn").removeClass('disabled');
-              }
+          $("#smartwizard").on("showStep", function(e, anchorObject, stepIndex, stepDirection, stepPosition) {
+            $("#prev-btn").removeClass('disabled').prop('disabled', false);
+            $("#next-btn").removeClass('disabled').prop('disabled', false);
+            if(stepPosition === 'first') {
+                $("#prev-btn").addClass('disabled').prop('disabled', true);
+            } else if(stepPosition === 'last') {
+                $("#next-btn").addClass('disabled').prop('disabled', true);
+            } else {
+                $("#prev-btn").removeClass('disabled').prop('disabled', false);
+                $("#next-btn").removeClass('disabled').prop('disabled', false);
+            }
+
+            // Get step info from Smart Wizard
+            let stepInfo = $('#smartwizard').smartWizard("getStepInfo");
+            $("#sw-current-step").text(stepInfo.currentStep + 1);
+            $("#sw-total-step").text(stepInfo.totalSteps);
           });
 
           // Smart Wizard
           $('#smartwizard').smartWizard({
-              selected: 0,
-              theme: 'arrows',
-              enableURLhash: false,
-              transition: {
-                  animation: 'slide-horizontal', // Effect on navigation, none/fade/slide-horizontal/slide-vertical/slide-swing
-              },
-              toolbarSettings: {
-                  toolbarPosition: 'bottom', // both bottom
-                  toolbarButtonPosition: 'center', // both bottom
-              }
+            selected: 0,
+            theme: 'arrows', // basic, arrows, square, round, dots
+            enableUrlHash: false,
+            transition: {
+              animation:'slideHorizontal' // none|fade|slideHorizontal|slideVertical|slideSwing|css
+            },
+            toolbar: {
+              position: 'both', // none/ top/ both bottom
+              // extraHtml: `<button class="btn btn-success sw-btn " onclick="onFinish()">Finish</button>
+              //             <button class="btn btn-secondary sw-btn" onclick="onCancel()">Cancel</button>`
+            }
           });
 
           // External Button Events
@@ -1147,13 +1754,6 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
 
 
           // Demo Button Events
-          $("#got_to_step").on("change", function() {
-              // Go to step
-              var step_index = $(this).val() - 1;
-              $('#smartwizard').smartWizard("goToStep", step_index);
-              return true;
-          });
-
           $("#is_justified").on("click", function() {
               // Change Justify
               var options = {
@@ -1164,24 +1764,26 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
               return true;
           });
 
-          $("#dark_mode").on("click", function() {
-              // Change darkMode
-              var options = {
-                darkMode: $(this).prop("checked")
-              };
-
-              $('#smartwizard').smartWizard("setOptions", options);
-              return true;
-          });
-
-
           $("#animation").on("change", function() {
-              // Change theme
-              var options = {
-                transition: {
-                    animation: $(this).val()
-                },
-              };
+              const anim = $(this).val();
+              const cssAnim = cssAnimationList[anim];
+              var options = {};
+
+              if (cssAnim != undefined) {
+                options = {
+                  transition: {
+                      animation: 'css',
+                      ...cssAnim
+                  },
+                };
+              } else {
+                options = {
+                  transition: {
+                      animation: anim
+                  },
+                };
+              }
+
               $('#smartwizard').smartWizard("setOptions", options);
               return true;
           });
@@ -1192,6 +1794,11 @@ $("#smartwizard").on("stepContent", function(e, anchorObject, stepIndex, stepDir
                 theme: $(this).val()
               };
               $('#smartwizard').smartWizard("setOptions", options);
+              return true;
+          });
+
+          $("#theme_colors").on("change", function() {
+              applyColors($('#theme_colors option:selected').data('colors'));
               return true;
           });
 
