@@ -398,6 +398,37 @@
 &lt;script src="https://unpkg.com/smartwizard@6/dist/js/jquery.smartWizard.min.js" type="text/javascript"&gt;&lt;/script&gt;
 </pre>
 
+<h6>Common JS/Webpack</h6>
+<pre class="prettyprint lang-js">
+var $ = require( "jquery" );
+require( "smartwizard/dist/css/smart_wizard_all.css");
+const smartWizard = require("smartwizard");
+
+$(function() {
+    $('#smartwizard').smartWizard();
+});
+</pre>
+
+<h6>ES6/Babel</h6>
+<pre class="prettyprint lang-js">
+import $ from "jquery";
+import "smartwizard/dist/css/smart_wizard_all.css";
+import smartWizard from 'smartwizard';
+
+$(function() {
+    $('#smartwizard').smartWizard();
+});
+</pre>
+
+Note: you may have to install the required dependencies 
+<pre class="prettyprint lang-bash">
+npm i jquery
+npm i smartwizard
+
+// If you are using Webpack, install
+npm i webpack webpack-cli style-loader css-loader --save-dev
+</pre>
+
                 <h3 id="downloads" class="anchor mt-4 mb-4"><a href="#downloads">Downloads</a></h3>
                 <p>
                   <a href="https://github.com/techlab/jquery-smartwizard/archive/master.zip" title="Download jQuery Smart Wizard on GitHub" class="btn btn-primary btn-sm">
@@ -508,11 +539,9 @@
 
 <h5 id="initialize_smartwizard" class="anchor"><a href="#initialize_smartwizard">Initialize the jQuery SmartWizard</a></h5>
 <pre class="prettyprint linenums lang-js">
-$(document).ready(function(){
-
-  // SmartWizard initialize
-  $('#smartwizard').smartWizard();
-
+$(function() {
+    // SmartWizard initialize
+    $('#smartwizard').smartWizard();
 });
 </pre>
 
