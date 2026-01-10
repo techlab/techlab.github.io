@@ -8,6 +8,7 @@ const CARBON_PLACEMENT = process.env.CARBON_PLACEMENT ?? ''
 export default defineConfig({
     title: 'TechLaboratory',
     description: 'Smart and open-source JavaScript plugins',
+    base: '/',
     cleanUrls: true,
     appearance: true, // Enable dark mode toggle
     themeConfig: {
