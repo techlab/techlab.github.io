@@ -1,0 +1,5 @@
+---
+jswizard: true
+---
+
+# JS Wizard
