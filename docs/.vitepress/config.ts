@@ -1,9 +1,9 @@
 import { defineConfig } from 'vitepress'
 
 // Get Google Analytics ID from environment variable
-const GA_TAG_ID = process.env.GA_TAG_ID ?? ''
-const CARBON_SERVE_ID = process.env.CARBON_SERVE_ID ?? ''
-const CARBON_PLACEMENT = process.env.CARBON_PLACEMENT ?? ''
+const GA_TAG_ID = process.env.VITE_GA_TAG_ID ?? 'XXX1'
+const CARBON_SERVE_ID = process.env.VITE_CARBON_SERVE_ID ?? 'XXX2'
+const CARBON_PLACEMENT = process.env.VITE_CARBON_PLACEMENT ?? 'XXX3'
 
 export default defineConfig({
     title: 'TechLaboratory',
@@ -47,7 +47,7 @@ export default defineConfig({
     head: [
         [
             'script',
-            { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=${GA_TAG_ID}' }
+            { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=' + GA_TAG_ID }
         ],
         [
             'script',
@@ -55,7 +55,7 @@ export default defineConfig({
             `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', ${GA_TAG_ID});`
+        gtag('config', '${GA_TAG_ID}');`
         ],
         ['meta', { name: 'theme-color', content: '#0b69ff' }],
         ['link', { rel: 'icon', href: '/favicon.ico' }]

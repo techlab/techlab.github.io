@@ -50,6 +50,9 @@ jobs:
           VITE_CARBON_PLACEMENT: ${{ secrets.CARBON_PLACEMENT }}
           VITE_GA_TAG_ID: ${{ secrets.GA_TAG_ID }}
       
+      - name: Add .nojekyll file
+        run: touch docs/.vitepress/dist/.nojekyll
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
