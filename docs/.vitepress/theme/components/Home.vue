@@ -8,67 +8,12 @@ const homeProducts = computed(() => products.filter(p => p.showOnHome !== false)
 </script>
 
 <template>
-	<div class="min-h-screen- bg-gradient-to-b from-gray-50 dark:from-gray-900 dark:to-gray-800">
-		
-		<!-- Hero Section -->
-		<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
-			<div class="text-center">
-				<!-- Hero Badges -->
-				<div class="flex justify-center gap-3 mb-8 flex-wrap">
-					<div class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-lg">
-						JavaScript
-					</div>
-					<div class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-lg">
-						React
-					</div>
-					<div class="px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 text-white text-sm font-semibold shadow-lg">
-						jQuery
-					</div>
-				</div>
-
-				<!-- Hero Title -->
-				<h1 class="block text-4xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">
-					Smart <span class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 bg-clip-text text-transparent">JavaScript</span> components for the web
-				</h1>
-
-				<!-- Hero Tagline -->
-				<p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mx-auto mb-12 leading-relaxed">
-					Modern and open-source UI components, ready-to-use examples with modern UI support
-				</p>
-
-				<!-- Hero Stats -->
-				<div class="flex justify-center gap-8 sm:gap-16 flex-wrap">
-					<div class="text-center">
-						<div class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2">
-							5+
-						</div>
-						<div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Products</div>
-					</div>
-					<div class="text-center">
-						<div class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2">
-							100%
-						</div>
-						<div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Open Source</div>
-					</div>
-					<div class="text-center">
-						<div class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-500 to-blue-600 bg-clip-text text-transparent mb-2">
-							MIT
-						</div>
-						<div class="text-sm text-gray-600 dark:text-gray-400 font-medium">Licensed</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
+	<div class="">
 		<section class="relative px-6 pt-16 pb-20 lg:px-8 lg:pt-24 lg:pb-28 mb-0">	
-			<div class="absolute inset-0">
-				<div class="h-1/3 sm:h-2/3"></div>
-			</div>
 			<div class="relative mx-auto max-w-7xl">
-				<div class="text-center">
-				<h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Products</h2>
+				<div class="text-center" id="products">
 				<p class="text-xl text-gray-500 sm:mt-4">
-					Explore our collection of modern, well-documented components</p>
+					Explore our collection of modern components and libraries</p>
 				</div>
 				<div class="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-2">
 					<!-- Product Cards -->	
