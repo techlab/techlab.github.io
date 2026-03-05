@@ -14,29 +14,41 @@ export interface Product {
 export const products: Product[] = [
     {
         title: 'jQuery Smart Wizard',
-        description: 'The awesome step wizard plugin for jQuery',
-        versions: ['v6', 'v5', 'v4', 'v2'],
+        description: 'A modern and accessible step wizard plugin for jQuery ',
+        versions: ['v7', 'v6', 'v5', 'v4', 'v2'],
         features: [
-            'Easy to implement and minimal HTML required',
-            'Responsive CSS design',
-            'Bootstrap compatible',
-            'Cool themes included and can be easily customized',
-            'Easy color customization using CSS variables',
-            'Form validation support',
-            'RTL (Right-to-left language) support',
-            'Accessible controls',
-            'External controls support',
-            'Easy ajax content integration',
+            'Easy to implement with minimal and clean HTML structure',
+            'Fully rewritten in TypeScript (v7) with built-in type declarations',
+            'Compatible with all modern browsers',
+            'Responsive and mobile-ready design',
+            'Multiple built-in themes (`basic` | `arrows` | `glow` | `pills`), easily customizable',
+            'Flexible color customization using CSS variables',
+            'Light / dark / auto display mode support',
+            'Built-in transition animations (`default` | `fade` | `slideHorizontal` | `slideVertical` | `slideSwing` | `css`)',
+            'Compatible with CSS animation libraries (including [Animate.css](https://animate.style/))',
+            'Extendable transition system with custom animation handlers',
+            'Comprehensive step states: `completed`, `active`, `disabled`, `hidden`, `error`, `warning`',
+            'Runtime option updates via `setOptions()`',
+            'Automatic horizontal scrolling when steps overflow (mouse wheel supported)',
+            'Keyboard navigation (left/right arrow keys)',
+            'Form validation support via `leave.sw` event',
+            'RTL (right-to-left language) support',
+            'Accessible navigation controls',
+            'Support for external navigation controls',
+            'Dynamic content loading via `contentLoader` callback',
             'Auto content height adjustment',
-            'Customizable toolbar and option to provide extra HTML'
+            'Customizable toolbar with support for additional HTML elements',
+            'Integrated progress bar',
+            'URL hash navigation with browser history integration',
+            'UMD (Universal Module Definition) compatible',
+            'Supports jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim versions'
         ],
         tags: ['jQuery'],
         pageLink: 'jquery-smartwizard',
 
         docsLink: 'jquery-smartwizard#documentation',
         demoLink: 'jquery-smartwizard#demo',
-        // screenshot: './media/jquery-smart-wizard/v6/sw-6-arrows.png'
-        screenshot: './media/jquery-smart-wizard/v6/gif/sw-6-validation.gif'
+        screenshot: './media/jquery-smart-wizard/v7/all-screens.png'
     },
     {
         title: 'jQuery Smart Cart',
