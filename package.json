@@ -13,7 +13,7 @@
         "@tailwindcss/postcss": "^4.1.17",
         "autoprefixer": "^10.4.0",
         "postcss": "^8.4.0",
-        "vite": "^5.0.0",
+        "vite": "^6.4.2",
         "vitepress": "^1.0.0-next.0"
     },
     "dependencies": {
