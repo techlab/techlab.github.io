@@ -169,34 +169,34 @@ A simple wizard with 4 steps demonstrating the basic functionality of SmartWizar
 <!-- Basic Demo -->
 <div>
   <div id="smartwizard-basic" class="smartwizard-example">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#step-1">
-          <div class="num">1</div>
+    <ul class="sw-nav">
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#step-1">
+          <div class="sw-badge">1</div>
           Customer Details
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#step-2">
-          <span class="num">2</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#step-2">
+          <span class="sw-badge">2</span>
           Products Details
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#step-3">
-          <span class="num">3</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#step-3">
+          <span class="sw-badge">3</span>
           Shipping Details
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#step-4">
-          <span class="num">4</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#step-4">
+          <span class="sw-badge">4</span>
           Confirm Order
         </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+    <div class="sw-tab-content">
+      <div id="step-1" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-1">
         <h3>Customer Details</h3>
         <p>Please enter your customer information below:</p>
         <div style="max-width: 500px;">
@@ -214,7 +214,7 @@ A simple wizard with 4 steps demonstrating the basic functionality of SmartWizar
           </div>
         </div>
       </div>
-      <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+      <div id="step-2" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-2">
         <h3>Products Details</h3>
         <p>Select the products you wish to order:</p>
         <div style="max-width: 500px;">
@@ -247,7 +247,7 @@ A simple wizard with 4 steps demonstrating the basic functionality of SmartWizar
           </div>
         </div>
       </div>
-      <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+      <div id="step-3" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-3">
         <h3>Shipping Details</h3>
         <p>Enter your shipping address:</p>
         <div style="max-width: 500px;">
@@ -276,7 +276,7 @@ A simple wizard with 4 steps demonstrating the basic functionality of SmartWizar
           </div>
         </div>
       </div>
-      <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+      <div id="step-4" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-4">
         <h3>✅ Confirm Order</h3>
         <p>Please review your order details before confirming:</p>
         <div style="max-width: 500px; padding: 1.5rem; background: #f9fafb; border-radius: 8px; border: 1px solid #e5e7eb;">
@@ -291,8 +291,8 @@ A simple wizard with 4 steps demonstrating the basic functionality of SmartWizar
         </div>
       </div>
     </div>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
   </div>
 </div>
@@ -303,28 +303,28 @@ This demo shows how to integrate form validation with SmartWizard. Try clicking 
 <!-- Form Validation Demo -->
 <div>
   <div id="smartwizard-validation" class="smartwizard-example">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#val-step-1">
-          <div class="num">1</div>
+    <ul class="sw-nav">
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#val-step-1">
+          <div class="sw-badge">1</div>
           Account Info
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#val-step-2">
-          <span class="num">2</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#val-step-2">
+          <span class="sw-badge">2</span>
           Profile
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#val-step-3">
-          <span class="num">3</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#val-step-3">
+          <span class="sw-badge">3</span>
           Complete
         </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div id="val-step-1" class="tab-pane" role="tabpanel">
+    <div class="sw-tab-content">
+      <div id="val-step-1" class="sw-tab-pane" role="tabpanel">
         <h3>Account Information</h3>
         <form id="form-step-1">
           <div style="max-width: 500px;">
@@ -343,7 +343,7 @@ This demo shows how to integrate form validation with SmartWizard. Try clicking 
           </div>
         </form>
       </div>
-      <div id="val-step-2" class="tab-pane" role="tabpanel">
+      <div id="val-step-2" class="sw-tab-pane" role="tabpanel">
         <h3>Profile Information</h3>
         <div style="max-width: 500px;">
           <div style="margin-bottom: 1rem;">
@@ -360,7 +360,7 @@ This demo shows how to integrate form validation with SmartWizard. Try clicking 
           </div>
         </div>
       </div>
-      <div id="val-step-3" class="tab-pane" role="tabpanel">
+      <div id="val-step-3" class="sw-tab-pane" role="tabpanel">
         <h3>🎉 Registration Complete!</h3>
         <p>Your account has been created successfully.</p>
         <div style="max-width: 500px; padding: 1.5rem; background: #f0fdf4; border-radius: 8px; border: 1px solid #86efac;">
@@ -368,8 +368,8 @@ This demo shows how to integrate form validation with SmartWizard. Try clicking 
         </div>
       </div>
     </div>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%"></div>
     </div>
   </div>
 </div>
@@ -380,28 +380,28 @@ This demo simulates loading content dynamically via Ajax. Content is loaded when
 <!-- Ajax Content Demo -->
 <div>
   <div id="smartwizard-ajax" class="smartwizard-example">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#ajax-step-1">
-          <div class="num">1</div>
+    <ul class="sw-nav">
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#ajax-step-1">
+          <div class="sw-badge">1</div>
           Step 1
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#ajax-step-2">
-          <span class="num">2</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#ajax-step-2">
+          <span class="sw-badge">2</span>
           Step 2
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#ajax-step-3">
-          <span class="num">3</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#ajax-step-3">
+          <span class="sw-badge">3</span>
           Step 3
         </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div id="ajax-step-1" class="tab-pane" role="tabpanel">
+    <div class="sw-tab-content">
+      <div id="ajax-step-1" class="sw-tab-pane" role="tabpanel">
         <div class="ajax-content">
           <div style="text-align: center; padding: 2rem;">
             <div style="display: inline-block; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #5ea8de; border-radius: 50%; animation: spin 1s linear infinite;"></div>
@@ -409,7 +409,7 @@ This demo simulates loading content dynamically via Ajax. Content is loaded when
           </div>
         </div>
       </div>
-      <div id="ajax-step-2" class="tab-pane" role="tabpanel">
+      <div id="ajax-step-2" class="sw-tab-pane" role="tabpanel">
         <div class="ajax-content">
           <div style="text-align: center; padding: 2rem;">
             <div style="display: inline-block; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #5ea8de; border-radius: 50%; animation: spin 1s linear infinite;"></div>
@@ -417,7 +417,7 @@ This demo simulates loading content dynamically via Ajax. Content is loaded when
           </div>
         </div>
       </div>
-      <div id="ajax-step-3" class="tab-pane" role="tabpanel">
+      <div id="ajax-step-3" class="sw-tab-pane" role="tabpanel">
         <div class="ajax-content">
           <div style="text-align: center; padding: 2rem;">
             <div style="display: inline-block; width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid #5ea8de; border-radius: 50%; animation: spin 1s linear infinite;"></div>
@@ -426,8 +426,8 @@ This demo simulates loading content dynamically via Ajax. Content is loaded when
         </div>
       </div>
     </div>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%"></div>
     </div>
   </div>
 </div>
@@ -438,28 +438,28 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
 <!-- RTL Demo -->
 <div id="demo-rtl" class="demo-container">
   <div id="smartwizard-rtl" dir="rtl" class="smartwizard-example">
-    <ul class="nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#rtl-step-1">
-          <div class="num">1</div>
+    <ul class="sw-nav">
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#rtl-step-1">
+          <div class="sw-badge">1</div>
           الخطوة الأولى
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#rtl-step-2">
-          <span class="num">2</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#rtl-step-2">
+          <span class="sw-badge">2</span>
           الخطوة الثانية
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#rtl-step-3">
-          <span class="num">3</span>
+      <li class="sw-nav-item">
+        <a class="sw-nav-link" href="#rtl-step-3">
+          <span class="sw-badge">3</span>
           الخطوة الثالثة
         </a>
       </li>
     </ul>
-    <div class="tab-content">
-      <div id="rtl-step-1" class="tab-pane" role="tabpanel">
+    <div class="sw-tab-content">
+      <div id="rtl-step-1" class="sw-tab-pane" role="tabpanel">
         <h3>معلومات شخصية</h3>
         <p>الرجاء إدخال معلوماتك الشخصية أدناه:</p>
         <div style="max-width: 500px;">
@@ -473,7 +473,7 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
           </div>
         </div>
       </div>
-      <div id="rtl-step-2" class="tab-pane" role="tabpanel">
+      <div id="rtl-step-2" class="sw-tab-pane" role="tabpanel">
         <h3>العنوان</h3>
         <p>أدخل عنوانك:</p>
         <div style="max-width: 500px;">
@@ -487,7 +487,7 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
           </div>
         </div>
       </div>
-      <div id="rtl-step-3" class="tab-pane" role="tabpanel">
+      <div id="rtl-step-3" class="sw-tab-pane" role="tabpanel">
         <h3>✅ اكتمل!</h3>
         <p>تم إكمال النموذج بنجاح.</p>
         <div style="max-width: 500px; padding: 1.5rem; background: #f0fdf4; border-radius: 8px; border: 1px solid #86efac;">
@@ -495,8 +495,8 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
         </div>
       </div>
     </div>
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%"></div>
     </div>
   </div>
 </div>
