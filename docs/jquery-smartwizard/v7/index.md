@@ -135,52 +135,52 @@ A modern and accessible step wizard plugin for jQuery
 :::
 
 <div id="smartwizard">
-    <ul class="nav">
-        <li class="nav-item">
-            <a class="nav-link" href="#step-1">
-                <div class="badge">1</div>
+    <ul class="sw-nav">
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-1">
+                <div class="sw-badge">1</div>
                 Customer Details
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#step-2">
-                <span class="badge">2</span>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-2">
+                <span class="sw-badge">2</span>
                 Products Details
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#step-3">
-                <span class="badge">3</span>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-3">
+                <span class="sw-badge">3</span>
                 Shipping Details
             </a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link " href="#step-4">
-                <span class="badge">4</span>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link " href="#step-4">
+                <span class="sw-badge">4</span>
                 Confirm Order
             </a>
         </li>
     </ul>
-    <div class="tab-content">
-        <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+    <div class="sw-tab-content">
+        <div id="step-1" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-1">
             <h3>Step 1 Content</h3>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
-        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+        <div id="step-2" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-2">
             <h3>Step 2 Content</h3>
             <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
         </div>
-        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+        <div id="step-3" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-3">
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
-        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+        <div id="step-4" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-4">
             <h3>Step 4 Content</h3>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
         </div>
     </div>
-    <div class="progress">
-        <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="sw-progress">
+        <div class="sw-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 </div>
 
@@ -467,6 +467,9 @@ $(function() {
 - Customizable toolbar with support for additional HTML elements
 - Integrated progress bar
 - URL hash navigation with browser history integration
+- Isolated `sw-*` CSS class prefixing to prevent collisions with Bootstrap, Tailwind, and other CSS frameworks
+- Built-in content sanitization (`contentSanitize`) to guard against DOM XSS in dynamically loaded content
+- Adaptive navigation bar scrolling and active step centering (`scrollToView`)
 - UMD (Universal Module Definition) compatible
 - Supports jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim versions
 
@@ -478,7 +481,7 @@ $(function() {
 
 ### Include CSS
 
-Include the base css file `/dist/css/smart_wizard.min.css` and the theme css file `/dist/css/themes/<theme-name>.min.css`.
+Include the base css file `/dist/css/smartwizard.min.css` and the theme css file `/dist/css/themes/<theme-name>.min.css`.
 
 ```html
 <!-- Base CSS -->
@@ -493,51 +496,51 @@ Include the base css file `/dist/css/smart_wizard.min.css` and the theme css fil
 ```html
 <!-- SmartWizard html -->
 <div id="smartwizard">
-    <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#step-1">
-            <div class="badge">1</div>
+    <ul class="sw-nav">
+        <li class="sw-nav-item">
+          <a class="sw-nav-link" href="#step-1">
+            <div class="sw-badge">1</div>
             Step Title
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#step-2">
-            <span class="badge">2</span>
+        <li class="sw-nav-item">
+          <a class="sw-nav-link" href="#step-2">
+            <span class="sw-badge">2</span>
             Step Title
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#step-3">
-            <span class="badge">3</span>
+        <li class="sw-nav-item">
+          <a class="sw-nav-link" href="#step-3">
+            <span class="sw-badge">3</span>
             Step Title
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#step-4">
-            <span class="badge">4</span>
+        <li class="sw-nav-item">
+          <a class="sw-nav-link" href="#step-4">
+            <span class="sw-badge">4</span>
             Step Title
           </a>
         </li>
     </ul>
 
-    <div class="tab-content">
-        <div id="step-1" class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+    <div class="sw-tab-content">
+        <div id="step-1" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-1">
             Step 1 content
         </div>
-        <div id="step-2" class="tab-pane" role="tabpanel" aria-labelledby="step-2">
+        <div id="step-2" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-2">
             Step 2 content
         </div>
-        <div id="step-3" class="tab-pane" role="tabpanel" aria-labelledby="step-3">
+        <div id="step-3" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-3">
             Step 3 content
         </div>
-        <div id="step-4" class="tab-pane" role="tabpanel" aria-labelledby="step-4">
+        <div id="step-4" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-4">
             Step 4 content
         </div>
     </div>
 
     <!-- Optional progressbar -->
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 
 </div>
@@ -567,7 +570,7 @@ $(function() {
 ```js
 $('#smartwizard').smartWizard({
     initialStep: 0,         // Initial selected step (0 = first step)
-    theme: 'basic',         // Theme: basic | arrows | dots | round | square | progress (ensure related CSS is included)
+    theme: 'basic',         // Theme: default | arrows | basic | glow | pills (ensure related CSS is included)
     displayMode: 'auto',    // Display mode: auto (system preference) | dark | light | none
 
     behavior: {
@@ -610,8 +613,8 @@ $('#smartwizard').smartWizard({
     keyboardNavigation: {
         enabled: true,             // Enable left/right arrow key navigation
         keys: {
-            left: [37],            // Key codes for backward navigation
-            right: [39]            // Key codes for forward navigation
+            left: ['ArrowLeft'],   // Key names for backward navigation
+            right: ['ArrowRight']  // Key names for forward navigation
         }
     },
 
@@ -635,10 +638,11 @@ $('#smartwizard').smartWizard({
         warning: []     // Step indexes to mark as warning on init
     },
 
-    scrollToView: false, // Scroll the active step anchor into view on step change
+    scrollToView: true, // Scroll the active step anchor into view on step change
 
-    contentLoader: null  // function(stepIndex, stepDirection, stepPosition, stepElement, callback)
+    contentLoader: null, // function(stepIndex, stepDirection, stepPosition, stepElement, callback)
                          // Dynamically load step content; call callback(htmlContent) when ready
+    contentSanitize: true // Sanitize dynamic HTML content loaded via contentLoader to prevent XSS
 });
 ```
 
@@ -661,20 +665,20 @@ OR
 ```
 
 ### Progressbar support
-jQuery Smart Wizard has built in progressbar support. You can simply add this by adding the Bootstrap style progressbar HTML inside the wizard HTML.
+jQuery Smart Wizard has built in progressbar support. You can simply add this by adding the progressbar HTML inside the wizard HTML.
 ```html
 <div id="smartwizard">
-    <ul class="nav">
+    <ul class="sw-nav">
         ...
     </ul>
  
-    <div class="tab-content">
+    <div class="sw-tab-content">
         ...
     </div>
  
     <!-- Include optional progressbar HTML -->
-    <div class="progress">
-      <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="sw-progress">
+      <div class="sw-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 </div>  
 ```
