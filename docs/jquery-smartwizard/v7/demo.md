@@ -10,19 +10,19 @@ head:
       content: wizard, step, jQuery, jQuery plugin, jQuery wizard, jQuery step wizard
   - - link
     - rel: stylesheet
-      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/smartwizard.min.css'
+      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/smartwizard.min.css'
   - - link
     - rel: stylesheet
-      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/arrows.min.css'
+      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/arrows.min.css'
   - - link
     - rel: stylesheet
-      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/basic.min.css'
+      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/basic.min.css'
   - - link
     - rel: stylesheet
-      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/glow.min.css'
+      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/glow.min.css'
   - - link
     - rel: stylesheet
-      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/pills.min.css'
+      href: 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/pills.min.css'
   - - link
     - rel: stylesheet
       href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
@@ -523,7 +523,7 @@ if (typeof window !== 'undefined') {
   jqueryScript.onload = function() {
     // Load SmartWizard after jQuery is loaded
     const swScript = document.createElement('script');
-    swScript.src = 'https://cdn.jsdelivr.net/npm/smartwizard@7/dist/js/jquery.smartWizard.min.js';
+    swScript.src = 'https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/js/jquery.smartWizard.min.js';
     swScript.onload = function() {
       initializeDemos();
     };
