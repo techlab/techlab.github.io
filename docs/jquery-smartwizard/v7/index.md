@@ -245,12 +245,12 @@ const loadScripts = async () => {
 
     try {
         await loadScript('https://code.jquery.com/jquery-4.0.0.min.js');
-        await loadScript('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/js/jquery.smartWizard.min.js');
-        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/smartwizard.min.css');
-        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/basic.min.css');
-        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/arrows.min.css');
-        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/pills.min.css');
-        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7/dist/css/themes/glow.min.css');
+        await loadScript('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/js/jquery.smartWizard.min.js');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/smartwizard.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/basic.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/arrows.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/pills.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/glow.min.css');
         await loadStyle('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
         return true;
     } catch (error) {
