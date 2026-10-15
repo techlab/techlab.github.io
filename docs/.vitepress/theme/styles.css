@@ -83,7 +83,7 @@
   border: none !important;
 }
 
-.sw>.nav>li+li,
+.sw>.sw-nav>li+li,
 .st>.nav>li+li {
   margin-top: 0;
 }
