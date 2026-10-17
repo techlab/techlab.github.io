@@ -35,9 +35,9 @@ SmartWizard features official adapters for **React** and **Vue 3**, an extensibl
 
 [![npm version](https://badge.fury.io/js/@smart-wizard%2Fcore.svg)](https://www.npmjs.com/package/@smart-wizard/core)
 
-[![jsDelivr Hits](https://data.jsdelivr.net/v1/package/npm/@smart-wizard/core/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@smart-wizard/core)
+<!-- [![jsDelivr Hits](https://data.jsdelivr.net/v1/package/npm/@smart-wizard/core/badge?style=rounded)](https://www.jsdelivr.com/package/npm/@smart-wizard/core)
 
-[![Npm Downloads](https://badgen.net/npm/dm/@smart-wizard/core?icon=npm)](https://www.npmjs.com/package/@smart-wizard/core)
+[![Npm Downloads](https://badgen.net/npm/dm/@smart-wizard/core?icon=npm)](https://www.npmjs.com/package/@smart-wizard/core) -->
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/techlab/smart-wizard/main/LICENSE)
 
