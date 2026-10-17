@@ -23,6 +23,7 @@ const { site } = useData()
         
         <div class="footer-section">
           <h4>Products</h4>
+          <a :href="withBase('/smart-wizard/')">Smart Wizard</a>
           <a :href="withBase('/react-smarttab/')">React Smart Tab</a>
           <a :href="withBase('/jquery-smartwizard/')">jQuery Smart Wizard</a>
           <a :href="withBase('/jquery-smartcart/')">jQuery Smart Cart</a>

@@ -13,6 +13,32 @@ export interface Product {
 
 export const products: Product[] = [
     {
+        title: 'Smart Wizard',
+        description: 'A modern, framework-agnostic wizard / multi-step component',
+        versions: ['v1'],
+        features: [
+            'Zero runtime dependencies, written in TypeScript with full type declarations',
+            'Framework-agnostic core with official React and Vue 3 adapters',
+            'Modern, accessible UI following W3C WAI-ARIA authoring practices',
+            'Multiple built-in themes (`default`, `arrows`, `pills`)',
+            'Extensive color presets (`default`, `ocean`, `forest`, `violet`, etc.) and CSS variables',
+            'Automatic, light, and dark color-scheme support',
+            'Horizontal and vertical layout modes',
+            'Built-in animations (`fade`, `slideHorizontal`, `slideVertical`, `slideSwing`, `css`)',
+            'Support for external CSS animations (e.g. Animate.css)',
+            'Comprehensive step states: `completed`, `active`, `disabled`, `hidden`, `error`, `warning`',
+            'Fluent step API for single or bulk step operations',
+            'Extensible plugin/extension architecture (touch swipe, URL hash & history)',
+            'Dynamic content loading via `contentLoader` callback',
+            'Integrated progress bar and loader overlay',
+            'Auto height adjustment and keyboard navigation'
+        ],
+        tags: ['JavaScript', 'TypeScript', 'React', 'Vue'],
+        pageLink: 'smart-wizard',
+        docsLink: 'smart-wizard#features',
+        demoLink: 'smart-wizard#live-demo',
+    },
+    {
         title: 'jQuery Smart Wizard',
         description: 'A modern and accessible step wizard plugin for jQuery ',
         versions: ['v7', 'v6', 'v5', 'v4', 'v2'],
