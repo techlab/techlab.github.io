@@ -17,6 +17,10 @@
         "vitepress": "^1.0.0-next.0"
     },
     "dependencies": {
+        "@smart-wizard/core": "^1.0.1",
+        "@smart-wizard/extension-swipe": "^1.0.1",
+        "@smart-wizard/extension-url-hash": "^1.0.1",
+        "@smart-wizard/ui": "^1.0.1",
         "@tailwindcss/vite": "^4.1.17",
         "tailwindcss": "^4.1.17"
     }

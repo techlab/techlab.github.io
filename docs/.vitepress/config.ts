@@ -20,21 +20,27 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             {
-                text: 'JavaScript',
+                text: 'Smart Wizard',
+                items: [
+                    { text: 'Smart Wizard (Standalone)', link: '/smart-wizard/' },
+                    { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/' },
+                ]
+            },
+            {
+                text: 'jQuery Plugins',
+                items: [
+                    { text: 'jQuery Smart Tab', link: '/jquery-smarttab/' },
+                    { text: 'jQuery Smart Cart', link: '/jquery-smartcart/' },
+                ]
+            },
+            {
+                text: 'Tools',
                 items: [
                     { text: 'Copify JS', link: '/copify/' },
                     { text: 'React Smart Tab', link: '/react-smarttab/' },
                     { text: 'create-jquery-plugin', link: '/create-jquery-plugin/' }
                 ]
             },
-            {
-                text: 'jQuery Plugins',
-                items: [
-                    { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/' },
-                    { text: 'jQuery Smart Tab', link: '/jquery-smarttab/' },
-                    { text: 'jQuery Smart Cart', link: '/jquery-smartcart/' },
-                ]
-            }
         ],
         socialLinks: [
             { icon: 'github', link: 'https://github.com/techlab' },
