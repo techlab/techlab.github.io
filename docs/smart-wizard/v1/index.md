@@ -273,7 +273,6 @@ SmartWizard features official adapters for **React** and **Vue 3**, an extensibl
     </div>
   </div>
 </div>
-
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { onMounted, watch } from 'vue'
@@ -1227,13 +1226,13 @@ const { next, prev, stepInfo, activeIndex } = useSmartWizard(wizardRef, {
 
 ## 📝 License
 
-**SmartWizard** is dual-licensed:
+**Smart Wizard** is dual-licensed:
 
-**[MIT License](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** — Free for personal and open-source projects.
+**[GNU General Public License v3.0 (GPLv3)](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** - free and open-source under the GNU General Public License v3.0
 
-**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for closed-source applications, commercial SaaS products, and client projects.  
+**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for **proprietary (closed-source) application, commercial SaaS, or client project** without releasing your application's source code under the GPLv3.
 
-> If you use **SmartWizard** in a commercial or client application, please purchase a commercial license to support active development and ongoing maintenance.
+Commercial licenses help support continued development, maintenance, and new features.
 
 <a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8">Purchase Single Commercial License</a>
 
