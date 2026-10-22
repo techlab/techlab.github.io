@@ -273,6 +273,7 @@ SmartWizard features official adapters for **React** and **Vue 3**, an extensibl
     </div>
   </div>
 </div>
+
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import { onMounted, watch } from 'vue'
