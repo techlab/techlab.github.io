@@ -91,9 +91,10 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
           <!-- Dropdown Menu -->
           <div v-show="isProductsOpen" class="tl-mega-menu" role="menu">
             <div class="tl-mega-inner">
-              <div class="tl-mega-col tl-mega-featured">
-                <div class="tl-mega-heading">Flagship Components</div>
+              <div class="tl-mega-col tl-mega-secondary">
+                <!-- <div class="tl-mega-heading">Plugins & Utilities</div> -->
                 <div class="tl-mega-list">
+
                   <a
                     v-for="prod in featuredProducts"
                     :key="prod.id"
@@ -113,12 +114,7 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
                       <p class="tl-product-tagline">{{ prod.tagline }}</p>
                     </div>
                   </a>
-                </div>
-              </div>
 
-              <div class="tl-mega-col tl-mega-secondary">
-                <div class="tl-mega-heading">Plugins & Utilities</div>
-                <div class="tl-mega-list">
                   <a
                     v-for="prod in otherProducts"
                     :key="prod.id"
@@ -395,7 +391,7 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
 
 .tl-mega-menu {
   position: absolute;
-  top: calc(100% + 8px);
+  top: calc(100%);
   left: 0;
   width: 580px;
   background-color: var(--tl-surface);
@@ -419,7 +415,7 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
 
 .tl-mega-inner {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  /* grid-template-columns: 1.15fr 0.85fr; */
   padding: 1.25rem;
   gap: 1.25rem;
 }

@@ -21,7 +21,7 @@ export default defineConfig({
             {
                 text: 'Products',
                 items: [
-                    { text: 'Smart Wizard (Standalone)', link: '/smart-wizard/' },
+                    { text: 'Smart Wizard', link: '/smart-wizard/' },
                     { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/' },
                     { text: 'jQuery Smart Cart', link: '/jquery-smartcart/' },
                     { text: 'jQuery Smart Tab', link: '/jquery-smarttab/' },
@@ -111,7 +111,7 @@ export default defineConfig({
         ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
         ['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }],
         ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap' }],
-        
+
         // Open Graph Meta
         ['meta', { property: 'og:site_name', content: 'TechLaboratory' }],
         ['meta', { property: 'og:type', content: 'website' }],
