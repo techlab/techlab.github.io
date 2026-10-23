@@ -1,0 +1,114 @@
+/* ==========================================================================
+   TechLaboratory v8 Design System Tokens
+   ========================================================================== */
+
+:root {
+  /* Brand Identity - Precision Developer Cyan & Royal Tech Blue */
+  --tl-brand-primary: #0284c7;
+  --tl-brand-glow: #38bdf8;
+  --tl-brand-hover: #0369a1;
+  --tl-brand-dark: #075985;
+  --tl-brand-soft: rgba(2, 132, 199, 0.1);
+  --tl-brand-gradient: linear-gradient(135deg, #0284c7 0%, #06b6d4 50%, #38bdf8 100%);
+  --tl-brand-gradient-subtle: linear-gradient(135deg, rgba(2, 132, 199, 0.08) 0%, rgba(6, 182, 212, 0.04) 100%);
+
+  /* Accent Colors */
+  --tl-emerald: #10b981;
+  --tl-emerald-soft: rgba(16, 185, 129, 0.12);
+  --tl-violet: #8b5cf6;
+  --tl-violet-soft: rgba(139, 92, 246, 0.12);
+  --tl-amber: #f59e0b;
+  --tl-amber-soft: rgba(245, 158, 11, 0.12);
+  --tl-rose: #f43f5e;
+  --tl-rose-soft: rgba(244, 63, 94, 0.12);
+
+  /* Light Theme (Default / Light Mode) */
+  --tl-bg: #f8fafc;
+  --tl-bg-alt: #ffffff;
+  --tl-surface: #ffffff;
+  --tl-surface-hover: #f1f5f9;
+  --tl-surface-glass: rgba(255, 255, 255, 0.82);
+  --tl-border: #e2e8f0;
+  --tl-border-subtle: #edf2f7;
+  --tl-border-focus: #38bdf8;
+  --tl-border-glow: rgba(2, 132, 199, 0.35);
+
+  --tl-text-primary: #0f172a;
+  --tl-text-secondary: #475569;
+  --tl-text-muted: #94a3b8;
+  --tl-text-inverse: #ffffff;
+
+  --tl-code-bg: #f1f5f9;
+  --tl-code-border: #e2e8f0;
+  --tl-code-text: #0f172a;
+
+  --tl-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --tl-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.06);
+  --tl-shadow-md: 0 8px 24px -4px rgba(15, 23, 42, 0.08);
+  --tl-shadow-lg: 0 16px 40px -8px rgba(15, 23, 42, 0.12);
+  --tl-shadow-glow: 0 0 32px -4px rgba(2, 132, 199, 0.18);
+
+  /* Typography */
+  --tl-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --tl-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Layout & Sizing */
+  --tl-header-height: 64px;
+  --tl-max-width: 1280px;
+  --tl-max-reading-width: 780px;
+
+  /* Radii */
+  --tl-radius-xs: 4px;
+  --tl-radius-sm: 6px;
+  --tl-radius-md: 10px;
+  --tl-radius-lg: 16px;
+  --tl-radius-xl: 24px;
+  --tl-radius-full: 9999px;
+
+  /* Micro Transitions */
+  --tl-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tl-transition-normal: 240ms cubic-bezier(0.4, 0, 0.2, 1);
+  --tl-transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* VitePress standard variables override mapping */
+  --vp-c-brand-1: #0284c7;
+  --vp-c-brand-2: #0369a1;
+  --vp-c-brand-3: #075985;
+  --vp-c-brand-soft: rgba(2, 132, 199, 0.1);
+  --vp-nav-height: 64px;
+}
+
+/* ==========================================================================
+   Dark Theme (Obsidian & Carbon Developer Architecture)
+   ========================================================================== */
+.dark {
+  --tl-bg: #080c14;
+  --tl-bg-alt: #0d1320;
+  --tl-surface: #111a2d;
+  --tl-surface-hover: #17233c;
+  --tl-surface-glass: rgba(13, 19, 32, 0.85);
+  --tl-border: rgba(148, 163, 184, 0.12);
+  --tl-border-subtle: rgba(148, 163, 184, 0.07);
+  --tl-border-focus: #38bdf8;
+  --tl-border-glow: rgba(56, 189, 248, 0.3);
+
+  --tl-text-primary: #f8fafc;
+  --tl-text-secondary: #94a3b8;
+  --tl-text-muted: #64748b;
+  --tl-text-inverse: #080c14;
+
+  --tl-code-bg: #090e1a;
+  --tl-code-border: rgba(148, 163, 184, 0.14);
+  --tl-code-text: #e2e8f0;
+
+  --tl-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --tl-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.55);
+  --tl-shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.65);
+  --tl-shadow-lg: 0 20px 48px -8px rgba(0, 0, 0, 0.75);
+  --tl-shadow-glow: 0 0 36px -4px rgba(56, 189, 248, 0.22);
+
+  --vp-c-brand-1: #38bdf8;
+  --vp-c-brand-2: #0284c7;
+  --vp-c-brand-3: #0369a1;
+  --vp-c-brand-soft: rgba(56, 189, 248, 0.12);
+}
