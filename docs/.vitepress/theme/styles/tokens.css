@@ -5,7 +5,8 @@
 :root {
   /* Brand Identity - Precision Developer Cyan & Royal Tech Blue */
   --tl-brand-primary: #0284c7;
-  --tl-brand-glow: #38bdf8;
+  --tl-brand-glow: #5ea8de;
+  /* --tl-brand-glow: #38bdf8; */
   --tl-brand-hover: #0369a1;
   --tl-brand-dark: #075985;
   --tl-brand-soft: rgba(2, 132, 199, 0.1);

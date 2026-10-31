@@ -9,9 +9,9 @@ const categories = ['All', 'Component', 'Plugin', 'Utility', 'CLI']
 
 const filteredProducts = computed(() => {
   if (activeCategory.value === 'All') {
-    return products
+    return products.filter(p => p.showOnHome === true)
   }
-  return products.filter(p => p.category === activeCategory.value)
+  return products.filter(p => p.category === activeCategory.value && p.showOnHome === true)
 })
 </script>
 
@@ -19,10 +19,10 @@ const filteredProducts = computed(() => {
   <section id="products" class="tl-portfolio-section">
     <div class="tl-container">
       <div class="tl-section-header">
-        <span class="tl-section-eyebrow">Product Ecosystem</span>
+        <span class="tl-section-eyebrow">Explore Our Products</span>
         <h2 class="tl-section-title">Open-Source Components & Plugins</h2>
         <p class="tl-section-desc">
-          Engineered for production environments, modern frameworks, and rock-solid backwards compatibility.
+          Built for modern web applications, extensible architectures, and reliable cross-browser performance.
         </p>
       </div>
 

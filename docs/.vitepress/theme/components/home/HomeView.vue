@@ -12,8 +12,8 @@ import CTASection from './CTASection.vue'
     <HomeHero />
     <FlagshipShowcase />
     <ProductGrid />
-    <DemosHighlight />
-    <ToolsHighlight />
+    <!-- <DemosHighlight /> -->
+    <!-- <ToolsHighlight /> -->
     <CTASection />
   </div>
 </template>

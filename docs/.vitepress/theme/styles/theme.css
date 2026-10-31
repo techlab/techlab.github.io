@@ -1,7 +1,9 @@
 @import './tokens.css';
 
 /* Base Reset & Foundations */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -23,7 +25,10 @@ body {
 }
 
 /* Hide VitePress default navigation bar completely */
-.VPNav, header.VPNavBar, .VPNavScreen, .VPFooter {
+.VPNav,
+header.VPNavBar,
+.VPNavScreen,
+.VPFooter {
   display: none !important;
 }
 
@@ -119,7 +124,7 @@ body {
 .tl-btn-lg {
   padding: 0.875rem 1.75rem;
   font-size: 1rem;
-  border-radius: var(--tl-radius-lg);
+  border-radius: var(--tl-radius-md);
 }
 
 /* Badges */
@@ -258,11 +263,17 @@ body {
 
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
-.VPLocalNav.empty { display: none !important; }
+
+.VPLocalNav.empty {
+  display: none !important;
+}

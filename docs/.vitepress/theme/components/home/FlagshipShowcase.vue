@@ -38,8 +38,12 @@ const themePreviews = {
         <!-- Top Flagship Header -->
         <div class="tl-flagship-header">
           <div class="tl-flagship-eyebrow">
-            <span class="tl-badge tl-badge-blue">Flagship Product</span>
-            <span class="tl-version-badge">v1.0 TypeScript Core</span>
+            <span
+              v-for="val in product.frameworks"
+              class="tl-badge tl-badge-blue"
+            >
+              {{ val }}
+            </span>
           </div>
 
           <h2 class="tl-flagship-title">{{ product.name }}</h2>
@@ -47,49 +51,18 @@ const themePreviews = {
           <p class="tl-flagship-desc">{{ product.description }}</p>
 
           <div class="tl-flagship-ctas">
-            <a :href="withBase(product.pageLink)" class="tl-btn tl-btn-primary tl-btn-lg">
+            <a :href="withBase(product.pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
               Explore {{ product.name }}
               <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-secondary tl-btn-lg">
-              Live Demos
+            <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+              Try Live Demo
             </a>
-            <a v-if="product.docsLink" :href="withBase(product.docsLink)" class="tl-btn tl-btn-ghost tl-btn-lg">
-              Documentation
+            <a v-if="product.docsLink" :href="withBase(product.docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+              View Documentation
             </a>
-          </div>
-        </div>
-
-        <!-- Middle Showcase: Interactive Preview Switcher -->
-        <div class="tl-flagship-showcase">
-          <div class="tl-showcase-nav">
-            <button
-              v-for="(val, key) in themePreviews"
-              :key="key"
-              type="button"
-              class="tl-showcase-tab"
-              :class="{ 'tl-showcase-tab-active': activeTheme === key }"
-              @click="activeTheme = key as any"
-            >
-              {{ val.title }}
-            </button>
-          </div>
-
-          <div class="tl-showcase-display">
-            <div class="tl-image-frame">
-              <img
-                :src="withBase(themePreviews[activeTheme].image)"
-                :alt="`${product.name} ${themePreviews[activeTheme].title}`"
-                class="tl-preview-img"
-                loading="lazy"
-              />
-              <div class="tl-preview-caption">
-                <span class="tl-caption-title">{{ themePreviews[activeTheme].title }}</span>
-                <span class="tl-caption-desc">{{ themePreviews[activeTheme].desc }}</span>
-              </div>
-            </div>
           </div>
         </div>
 

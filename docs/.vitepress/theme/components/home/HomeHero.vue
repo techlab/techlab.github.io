@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import { withBase } from 'vitepress'
 
 const activeTab = ref<'sw' | 'react' | 'copify'>('sw')
@@ -45,6 +45,8 @@ function copyActiveCode() {
     setTimeout(() => { copied.value = false }, 2000)
   }
 }
+
+const maintainedYear = computed(() => (new Date().getFullYear() - 2015))
 </script>
 
 <template>
@@ -53,16 +55,9 @@ function copyActiveCode() {
       <div class="tl-hero-grid">
         <!-- Left: Copy & Actions -->
         <div class="tl-hero-content">
-          <div class="tl-hero-badge-wrap">
-            <span class="tl-badge tl-badge-blue">
-              <span class="tl-badge-pulse"></span>
-              TechLaboratory v8 Platform
-            </span>
-          </div>
-
           <h1 class="tl-hero-title">
             Build better web experiences with
-            <span class="tl-gradient-text">precision developer tools</span>
+            <span class="tl-gradient-text"><strong>smarter components</strong> for the modern web</span>
           </h1>
 
           <p class="tl-hero-subtitle">
@@ -76,91 +71,43 @@ function copyActiveCode() {
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a :href="withBase('/demos/')" class="tl-btn tl-btn-secondary tl-btn-lg">
-              Interactive Demos
+            <a href="https://github.com/techlab" class="tl-btn tl-btn-secondary tl-btn-lg">
+              <svg data-v-417d27fb="" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path data-v-417d27fb="" fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"></path></svg>View on GitHub
             </a>
           </div>
 
           <!-- Quick Metrics Bar -->
           <div class="tl-hero-stats">
             <div class="tl-stat-item">
-              <span class="tl-stat-val">10M+</span>
-              <span class="tl-stat-lbl">CDN Requests / Mo</span>
+              <span class="tl-stat-val">15M+</span>
+              <span class="tl-stat-lbl">CDN Requests Monthly</span>
             </div>
+
             <div class="tl-stat-divider"></div>
             <div class="tl-stat-item">
-              <span class="tl-stat-val">12+</span>
-              <span class="tl-stat-lbl">Years Maintained</span>
+              <span class="tl-stat-val">20K+</span>
+              <span class="tl-stat-lbl">NPM Downloads Monthly</span>
             </div>
+
             <div class="tl-stat-divider"></div>
             <div class="tl-stat-item">
-              <span class="tl-stat-val">0</span>
-              <span class="tl-stat-lbl">Core Dependencies</span>
+              <span class="tl-stat-val">{{ maintainedYear }}+</span>
+              <span class="tl-stat-lbl">Years of Maintenance</span>
             </div>
+            
           </div>
         </div>
 
         <!-- Right: Technical Interactive Terminal/Code Window -->
         <div class="tl-hero-visual">
-          <div class="tl-terminal-window">
-            <div class="tl-terminal-bar">
-              <div class="tl-window-dots">
-                <span class="tl-dot tl-dot-red"></span>
-                <span class="tl-dot tl-dot-yellow"></span>
-                <span class="tl-dot tl-dot-green"></span>
-              </div>
-              <div class="tl-terminal-tabs">
-                <button
-                  type="button"
-                  class="tl-terminal-tab"
-                  :class="{ 'tl-terminal-tab-active': activeTab === 'sw' }"
-                  @click="activeTab = 'sw'"
-                >
-                  TypeScript
-                </button>
-                <button
-                  type="button"
-                  class="tl-terminal-tab"
-                  :class="{ 'tl-terminal-tab-active': activeTab === 'react' }"
-                  @click="activeTab = 'react'"
-                >
-                  React 19
-                </button>
-                <button
-                  type="button"
-                  class="tl-terminal-tab"
-                  :class="{ 'tl-terminal-tab-active': activeTab === 'copify' }"
-                  @click="activeTab = 'copify'"
-                >
-                  Copify
-                </button>
-              </div>
-              <button
-                type="button"
-                class="tl-copy-code-btn"
-                :title="copied ? 'Copied!' : 'Copy Code'"
-                @click="copyActiveCode"
-              >
-                <span v-if="copied" class="tl-copied-tag">Copied!</span>
-                <svg v-else viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>
-              </button>
-            </div>
 
-            <div class="tl-terminal-body">
-              <pre class="tl-code-pre"><code>{{ codeSnippets[activeTab] }}</code></pre>
-            </div>
+          <img
+                :src="withBase('images/hero2.png')"
+                alt="TechLaboratory"
+                class="tl-preview-img"
+                loading="lazy"
+              />
 
-            <div class="tl-terminal-footer">
-              <div class="tl-install-snippet">
-                <span class="tl-prompt">$</span>
-                <code>npm install @smart-wizard/core</code>
-              </div>
-              <span class="tl-tech-tag">MIT License</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -215,7 +162,7 @@ function copyActiveCode() {
 
 .tl-hero-title {
   font-size: 2.75rem;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.035em;
   color: var(--tl-text-primary);

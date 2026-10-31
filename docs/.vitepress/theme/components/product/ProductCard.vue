@@ -9,11 +9,25 @@ defineProps<{
 </script>
 
 <template>
-  <div class="tl-product-card" :class="{ 'tl-product-card-featured': featured || product.featured }">
+  <div class="tl-product-card">
+    <div v-if="product.screenshot" class="tl-product-thumb">
+        <img :src="withBase(product.screenshot)" :alt="product.name" class="tl-product-img" loading="lazy" />
+    </div>
+
+    <div class="tl-product-card-body">
+
     <div class="tl-card-top">
       <div class="tl-card-header-row">
         <span class="tl-category-tag">{{ product.category }}</span>
-        <span v-if="product.badge" class="tl-badge tl-badge-blue">{{ product.badge }}</span>
+
+        <div class="tl-card-header-tags">
+            <span
+              v-for="val in product.frameworks"
+              class="tl-badge tl-badge-blue"
+            >
+              {{ val }}
+            </span>
+          </div>
       </div>
 
       <a :href="withBase(product.pageLink)" class="tl-card-title-link">
@@ -21,13 +35,6 @@ defineProps<{
       </a>
 
       <p class="tl-card-desc">{{ product.description }}</p>
-
-      <!-- Framework badges -->
-      <div v-if="product.frameworks && product.frameworks.length > 0" class="tl-frameworks-row">
-        <span v-for="fw in product.frameworks" :key="fw" class="tl-framework-pill">
-          {{ fw }}
-        </span>
-      </div>
 
       <!-- Feature highlights -->
       <ul v-if="product.features && product.features.length > 0" class="tl-card-features">
@@ -44,13 +51,13 @@ defineProps<{
     <div class="tl-card-footer">
       <div class="tl-card-primary-actions">
         <a :href="withBase(product.pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
-          Overview
+          Explore More
         </a>
         <a v-if="product.docsLink" :href="withBase(product.docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
-          Docs
+          Documentation
         </a>
-        <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-ghost tl-btn-sm">
-          Demo
+        <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+          Live Demo
         </a>
       </div>
 
@@ -83,6 +90,7 @@ defineProps<{
         </a>
       </div>
     </div>
+    </div>
   </div>
 </template>
 
@@ -91,16 +99,36 @@ defineProps<{
   background-color: var(--tl-surface);
   border: 1px solid var(--tl-border);
   border-radius: var(--tl-radius-lg);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1.5rem;
   transition: all var(--tl-transition-normal);
   position: relative;
 }
 
+.tl-product-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.tl-product-thumb {
+  position: relative;
+  height: 260px;
+  background-color: var(--tl-bg-alt);
+  overflow: hidden;
+}
+
+.tl-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--tl-transition-smooth);
+}
+
 .tl-product-card:hover {
-  transform: translateY(-2px);
   border-color: var(--tl-border-glow);
   box-shadow: var(--tl-shadow-md);
 }
@@ -115,6 +143,11 @@ defineProps<{
   align-items: center;
   justify-content: space-between;
   margin-bottom: 0.85rem;
+}
+.tl-card-header-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.275rem;
 }
 
 .tl-category-tag {

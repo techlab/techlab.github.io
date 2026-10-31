@@ -10,6 +10,7 @@ export interface ProductDefinition {
   title: string
   tagline: string
   description: string
+  tags: string[]
   category: 'Component' | 'Plugin' | 'Utility' | 'CLI'
   status: 'stable' | 'beta' | 'experimental' | 'new' | 'popular'
   badge?: string
@@ -55,7 +56,8 @@ export const products: ProductDefinition[] = [
       { label: 'Themes Included', value: '4', description: 'Default, Arrows, Pills, Glow' },
       { label: 'WAI-ARIA Compliance', value: '100%', description: 'Fully accessible' }
     ],
-    frameworks: ['TypeScript', 'JavaScript', 'React', 'Vue 3'],
+    frameworks: ['TypeScript', 'JavaScript', 'React', 'Vue'],
+    tags: [],
     features: [
       'Zero runtime dependencies, written in TypeScript with full type declarations',
       'Framework-agnostic core architecture with official React and Vue 3 adapters',
@@ -94,6 +96,7 @@ export const products: ProductDefinition[] = [
       { label: 'Years Maintained', value: '12+', description: 'Actively updated since 2012' }
     ],
     frameworks: ['jQuery', 'JavaScript', 'Bootstrap'],
+    tags: [],
     features: [
       'Fully rewritten in TypeScript (v7) with built-in type declarations',
       'Clean and minimal HTML structure with responsive, mobile-ready layout',
@@ -127,6 +130,7 @@ export const products: ProductDefinition[] = [
       { label: 'Payment Gateways', value: 'PayPal & Custom', description: 'Form & Ajax submit ready' }
     ],
     frameworks: ['jQuery', 'Bootstrap'],
+    tags: [],
     features: [
       'In-built PayPal, Ajax, and form submit payment methods',
       'Clean, modern, and compact responsive checkout interface',
@@ -152,6 +156,7 @@ export const products: ProductDefinition[] = [
     docsLink: '/jquery-smarttab/v4/',
     versions: ['v4', 'v3', 'v2'],
     frameworks: ['jQuery', 'Bootstrap'],
+    tags: [],
     features: [
       'Responsive layout with automatic mobile adaptations',
       'Built-in visual themes (basic, brick, elite, pills)',
@@ -178,6 +183,7 @@ export const products: ProductDefinition[] = [
     docsLink: '/copify/v0/',
     versions: ['v0'],
     frameworks: ['TypeScript', 'JavaScript'],
+    tags: [],
     features: [
       'Zero dependencies and sub-2KB gzipped footprint',
       'Async Clipboard API support with execCommand fallback',
@@ -200,6 +206,7 @@ export const products: ProductDefinition[] = [
     docsLink: '/react-smarttab/v2/',
     versions: ['v2', 'v1'],
     frameworks: ['React', 'JavaScript'],
+    tags: [],
     features: [
       'Declarative React component structure',
       'Multiple themes and dark mode styles',
@@ -224,12 +231,13 @@ export const products: ProductDefinition[] = [
     docsLink: '/create-jquery-plugin/v1/',
     versions: ['v1'],
     frameworks: ['Node.js', 'CLI', 'jQuery'],
+    tags: [],
     features: [
       'Instant modern plugin scaffolding with a single command',
       'Preconfigured build steps (Rollup, Babel, UMD)',
       'Automated unit testing setup with Jasmine and Karma'
     ],
-    showOnHome: false
+    showOnHome: true
   }
 ];
 

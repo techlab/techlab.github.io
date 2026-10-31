@@ -41,10 +41,9 @@ onUnmounted(() => {
 const activeSection = computed(() => {
   const p = route.path
   if (p.includes('/smart-wizard') || p.includes('/jquery-') || p.includes('/copify') || p.includes('/react-smarttab')) return 'products'
-  if (p.startsWith('/docs')) return 'docs'
-  if (p.startsWith('/demos')) return 'demos'
   if (p.startsWith('/tools')) return 'tools'
   if (p.startsWith('/articles')) return 'articles'
+  if (p.startsWith('')) return 'home'
   return ''
 })
 
@@ -56,18 +55,22 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
   <header class="tl-header" :class="{ 'tl-header-scrolled': isScrolled }">
     <div class="tl-header-inner tl-container">
       <!-- Logo & Brand Title -->
-      <a :href="withBase('/')" class="tl-brand-link" aria-label="TechLaboratory Home">
+      <a :href="withBase('/')" class="tl-brand-link" aria-label="TechLaboratory">
         <div class="tl-brand-logo-wrap">
           <img src="/images/logo.png" alt="TechLaboratory" class="tl-brand-logo" width="30" height="30" />
         </div>
         <div class="tl-brand-text">
-          <span class="tl-brand-title">Tech<span class="tl-brand-accent">Lab</span></span>
-          <span class="tl-brand-v">v8</span>
+          <span class="tl-brand-title"><span class="tl-brand-accent">TechLaboratory</span></span>
         </div>
       </a>
 
       <!-- Desktop Navigation -->
       <nav class="tl-desktop-nav" aria-label="Main Navigation">
+
+        <a :href="withBase('/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'home' }">
+          Home
+        </a>
+
         <!-- Products Mega Dropdown -->
         <div
           class="tl-nav-item tl-dropdown-wrap"
@@ -140,14 +143,6 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
             </div>
           </div>
         </div>
-
-        <a :href="withBase('/docs/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'docs' }">
-          Docs
-        </a>
-
-        <a :href="withBase('/demos/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'demos' }">
-          Demos
-        </a>
 
         <a :href="withBase('/tools/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'tools' }">
           Tools
@@ -245,8 +240,6 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
 
         <div class="tl-mobile-section">
           <div class="tl-mobile-heading">Platform</div>
-          <a :href="withBase('/docs/')" class="tl-mobile-nav-link" @click="closeAllMenus">Documentation</a>
-          <a :href="withBase('/demos/')" class="tl-mobile-nav-link" @click="closeAllMenus">Interactive Demos</a>
           <a :href="withBase('/tools/')" class="tl-mobile-nav-link" @click="closeAllMenus">Developer Tools</a>
           <a :href="withBase('/articles/')" class="tl-mobile-nav-link" @click="closeAllMenus">Articles & Insights</a>
           <a :href="withBase('/about')" class="tl-mobile-nav-link" @click="closeAllMenus">About TechLaboratory</a>
@@ -300,9 +293,8 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
   justify-content: center;
   width: 32px;
   height: 32px;
-  border-radius: var(--tl-radius-sm);
   background: var(--tl-surface);
-  border: 1px solid var(--tl-border);
+  border: 0;
   overflow: hidden;
 }
 
@@ -317,8 +309,8 @@ const otherProducts = computed(() => products.filter(p => !p.featured && p.statu
 }
 
 .tl-brand-title {
-  font-size: 1.125rem;
-  font-weight: 800;
+  font-size: 1.4rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--tl-text-primary);
 }

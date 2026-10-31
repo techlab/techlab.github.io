@@ -14,16 +14,14 @@ const currentYear = computed(() => new Date().getFullYear())
         <!-- Brand & Mission Column -->
         <div class="tl-footer-brand-col">
           <a :href="withBase('/')" class="tl-footer-brand-link">
-            <img src="/images/logo.png" alt="TechLaboratory" width="28" height="28" class="tl-footer-logo" />
+            <img src="/images/logo.png" alt="TechLaboratory" width="40" height="40" class="tl-footer-logo" />
             <span class="tl-footer-brand-title">TechLaboratory</span>
           </a>
           <p class="tl-footer-mission">
-            Developer tools, components, and practical engineering resources for building better web applications. Precision open-source software since 2010.
+            Open-source UI components and engineering utilities for building modern web applications.
+            <br/>
+            Built and maintained for over a decade.
           </p>
-          <div class="tl-footer-status">
-            <span class="tl-status-dot"></span>
-            <span class="tl-status-text">All systems operational & actively maintained</span>
-          </div>
         </div>
 
         <!-- Products Column -->
@@ -32,7 +30,7 @@ const currentYear = computed(() => new Date().getFullYear())
           <ul class="tl-footer-links">
             <li>
               <a :href="withBase('/smart-wizard/')" class="tl-footer-link">
-                Smart Wizard <span class="tl-badge tl-badge-blue tl-badge-mini">Flagship</span>
+                Smart Wizard
               </a>
             </li>
             <li><a :href="withBase('/jquery-smartwizard/')" class="tl-footer-link">jQuery Smart Wizard</a></li>
@@ -44,31 +42,18 @@ const currentYear = computed(() => new Date().getFullYear())
           </ul>
         </div>
 
-        <!-- Platform & Resources Column -->
+        <!-- Resources Column -->
         <div class="tl-footer-col">
-          <h4 class="tl-footer-heading">Platform</h4>
-          <ul class="tl-footer-links">
-            <li><a :href="withBase('/docs/')" class="tl-footer-link">Documentation</a></li>
-            <li><a :href="withBase('/demos/')" class="tl-footer-link">Interactive Demos</a></li>
-            <li><a :href="withBase('/tools/')" class="tl-footer-link">Developer Tools</a></li>
-            <li><a :href="withBase('/articles/')" class="tl-footer-link">Engineering Articles</a></li>
-            <li><a :href="withBase('/smart-wizard/pricing')" class="tl-footer-link">Commercial Licencing</a></li>
-            <li><a :href="withBase('/smart-wizard/changelog')" class="tl-footer-link">Changelogs</a></li>
-          </ul>
-        </div>
-
-        <!-- Open Source & Community Column -->
-        <div class="tl-footer-col">
-          <h4 class="tl-footer-heading">Open Source</h4>
+          <h4 class="tl-footer-heading">Resources</h4>
           <ul class="tl-footer-links">
             <li>
               <a href="https://github.com/techlab" target="_blank" rel="noopener noreferrer" class="tl-footer-link">
-                GitHub Organization
+                View on GitHub
               </a>
             </li>
             <li>
               <a href="https://www.npmjs.com/~dipuraj" target="_blank" rel="noopener noreferrer" class="tl-footer-link">
-                npm Packages
+                NPM Packages
               </a>
             </li>
             <li>
@@ -76,22 +61,8 @@ const currentYear = computed(() => new Date().getFullYear())
                 Sponsor on GitHub ❤️
               </a>
             </li>
-            <li>
-              <a href="https://github.com/techlab/smart-wizard/issues" target="_blank" rel="noopener noreferrer" class="tl-footer-link">
-                Issue Tracker
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Company & Legal Column -->
-        <div class="tl-footer-col">
-          <h4 class="tl-footer-heading">Company</h4>
-          <ul class="tl-footer-links">
             <li><a :href="withBase('/about')" class="tl-footer-link">About TechLaboratory</a></li>
             <li><a :href="withBase('/privacy')" class="tl-footer-link">Privacy Policy</a></li>
-            <li><a href="https://github.com/techlab/smart-wizard/blob/main/LICENSE" target="_blank" rel="noopener noreferrer" class="tl-footer-link">MIT Licence</a></li>
-            <li><a href="mailto:contact@techlaboratory.net" class="tl-footer-link">Contact & Support</a></li>
           </ul>
         </div>
       </div>
@@ -99,12 +70,7 @@ const currentYear = computed(() => new Date().getFullYear())
       <!-- Bottom Bar -->
       <div class="tl-footer-bottom">
         <div class="tl-footer-copy">
-          © {{ currentYear }} TechLaboratory. Independent developer platform created by <a href="http://dipu.me" target="_blank" rel="noopener">Dipu Raj</a>.
-        </div>
-        <div class="tl-footer-meta">
-          <span class="tl-meta-pill">TechLab v8</span>
-          <span class="tl-meta-pill">VitePress</span>
-          <span class="tl-meta-pill">TypeScript</span>
+          © {{ currentYear }} TechLaboratory. Independent developer platform created by <a href="https://github.com/techlab" target="_blank" rel="noopener">Dipu Rajendran</a>.
         </div>
       </div>
     </div>
@@ -148,8 +114,9 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .tl-footer-brand-link {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: s;
   gap: 0.625rem;
   text-decoration: none !important;
   color: var(--tl-text-primary);
@@ -157,9 +124,10 @@ const currentYear = computed(() => new Date().getFullYear())
 }
 
 .tl-footer-brand-title {
-  font-size: 1.125rem;
-  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--tl-brand-glow);
 }
 
 .tl-footer-mission {
