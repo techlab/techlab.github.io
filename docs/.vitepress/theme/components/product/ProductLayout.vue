@@ -7,7 +7,7 @@ import ProductMetrics from './ProductMetrics.vue'
 import ProductFeatures from './ProductFeatures.vue'
 import ProductPricingPreview from './ProductPricingPreview.vue'
 import CTASection from '../home/CTASection.vue'
-import { getProduct, products } from '../../data/products'
+import { getProduct, products, getProductPageLink } from '../../data/products'
 
 const props = defineProps<{
   productId?: string
@@ -19,8 +19,11 @@ const product = computed(() => {
   if (props.productId) {
     return getProduct(props.productId) || products[0]
   }
-  // Try matching route path
-  const match = products.find(p => route.path.includes(p.pageLink.replace(/^\/|\/$/g, '')))
+  // Try matching route path against each product's home link
+  const match = products.find(p => {
+    const homeLink = getProductPageLink(p).replace(/^\/|\/$/g, '')
+    return route.path.includes(homeLink)
+  })
   return match || products[0]
 })
 </script>

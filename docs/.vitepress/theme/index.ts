@@ -39,13 +39,13 @@ import FeaturedArticle from './components/articles/FeaturedArticle.vue'
 import ArticleList from './components/articles/ArticleList.vue'
 
 // Tools Components
-import ToolCard from './components/tools/ToolCard.vue'
-import ToolList from './components/tools/ToolList.vue'
-import JsonFormatter from './components/tools/JsonFormatter.vue'
-import Base64Tool from './components/tools/Base64Tool.vue'
-import UrlEncoderTool from './components/tools/UrlEncoderTool.vue'
-import UuidGenerator from './components/tools/UuidGenerator.vue'
-import RegexTester from './components/tools/RegexTester.vue'
+// import ToolCard from './components/tools/ToolCard.vue'
+// import ToolList from './components/tools/ToolList.vue'
+// import JsonFormatter from './components/tools/JsonFormatter.vue'
+// import Base64Tool from './components/tools/Base64Tool.vue'
+// import UrlEncoderTool from './components/tools/UrlEncoderTool.vue'
+// import UuidGenerator from './components/tools/UuidGenerator.vue'
+// import RegexTester from './components/tools/RegexTester.vue'
 
 export default {
   extends: DefaultTheme,
@@ -87,12 +87,12 @@ export default {
     app.component('ArticleList', ArticleList)
 
     // Tools
-    app.component('ToolCard', ToolCard)
-    app.component('ToolList', ToolList)
-    app.component('JsonFormatter', JsonFormatter)
-    app.component('Base64Tool', Base64Tool)
-    app.component('UrlEncoderTool', UrlEncoderTool)
-    app.component('UuidGenerator', UuidGenerator)
-    app.component('RegexTester', RegexTester)
+    // app.component('ToolCard', ToolCard)
+    // app.component('ToolList', ToolList)
+    // app.component('JsonFormatter', JsonFormatter)
+    // app.component('Base64Tool', Base64Tool)
+    // app.component('UrlEncoderTool', UrlEncoderTool)
+    // app.component('UuidGenerator', UuidGenerator)
+    // app.component('RegexTester', RegexTester)
   }
 }

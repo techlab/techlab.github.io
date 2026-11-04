@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Engineering Articles & Insights — TechLaboratory
+title: Engineering Articles & Insights - TechLaboratory
 description: Deep dives into software architecture, zero-dependency engineering, modern web standards, and developer experience.
 ads: false
 ---

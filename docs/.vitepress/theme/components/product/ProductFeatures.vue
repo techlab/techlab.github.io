@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { ProductDefinition } from '../../data/products'
+import { getProductVersionData } from '../../data/products'
 
-defineProps<{
+const props = defineProps<{
   product: ProductDefinition
 }>()
+
+const features = computed(() => getProductVersionData(props.product)?.features || [])
 </script>
 
 <template>
@@ -18,7 +22,7 @@ defineProps<{
       </div>
 
       <div class="tl-pfeatures-grid">
-        <div v-for="(feat, idx) in product.features" :key="idx" class="tl-pfeature-card">
+        <div v-for="(feat, idx) in features" :key="idx" class="tl-pfeature-card">
           <div class="tl-pfeat-icon">
             <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />

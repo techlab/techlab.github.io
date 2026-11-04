@@ -1,17 +1,26 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import type { ProductDefinition } from '../../data/products'
+import { getProductPageLink, getProductVersionData } from '../../data/products'
 
-defineProps<{
+const props = defineProps<{
   product: ProductDefinition
   featured?: boolean
 }>()
+
+const pageLink = computed(() => getProductPageLink(props.product))
+const versionData = computed(() => getProductVersionData(props.product))
+const docsLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'doc')?.link)
+const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'demo')?.link)
+const features = computed(() => versionData.value?.features || [])
+const screenshot = computed(() => versionData.value?.screenshot)
 </script>
 
 <template>
   <div class="tl-product-card">
-    <div v-if="product.screenshot" class="tl-product-thumb">
-        <img :src="withBase(product.screenshot)" :alt="product.name" class="tl-product-img" loading="lazy" />
+    <div v-if="screenshot" class="tl-product-thumb">
+        <img :src="withBase(screenshot)" :alt="product.name" class="tl-product-img" loading="lazy" />
     </div>
 
     <div class="tl-product-card-body">
@@ -22,7 +31,7 @@ defineProps<{
 
         <div class="tl-card-header-tags">
             <span
-              v-for="val in product.frameworks"
+              v-for="val in product.tags"
               class="tl-badge tl-badge-blue"
             >
               {{ val }}
@@ -30,15 +39,15 @@ defineProps<{
           </div>
       </div>
 
-      <a :href="withBase(product.pageLink)" class="tl-card-title-link">
+      <a :href="withBase(pageLink)" class="tl-card-title-link">
         <h3 class="tl-card-title">{{ product.name }}</h3>
       </a>
 
       <p class="tl-card-desc">{{ product.description }}</p>
 
       <!-- Feature highlights -->
-      <ul v-if="product.features && product.features.length > 0" class="tl-card-features">
-        <li v-for="(feat, idx) in product.features.slice(0, 3)" :key="idx" class="tl-feature-item">
+      <ul v-if="features && features.length > 0" class="tl-card-features">
+        <li v-for="(feat, idx) in features.slice(0, 3)" :key="idx" class="tl-feature-item">
           <svg class="tl-check-icon" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
           </svg>
@@ -50,13 +59,13 @@ defineProps<{
     <!-- Card Footer Links -->
     <div class="tl-card-footer">
       <div class="tl-card-primary-actions">
-        <a :href="withBase(product.pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
+        <a :href="withBase(pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
           Explore More
         </a>
-        <a v-if="product.docsLink" :href="withBase(product.docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+        <a v-if="docsLink" :href="withBase(docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
           Documentation
         </a>
-        <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+        <a v-if="demoLink" :href="withBase(demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
           Live Demo
         </a>
       </div>

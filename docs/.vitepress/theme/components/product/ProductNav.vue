@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import type { ProductDefinition } from '../../data/products'
+import { getProductPageLink, getProductVersionData } from '../../data/products'
 
 const props = defineProps<{
   product: ProductDefinition
@@ -9,19 +10,22 @@ const props = defineProps<{
 
 const route = useRoute()
 
-const navLinks = computed(() => [
-  { name: 'Overview', path: props.product.pageLink },
-  { name: 'Features', path: `${props.product.pageLink}features` },
-  { name: 'Demos', path: props.product.demoLink || `${props.product.pageLink}demos` },
-  { name: 'Docs', path: props.product.docsLink || `${props.product.pageLink}v1/` },
-  { name: 'Pricing', path: props.product.pricingLink || `${props.product.pageLink}pricing` },
-  { name: 'Changelog', path: props.product.changelogLink || `${props.product.pageLink}changelog` },
-])
+// Derive the product home link from the latest version's subMenu
+const pageLink = computed(() => getProductPageLink(props.product))
+
+// Use the latest version's subMenu for navigation links
+const navLinks = computed(() => {
+  const vd = getProductVersionData(props.product)
+  if (vd?.subMenu) {
+    return vd.subMenu.map(item => ({ name: item.title, path: item.link }))
+  }
+  return [{ name: 'Overview', path: pageLink.value }]
+})
 
 function isActive(linkPath: string): boolean {
   const current = route.path.replace(/\/$/, '')
   const target = linkPath.replace(/\/$/, '')
-  if (linkPath === props.product.pageLink) {
+  if (linkPath === pageLink.value) {
     return current === target
   }
   return current.startsWith(target)
@@ -32,7 +36,7 @@ function isActive(linkPath: string): boolean {
   <nav class="tl-product-nav" aria-label="Product Navigation">
     <div class="tl-container tl-product-nav-inner">
       <!-- Product Brand -->
-      <a :href="withBase(product.pageLink)" class="tl-pnav-brand">
+      <a :href="withBase(pageLink)" class="tl-pnav-brand">
         <span class="tl-pnav-title">{{ product.name }}</span>
         <span v-if="product.versions && product.versions.length > 0" class="tl-pnav-version">
           {{ product.versions[0] }}

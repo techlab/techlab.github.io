@@ -1,5 +1,5 @@
 ---
-title: Developer Tools & Utilities — TechLaboratory
+title: Developer Tools & Utilities - TechLaboratory
 description: Fast, zero-dependency, in-browser utilities for web developers. Format JSON, test regex, encode Base64, convert URLs, and generate UUIDs locally with complete privacy.
 head:
   - - meta

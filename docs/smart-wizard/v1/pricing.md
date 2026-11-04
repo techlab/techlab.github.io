@@ -1,14 +1,14 @@
 ---
+layout: home
 title: Smart Wizard Pricing & Commercial Licenses
 description: Licensing options for Smart Wizard. 100% Free MIT Open Source, plus Commercial Developer and Team options.
-ads: false
 ---
 
 <script setup>
-import ProductNav from '../.vitepress/theme/components/product/ProductNav.vue'
-import PricingCard from '../.vitepress/theme/components/pricing/PricingCard.vue'
-import PricingTable from '../.vitepress/theme/components/pricing/PricingTable.vue'
-import { getProduct } from '../.vitepress/theme/data/products'
+import ProductNav from '../../.vitepress/theme/components/product/ProductNav.vue'
+import PricingCard from '../../.vitepress/theme/components/pricing/PricingCard.vue'
+import PricingTable from '../../.vitepress/theme/components/pricing/PricingTable.vue'
+import { getProduct } from '../../.vitepress/theme/data/products'
 
 const product = getProduct('smart-wizard')
 </script>

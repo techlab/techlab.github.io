@@ -27,7 +27,7 @@ export default createContentLoader('articles/posts/*.md', {
           url,
           date: dateObj.toISOString(),
           formattedDate: dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }),
-          author: frontmatter.author || 'Dipu Raj',
+          author: frontmatter.author || '',
           tags: frontmatter.tags || ['Engineering'],
           cover: frontmatter.cover,
           featured: Boolean(frontmatter.featured),

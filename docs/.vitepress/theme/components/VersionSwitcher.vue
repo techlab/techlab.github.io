@@ -69,8 +69,14 @@ function goToVersion() {
   router.go(withBase(newPath))
 }
 
-function getProductData(pageLink) {
-  return products.filter(product => product.pageLink === pageLink)[0] ?? null;
+function getProductData(pluginSegment) {
+  // Match by id or by the first segment of any version's home link
+  return products.find(product => {
+    if (product.id === pluginSegment) return true
+    return Object.values(product.versionData).some(v =>
+      v.subMenu.some(m => m.type === 'home' && m.link.replace(/^\/|\/$/g, '') === pluginSegment)
+    )
+  }) ?? null;
 }
 </script>
 

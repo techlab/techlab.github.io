@@ -48,7 +48,7 @@ const currentYear = computed(() => new Date().getFullYear())
           <ul class="tl-footer-links">
             <li>
               <a href="https://github.com/techlab" target="_blank" rel="noopener noreferrer" class="tl-footer-link">
-                View on GitHub
+                Follow on GitHub
               </a>
             </li>
             <li>
@@ -58,10 +58,10 @@ const currentYear = computed(() => new Date().getFullYear())
             </li>
             <li>
               <a href="https://github.com/sponsors/techlab" target="_blank" rel="noopener noreferrer" class="tl-footer-link">
-                Sponsor on GitHub ❤️
+                Sponsor on GitHub
               </a>
             </li>
-            <li><a :href="withBase('/about')" class="tl-footer-link">About TechLaboratory</a></li>
+            <li><a :href="withBase('/about')" class="tl-footer-link">About</a></li>
             <li><a :href="withBase('/privacy')" class="tl-footer-link">Privacy Policy</a></li>
           </ul>
         </div>

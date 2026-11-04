@@ -1,12 +1,13 @@
 ---
+layout: home
 title: Smart Wizard Interactive Demos & Playgrounds
 description: Interactive showcases, theme variations, vertical layouts, and StackBlitz playgrounds for Smart Wizard.
 ads: false
 ---
 
 <script setup>
-import ProductNav from '../.vitepress/theme/components/product/ProductNav.vue'
-import { getProduct } from '../.vitepress/theme/data/products'
+import ProductNav from '../../.vitepress/theme/components/product/ProductNav.vue'
+import { getProduct } from '../../.vitepress/theme/data/products'
 
 const product = getProduct('smart-wizard')
 </script>

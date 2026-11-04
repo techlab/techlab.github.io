@@ -1,9 +1,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { withBase } from 'vitepress'
-import { getFeaturedProduct } from '../../data/products'
+import { getFeaturedProduct, getProductPageLink, getProductVersionData } from '../../data/products'
 
 const product = computed(() => getFeaturedProduct())
+const pageLink = computed(() => getProductPageLink(product.value))
+const versionData = computed(() => getProductVersionData(product.value))
+const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'demo')?.link)
+const docsLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'doc')?.link)
 
 const activeTheme = ref<'arrows' | 'pills' | 'checkout' | 'glow'>('arrows')
 
@@ -39,7 +43,7 @@ const themePreviews = {
         <div class="tl-flagship-header">
           <div class="tl-flagship-eyebrow">
             <span
-              v-for="val in product.frameworks"
+              v-for="val in product.tags"
               class="tl-badge tl-badge-blue"
             >
               {{ val }}
@@ -51,16 +55,16 @@ const themePreviews = {
           <p class="tl-flagship-desc">{{ product.description }}</p>
 
           <div class="tl-flagship-ctas">
-            <a :href="withBase(product.pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
+            <a :href="withBase(pageLink)" class="tl-btn tl-btn-primary tl-btn-sm">
               Explore {{ product.name }}
               <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
               </svg>
             </a>
-            <a v-if="product.demoLink" :href="withBase(product.demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+            <a v-if="demoLink" :href="withBase(demoLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
               Try Live Demo
             </a>
-            <a v-if="product.docsLink" :href="withBase(product.docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
+            <a v-if="docsLink" :href="withBase(docsLink)" class="tl-btn tl-btn-secondary tl-btn-sm">
               View Documentation
             </a>
           </div>

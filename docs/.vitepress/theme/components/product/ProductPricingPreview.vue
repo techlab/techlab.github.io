@@ -1,10 +1,15 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import type { ProductDefinition } from '../../data/products'
+import { getProductPageLink, getProductVersionData } from '../../data/products'
 
-defineProps<{
+const props = defineProps<{
   product: ProductDefinition
 }>()
+
+const pageLink = computed(() => getProductPageLink(props.product))
+const docsLink = computed(() => getProductVersionData(props.product)?.subMenu.find(m => m.type === 'doc')?.link)
 </script>
 
 <template>
@@ -37,7 +42,7 @@ defineProps<{
           </ul>
 
           <div class="tl-pplan-action">
-            <a :href="withBase(product.docsLink || product.pageLink)" class="tl-btn tl-btn-secondary tl-btn-lg tl-btn-block">
+            <a :href="withBase(docsLink || pageLink)" class="tl-btn tl-btn-secondary tl-btn-lg tl-btn-block">
               Get Started Free
             </a>
           </div>
@@ -61,7 +66,7 @@ defineProps<{
           </ul>
 
           <div class="tl-pplan-action">
-            <a :href="withBase(`${product.pageLink}pricing`)" class="tl-btn tl-btn-primary tl-btn-lg tl-btn-block">
+            <a :href="withBase(`${pageLink}pricing`)" class="tl-btn tl-btn-primary tl-btn-lg tl-btn-block">
               View Licensing Options
             </a>
           </div>

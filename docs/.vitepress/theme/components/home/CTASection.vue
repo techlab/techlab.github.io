@@ -14,8 +14,8 @@ import { withBase } from 'vitepress'
           </p>
 
           <div class="tl-cta-buttons">
-            <a href="#products" class="tl-btn tl-btn-primary">
-              Explore Smart Wizard
+            <a :href="withBase('/#products')" class="tl-btn tl-btn-primary">
+              Explore Products
             </a>
             <a href="https://github.com/techlab" target="_blank" rel="noopener noreferrer" class="tl-btn tl-btn-secondary">
               <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
