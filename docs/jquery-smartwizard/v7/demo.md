@@ -1,4 +1,5 @@
 ---
+layout: product
 title: jQuery SmartWizard v7 - Demos
 description: Interactive demos of jQuery SmartWizard v7
 head:
@@ -28,7 +29,345 @@ head:
       href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
 ---
 
+<div class="tl-md-container vp-doc">
+
 # jQuery SmartWizard <span class="text-gray-400">v6</span> Demos
+
+
+## Live Demo
+
+:::details jQuery SmartWizard Settings
+<div class="settings-panel grid grid-cols-2 gap-4 p-6 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+    <!-- Theme & Animation -->
+    <div class="settings-section">
+      <h4>Appearance</h4>
+      <div class="form-group">
+        <label for="theme_selector">Theme</label>
+        <select id="theme_selector">
+          <option value="">Default</option>
+          <option value="arrows" selected>Arrows</option>
+          <option value="glow">Glow</option>
+          <option value="basic">Basic</option>
+          <option value="pills">Pills</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="animation">Transition</label>
+        <select id="animation">
+          <optgroup label="Buit-in Animations">
+            <option value="none">None</option>
+            <option value="fade">Fade</option>
+            <option value="slideHorizontal" selected="">Slide Horizontal</option>
+            <option value="slideVertical">Slide Vertical</option>
+            <option value="slideSwing">Slide Swing</option>
+          </optgroup>
+          <optgroup label="CSS Animations (External Plugin)">
+            <option value="cssSlideH">Slide Horizontal</option>
+            <option value="cssSlideV">Slide Vertical</option>
+            <option value="cssFade">Fade</option>
+            <option value="cssFadeSlideH">Fade + Slide Horizontal</option>
+            <option value="cssFadeSlideV">Fade + Slide Vertical</option>
+            <option value="cssFadeSlideCorner1">Fade + Slide Corner 1</option>
+            <option value="cssFadeSlideCorner2">Fade + Slide Corner 2</option>
+            <option value="cssBounce">Bounce</option>
+            <option value="cssBounceSlideH">Bounce + Slide Horizontal</option>
+            <option value="cssBounceSlideV">Bounce + Slide Vertical</option>
+            <option value="cssBackSlideH">Back + Slide Horizontal</option>
+            <option value="cssBackSlideV">Back + Slide Vertical</option>
+            <option value="cssFlipH">Flip Horizontal</option>
+            <option value="cssFlipV">Flip Vertical</option>
+            <option value="cssLightspeed">Lightspeed</option>
+            <option value="cssRotate">Rotate</option>
+            <option value="cssRotateClock">Rotate Clockwise</option>
+            <option value="cssRotateAntiClock">Rotate Anti Clockwise</option>
+            <option value="cssZoom">Zoom</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-group">
+          <label for="theme_colors">Colors</label>
+          <select id="theme_colors" aria-label="">
+            <!-- <option value="custom" selected>Custom</option> -->
+            <option value="">Default</option>
+            <option value="ocean">Ocean</option>
+            <option value="teal">Teal</option>
+            <option value="forest">Forest</option>
+            <option value="violet">Violet</option>
+            <option value="crimson">Crimson</option>
+            <option value="amber">Amber</option>
+            <option value="indigo">Indigo</option>
+            <option value="slate">Slate ♿</option>
+          </select>
+      </div>
+    </div>
+    <div class="">
+      <!-- Toolbar Settings -->
+      <h4>Toolbar Settings</h4>
+      <div class="form-group">
+        <label for="toolbar-position">Position</label>
+        <select id="toolbar-position" name="toolbar-position">
+          <option value="none">None</option>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+          <option value="both" selected>Both</option>
+        </select>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input align-middle option-setting-checkbox" type="checkbox" id="toolbar-showNextButton" value="1" checked="">
+        <label class="form-check-label align-middle" for="toolbar-showNextButton">Show Next Button</label>
+      </div>
+      <div class="form-check mb-5">
+        <input class="form-check-input align-middle option-setting-checkbox" type="checkbox" id="toolbar-showPreviousButton" value="1" checked="">
+        <label class="form-check-label align-middle" for="toolbar-showPreviousButton">Show Previous Button</label>
+      </div>
+    <!-- Controls -->
+      <h4>Controls</h4>
+        <div class="button-group">
+          <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+          <button class="btn btn-secondary" id="next-btn">Next</button>
+          <button class="btn btn-danger" id="reset-btn">Reset</button>
+        </div>
+    </div>
+</div>
+:::
+
+<div id="smartwizard">
+    <ul class="sw-nav">
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-1">
+                <div class="sw-badge">1</div>
+                Customer Details
+            </a>
+        </li>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-2">
+                <span class="sw-badge">2</span>
+                Products Details
+            </a>
+        </li>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link" href="#step-3">
+                <span class="sw-badge">3</span>
+                Shipping Details
+            </a>
+        </li>
+        <li class="sw-nav-item">
+            <a class="sw-nav-link " href="#step-4">
+                <span class="sw-badge">4</span>
+                Confirm Order
+            </a>
+        </li>
+    </ul>
+    <div class="sw-tab-content">
+        <div id="step-1" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-1">
+            <h3>Step 1 Content</h3>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div id="step-2" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-2">
+            <h3>Step 2 Content</h3>
+            <div>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+        </div>
+        <div id="step-3" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-3">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+        <div id="step-4" class="sw-tab-pane" role="tabpanel" aria-labelledby="step-4">
+            <h3>Step 4 Content</h3>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+    </div>
+    <div class="sw-progress">
+        <div class="sw-progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+</div>
+
+<script setup lang="ts">
+import { useData } from 'vitepress'
+import { computed, onMounted, watch } from 'vue'
+
+const { isDark } = useData()
+// Watch for changes to isDark
+watch(isDark, (dark) => {
+    const wizardElement = $('#smartwizard');
+    wizardElement.smartWizard('setOptions', {
+        displayMode: dark ? 'dark' : 'light',
+    });
+})
+
+
+// ── CSS Animation definitions (Animate.css) ──
+const cssAnimationList = {
+    cssSlideH: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__slideInLeft', hide: 'animate__slideOutRight' }, backward: { show: 'animate__slideInRight', hide: 'animate__slideOutLeft' } },
+    cssSlideV: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__slideInDown', hide: 'animate__slideOutDown' }, backward: { show: 'animate__slideInUp', hide: 'animate__slideOutUp' } },
+    cssFade: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__fadeIn', hide: 'animate__fadeOut' }, backward: { show: 'animate__fadeIn', hide: 'animate__fadeOut' } },
+    cssFadeSlideH: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__fadeInLeft', hide: 'animate__fadeOutRight' }, backward: { show: 'animate__fadeInRight', hide: 'animate__fadeOutLeft' } },
+    cssFadeSlideV: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__fadeInDown', hide: 'animate__fadeOutDown' }, backward: { show: 'animate__fadeInUp', hide: 'animate__fadeOutUp' } },
+    cssFadeSlideCorner1: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__fadeInTopLeft', hide: 'animate__fadeOutBottomRight' }, backward: { show: 'animate__fadeInBottomRight', hide: 'animate__fadeOutTopLeft' } },
+    cssFadeSlideCorner2: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__fadeInBottomLeft', hide: 'animate__fadeOutTopRight' }, backward: { show: 'animate__fadeInTopRight', hide: 'animate__fadeOutBottomLeft' } },
+    cssBounce: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__bounceIn', hide: 'animate__bounceOut' }, backward: { show: 'animate__bounceIn', hide: 'animate__bounceOut' } },
+    cssBounceSlideH: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__bounceInLeft', hide: 'animate__bounceOutRight' }, backward: { show: 'animate__bounceInRight', hide: 'animate__bounceOutLeft' } },
+    cssBounceSlideV: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__bounceInDown', hide: 'animate__bounceOutDown' }, backward: { show: 'animate__bounceInUp', hide: 'animate__bounceOutUp' } },
+    cssBackSlideH: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__backInLeft', hide: 'animate__backOutRight' }, backward: { show: 'animate__backInRight', hide: 'animate__backOutLeft' } },
+    cssBackSlideV: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__backInDown', hide: 'animate__backOutDown' }, backward: { show: 'animate__backInUp', hide: 'animate__backOutUp' } },
+    cssFlipH: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__flipInY', hide: 'animate__flipOutY' }, backward: { show: 'animate__flipInY', hide: 'animate__flipOutY' } },
+    cssFlipV: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__flipInX', hide: 'animate__flipOutX' }, backward: { show: 'animate__flipInX', hide: 'animate__flipOutX' } },
+    cssLightspeed: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__lightSpeedInLeft', hide: 'animate__lightSpeedOutRight' }, backward: { show: 'animate__lightSpeedInRight', hide: 'animate__lightSpeedOutLeft' } },
+    cssRotate: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__rotateIn', hide: 'animate__rotateOut' }, backward: { show: 'animate__rotateIn', hide: 'animate__rotateOut' } },
+    cssRotateClock: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__rotateInDownLeft', hide: 'animate__rotateOutDownLeft' }, backward: { show: 'animate__rotateInUpLeft', hide: 'animate__rotateOutUpLeft' } },
+    cssRotateAntiClock: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__rotateInDownRight', hide: 'animate__rotateOutDownRight' }, backward: { show: 'animate__rotateInUpRight', hide: 'animate__rotateOutUpRight' } },
+    cssZoom: { prefix: 'animate__animated animate__faster', forward: { show: 'animate__zoomIn', hide: 'animate__zoomOut' }, backward: { show: 'animate__zoomIn', hide: 'animate__zoomOut' } },
+};
+
+const loadScripts = async () => {
+    const loadScript = (src: string) => {
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    };
+
+    const loadStyle = (href: string) => {
+         return new Promise((resolve, reject) => {
+             const link = document.createElement('link');
+             link.rel = 'stylesheet';
+             link.href = href;
+             link.onload = resolve;
+             link.onerror = reject;
+             document.head.appendChild(link);
+         })
+    }
+
+    try {
+        await loadScript('https://code.jquery.com/jquery-4.0.0.min.js');
+        await loadScript('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/js/jquery.smartWizard.min.js');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/smartwizard.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/basic.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/arrows.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/pills.min.css');
+        await loadStyle('https://cdn.jsdelivr.net/npm/smartwizard@7.1.0/dist/css/themes/glow.min.css');
+        await loadStyle('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+        return true;
+    } catch (error) {
+        console.error('Failed to load scripts:', error);
+        return false;
+    }
+};
+
+const initSmartWizard = () => {
+    // @ts-ignore
+    if (typeof jQuery === 'undefined') return;
+    
+    // @ts-ignore
+    const $ = jQuery;
+
+    const wizardElement = $('#smartwizard');
+
+    // Step show event
+    wizardElement.on("shown.sw", function (e, args) {
+        const stepPosition = args.stepPosition;
+        $("#prev-btn").removeClass('disabled').prop('disabled', false);
+        $("#next-btn").removeClass('disabled').prop('disabled', false);
+        if(stepPosition === 'first') {
+            $("#prev-btn").addClass('disabled').prop('disabled', true);
+        } else if(stepPosition === 'last') {
+            $("#next-btn").addClass('disabled').prop('disabled', true);
+        } else {
+            $("#prev-btn").removeClass('disabled').prop('disabled', false);
+            $("#next-btn").removeClass('disabled').prop('disabled', false);
+        }
+      });
+
+    // Smart Wizard
+    wizardElement.smartWizard({
+        initialStep: 0,
+        theme: 'arrows',
+        displayMode: isDark.value ? 'dark' : 'light',
+        transition: {
+            effect:'slideHorizontal' // none|fade|slideHorizontal|slideVertical|slideSwing|css
+        },
+        toolbar: {
+            position: 'both', // none/ top/ both bottom
+        }
+    });
+
+    // External Button Events
+    $("#reset-btn").on("click", function() {
+        wizardElement.smartWizard("reset");
+        return true;
+    });
+
+    $("#prev-btn").on("click", function() {
+        wizardElement.smartWizard("prev");
+        return true;
+    });
+
+    $("#next-btn").on("click", function() {
+        wizardElement.smartWizard("next");
+        return true;
+    });
+
+    // Toolbar position
+    $('#toolbar-position').on('change', function() {
+        wizardElement.smartWizard('setOptions', {
+            toolbar: { position: $(this).val() }
+        });
+    });
+
+    // Toolbar buttons
+    $('#toolbar-showNextButton').on('change', function() {
+      wizardElement.smartWizard('setOptions', {
+        toolbar: { buttons: {showNext: $(this).prop('checked') }}
+      });
+    });
+
+    $('#toolbar-showPreviousButton').on('change', function() {
+      wizardElement.smartWizard('setOptions', {
+        toolbar: { buttons: {showPrevious: $(this).prop('checked') }}
+      });
+    });
+
+    $("#animation").on("change", function(this: HTMLElement) {
+        const anim = $(this).val() as keyof typeof cssAnimationList;
+        const cssAnim = cssAnimationList[anim];
+        const options = cssAnim
+            ? { transition: { effect: 'css', css: { ...cssAnim } } }
+            : { transition: { effect: anim } };
+        wizardElement.smartWizard('setOptions', options);
+        return true;
+    });
+
+    $("#theme_selector").on("change", function(this: HTMLElement) {
+        var options = {
+            theme: $(this).val()
+        };
+        $('#smartwizard').smartWizard("setOptions", options);
+        return true;
+    });
+
+    $("#theme_colors").on("change", function(this: HTMLElement) {
+        const colorName = $(this).val();
+        if (colorName) {
+            wizardElement.attr('data-color', colorName);
+        } else {
+            wizardElement.removeAttr('data-color');
+        }
+        return true;
+    });
+}
+
+onMounted(async () => {
+    if (typeof window !== 'undefined') {
+        const loaded = await loadScripts();
+        if (loaded) {
+            initSmartWizard();
+        }
+    }
+});
+</script>
+
 
 Interactive demos of jQuery SmartWizard
 
@@ -515,7 +854,7 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
 
 <ClientOnly>
 
-<script>
+<script lang="ts">
 if (typeof window !== 'undefined') {
   // Load jQuery
   const jqueryScript = document.createElement('script');
@@ -883,3 +1222,4 @@ function initializeDemos() {
 }
 </script>
 </ClientOnly>
+</div>

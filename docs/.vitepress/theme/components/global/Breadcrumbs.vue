@@ -1,8 +1,14 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
+import VersionSwitcher from '../../components/VersionSwitcher.vue'
+import { getCurrentRoute, isActive } from '../../utils/route'
 
 const route = useRoute()
+
+// Get page data
+const routeData = computed(() => getCurrentRoute())
+const pageData = computed(() => routeData.value?.pageData || []);
 
 interface BreadcrumbItem {
   name: string
@@ -21,17 +27,17 @@ const items = computed<BreadcrumbItem[]>(() => {
     accumulated += `/${seg}`
     let label = seg.replace(/-/g, ' ')
     label = label.charAt(0).toUpperCase() + label.slice(1)
-    if (seg === 'smart-wizard') label = 'Smart Wizard'
-    if (seg === 'jquery-smartwizard') label = 'jQuery Smart Wizard'
-    if (seg === 'jquery-smartcart') label = 'jQuery Smart Cart'
-    if (seg === 'jquery-smarttab') label = 'jQuery Smart Tab'
-    if (seg === 'react-smarttab') label = 'React Smart Tab'
-    if (seg === 'copify') label = 'Copify'
-    if (seg === 'create-jquery-plugin') label = 'create-jquery-plugin'
-    if (seg === 'docs') label = 'Docs'
-    if (seg === 'demos') label = 'Demos'
-    if (seg === 'tools') label = 'Tools'
-    if (seg === 'articles') label = 'Articles'
+
+    if (routeData.value?.pageType == 'product' && seg == pageData.value?.id) {
+      label = pageData.value?.name;
+    } else if (routeData.value?.pageType == 'product' && seg == pageData.value?.currentVersion) {
+      label = pageData.value?.currentVersion;
+    } else {
+      if (seg === 'docs') label = 'Docs'
+      if (seg === 'demos') label = 'Demos'
+      if (seg === 'tools') label = 'Tools'
+      if (seg === 'articles') label = 'Articles'
+    }
 
     list.push({ name: label, url: `${accumulated}/` })
   }
@@ -66,6 +72,15 @@ const items = computed<BreadcrumbItem[]>(() => {
       </li>
     </ol>
   </nav>
+
+  <!-- Product Brand -->
+      <!-- <a href="/smart-wizard/" class="tl-pnav-brand">
+        <span class="tl-pnav-title">Smart Wizard</span>
+
+        <div class="tl-aside-inner">
+          <VersionSwitcher />
+        </div>
+      </a> -->
 </template>
 
 <style scoped>

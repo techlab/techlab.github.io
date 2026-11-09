@@ -80,7 +80,7 @@ export const products: ProductDefinition[] = [
           'Dynamic asynchronous content loading via contentLoader callback',
           'Integrated progress bar, loader overlay, and auto height adjustment'
         ],
-        screenshot: '/media/jquery-smart-wizard/v7/screens-banner.png'
+        screenshot: '/media/jquery-smart-wizard/v7/screens-banner.png',
       }
     }
   },
@@ -106,7 +106,7 @@ export const products: ProductDefinition[] = [
       'v7': {
         subMenu: [
           { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartwizard/v7/' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v7/docs' },
           { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v7/demo' },
         ],
         features: [
@@ -424,4 +424,57 @@ export function getProductVersionData(product: ProductDefinition, version?: stri
 
 export function getFeaturedProduct(): ProductDefinition {
   return products.find(p => p.featured) || products[0]
+}
+
+export interface ProductDetails {
+  id: string
+  name: string
+  title: string
+  tagline: string
+  description: string
+  category: 'Component' | 'Plugin' | 'Utility' | 'CLI'
+  tags: string[]
+  repository?: string
+  npm?: string
+  metrics?: ProductMetric[]
+  features?: string[]
+  subMenu: Record<string, ProductSubMenuItem>
+  versions: string[]
+  currentVersion: string
+  versionDetails?: ProductVersionData
+  raw: ProductDefinition
+}
+
+export function getProductDetails(product: ProductDefinition, version?: string): ProductDetails {
+  const resolvedVersion = (version && product.versionData[version]) ? version : product.versions[0];
+  const versionDetails = product.versionData[resolvedVersion];
+  return {
+    id: product.id,
+    name: product.name,
+    title: product.title,
+    tagline: product.tagline,
+    description: product.description,
+    category: product.category,
+    tags: product.tags,
+    repository: product.repository,
+    npm: product.npm,
+    metrics: product.metrics,
+    features: versionDetails.features,
+    // Sub menu
+    subMenu: getSubMenu(versionDetails),
+    // Version data
+    versions: product.versions,
+    currentVersion: resolvedVersion,
+    versionDetails: versionDetails,
+    raw: product,
+  }
+}
+
+function getSubMenu(versionDetails?: ProductVersionData): Record<string, ProductSubMenuItem> {
+  const subMenu: Record<string, ProductSubMenuItem> = {};
+  if (!versionDetails?.subMenu) return subMenu;
+  for (const menu of versionDetails.subMenu) {
+    subMenu[menu.type] = menu;
+  }
+  return subMenu;
 }

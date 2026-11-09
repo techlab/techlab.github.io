@@ -52,9 +52,9 @@ export default {
   Layout: Layout,
   enhanceApp({ app }: { app: App }) {
     // Global Elements
-    app.component('Badge', Badge)
+    // app.component('Badge', Badge)
     app.component('Breadcrumbs', Breadcrumbs)
-    app.component('AdSlot', AdSlot)
+    // app.component('AdSlot', AdSlot)
 
     // Home
     app.component('HomeView', HomeView)

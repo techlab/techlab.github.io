@@ -1,11 +1,10 @@
 ---
-layout: home
+layout: product
 title: Smart Wizard Pricing & Commercial Licenses
 description: Licensing options for Smart Wizard. 100% Free MIT Open Source, plus Commercial Developer and Team options.
 ---
 
 <script setup>
-import ProductNav from '../../.vitepress/theme/components/product/ProductNav.vue'
 import PricingCard from '../../.vitepress/theme/components/pricing/PricingCard.vue'
 import PricingTable from '../../.vitepress/theme/components/pricing/PricingTable.vue'
 import { getProduct } from '../../.vitepress/theme/data/products'
@@ -13,20 +12,35 @@ import { getProduct } from '../../.vitepress/theme/data/products'
 const product = getProduct('smart-wizard')
 </script>
 
-<ProductNav :product="product" />
+<ProductPricingPreview />
 
-<div class="tl-container" style="padding-top: 2rem;">
 
-# Smart Wizard Pricing & Licensing
+<div class="tl-md-container vp-doc">
 
-Choose the plan that fits your project. Smart Wizard is proudly **100% Free and Open Source (MIT)**. Commercial licenses are available for teams requiring indemnification, no-attribution terms, and direct SLA support.
+# Smart Wizard - Pricing & Licensing
+
+Smart Wizard is dual-licensed: 100% Free and Open Source (GPLv3) and Commercial licenses for commercial projects.
 
 ---
+
+
+**[GNU General Public License v3.0 (GPLv3)](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** - free and open-source under the GNU General Public License v3.0
+
+**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for **proprietary (closed-source) application, commercial SaaS, or client project** without releasing your application's source code under the GPLv3.
+
+Commercial licenses help support continued development, maintenance, and new features.
+
+<a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8">Purchase Single Commercial License</a>
+
+::: info 🎉 Special Launch Offer 🎉
+Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.
+:::
+
 
 <div class="tl-pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0;">
   <PricingCard
     name="Community"
-    price="$0"
+    price="Free"
     period="forever"
     badge="Open Source"
     description="Full access to the core engine, official adapters, and standard themes."

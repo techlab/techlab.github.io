@@ -50,7 +50,7 @@
   --tl-shadow-glow: 0 0 32px -4px rgba(2, 132, 199, 0.18);
 
   /* Typography */
-  --tl-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --tl-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   --tl-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   /* Layout & Sizing */
@@ -72,10 +72,18 @@
   --tl-transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
 
   /* VitePress standard variables override mapping */
+  --vp-font-family-base: var(--tl-font-sans);
+  --vp-font-family-mono: var(--tl-font-mono);
   --vp-c-brand-1: #0284c7;
   --vp-c-brand-2: #0369a1;
   --vp-c-brand-3: #075985;
   --vp-c-brand-soft: rgba(2, 132, 199, 0.1);
+  --vp-c-text-1: var(--tl-text-primary);
+  --vp-c-text-2: var(--tl-text-secondary);
+  --vp-c-text-3: var(--tl-text-muted);
+  --vp-c-divider: var(--tl-border);
+  --vp-c-bg: var(--tl-bg);
+  --vp-c-bg-alt: var(--tl-bg-alt);
   --vp-nav-height: 64px;
 }
 
@@ -112,4 +120,10 @@
   --vp-c-brand-2: #0284c7;
   --vp-c-brand-3: #0369a1;
   --vp-c-brand-soft: rgba(56, 189, 248, 0.12);
+  --vp-c-text-1: var(--tl-text-primary);
+  --vp-c-text-2: var(--tl-text-secondary);
+  --vp-c-text-3: var(--tl-text-muted);
+  --vp-c-divider: var(--tl-border);
+  --vp-c-bg: var(--tl-bg);
+  --vp-c-bg-alt: var(--tl-bg-alt);
 }

@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import type { ProductMetric } from '../../data/products'
+import { ref, computed } from 'vue'
+import {  getCurrentRoute } from '../../utils/route'
 
 defineProps<{
   metrics?: ProductMetric[]
 }>()
+
+// Get page data
+const routeData = computed(() => getCurrentRoute())
+const metrics = computed(() => routeData.value?.pageData.metrics || []);
 </script>
 
 <template>

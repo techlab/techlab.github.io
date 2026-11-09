@@ -1,17 +1,11 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { withBase } from 'vitepress'
-import type { ProductDefinition } from '../../data/products'
-import { getProductPageLink, getProductVersionData } from '../../data/products'
-
-const props = defineProps<{
-  product: ProductDefinition
-}>()
+import { getCurrentRoute } from '../../utils/route'
 
 const copied = ref(false)
 
 function copyInstall() {
-  const cmd = `npm install ${props.product.npm || props.product.id}`
+  const cmd = `npm install ${product.npm}`
   if (typeof navigator !== 'undefined' && navigator.clipboard) {
     navigator.clipboard.writeText(cmd)
     copied.value = true
@@ -19,10 +13,9 @@ function copyInstall() {
   }
 }
 
-// Derive links from latest version's subMenu
-const versionData = computed(() => getProductVersionData(props.product))
-const docsLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'doc')?.link)
-const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'demo')?.link)
+// Get page data
+const routeData = computed(() => getCurrentRoute())
+const product = computed(() => routeData.value?.pageData || []);
 </script>
 
 <template>
@@ -31,7 +24,6 @@ const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 
       <div class="tl-phero-inner">
         <div class="tl-phero-badges">
           <span class="tl-badge tl-badge-blue">{{ product.category }}</span>
-          <span v-if="product.versions" class="tl-version-tag">{{ product.versions[0] }}</span>
         </div>
 
         <h1 class="tl-phero-title">{{ product.name }}</h1>
@@ -42,7 +34,7 @@ const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 
         <div class="tl-phero-install-wrap">
           <div class="tl-install-box">
             <span class="tl-install-prompt">$</span>
-            <code class="tl-install-cmd">npm install {{ product.npm || product.id }}</code>
+            <code class="tl-install-cmd">npm install {{ product.npm }}</code>
             <button
               type="button"
               class="tl-copy-install-btn"
@@ -59,17 +51,14 @@ const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 
         </div>
 
         <!-- Hero Actions -->
-        <div class="tl-phero-actions">
+        <!-- <div class="tl-phero-actions">
           <a v-if="docsLink" :href="withBase(docsLink)" class="tl-btn tl-btn-primary tl-btn-lg">
             Documentation
           </a>
           <a v-if="demoLink" :href="withBase(demoLink)" class="tl-btn tl-btn-secondary tl-btn-lg">
             Interactive Demos
           </a>
-          <a v-if="product.repository" :href="product.repository" target="_blank" rel="noopener noreferrer" class="tl-btn tl-btn-ghost tl-btn-lg">
-            GitHub
-          </a>
-        </div>
+        </div> -->
       </div>
     </div>
   </header>

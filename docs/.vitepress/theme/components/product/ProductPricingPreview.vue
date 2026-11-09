@@ -1,25 +1,23 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
-import type { ProductDefinition } from '../../data/products'
-import { getProductPageLink, getProductVersionData } from '../../data/products'
+import { getCurrentRoute } from '../../utils/route'
 
-const props = defineProps<{
-  product: ProductDefinition
-}>()
-
-const pageLink = computed(() => getProductPageLink(props.product))
-const docsLink = computed(() => getProductVersionData(props.product)?.subMenu.find(m => m.type === 'doc')?.link)
+// Get page data
+const routeData = computed(() => getCurrentRoute())
+const product = computed(() => routeData.value?.pageData || []);
+const pageLink = computed(() => product.value?.subMenu.doc?.link)
+const docsLink = computed(() => product.value?.subMenu.doc?.link)
 </script>
 
 <template>
   <section class="tl-ppricing-preview-section">
     <div class="tl-container">
       <div class="tl-section-header">
-        <span class="tl-section-eyebrow">Licensing & Commercial Support</span>
-        <h2 class="tl-section-title">Transparent Open-Source & Commercial Plans</h2>
+        <span class="tl-section-eyebrow">Pricing & Licensing</span>
+        <h2 class="tl-section-title">{{ product.title }}: Pricing & Licensing</h2>
         <p class="tl-section-desc">
-          Smart Wizard is 100% Free and Open Source under the MIT license. We also offer commercial developer and team licenses with priority SLA support.
+          {{ product.name }} is 100% Free and Open Source under the {{ product.license }}. We also offer commercial developer and team licenses with priority SLA support.
         </p>
       </div>
 
@@ -42,7 +40,7 @@ const docsLink = computed(() => getProductVersionData(props.product)?.subMenu.fi
           </ul>
 
           <div class="tl-pplan-action">
-            <a :href="withBase(docsLink || pageLink)" class="tl-btn tl-btn-secondary tl-btn-lg tl-btn-block">
+            <a :href="(docsLink || pageLink)" class="tl-btn tl-btn-secondary tl-btn-lg tl-btn-block">
               Get Started Free
             </a>
           </div>

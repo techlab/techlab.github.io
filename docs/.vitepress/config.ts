@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { fileURLToPath, URL } from 'node:url'
 
 // Get Google Analytics ID from environment variable
 const GA_TAG_ID = process.env.VITE_GA_TAG_ID ?? 'XXX1'
@@ -148,5 +149,14 @@ export default defineConfig({
     sitemap: {
         hostname: 'https://techlaboratory.net'
     },
-    ignoreDeadLinks: true
+    ignoreDeadLinks: true,
+    srcExclude: ['**/*bakcup*', '**/*backup*'],
+    vite: {
+        resolve: {
+            alias: {
+                // Creates an alias pointing directly to your .vitepress directory
+                '@vitepress': fileURLToPath(new URL('./', import.meta.url))
+            }
+        }
+    }
 })
