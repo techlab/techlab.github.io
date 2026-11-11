@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
-import VersionSwitcher from '../../components/VersionSwitcher.vue'
 import { resolveRoute, isActive } from '../../utils/route'
 
 const route = useRoute()
@@ -72,15 +71,6 @@ const items = computed<BreadcrumbItem[]>(() => {
       </li>
     </ol>
   </nav>
-
-  <!-- Product Brand -->
-      <!-- <a href="/smart-wizard/" class="tl-pnav-brand">
-        <span class="tl-pnav-title">Smart Wizard</span>
-
-        <div class="tl-aside-inner">
-          <VersionSwitcher />
-        </div>
-      </a> -->
 </template>
 
 <style scoped>
