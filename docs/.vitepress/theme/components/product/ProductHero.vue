@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { getCurrentRoute } from '../../utils/route'
+import { withBase, useRoute } from 'vitepress'
+import { resolveRoute } from '../../utils/route'
 
+const route = useRoute()
 const copied = ref(false)
 
 function copyInstall() {
-  const cmd = `npm install ${product.npm}`
+  const cmd = `npm install ${product.value?.npm || ''}`
   if (typeof navigator !== 'undefined' && navigator.clipboard) {
     navigator.clipboard.writeText(cmd)
     copied.value = true
@@ -13,52 +15,31 @@ function copyInstall() {
   }
 }
 
-// Get page data
-const routeData = computed(() => getCurrentRoute())
-const product = computed(() => routeData.value?.pageData || []);
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
+const product = computed(() => routeData.value?.pageData || {} as any);
+const docsLink = computed(() => product.value?.subMenu?.docs?.link || '');
+const demoLink = computed(() => product.value?.subMenu?.demo?.link || '');
 </script>
 
 <template>
   <header class="tl-product-hero">
     <div class="tl-container">
       <div class="tl-phero-inner">
-        <div class="tl-phero-badges">
-          <span class="tl-badge tl-badge-blue">{{ product.category }}</span>
-        </div>
 
         <h1 class="tl-phero-title">{{ product.name }}</h1>
         <p class="tl-phero-tagline">{{ product.tagline }}</p>
-        <p class="tl-phero-desc">{{ product.description }}</p>
-
-        <!-- Install Snippet Bar -->
-        <div class="tl-phero-install-wrap">
-          <div class="tl-install-box">
-            <span class="tl-install-prompt">$</span>
-            <code class="tl-install-cmd">npm install {{ product.npm }}</code>
-            <button
-              type="button"
-              class="tl-copy-install-btn"
-              :title="copied ? 'Copied to clipboard!' : 'Copy install command'"
-              @click="copyInstall"
-            >
-              <span v-if="copied" class="tl-copied-text">Copied!</span>
-              <svg v-else viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-              </svg>
-            </button>
-          </div>
-        </div>
+        <p class="tl-phero-desc" v-html="product.description"></p>
 
         <!-- Hero Actions -->
-        <!-- <div class="tl-phero-actions">
-          <a v-if="docsLink" :href="withBase(docsLink)" class="tl-btn tl-btn-primary tl-btn-lg">
+        <div class="tl-phero-actions">
+          <a v-if="docsLink" :href="withBase(docsLink)" class="tl-btn tl-btn-primary">
             Documentation
           </a>
-          <a v-if="demoLink" :href="withBase(demoLink)" class="tl-btn tl-btn-secondary tl-btn-lg">
+          <a v-if="demoLink" :href="withBase(demoLink)" class="tl-btn tl-btn-secondary">
             Interactive Demos
           </a>
-        </div> -->
+        </div>
       </div>
     </div>
   </header>
@@ -72,9 +53,10 @@ const product = computed(() => routeData.value?.pageData || []);
 }
 
 .tl-phero-inner {
-  max-width: 800px;
+  max-width: 950px;
   margin: 0 auto;
   text-align: center;
+  margin-top: 3.5rem;
 }
 
 .tl-phero-badges {

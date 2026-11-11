@@ -110,7 +110,9 @@ const routeCache = new Map<string, CurrentRouteResult>()
  */
 function normalizePath(rawPath: string): string {
     if (!rawPath) return '/'
-    const clean = rawPath.split('?')[0].split('#')[0].trim()
+    let clean = rawPath.split('?')[0].split('#')[0].trim()
+    clean = clean.replace(/\.html$/, '')
+    clean = clean.replace(/\/index$/, '')
     const trimmed = clean.replace(/\/+$/, '')
     return trimmed || '/'
 }
@@ -262,9 +264,20 @@ export function clearRouteCache(): void {
     routeCache.clear()
 }
 
-export function isActive(linkPath: string): boolean {
-    const route = useRoute()
-    const current = route.path.replace(/\/$/, '')
-    const target = linkPath.replace(/\/$/, '')
-    return current === target
+export function isActive(linkPath: string, currentPath?: string): boolean {
+    let current = currentPath
+    if (!current) {
+        try {
+            const route = useRoute()
+            current = route?.path
+        } catch {
+            if (typeof window !== 'undefined' && window.location?.pathname) {
+                current = window.location.pathname
+            }
+        }
+    }
+    if (!current || !linkPath) return false
+    const cleanCurrent = current.split('?')[0].split('#')[0].replace(/\/+$/, '').toLowerCase()
+    const cleanTarget = linkPath.split('?')[0].split('#')[0].replace(/\/+$/, '').toLowerCase()
+    return cleanCurrent === cleanTarget
 }

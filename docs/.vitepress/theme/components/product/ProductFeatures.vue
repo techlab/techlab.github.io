@@ -1,33 +1,32 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { getCurrentRoute } from '../../utils/route'
+import { useRoute } from 'vitepress'
+import { resolveRoute } from '../../utils/route'
 
-// Get page data
-const routeData = computed(() => getCurrentRoute())
-const product = computed(() => routeData.value?.pageData || []);
+const route = useRoute()
+
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
+const product = computed(() => routeData.value?.pageData || {} as any);
 </script>
 
 <template>
   <section class="tl-pfeatures-section">
     <div class="tl-container">
       <div class="tl-section-header">
-        <span class="tl-section-eyebrow">Architecture & Capabilities</span>
-        <h2 class="tl-section-title">Engineered for Modern Web Engineering</h2>
-        <p class="tl-section-desc">
-          Built from the ground up to solve complex multi-step form orchestration, user onboarding, and application state.
-        </p>
+        <span class="tl-section-eyebrow">Features & Capabilities</span>
+        <h2 class="tl-section-title">Explore the features & capabilities</h2>
       </div>
 
       <div class="tl-pfeatures-grid">
         <div v-for="(feat, idx) in product.features" :key="idx" class="tl-pfeature-card">
           <div class="tl-pfeat-icon">
-            <svg viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
-              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-            </svg>
+            <div v-if="feat.icon" class="tl-pfeatures-icon-box">{{ feat.icon }}</div>
+            <svg v-if="!feat.icon" class="tl-pfeatures-icon-box" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
           </div>
           <div class="tl-pfeat-content">
-            <h3 class="tl-pfeat-title">Key Capability #{{ idx + 1 }}</h3>
-            <p class="tl-pfeat-desc">{{ feat }}</p>
+            <h3 class="tl-pfeat-title">{{ feat.title }}</h3>
+            <p class="tl-pfeat-desc">{{ feat.description }}</p>
           </div>
         </div>
       </div>
@@ -37,7 +36,12 @@ const product = computed(() => routeData.value?.pageData || []);
 
 <style scoped>
 .tl-pfeatures-section {
-  padding: 5rem 0;
+  padding: 2rem 0;
+}
+
+.tl-pfeatures-icon-box {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .tl-pfeatures-grid {
@@ -65,7 +69,6 @@ const product = computed(() => routeData.value?.pageData || []);
 
 .tl-pfeature-card:hover {
   border-color: var(--tl-border-glow);
-  transform: translateY(-2px);
   box-shadow: var(--tl-shadow-sm);
 }
 

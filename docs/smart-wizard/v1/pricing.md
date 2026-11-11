@@ -15,7 +15,7 @@ const product = getProduct('smart-wizard')
 <ProductPricingPreview />
 
 
-<div class="tl-md-container vp-doc">
+<div class="tl-md-container tl-md-container-mt vp-doc">
 
 # Smart Wizard - Pricing & Licensing
 

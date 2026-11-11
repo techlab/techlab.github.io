@@ -20,62 +20,32 @@ export default defineConfig({
         nav: [
             { text: 'Home', link: '/' },
             {
-                text: 'Products',
+                text: 'Components',
                 items: [
-                    { text: 'Smart Wizard', link: '/smart-wizard/' },
-                    { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/' },
-                    { text: 'jQuery Smart Cart', link: '/jquery-smartcart/' },
-                    { text: 'jQuery Smart Tab', link: '/jquery-smarttab/' },
-                    { text: 'Copify JS', link: '/copify/' },
-                    { text: 'React Smart Tab', link: '/react-smarttab/' },
-                    { text: 'create-jquery-plugin', link: '/create-jquery-plugin/' }
+                    { text: 'Smart Wizard', link: '/smart-wizard/', rel: 'smart-wizard' },
+                    { text: 'Copify JS', link: '/copify/', rel: 'copify' },
+                    { text: 'React Smart Tab', link: '/react-smarttab/', rel: 'react-smarttab' }
                 ]
             },
-            { text: 'Docs', link: '/docs/' },
-            { text: 'Demos', link: '/demos/' },
-            { text: 'Tools', link: '/tools/' },
-            { text: 'Articles', link: '/articles/' }
+            {
+                text: 'jQuery',
+                items: [
+                    { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/', rel: 'jquery-smartwizard' },
+                    { text: 'jQuery Smart Cart', link: '/jquery-smartcart/', rel: 'jquery-smartcart' },
+                    { text: 'jQuery Smart Tab', link: '/jquery-smarttab/', rel: 'jquery-smarttab' },
+                    { text: 'create-jquery-plugin', link: '/create-jquery-plugin/', rel: 'create-jquery-plugin' }
+                ]
+            },
+            // {
+            //     text: 'Tools',
+            //     link: '/tools/'
+            // },
+            // {
+            //     text: 'Articles',
+            //     link: '/articles/'
+            // }
         ],
         // sidebar: {
-        //     '/smart-wizard/': [
-        //         {
-        //             text: 'Smart Wizard Platform',
-        //             items: [
-        //                 { text: 'Overview', link: '/smart-wizard/' },
-        //                 { text: 'Features & Architecture', link: '/smart-wizard/features' },
-        //                 { text: 'Interactive Demos', link: '/smart-wizard/demos' },
-        //                 { text: 'Documentation (v1)', link: '/smart-wizard/v1/' },
-        //                 { text: 'Pricing & Licensing', link: '/smart-wizard/pricing' },
-        //                 { text: 'Changelog', link: '/smart-wizard/changelog' }
-        //             ]
-        //         },
-        //         {
-        //             text: 'Technical Guides',
-        //             items: [
-        //                 { text: 'Getting Started', link: '/smart-wizard/v1/#getting-started' },
-        //                 { text: 'Installation', link: '/smart-wizard/v1/#installation' },
-        //                 { text: 'Options', link: '/smart-wizard/v1/#options' },
-        //                 { text: 'Themes', link: '/smart-wizard/v1/#themes' },
-        //                 { text: 'Events & API', link: '/smart-wizard/v1/#events' },
-        //                 { text: 'Live Sandbox', link: '/smart-wizard/v1/demo' }
-        //             ]
-        //         }
-        //     ],
-        //     '/docs/': [
-        //         {
-        //             text: 'Documentation Hub',
-        //             items: [
-        //                 { text: 'All Documentation', link: '/docs/' },
-        //                 { text: 'Smart Wizard (v1)', link: '/smart-wizard/v1/' },
-        //                 { text: 'jQuery Smart Wizard', link: '/jquery-smartwizard/' },
-        //                 { text: 'jQuery Smart Cart', link: '/jquery-smartcart/' },
-        //                 { text: 'jQuery Smart Tab', link: '/jquery-smarttab/' },
-        //                 { text: 'Copify JS', link: '/copify/' },
-        //                 { text: 'React Smart Tab', link: '/react-smarttab/' },
-        //                 { text: 'create-jquery-plugin', link: '/create-jquery-plugin/' }
-        //             ]
-        //         }
-        //     ],
         //     '/tools/': [
         //         {
         //             text: 'Developer Utilities',

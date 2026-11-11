@@ -2,12 +2,12 @@
 import { computed } from 'vue'
 import { useRoute, withBase } from 'vitepress'
 import VersionSwitcher from '../../components/VersionSwitcher.vue'
-import { getCurrentRoute, isActive } from '../../utils/route'
+import { resolveRoute, isActive } from '../../utils/route'
 
 const route = useRoute()
 
-// Get page data
-const routeData = computed(() => getCurrentRoute())
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
 const pageData = computed(() => routeData.value?.pageData || []);
 
 interface BreadcrumbItem {

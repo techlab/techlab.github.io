@@ -1,6 +1,6 @@
 ---
 layout: product
-title: Smart Wizard Documentation - Modern Framework-Agnostic Multi-Step Stepper & Wizard
+title: Documentation - Smart Wizard 
 description: A modern, framework-agnostic wizard and multi-step component for JavaScript, React, and Vue
 head:
   - - meta
@@ -11,7 +11,7 @@ head:
       content: wizard, stepper, multi-step, form, component, javascript, typescript, react, vue, smartwizard
 ---
 
-<div class="tl-md-container vp-doc">
+<div class="tl-md-container tl-md-container-mt vp-doc">
 
 # Installation  
 

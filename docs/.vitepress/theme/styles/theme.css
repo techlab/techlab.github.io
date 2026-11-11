@@ -56,12 +56,21 @@ header.VPNavBar,
 
 /* Markdown Container */
 .tl-md-container {
-  margin-top: var(--tl-header-height);
   width: 100%;
   max-width: var(--tl-max-width);
   margin-left: auto;
   margin-right: auto;
   padding: 1.5rem;
+}
+
+.tl-md-container-mt {
+  margin-top: var(--tl-header-height);
+}
+
+.tl-md-hero {
+  padding: 4.5rem 0 3.5rem 0;
+  background: linear-gradient(180deg, var(--tl-surface-glass) 0%, transparent 100%);
+  border-bottom: 1px solid var(--tl-border-subtle);
 }
 
 @media (max-width: 640px) {

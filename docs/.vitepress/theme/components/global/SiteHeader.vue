@@ -2,12 +2,12 @@
 import { ref, computed, onMounted, onUnmounted, watch } from 'vue'
 import { useData, useRoute, withBase } from 'vitepress'
 import { VPNavBarSearch } from 'vitepress/theme'
-import { products, getProductPageLink } from '../../data/products'
+import { getProductDescription } from '../../data/products'
 
-const { isDark } = useData()
+const { theme, isDark } = useData()
 const route = useRoute()
 
-const isProductsOpen = ref(false)
+const activeDropdown = ref<string | null>(null)
 const isMobileMenuOpen = ref(false)
 const isScrolled = ref(false)
 
@@ -16,8 +16,22 @@ function toggleTheme() {
 }
 
 function closeAllMenus() {
-  isProductsOpen.value = false
+  activeDropdown.value = null
   isMobileMenuOpen.value = false
+}
+
+function toggleDropdown(name: string) {
+  activeDropdown.value = activeDropdown.value === name ? null : name
+}
+
+function openDropdown(name: string) {
+  activeDropdown.value = name
+}
+
+function closeDropdown(name: string) {
+  if (activeDropdown.value === name) {
+    activeDropdown.value = null
+  }
 }
 
 watch(() => route.path, () => {
@@ -30,25 +44,33 @@ function handleScroll() {
   }
 }
 
+function handleClickOutside(event: MouseEvent) {
+  const target = event.target as HTMLElement
+  if (!target || !target.isConnected) return
+  if (!target.closest('.tl-header')) {
+    closeAllMenus()
+  }
+}
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll, { passive: true })
+  document.addEventListener('click', handleClickOutside)
 })
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('click', handleClickOutside)
 })
 
 const activeSection = computed(() => {
   const p = route.path
-  if (p.includes('/smart-wizard') || p.includes('/jquery-') || p.includes('/copify') || p.includes('/react-smarttab')) return 'products'
+  if (p === '/' || p === '') return 'home'
+  if (p.startsWith('/smart-wizard') || p.startsWith('/copify') || p.startsWith('/react-smarttab')) return 'components'
+  if (p.startsWith('/jquery-') || p.startsWith('/create-jquery-plugin')) return 'jquery'
   if (p.startsWith('/tools')) return 'tools'
   if (p.startsWith('/articles')) return 'articles'
-  if (p.startsWith('')) return 'home'
   return ''
 })
-
-const featuredProducts = computed(() => products.filter(p => p.featured))
-const otherProducts = computed(() => products.filter(p => !p.featured))
 </script>
 
 <template>
@@ -64,86 +86,66 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="tl-desktop-nav" aria-label="Main Navigation">
-
-        <a :href="withBase('/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'home' }">
-          Home
-        </a>
-
-        <!-- Products Mega Dropdown -->
-        <div
-          class="tl-nav-item tl-dropdown-wrap"
-          @mouseenter="isProductsOpen = true"
-          @mouseleave="isProductsOpen = false"
-        >
-          <button
-            type="button"
-            class="tl-nav-link tl-dropdown-btn"
-            :class="{ 'tl-nav-active': activeSection === 'products' || isProductsOpen }"
-            :aria-expanded="isProductsOpen"
-            aria-haspopup="true"
-            @click="isProductsOpen = !isProductsOpen"
+      <nav class="tl-desktop-nav" aria-label="Main Navigation" v-if="theme.nav">
+        <template v-for="item in theme.nav" :key="item.text">
+          <!-- 1. Render simple links (Home, Tools, Articles, etc.) -->
+          <a 
+            v-if="item.link"
+            :href="withBase(item.link)" 
+            class="tl-nav-link" 
+            :class="{ 'tl-nav-active': activeSection === item.text.toLowerCase().replace(/\s+/g, '-') }"
           >
-            <span>Products</span>
-            <svg class="tl-chevron" :class="{ 'tl-chevron-rotated': isProductsOpen }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-            </svg>
-          </button>
+            {{ item.text }}
+          </a>
 
-          <!-- Dropdown Menu -->
-          <div v-show="isProductsOpen" class="tl-mega-menu" role="menu">
-            <div class="tl-mega-inner">
-              <div class="tl-mega-col tl-mega-secondary">
-                <!-- <div class="tl-mega-heading">Plugins & Utilities</div> -->
-                <div class="tl-mega-list">
+          <!-- 2. Render item with dropdown (Components, jQuery, etc.) -->
+          <div
+            v-else-if="item.items"
+            class="tl-nav-item tl-dropdown-wrap"
+            @mouseenter="openDropdown(item.text.toLowerCase())"
+            @mouseleave="closeDropdown(item.text.toLowerCase())"
+          >
+            <button
+              type="button"
+              class="tl-nav-link tl-dropdown-btn"
+              :class="{ 
+                'tl-nav-active': activeSection === item.text.toLowerCase() || activeDropdown === item.text.toLowerCase() 
+              }"
+              :aria-expanded="activeDropdown === item.text.toLowerCase()"
+              aria-haspopup="true"
+              @click.stop="toggleDropdown(item.text.toLowerCase())"
+            >
+              <span>{{ item.text }}</span>
+              <svg class="tl-chevron" :class="{ 'tl-chevron-rotated': activeDropdown === item.text.toLowerCase() }" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+              </svg>
+            </button>
 
-                  <a
-                    v-for="prod in featuredProducts"
-                    :key="prod.id"
-                    :href="withBase(getProductPageLink(prod))"
-                    class="tl-product-row"
-                    role="menuitem"
-                    @click="isProductsOpen = false"
-                  >
-                    <!-- <div class="tl-product-icon">
-                      <span class="tl-icon-box">⚡</span>
-                    </div> -->
-                    <div class="tl-product-info">
-                      <div class="tl-product-header">
-                        <span class="tl-product-name">{{ prod.name }}</span>
+            <!-- Dropdown menu items list -->
+            <div v-if="activeDropdown === item.text.toLowerCase()" class="tl-mega-menu" role="menu">
+              <div class="tl-mega-inner">
+                <div class="tl-mega-col">
+                  <div class="tl-mega-list">
+                    <a 
+                      v-for="subItem in item.items" 
+                      :key="subItem.link"
+                      :href="withBase(subItem.link)"
+                      class="tl-product-row-compact"
+                      role="menuitem"
+                      @click="closeAllMenus"
+                    >
+                      <div class="tl-product-compact-header">
+                        <span class="tl-product-compact-name">{{ subItem.text }}</span>
                       </div>
-                      <p class="tl-product-tagline">{{ prod.tagline }}</p>
-                    </div>
-                  </a>
-
-                  <a
-                    v-for="prod in otherProducts"
-                    :key="prod.id"
-                    :href="withBase(getProductPageLink(prod))"
-                    class="tl-product-row-compact"
-                    role="menuitem"
-                    @click="isProductsOpen = false"
-                  >
-                    <div class="tl-product-compact-header">
-                      <span class="tl-product-compact-name">{{ prod.name }}</span>
-                      <span class="tl-product-compact-cat">{{ prod.category }}</span>
-                    </div>
-                    <span class="tl-product-compact-desc">{{ prod.tagline }}</span>
-                  </a>
+                      <span v-if="subItem.rel" class="tl-product-compact-desc" :title="getProductDescription(subItem.rel)">{{ getProductDescription(subItem.rel) }}</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- <a :href="withBase('/tools/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'tools' }">
-          Tools
-        </a> -->
-
-        <!-- <a :href="withBase('/articles/')" class="tl-nav-link" :class="{ 'tl-nav-active': activeSection === 'articles' }">
-          Articles
-        </a> -->
+        </template>
       </nav>
 
       <!-- Right Action Items: Search, GitHub, Dark Toggle, Mobile Toggle -->
@@ -199,7 +201,7 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
           class="tl-icon-btn tl-mobile-toggle"
           aria-label="Toggle navigation menu"
           :aria-expanded="isMobileMenuOpen"
-          @click="isMobileMenuOpen = !isMobileMenuOpen"
+          @click.stop="isMobileMenuOpen = !isMobileMenuOpen"
         >
           <svg v-if="!isMobileMenuOpen" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -216,27 +218,45 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
 
     <!-- Mobile Drawer -->
     <div v-show="isMobileMenuOpen" class="tl-mobile-drawer">
-      <div class="tl-mobile-menu-inner tl-container">
-        <div class="tl-mobile-section">
-          <div class="tl-mobile-heading">Products</div>
-          <a
-            v-for="prod in products"
-            :key="prod.id"
-            :href="withBase(getProductPageLink(prod))"
-            class="tl-mobile-product-link"
-            @click="closeAllMenus"
-          >
-            <span class="tl-mobile-prod-title">{{ prod.name }}</span>
-          </a>
-        </div>
+      <div class="tl-mobile-menu-inner tl-container" v-if="theme.nav">
+        <template v-for="item in theme.nav" :key="item.text">
+          <!-- 1. Direct link item (e.g. Home, Tools, Articles) -->
+          <div v-if="item.link" class="tl-mobile-section tl-mobile-section-link">
+            <a
+              :href="withBase(item.link)"
+              class="tl-mobile-nav-link"
+              :class="{ 'tl-nav-active': activeSection === item.text.toLowerCase().replace(/\s+/g, '-') }"
+              @click="closeAllMenus"
+            >
+              {{ item.text }}
+            </a>
+          </div>
 
-        <!-- <div class="tl-mobile-section"> -->
-          <!-- <div class="tl-mobile-heading">Platform</div> -->
-          <!-- <a :href="withBase('/tools/')" class="tl-mobile-nav-link" @click="closeAllMenus">Developer Tools</a> -->
-          <!-- <a :href="withBase('/articles/')" class="tl-mobile-nav-link" @click="closeAllMenus">Articles & Insights</a> -->
-          <!-- <a :href="withBase('/about')" class="tl-mobile-nav-link" @click="closeAllMenus">About</a> -->
-        <!-- </div> -->
-
+          <!-- 2. Section with dropdown items (e.g. Components, jQuery) -->
+          <div v-else-if="item.items" class="tl-mobile-section">
+            <div class="tl-mobile-heading">
+              <a v-if="item.link" :href="withBase(item.link)" @click="closeAllMenus">{{ item.text }}</a>
+              <span v-else>{{ item.text }}</span>
+            </div>
+            <a
+              v-for="subItem in item.items"
+              :key="subItem.link"
+              :href="withBase(subItem.link)"
+              class="tl-mobile-product-link"
+              @click="closeAllMenus"
+            >
+              <div class="tl-mobile-prod-content">
+                <span class="tl-mobile-prod-title">{{ subItem.text }}</span>
+                <span
+                  v-if="subItem.rel && getProductDescription(subItem.rel)"
+                  class="tl-mobile-prod-desc"
+                >
+                  {{ getProductDescription(subItem.rel) }}
+                </span>
+              </div>
+            </a>
+          </div>
+        </template>
       </div>
     </div>
   </header>
@@ -378,13 +398,18 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
   position: absolute;
   top: calc(100%);
   left: 0;
-  width: 580px;
+  width: 320px;
   background-color: var(--tl-surface);
   border: 1px solid var(--tl-border);
   border-radius: var(--tl-radius-lg);
   box-shadow: var(--tl-shadow-lg);
   overflow: hidden;
   animation: tl-dropdown-fade 180ms ease-out forwards;
+}
+
+.tl-mega-menu-right {
+  left: auto;
+  right: 0;
 }
 
 @keyframes tl-dropdown-fade {
@@ -400,9 +425,8 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
 
 .tl-mega-inner {
   display: grid;
-  /* grid-template-columns: 1.15fr 0.85fr; */
-  padding: 1.25rem;
-  gap: 1.25rem;
+  padding: 0.75rem;
+  gap: 0.5rem;
 }
 
 .tl-mega-heading {
@@ -474,7 +498,7 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
   padding: 0.5rem 0.65rem;
   border-radius: var(--tl-radius-sm);
   text-decoration: none !important;
-  display: block;
+  display: grid;
   transition: background-color var(--tl-transition-fast);
 }
 
@@ -592,7 +616,11 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
 }
 
 .tl-mobile-section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tl-mobile-section-link {
+  margin-bottom: 0.25rem;
 }
 
 .tl-mobile-heading {
@@ -602,7 +630,17 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
   text-transform: uppercase;
   color: var(--tl-text-muted);
   letter-spacing: 0.08em;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+.tl-mobile-heading a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+.tl-mobile-heading a:hover {
+  color: var(--tl-brand-glow);
 }
 
 .tl-mobile-product-link {
@@ -613,15 +651,29 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
   border-radius: var(--tl-radius-sm);
   color: var(--tl-text-primary);
   text-decoration: none !important;
+  transition: background-color var(--tl-transition-fast);
 }
 
 .tl-mobile-product-link:hover {
   background-color: var(--tl-surface-hover);
 }
 
+.tl-mobile-prod-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
 .tl-mobile-prod-title {
   font-size: 0.9375rem;
   font-weight: 600;
+  color: var(--tl-text-primary);
+}
+
+.tl-mobile-prod-desc {
+  font-size: 0.75rem;
+  color: var(--tl-text-secondary);
+  line-height: 1.35;
 }
 
 .tl-mobile-nav-link {
@@ -631,9 +683,13 @@ const otherProducts = computed(() => products.filter(p => !p.featured))
   font-weight: 500;
   color: var(--tl-text-secondary);
   text-decoration: none !important;
+  border-radius: var(--tl-radius-sm);
+  transition: all var(--tl-transition-fast);
 }
 
-.tl-mobile-nav-link:hover {
+.tl-mobile-nav-link:hover,
+.tl-mobile-nav-link.tl-nav-active {
   color: var(--tl-brand-glow);
+  background-color: var(--tl-surface-hover);
 }
 </style>

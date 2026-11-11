@@ -5,14 +5,20 @@ export interface ProductMetric {
 }
 
 export interface ProductSubMenuItem {
-  type: 'home' | 'doc' | 'demo' | 'pricing' | 'changelog' | string
+  type: 'home' | 'docs' | 'demo' | 'pricing' | 'changelog' | string
   title: string
   link: string
 }
 
+export interface FeatureItem {
+  icon: string
+  title: string
+  description: string
+}
+
 export interface ProductVersionData {
   subMenu: ProductSubMenuItem[]
-  features?: string[]
+  features?: FeatureItem[]
   screenshot?: string
 }
 
@@ -42,8 +48,10 @@ export const products: ProductDefinition[] = [
     id: 'smart-wizard',
     name: 'Smart Wizard',
     title: 'Smart Wizard',
-    tagline: 'Modern, framework-agnostic multi-step wizard component',
-    description: 'Built from the ground up with TypeScript and zero runtime dependencies. Features official React and Vue 3 adapters, modular themes, fluent step APIs, and W3C WAI-ARIA accessibility.',
+    tagline: 'Modern, framework-agnostic multi-step wizard component with React & Vue support',
+    description: `A next-generation, extensible multi-step wizard component built for modern web applications.
+The evolution of the popular jQuery SmartWizard, rebuilt from the ground up with TypeScript with zero runtime dependencies, Smart Wizard provides a lightweight, accessible, and customizable solution for building complex workflows, registration forms, checkout flows, surveys, and onboarding experiences. 
+Featuring official React and Vue 3 adapters, modular themes, and a fluent API, it delivers flexibility and simplicity for modern web development.`,
     category: 'Component',
     tags: ['TypeScript', 'JavaScript', 'React', 'Vue'],
     featured: true,
@@ -68,17 +76,23 @@ export const products: ProductDefinition[] = [
           { type: 'pricing', title: 'Pricing', link: '/smart-wizard/v1/pricing' },
         ],
         features: [
-          'Zero runtime dependencies, written in TypeScript with full type declarations',
-          'Framework-agnostic core architecture with official React and Vue 3 adapters',
-          'Modern, accessible UI strictly adhering to W3C WAI-ARIA authoring practices',
-          'Multiple modular built-in themes (default, arrows, pills, glow)',
-          'Extensive color presets and automatic, light, and dark color-scheme support',
-          'Horizontal and vertical layout modes with responsive mobile auto-folding',
-          'Built-in transitions (fade, slideHorizontal, slideVertical, slideSwing) and Animate.css support',
-          'Comprehensive step states: completed, active, disabled, hidden, error, warning',
-          'Extensible lifecycle plugin system (touch swipe, URL hash & browser history)',
-          'Dynamic asynchronous content loading via contentLoader callback',
-          'Integrated progress bar, loader overlay, and auto height adjustment'
+          { icon: '⚡', title: 'Zero Dependencies', description: 'Zero runtime dependencies, written in TypeScript with full type declarations' },
+          { icon: '', title: 'Framework Agnostic', description: 'Framework-agnostic core architecture with official React and Vue 3 adapters' },
+          { icon: '♿', title: 'Fully Accessible', description: 'Modern, accessible UI strictly adhering to W3C WAI-ARIA authoring practices' },
+          { icon: '🎭', title: 'Modular Themes', description: 'Multiple modular built-in themes (default, arrows, pills, glow)' },
+          { icon: '🎨', title: 'Color Customization', description: 'Extensive color presets and automatic, light, and dark color-scheme support' },
+          { icon: '📐', title: 'Layout Flexibility', description: 'Horizontal and vertical layout modes with responsive mobile auto-folding' },
+          { icon: '🌀', title: 'Transitions', description: 'Built-in transitions (fade, slideHorizontal, slideVertical, slideSwing) and Animate.css support' },
+          { icon: '🏷️', title: 'Step States', description: 'Comprehensive step states: completed, active, disabled, hidden, error, warning' },
+          { icon: '🔌', title: 'Lifecycle Plugins', description: 'Extensible lifecycle plugin system (touch swipe, URL hash & browser history)' },
+          { icon: '⏳', title: 'Async Loading', description: 'Dynamic asynchronous content loading via contentLoader callback' },
+          { icon: '🛠️', title: 'Integrated Features', description: 'Integrated progress bar, loader overlay, and auto height adjustment' },
+
+
+          { icon: '🛠️', title: '100% TypeScript', description: 'Built from the ground up with strict typings and full TypeScript declarations' },
+          { icon: '🛠️', title: 'Official Adapters', description: 'First-class support for **React** (`useSmartWizard`, `SmartWizardProvider`) and **Vue 3** (`useSmartWizard`)' },
+          { icon: '🛠️', title: 'Fluent Step API', description: 'Clean, chainable API for single or bulk step state manipulation' },
+
         ],
         screenshot: '/media/jquery-smart-wizard/v7/screens-banner.png',
       }
@@ -105,91 +119,88 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v7': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v7' },
           { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v7/docs' },
           { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v7/demo' },
         ],
         features: [
-          'Fully rewritten in TypeScript (v7) with built-in type declarations',
-          'Clean and minimal HTML structure with responsive, mobile-ready layout',
-          'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables',
-          'Rich transition animations with full support for external CSS animation libraries',
-          'Form validation integration via leave.sw event hooks',
-          'RTL (right-to-left) language support and keyboard navigation',
-          'Dynamic Ajax content loading and URL hash history integration',
-          'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim'
+          { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
+          { icon: '📱', title: 'Responsive Design', description: 'Clean and minimal HTML structure with responsive, mobile-ready layout' },
+          { icon: '🎭', title: 'Multiple Themes', description: 'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables' },
+          { icon: '✨', title: 'Rich Transitions', description: 'Rich transition animations with full support for external CSS animation libraries' },
+          { icon: '🛡️', title: 'Form Validation', description: 'Form validation integration via leave.sw event hooks' },
+          { icon: '🌐', title: 'RTL Support', description: 'RTL (right-to-left) language support and keyboard navigation' },
+          { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
+          { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
         screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
       },
       'v6': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartwizard/v6/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v6' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v6/docs' },
           { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v6/demo' },
         ],
         features: [
-          'Fully rewritten in TypeScript (v7) with built-in type declarations',
-          'Clean and minimal HTML structure with responsive, mobile-ready layout',
-          'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables',
-          'Rich transition animations with full support for external CSS animation libraries',
-          'Form validation integration via leave.sw event hooks',
-          'RTL (right-to-left) language support and keyboard navigation',
-          'Dynamic Ajax content loading and URL hash history integration',
-          'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim'
+          { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
+          { icon: '📱', title: 'Responsive Design', description: 'Clean and minimal HTML structure with responsive, mobile-ready layout' },
+          { icon: '🎭', title: 'Multiple Themes', description: 'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables' },
+          { icon: '✨', title: 'Rich Transitions', description: 'Rich transition animations with full support for external CSS animation libraries' },
+          { icon: '🛡️', title: 'Form Validation', description: 'Form validation integration via leave.sw event hooks' },
+          { icon: '🌐', title: 'RTL Support', description: 'RTL (right-to-left) language support and keyboard navigation' },
+          { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
+          { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
         screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
       },
       'v5': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartwizard/v5/' },
-          { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v5/demo' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v5' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v5/docs' },
         ],
         features: [
-          'Fully rewritten in TypeScript (v7) with built-in type declarations',
-          'Clean and minimal HTML structure with responsive, mobile-ready layout',
-          'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables',
-          'Rich transition animations with full support for external CSS animation libraries',
-          'Form validation integration via leave.sw event hooks',
-          'RTL (right-to-left) language support and keyboard navigation',
-          'Dynamic Ajax content loading and URL hash history integration',
-          'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim'
+          { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
+          { icon: '📱', title: 'Responsive Design', description: 'Clean and minimal HTML structure with responsive, mobile-ready layout' },
+          { icon: '🎭', title: 'Multiple Themes', description: 'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables' },
+          { icon: '✨', title: 'Rich Transitions', description: 'Rich transition animations with full support for external CSS animation libraries' },
+          { icon: '🛡️', title: 'Form Validation', description: 'Form validation integration via leave.sw event hooks' },
+          { icon: '🌐', title: 'RTL Support', description: 'RTL (right-to-left) language support and keyboard navigation' },
+          { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
+          { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
         screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
       },
       'v4': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartwizard/v4/' },
-          { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v4/demo' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v4' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v4/docs' },
         ],
         features: [
-          'Fully rewritten in TypeScript (v7) with built-in type declarations',
-          'Clean and minimal HTML structure with responsive, mobile-ready layout',
-          'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables',
-          'Rich transition animations with full support for external CSS animation libraries',
-          'Form validation integration via leave.sw event hooks',
-          'RTL (right-to-left) language support and keyboard navigation',
-          'Dynamic Ajax content loading and URL hash history integration',
-          'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim'
+          { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
+          { icon: '📱', title: 'Responsive Design', description: 'Clean and minimal HTML structure with responsive, mobile-ready layout' },
+          { icon: '🎭', title: 'Multiple Themes', description: 'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables' },
+          { icon: '✨', title: 'Rich Transitions', description: 'Rich transition animations with full support for external CSS animation libraries' },
+          { icon: '🛡️', title: 'Form Validation', description: 'Form validation integration via leave.sw event hooks' },
+          { icon: '🌐', title: 'RTL Support', description: 'RTL (right-to-left) language support and keyboard navigation' },
+          { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
+          { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
         screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
       },
       'v2': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartwizard/v2/' },
-          { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v2/demo' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v2' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v2/docs' },
         ],
         features: [
-          'Fully rewritten in TypeScript (v7) with built-in type declarations',
-          'Clean and minimal HTML structure with responsive, mobile-ready layout',
-          'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables',
-          'Rich transition animations with full support for external CSS animation libraries',
-          'Form validation integration via leave.sw event hooks',
-          'RTL (right-to-left) language support and keyboard navigation',
-          'Dynamic Ajax content loading and URL hash history integration',
-          'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim'
+          { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
+          { icon: '📱', title: 'Responsive Design', description: 'Clean and minimal HTML structure with responsive, mobile-ready layout' },
+          { icon: '🎭', title: 'Multiple Themes', description: 'Multiple themes (basic, arrows, glow, pills) easily customizable via CSS variables' },
+          { icon: '✨', title: 'Rich Transitions', description: 'Rich transition animations with full support for external CSS animation libraries' },
+          { icon: '🛡️', title: 'Form Validation', description: 'Form validation integration via leave.sw event hooks' },
+          { icon: '🌐', title: 'RTL Support', description: 'RTL (right-to-left) language support and keyboard navigation' },
+          { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
+          { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
         screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
       }
@@ -215,29 +226,30 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v3': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartcart/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartcart/v3/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartcart/v3' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartcart/v3/docs' },
+          { type: 'demo', title: 'Demo', link: '/jquery-smartcart/v3/demo' },
         ],
         features: [
-          'In-built PayPal, Ajax, and form submit payment methods',
-          'Clean, modern, and compact responsive checkout interface',
-          'Public methods for programmatic cart updates and event listeners',
-          'Dynamic subtotal, tax, and shipping calculation',
-          'Bootstrap 3, 4, and 5 compatibility out of the box'
+          { icon: '💳', title: 'Payment Gateways', description: 'In-built PayPal, Ajax, and form submit payment methods' },
+          { icon: '📱', title: 'Responsive Checkout', description: 'Clean, modern, and compact responsive checkout interface' },
+          { icon: '⚙️', title: 'Public Methods & Events', description: 'Public methods for programmatic cart updates and event listeners' },
+          { icon: '🧮', title: 'Automatic Calculations', description: 'Dynamic subtotal, tax, and shipping calculation' },
+          { icon: '🎨', title: 'Bootstrap Compatibility', description: 'Bootstrap 3, 4, and 5 compatibility out of the box' },
         ],
         screenshot: '/media/jquery-smart-cart/v3/SmartCart3-Normal.png'
       },
       'v2': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smartcart/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smartcart/v2/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smartcart/v2' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smartcart/v2/docs' },
         ],
         features: [
-          'In-built PayPal, Ajax, and form submit payment methods',
-          'Clean, modern, and compact responsive checkout interface',
-          'Public methods for programmatic cart updates and event listeners',
-          'Dynamic subtotal, tax, and shipping calculation',
-          'Bootstrap 3, 4, and 5 compatibility out of the box'
+          { icon: '💳', title: 'Payment Gateways', description: 'In-built PayPal, Ajax, and form submit payment methods' },
+          { icon: '📱', title: 'Responsive Checkout', description: 'Clean, modern, and compact responsive checkout interface' },
+          { icon: '⚙️', title: 'Public Methods & Events', description: 'Public methods for programmatic cart updates and event listeners' },
+          { icon: '🧮', title: 'Automatic Calculations', description: 'Dynamic subtotal, tax, and shipping calculation' },
+          { icon: '🎨', title: 'Bootstrap Compatibility', description: 'Bootstrap 3, 4, and 5 compatibility out of the box' },
         ],
         screenshot: '/media/jquery-smart-cart/v3/SmartCart3-Normal.png'
       }
@@ -259,43 +271,44 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v4': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smarttab/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smarttab/v4/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smarttab/v4' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smarttab/v4/docs' },
+          { type: 'demo', title: 'Demo', link: '/jquery-smarttab/v4/demo' },
         ],
         features: [
-          'Responsive layout with automatic mobile adaptations',
-          'Built-in visual themes (basic, brick, elite, pills)',
-          'URL hash navigation and deep-linking support',
-          'Ajax content loading and auto-progress tab rotation',
-          'Keyboard navigation and auto content height adjustments'
+          { icon: '📱', title: 'Responsive Layout', description: 'Responsive layout with automatic mobile adaptations' },
+          { icon: '🎭', title: 'Visual Themes', description: 'Built-in visual themes (basic, brick, elite, pills)' },
+          { icon: '🔗', title: 'URL Hash Navigation', description: 'URL hash navigation and deep-linking support' },
+          { icon: '🔄', title: 'Ajax & Auto-Progress', description: 'Ajax content loading and auto-progress tab rotation' },
+          { icon: '⌨️', title: 'Keyboard & Auto-Height', description: 'Keyboard navigation and auto content height adjustments' },
         ],
         screenshot: '/media/jquery-smart-tab/v4/st-v4-basic.gif'
       },
       'v3': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smarttab/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smarttab/v3/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smarttab/v3' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smarttab/v3/docs' },
         ],
         features: [
-          'Responsive layout with automatic mobile adaptations',
-          'Built-in visual themes (basic, brick, elite, pills)',
-          'URL hash navigation and deep-linking support',
-          'Ajax content loading and auto-progress tab rotation',
-          'Keyboard navigation and auto content height adjustments'
+          { icon: '📱', title: 'Responsive Layout', description: 'Responsive layout with automatic mobile adaptations' },
+          { icon: '🎭', title: 'Visual Themes', description: 'Built-in visual themes (basic, brick, elite, pills)' },
+          { icon: '🔗', title: 'URL Hash Navigation', description: 'URL hash navigation and deep-linking support' },
+          { icon: '🔄', title: 'Ajax & Auto-Progress', description: 'Ajax content loading and auto-progress tab rotation' },
+          { icon: '⌨️', title: 'Keyboard & Auto-Height', description: 'Keyboard navigation and auto content height adjustments' },
         ],
         screenshot: '/media/jquery-smart-tab/v4/st-v4-basic.gif'
       },
       'v2': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/jquery-smarttab/' },
-          { type: 'doc', title: 'Documentation', link: '/jquery-smarttab/v2/' },
+          { type: 'home', title: 'Overview', link: '/jquery-smarttab/v2' },
+          { type: 'docs', title: 'Documentation', link: '/jquery-smarttab/v2/docs' },
         ],
         features: [
-          'Responsive layout with automatic mobile adaptations',
-          'Built-in visual themes (basic, brick, elite, pills)',
-          'URL hash navigation and deep-linking support',
-          'Ajax content loading and auto-progress tab rotation',
-          'Keyboard navigation and auto content height adjustments'
+          { icon: '📱', title: 'Responsive Layout', description: 'Responsive layout with automatic mobile adaptations' },
+          { icon: '🎭', title: 'Visual Themes', description: 'Built-in visual themes (basic, brick, elite, pills)' },
+          { icon: '🔗', title: 'URL Hash Navigation', description: 'URL hash navigation and deep-linking support' },
+          { icon: '🔄', title: 'Ajax & Auto-Progress', description: 'Ajax content loading and auto-progress tab rotation' },
+          { icon: '⌨️', title: 'Keyboard & Auto-Height', description: 'Keyboard navigation and auto content height adjustments' },
         ],
         screenshot: '/media/jquery-smart-tab/v4/st-v4-basic.gif'
       }
@@ -317,14 +330,14 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v0': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/copify/' },
-          { type: 'doc', title: 'Documentation', link: '/copify/v0/' },
+          { type: 'home', title: 'Overview', link: '/copify/v0' },
+          { type: 'docs', title: 'Documentation', link: '/copify/v0/docs' },
         ],
         features: [
-          'Zero dependencies and sub-2KB gzipped footprint',
-          'Async Clipboard API support with execCommand fallback',
-          'Comprehensive error handling and promise-based API',
-          'TypeScript type definitions included'
+          { icon: '⚡', title: 'Zero Dependencies', description: 'Zero dependencies and sub-2KB gzipped footprint' },
+          { icon: '📋', title: 'Async Clipboard API', description: 'Async Clipboard API support with execCommand fallback' },
+          { icon: '🛡️', title: 'Promise-Based API', description: 'Comprehensive error handling and promise-based API' },
+          { icon: '📘', title: 'TypeScript Definitions', description: 'TypeScript type definitions included' },
         ]
       }
     }
@@ -344,25 +357,16 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v2': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/react-smarttab/' },
-          { type: 'doc', title: 'Documentation', link: '/react-smarttab/v2/' },
+          { type: 'home', title: 'Overview', link: '/react-smarttab/v2' },
+          { type: 'docs', title: 'Documentation', link: '/react-smarttab/v2/docs' },
         ],
         features: [
-          'Declarative React component structure',
-          'Multiple themes and dark mode styles',
-          'Horizontal and vertical layout orientation'
-        ],
-        screenshot: '/media/react-smart-tab/v2/react-smarttab-v2-brick.png'
-      },
-      'v1': {
-        subMenu: [
-          { type: 'home', title: 'Overview', link: '/react-smarttab/' },
-          { type: 'doc', title: 'Documentation', link: '/react-smarttab/v1/' },
-        ],
-        features: [
-          'Declarative React component structure',
-          'Multiple themes and dark mode styles',
-          'Horizontal and vertical layout orientation'
+          { icon: '⚛️', title: 'Declarative React', description: 'Declarative React component structure' },
+          { icon: '🎨', title: 'Themes & Dark Mode', description: 'Multiple themes and dark mode styles' },
+          { icon: '📐', title: 'Flexible Orientation', description: 'Horizontal and vertical layout orientation' },
+          { icon: '', title: 'Responsive design', description: 'Responsive design' },
+          { icon: '', title: 'Standalone CSS', description: 'Standalone CSS' },
+          { icon: '', title: 'Bootstrap compatible', description: 'Bootstrap compatible' },
         ],
         screenshot: '/media/react-smart-tab/v2/react-smarttab-v2-brick.png'
       }
@@ -384,13 +388,13 @@ export const products: ProductDefinition[] = [
     versionData: {
       'v1': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/create-jquery-plugin/' },
-          { type: 'doc', title: 'Documentation', link: '/create-jquery-plugin/v1/' },
+          { type: 'home', title: 'Overview', link: '/create-jquery-plugin/v1/' },
+          { type: 'docs', title: 'Documentation', link: '/create-jquery-plugin/v1/docs' },
         ],
         features: [
-          'Instant modern plugin scaffolding with a single command',
-          'Preconfigured build steps (Rollup, Babel, UMD)',
-          'Automated unit testing setup with Jasmine and Karma'
+          { icon: '🚀', title: 'Instant Scaffolding', description: 'Instant modern plugin scaffolding with a single command' },
+          { icon: '📦', title: 'Preconfigured Bundler', description: 'Preconfigured build steps (Rollup, Babel, UMD)' },
+          { icon: '🧪', title: 'Automated Testing', description: 'Automated unit testing setup with Jasmine and Karma' },
         ]
       }
     }
@@ -405,6 +409,14 @@ export function getProduct(id: string): ProductDefinition | undefined {
       v.subMenu.some(m => m.type === 'home' && m.link.replace(/^\/|\/$/g, '') === id.replace(/^\/|\/$/g, ''))
     )
   })
+}
+
+export function getProductDescription(id: string): string | undefined {
+  const p = products.find(p => {
+    if (p.id === id) return true
+  })
+
+  return p?.tagline
 }
 
 export function getProductPageLink(product: ProductDefinition): string {
@@ -437,7 +449,7 @@ export interface ProductDetails {
   repository?: string
   npm?: string
   metrics?: ProductMetric[]
-  features?: string[]
+  features?: FeatureItem[]
   subMenu: Record<string, ProductSubMenuItem>
   versions: string[]
   currentVersion: string

@@ -1,6 +1,6 @@
 ---
 layout: product
-title: jQuery SmartWizard v7
+title: Documentation - jQuery SmartWizard v7
 description: A modern and accessible step wizard plugin for jQuery 
 head:
   - - meta

@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { withBase } from 'vitepress'
-import { getCurrentRoute } from '../../utils/route'
+import { withBase, useRoute } from 'vitepress'
+import { resolveRoute } from '../../utils/route'
 
-// Get page data
-const routeData = computed(() => getCurrentRoute())
-const product = computed(() => routeData.value?.pageData || []);
-const pageLink = computed(() => product.value?.subMenu.doc?.link)
-const docsLink = computed(() => product.value?.subMenu.doc?.link)
+const route = useRoute()
+
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
+const product = computed(() => routeData.value?.pageData || {} as any);
+const pageLink = computed(() => product.value?.subMenu?.doc?.link || product.value?.subMenu?.docs?.link || '')
+const docsLink = computed(() => product.value?.subMenu?.doc?.link || product.value?.subMenu?.docs?.link || '')
 </script>
 
 <template>

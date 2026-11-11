@@ -1,14 +1,18 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import {  getCurrentRoute } from '../../utils/route'
+import { useRoute } from 'vitepress'
+import { resolveRoute } from '../../utils/route'
+import type { ProductMetric } from '../../data/products'
 
-defineProps<{
+const props = defineProps<{
   metrics?: ProductMetric[]
 }>()
 
-// Get page data
-const routeData = computed(() => getCurrentRoute())
-const metrics = computed(() => routeData.value?.pageData.metrics || []);
+const route = useRoute()
+
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
+const metrics = computed(() => props.metrics || (routeData.value?.pageData as any)?.metrics || []);
 </script>
 
 <template>
