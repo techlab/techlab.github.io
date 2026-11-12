@@ -65,7 +65,7 @@ onUnmounted(() => {
 const activeSection = computed(() => {
   const p = route.path
   if (p === '/' || p === '') return 'home'
-  if (p.startsWith('/smart-wizard') || p.startsWith('/copify') || p.startsWith('/react-smarttab')) return 'components'
+  if (p.startsWith('/smart-wizard') || p.startsWith('/copify') || p.startsWith('/react-smart-tab')) return 'components'
   if (p.startsWith('/jquery-') || p.startsWith('/create-jquery-plugin')) return 'jquery'
   if (p.startsWith('/tools')) return 'tools'
   if (p.startsWith('/articles')) return 'articles'

@@ -61,11 +61,11 @@ const App = () => {
 export default App
 ```
 
-Please see the [documentation](http://techlaboratory.net/react-smarttab#documentation) for more details on implementation and usage.  
+Please see the [documentation](http://techlaboratory.net/react-smart-tab#documentation) for more details on implementation and usage.  
 
 ##### Optional parameters
 
-Please see the [parameter descriptions](http://techlaboratory.net/react-smarttab#parameter-description) for more details.
+Please see the [parameter descriptions](http://techlaboratory.net/react-smart-tab#parameter-description) for more details.
 
 ```jsx
 import React from 'react'

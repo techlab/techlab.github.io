@@ -24,7 +24,7 @@ export default defineConfig({
                 items: [
                     { text: 'Smart Wizard', link: '/smart-wizard/', rel: 'smart-wizard' },
                     { text: 'Copify JS', link: '/copify/', rel: 'copify' },
-                    { text: 'React Smart Tab', link: '/react-smarttab/', rel: 'react-smarttab' }
+                    { text: 'React Smart Tab', link: '/react-smart-tab/', rel: 'react-smart-tab' }
                 ]
             },
             {

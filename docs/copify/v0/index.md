@@ -17,23 +17,6 @@ head:
 
 <div class="tl-md-container vp-doc">
 
-# Copify JS
-
-A modern, cross-platform clipboard utility library for web
-<hr>
-
-
-Copify JS is a modern clipboard utility library that provides a simple and reliable way to interact with the system clipboard in web applications. It uses modern browser APIs with fallbacks for broader compatibility.
-
-## Features
-
-- ✓ Support on all modern browsers
-- ✓ TypeScript support with comprehensive type definitions
-- ✓ Fallback mechanisms for different levels of browser support
-- ✓ Comprehensive error handling with detailed results
-- ✓ Standalone with zero dependencies
-- ✓ Lightweight and fast
-
 ## License
 
 Copify JS is dual-licensed:

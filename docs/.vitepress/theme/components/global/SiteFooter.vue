@@ -37,7 +37,7 @@ const currentYear = computed(() => new Date().getFullYear())
             <li><a :href="withBase('/jquery-smartcart/')" class="tl-footer-link">jQuery Smart Cart</a></li>
             <li><a :href="withBase('/jquery-smarttab/')" class="tl-footer-link">jQuery Smart Tab</a></li>
             <li><a :href="withBase('/copify/')" class="tl-footer-link">Copify JS</a></li>
-            <li><a :href="withBase('/react-smarttab/')" class="tl-footer-link">React Smart Tab</a></li>
+            <li><a :href="withBase('/react-smart-tab/')" class="tl-footer-link">React Smart Tab</a></li>
             <li><a :href="withBase('/create-jquery-plugin/')" class="tl-footer-link">create-jquery-plugin</a></li>
           </ul>
         </div>

@@ -336,12 +336,13 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
           { icon: '📋', title: 'Async Clipboard API', description: 'Async Clipboard API support with execCommand fallback' },
           { icon: '🛡️', title: 'Promise-Based API', description: 'Comprehensive error handling and promise-based API' },
           { icon: '📘', title: 'TypeScript Definitions', description: 'TypeScript type definitions included' },
+          { icon: '🌐', title: 'Browsers Compatible', description: 'Support on all modern browsers' },
         ]
       }
     }
   },
   {
-    id: 'react-smarttab',
+    id: 'react-smart-tab',
     name: 'React Smart Tab',
     title: 'React Smart Tab',
     tagline: 'Awesome tab component for ReactJS applications',
@@ -349,14 +350,14 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
     category: 'Component',
     featured: false,
     repository: 'https://github.com/techlab/react-smarttab',
-    versions: ['v2', 'v1'],
+    versions: ['v2'],
     tags: ['React', 'JavaScript'],
     showOnHome: false,
     versionData: {
       'v2': {
         subMenu: [
-          { type: 'home', title: 'Overview', link: '/react-smarttab/v2' },
-          { type: 'docs', title: 'Documentation', link: '/react-smarttab/v2/docs' },
+          { type: 'home', title: 'Overview', link: '/react-smart-tab/v2' },
+          { type: 'docs', title: 'Documentation', link: '/react-smart-tab/v2/docs' },
         ],
         features: [
           { icon: '⚛️', title: 'Declarative React', description: 'Declarative React component structure' },

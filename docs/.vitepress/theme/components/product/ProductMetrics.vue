@@ -39,19 +39,22 @@ const metrics = computed(() => props.metrics || (routeData.value?.pageData as an
 
 .tl-pmetrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
   gap: 2rem;
 }
 
 @media (max-width: 860px) {
   .tl-pmetrics-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-auto-flow: row; /* Critical: allows items to wrap onto new rows */
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 500px) {
   .tl-pmetrics-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
