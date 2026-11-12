@@ -87,11 +87,9 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
           { icon: '🔌', title: 'Lifecycle Plugins', description: 'Extensible lifecycle plugin system (touch swipe, URL hash & browser history)' },
           { icon: '⏳', title: 'Async Loading', description: 'Dynamic asynchronous content loading via contentLoader callback' },
           { icon: '🛠️', title: 'Integrated Features', description: 'Integrated progress bar, loader overlay, and auto height adjustment' },
-
-
-          { icon: '🛠️', title: '100% TypeScript', description: 'Built from the ground up with strict typings and full TypeScript declarations' },
-          { icon: '🛠️', title: 'Official Adapters', description: 'First-class support for **React** (`useSmartWizard`, `SmartWizardProvider`) and **Vue 3** (`useSmartWizard`)' },
-          { icon: '🛠️', title: 'Fluent Step API', description: 'Clean, chainable API for single or bulk step state manipulation' },
+          { icon: '🛡️', title: 'TypeScript', description: 'Built from the ground up with strict typings and full TypeScript declarations' },
+          { icon: '🔄', title: 'Official Adapters', description: 'First-class support for **React** (`useSmartWizard`, `SmartWizardProvider`) and **Vue 3** (`useSmartWizard`)' },
+          { icon: '🌀', title: 'Fluent Step API', description: 'Clean, chainable API for single or bulk step state manipulation' },
 
         ],
         screenshot: '/media/jquery-smart-wizard/v7/screens-banner.png',

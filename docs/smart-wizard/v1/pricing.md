@@ -12,9 +12,6 @@ import { getProduct } from '../../.vitepress/theme/data/products'
 const product = getProduct('smart-wizard')
 </script>
 
-<ProductPricingPreview />
-
-
 <div class="tl-md-container tl-md-container-mt vp-doc">
 
 # Smart Wizard - Pricing & Licensing
@@ -22,19 +19,6 @@ const product = getProduct('smart-wizard')
 Smart Wizard is dual-licensed: 100% Free and Open Source (GPLv3) and Commercial licenses for commercial projects.
 
 ---
-
-
-**[GNU General Public License v3.0 (GPLv3)](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** - free and open-source under the GNU General Public License v3.0
-
-**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for **proprietary (closed-source) application, commercial SaaS, or client project** without releasing your application's source code under the GPLv3.
-
-Commercial licenses help support continued development, maintenance, and new features.
-
-<a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8">Purchase Single Commercial License</a>
-
-::: info 🎉 Special Launch Offer 🎉
-Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.
-:::
 
 
 <div class="tl-pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0;">
@@ -45,8 +29,8 @@ Use coupon code `EARLY20` during checkout to receive **20% discount** on your li
     badge="Open Source"
     description="Full access to the core engine, official adapters, and standard themes."
     :features="[
-      'MIT Open Source License',
-      'TypeScript core (0 dependencies)',
+      'GNU General Public License v3.0 (GPLv3)',
+      'Full TypeScript Core (zero dependencies)',
       'React & Vue 3 official adapters',
       'Standard themes (Arrows, Pills, Glow)',
       'Community GitHub support'
@@ -63,7 +47,7 @@ Use coupon code `EARLY20` during checkout to receive **20% discount** on your li
     :highlighted="true"
     description="For individual developers building commercial closed-source applications."
     :features="[
-      'Commercial perpetual license (1 dev)',
+      'Commercial Perpetual License (1 dev)',
       'No source code attribution required',
       'Unlimited client & commercial apps',
       'Priority email bug resolution (48h)',
@@ -91,6 +75,24 @@ Use coupon code `EARLY20` during checkout to receive **20% discount** on your li
     ctaLink="https://github.com/sponsors/techlab"
   />
 </div>
+
+
+<ProductPricingPreview />
+
+
+**[GNU General Public License v3.0 (GPLv3)](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** - free and open-source under the GNU General Public License v3.0
+
+**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for **proprietary (closed-source) application, commercial SaaS, or client project** without releasing your application's source code under the GPLv3.
+
+Commercial licenses help support continued development, maintenance, and new features.
+
+<a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8">Purchase Single Commercial License</a>
+
+::: info 🎉 Special Launch Offer 🎉
+Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.
+:::
+
+
 
 ---
 
