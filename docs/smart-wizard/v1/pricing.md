@@ -20,108 +20,78 @@ Smart Wizard is dual-licensed: 100% Free and Open Source (GPLv3) and Commercial 
 
 ---
 
-
-<div class="tl-pricing-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 3rem 0;">
+<div class="tl-pricing-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 3rem 0;">
   <PricingCard
     name="Community"
     price="Free"
     period="forever"
     badge="Open Source"
-    description="Full access to the core engine, official adapters, and standard themes."
+    description="Full access to the core engine, official adapters, and standard themes. For personal and open-source projects under a license compatible with the GPLv3"
     :features="[
       'GNU General Public License v3.0 (GPLv3)',
-      'Full TypeScript Core (zero dependencies)',
-      'React & Vue 3 official adapters',
-      'Standard themes (Arrows, Pills, Glow)',
-      'Community GitHub support'
+      'Smart Wizard Core (zero dependencies)',
+      'Official React Adapter',
+      'Official Vue Adapter',
+      'Standard Themes (Arrows, Pills, Glow)',
+      'Community Support - GitHub Discussions & Issue Tracking'
     ]"
     ctaText="Get Started Free"
-    ctaLink="/smart-wizard/v1/"
+    ctaLink="/smart-wizard/v1/docs"
   />
 
   <PricingCard
-    name="Commercial Developer"
-    price="$29"
-    period="one-time"
-    badge="Most Popular"
+    name="Single Commercial License"
+    price="$49"
+    period="one-time for V1"
+    badge="Commercial"
     :highlighted="true"
-    description="For individual developers building commercial closed-source applications."
+    description="For developers building proprietary (closed-source) applications, commercial applications, or client project not licensed under the GPLv3."
     :features="[
-      'Commercial Perpetual License (1 dev)',
-      'No source code attribution required',
-      'Unlimited client & commercial apps',
-      'Priority email bug resolution (48h)',
-      'Access to upcoming premium extensions'
+      'Commercial License (1 Developer/1 Project)',
+      'Includes lifetime updates for Smart Wizard V1',
+      'Priority Bug Resolution (Email)',
+      'Access to Upcoming Premium Themes & Extensions',
     ]"
-    ctaText="Purchase Developer License"
-    ctaLink="https://github.com/sponsors/techlab"
+    ctaText="Purchase Single Commercial License"
+    ctaLink="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8"
   />
-
-  <PricingCard
-    name="Commercial Team"
-    price="$79"
-    period="one-time"
-    badge="For Teams"
-    description="For development teams building mission-critical commercial platforms."
-    :features="[
-      'Commercial license for up to 10 developers',
-      'No attribution required',
-      'Unlimited commercial projects',
-      'Priority ticket resolution (24h)',
-      'Direct Slack/Discord access',
-      '1 Architecture & theme review session'
-    ]"
-    ctaText="Purchase Team License"
-    ctaLink="https://github.com/sponsors/techlab"
-  />
+  
 </div>
 
+<center>
 
-<ProductPricingPreview />
+_Commercial licenses help support continued development, maintenance, and new features_
 
+</center>
 
-**[GNU General Public License v3.0 (GPLv3)](https://github.com/techlab/smart-wizard/blob/main/LICENSE)** - free and open-source under the GNU General Public License v3.0
+> [!IMPORTANT] 🎉 Special Launch Offer 🎉
+> Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.
 
-**[Commercial License](https://techlaboratory.net/smart-wizard#license)** — Required for **proprietary (closed-source) application, commercial SaaS, or client project** without releasing your application's source code under the GPLv3.
-
-Commercial licenses help support continued development, maintenance, and new features.
-
-<a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8">Purchase Single Commercial License</a>
-
-::: info 🎉 Special Launch Offer 🎉
-Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.
-:::
-
-
-
----
-
-## Detailed Plan Comparison
-
-<PricingTable />
-
----
 
 ## Frequently Asked Questions
 
 ### Can I use the Community version in commercial projects?
-Yes! The core Smart Wizard library is licensed under the permissive **MIT License**, meaning you are free to use it in both commercial and non-commercial products. The MIT license requires preserving the original copyright notice in your bundled source files.
 
-### Why purchase a Commercial License?
-The Commercial License removes the attribution requirement for closed-source client deliverables, provides dedicated email/Slack support with guaranteed response times, and directly funds continuous maintenance and extension development.
+Yes! Smart Wizard Community is licensed under the **GNU General Public License v3.0 (GPLv3)**, which permits commercial use. However, if you distribute applications containing Smart Wizard, you must comply with the GPLv3 licensing requirements, including applicable source-code and redistribution obligations. If you are building closed-source commercial applications and prefer not to comply with GPLv3 distribution requirements, you can purchase a Commercial License.
 
-### Is the license recurring or one-time?
-All commercial developer and team licenses are **perpetual one-time purchases** including 1 full year of priority updates and support.
+### Why should I purchase a Commercial License?
+
+A Commercial License allows you to use Smart Wizard in proprietary and closed-source commercial applications without the distribution obligations of GPLv3. It also provides access to commercial support, depending on your selected plan, and helps fund ongoing development, maintenance, and new features.
+
+### Is the Commercial License a one-time payment or subscription?
+
+All Smart Wizard v1 commercial licenses are **one-time purchases** with no recurring subscription fees. Each license includes lifetime updates within the Smart Wizard v1.x release series. Major future versions, such as v2, may require a separate license or upgrade purchase.
+
+### Can I use Smart Wizard in my SaaS application?
+
+Yes! You can use Smart Wizard as part of your commercial SaaS application under the appropriate Commercial License. However, redistributing Smart Wizard as a standalone product, embedding it into another product for resale, or offering it as a component for others to build upon requires additional OEM or redistribution rights.
+
+### Do I get lifetime updates?
+
+Yes! All commercial licenses include lifetime updates for the Smart Wizard v1.x series, including bug fixes, improvements, and new features released within that major version. Major version upgrades may require a separate purchase.
 
 ### How do I receive support?
-Community users can file issues and ask questions on [GitHub Discussions](https://github.com/techlab/smart-wizard/discussions). Commercial license holders receive direct email assistance from the core author.
+
+Community users can report issues and ask questions through [GitHub Discussions](https://github.com/techlab/smart-wizard/discussions). Commercial license holders receive direct email support according to their selected plan.
 
 </div>
-
-<style>
-@media (max-width: 960px) {
-  .tl-pricing-grid {
-    grid-template-columns: 1fr !important;
-  }
-}
-</style>

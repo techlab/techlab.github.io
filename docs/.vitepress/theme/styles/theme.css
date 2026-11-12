@@ -112,6 +112,10 @@ header.VPNavBar,
   box-shadow: 0 2px 10px rgba(2, 132, 199, 0.3);
 }
 
+.vp-doc a.tl-btn-primary {
+  color: #ffffff !important;
+}
+
 .tl-btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 18px rgba(2, 132, 199, 0.45);

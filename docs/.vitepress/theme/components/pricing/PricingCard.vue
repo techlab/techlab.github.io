@@ -67,7 +67,7 @@ defineProps<{
 
 .tl-pricing-card:hover {
   border-color: var(--tl-border-glow);
-  transform: translateY(-3px);
+  transform: translateY(-1px);
   box-shadow: var(--tl-shadow-md);
 }
 
