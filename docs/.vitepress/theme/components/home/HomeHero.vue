@@ -139,6 +139,9 @@ const maintainedYear = computed(() => (new Date().getFullYear() - 2015))
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
+  .tl-hero-visual {
+    order: -1;
+  }
 }
 
 .tl-hero-badge-wrap {

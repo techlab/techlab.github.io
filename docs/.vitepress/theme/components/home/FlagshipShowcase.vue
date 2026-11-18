@@ -8,7 +8,8 @@ const pageLink = computed(() => getProductPageLink(product.value))
 const versionData = computed(() => getProductVersionData(product.value))
 const demoLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'demo')?.link)
 const docsLink = computed(() => versionData.value?.subMenu.find(m => m.type === 'doc')?.link)
-
+// Get first few feature
+const features = computed(() => versionData.value?.features.slice(0, 5) || [])
 const activeTheme = ref<'arrows' | 'pills' | 'checkout' | 'glow'>('arrows')
 
 const themePreviews = {
@@ -70,32 +71,15 @@ const themePreviews = {
           </div>
         </div>
 
-        <!-- Bottom Feature Highlights Grid -->
-        <div class="tl-flagship-features-grid">
-          <div class="tl-feature-col">
-            <div class="tl-feat-icon-box">⚡</div>
-            <h4 class="tl-feat-name">Zero Dependencies</h4>
-            <p class="tl-feat-desc">Written in modern TypeScript. Extremely lightweight footprint without heavy runtime bloat.</p>
-          </div>
-
-          <div class="tl-feature-col">
-            <div class="tl-feat-icon-box">⚛️</div>
-            <h4 class="tl-feat-name">Official Adapters</h4>
-            <p class="tl-feat-desc">First-class React and Vue 3 wrappers, plus vanilla JavaScript and jQuery compatibility.</p>
-          </div>
-
-          <div class="tl-feature-col">
-            <div class="tl-feat-icon-box">♿</div>
-            <h4 class="tl-feat-name">W3C WAI-ARIA</h4>
-            <p class="tl-feat-desc">Fully accessible keyboard navigation, screen-reader role announcements, and focus management.</p>
-          </div>
-
-          <div class="tl-feature-col">
-            <div class="tl-feat-icon-box">🎨</div>
-            <h4 class="tl-feat-name">CSS Variable Themes</h4>
-            <p class="tl-feat-desc">Default, Arrows, Pills, and Glow themes with automatic dark/light mode and custom color presets.</p>
+        <!-- Feature highlights -->
+        <div v-if="features && features.length > 0" class="tl-flagship-features-grid">
+          <div v-for="(feat, idx) in features" :key="idx" class="tl-feature-col">
+            <div class="tl-feat-icon-box">{{ feat.icon }}</div>
+            <h4 class="tl-feat-name">{{ feat.title }}</h4>
+            <p class="tl-feat-desc">{{ feat.description }}</p>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
@@ -264,7 +248,7 @@ const themePreviews = {
 /* Features Grid */
 .tl-flagship-features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--tl-border-subtle);

@@ -77,7 +77,8 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
         ],
         features: [
           { icon: '⚡', title: 'Zero Dependencies', description: 'Zero runtime dependencies, written in TypeScript with full type declarations' },
-          { icon: '', title: 'Framework Agnostic', description: 'Framework-agnostic core architecture with official React and Vue 3 adapters' },
+          { icon: '⚛️', title: 'Official Adapters', description: 'First-class support for React and Vue 3' },
+          { icon: '✨', title: 'Framework Agnostic', description: 'Framework-agnostic core architecture with official React and Vue 3 adapters' },
           { icon: '♿', title: 'Fully Accessible', description: 'Modern, accessible UI strictly adhering to W3C WAI-ARIA authoring practices' },
           { icon: '🎭', title: 'Modular Themes', description: 'Multiple modular built-in themes (default, arrows, pills, glow)' },
           { icon: '🎨', title: 'Color Customization', description: 'Extensive color presets and automatic, light, and dark color-scheme support' },
@@ -88,7 +89,6 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
           { icon: '⏳', title: 'Async Loading', description: 'Dynamic asynchronous content loading via contentLoader callback' },
           { icon: '🛠️', title: 'Integrated Features', description: 'Integrated progress bar, loader overlay, and auto height adjustment' },
           { icon: '🛡️', title: 'TypeScript', description: 'Built from the ground up with strict typings and full TypeScript declarations' },
-          { icon: '🔄', title: 'Official Adapters', description: 'First-class support for **React** (`useSmartWizard`, `SmartWizardProvider`) and **Vue 3** (`useSmartWizard`)' },
           { icon: '🌀', title: 'Fluent Step API', description: 'Clean, chainable API for single or bulk step state manipulation' },
 
         ],

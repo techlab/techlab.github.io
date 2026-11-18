@@ -7,7 +7,9 @@ import { withBase } from 'vitepress'
     <div class="tl-container">
       <div class="tl-cta-box">
         <div class="tl-cta-content">
-          <span class="tl-badge tl-badge-blue tl-cta-badge">OPEN SOURCE · FREE · READY TO USE</span>
+          <span class="tl-badge tl-badge-blue tl-cta-badge">OPEN SOURCE</span>
+          <span class="tl-badge tl-badge-blue tl-cta-badge">FREE</span>
+          <span class="tl-badge tl-badge-blue tl-cta-badge">READY TO USE</span>
           <h2 class="tl-cta-title">Ready to build better web experiences?</h2>
           <p class="tl-cta-desc">
             Developer-focused libraries for building modern web applications - simple to integrate, fully typed, and production ready.
@@ -60,6 +62,8 @@ import { withBase } from 'vitepress'
 
 .tl-cta-badge {
   margin-bottom: 1.25rem;
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .tl-cta-title {
