@@ -100,17 +100,21 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
     id: 'jquery-smartwizard',
     name: 'jQuery Smart Wizard',
     title: 'jQuery Smart Wizard',
-    tagline: 'The premier step wizard plugin for jQuery',
-    description: 'The battle-tested, highly customizable multi-step navigation plugin. Serving web developers for over a decade with millions of downloads and robust enterprise form validation.',
+    tagline: 'A modern and accessible step wizard plugin for jQuery',
+    description: `A lightweight and extensible step wizard plugin built for web applications using jQuery. 
+It provides a clean, intuitive interface for managing multi-step processes such as registration forms, checkout screens, surveys, configuration flows, and more.
+It offers customizable navigation styles, toolbars, transitions, and events, making it easy to integrate into existing applications. 
+Whether you’re building a simple step form or a complex workflow, Smart Wizard adapts to your needs.`,
     category: 'Plugin',
     featured: false,
     repository: 'https://github.com/techlab/jquery-smartwizard',
     npm: 'smartwizard',
     versions: ['v7', 'v6', 'v5', 'v4', 'v2'],
     metrics: [
-      { label: 'CDN Requests', value: '10M+', description: 'Monthly requests across jsDelivr & cdnjs' },
-      { label: 'GitHub Stars', value: '3.2k+', description: 'Trusted worldwide' },
-      { label: 'Years Maintained', value: '12+', description: 'Actively updated since 2012' }
+      { label: 'CDN Requests', value: '12M+', description: 'Monthly requests across jsDelivr & others' },
+      { label: 'NPM Downloads', value: '60K+', description: 'Every Month' },
+      { label: 'License', value: 'GPLv3', description: 'Free and open-source License' },
+      { label: 'Years Maintained', value: '12+', description: 'Actively updated over the years' }
     ],
     tags: ['jQuery', 'JavaScript', 'Bootstrap'],
     showOnHome: true,
