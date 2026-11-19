@@ -17,6 +17,17 @@ export const EXACT_REDIRECTS: Record<string, string> = {
   '/projects/demo/jquery-smart-tab/v4': '/jquery-smarttab/v4/demo',
   '/projects/demo/jquery-smart-tab/v4/ajax': '/jquery-smarttab/v4/demo',
   '/projects/demo/jquery-smart-tab/v4/multiple': '/jquery-smarttab/v4/demo',
+  '/archive/jquery-smart-wizard/v4': '/jquery-smartwizard/v4/',
+  '/react-smarttab': '/react-smart-tab/',
+  '/articles': '/articles/',
+  '/article': '/articles/',
+  // Safeguards for clean URLs without trailing slash
+  '/smart-wizard': '/smart-wizard/',
+  '/jquery-smartwizard': '/jquery-smartwizard/',
+  '/jquery-smartcart': '/jquery-smartcart/',
+  '/jquery-smarttab': '/jquery-smarttab/',
+  '/copify': '/copify/',
+  '/create-jquery-plugin': '/create-jquery-plugin/',
 }
 
 /**
@@ -25,11 +36,15 @@ export const EXACT_REDIRECTS: Record<string, string> = {
 export const QUERY_PRODUCT_REDIRECTS: Record<string, string> = {
   smartwizard: '/jquery-smartwizard/',
   'jquery-smartwizard': '/jquery-smartwizard/',
+  swiz: '/jquery-smartwizard/',
   smartcart: '/jquery-smartcart/',
   'jquery-smartcart': '/jquery-smartcart/',
+  scat: '/jquery-smartcart/',
   smarttab: '/jquery-smarttab/',
   'jquery-smarttab': '/jquery-smarttab/',
+  stab: '/jquery-smarttab/',
   'react-smart-tab': '/react-smart-tab/',
+  'react-smarttab': '/react-smart-tab/',
   copify: '/copify/',
   'smart-wizard': '/smart-wizard/',
   'create-jquery-plugin': '/create-jquery-plugin/',
@@ -48,6 +63,13 @@ const PREFIX_REDIRECTS: Array<{ prefix: string; target: string }> = [
   { prefix: '/projects/demo/jquery-smart-tab/', target: '/jquery-smarttab/v4/demo' },
   { prefix: '/projects/demo/jquery-smart-wizard/', target: '/jquery-smartwizard/v7/demo' },
   { prefix: '/projects/demo/jquery-smart-cart/', target: '/jquery-smartcart/v3/demo' },
+  { prefix: '/archive/jquery-smart-wizard/', target: '/jquery-smartwizard/' },
+  { prefix: '/archive/jquery-smart-tab/', target: '/jquery-smarttab/' },
+  { prefix: '/archive/jquery-smart-cart/', target: '/jquery-smartcart/' },
+  { prefix: '/labs/smartwizard2/', target: '/jquery-smartwizard/v2/' },
+  { prefix: '/labs/smartwizard/', target: '/jquery-smartwizard/' },
+  { prefix: '/labs/', target: '/jquery-smartwizard/' },
+  { prefix: '/article/', target: '/articles/' },
 ]
 
 function normalizePath(pathname: string): string {
