@@ -6,10 +6,6 @@ description: Licensing options for Smart Wizard. 100% Free MIT Open Source, plus
 
 <script setup>
 import PricingCard from '../../.vitepress/theme/components/pricing/PricingCard.vue'
-import PricingTable from '../../.vitepress/theme/components/pricing/PricingTable.vue'
-import { getProduct } from '../../.vitepress/theme/data/products'
-
-const product = getProduct('smart-wizard')
 </script>
 
 <div class="tl-md-container tl-md-container-mt vp-doc">
@@ -20,43 +16,7 @@ Smart Wizard is dual-licensed: 100% Free and Open Source (GPLv3) and Commercial 
 
 ---
 
-<div class="tl-pricing-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 3rem 0;">
-  <PricingCard
-    name="Community"
-    price="Free"
-    period="forever"
-    badge="Open Source"
-    description="Full access to the core engine, official adapters, and standard themes. For personal and open-source projects under a license compatible with the GPLv3"
-    :features="[
-      'GNU General Public License v3.0 (GPLv3)',
-      'Smart Wizard Core (zero dependencies)',
-      'Official React Adapter',
-      'Official Vue Adapter',
-      'Standard Themes (Arrows, Pills, Glow)',
-      'Community Support - GitHub Discussions & Issue Tracking'
-    ]"
-    ctaText="Get Started Free"
-    ctaLink="/smart-wizard/v1/docs"
-  />
-
-  <PricingCard
-    name="Single Commercial License"
-    price="$49"
-    period="one-time for V1"
-    badge="Commercial"
-    :highlighted="true"
-    description="For developers building proprietary (closed-source) applications, commercial applications, or client project not licensed under the GPLv3."
-    :features="[
-      'Commercial License (1 Developer/1 Project)',
-      'Includes lifetime updates for Smart Wizard V1',
-      'Priority Bug Resolution (Email)',
-      'Access to Upcoming Premium Themes & Extensions',
-    ]"
-    ctaText="Purchase Single Commercial License"
-    ctaLink="https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8"
-  />
-  
-</div>
+<PricingCard />
 
 <center>
 

@@ -16,10 +16,23 @@ export interface FeatureItem {
   description: string
 }
 
+export interface PricePlan {
+  type: 'PAID' | 'MIT' | 'GPL-3.0' | string
+  name: string
+  price: string
+  period?: string
+  description: string
+  link: string
+  linkText: string
+  features: string[]
+  tags?: string[]
+}
+
 export interface ProductVersionData {
   subMenu: ProductSubMenuItem[]
   features?: FeatureItem[]
   screenshot?: string
+  prices?: PricePlan[]
 }
 
 export interface ProductDefinition {
@@ -93,6 +106,42 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
 
         ],
         screenshot: '/media/jquery-smart-wizard/v7/screens-banner.png',
+        prices: [
+          {
+            type: 'GPL-3.0',
+            name: 'Community',
+            price: 'Free',
+            period: 'forever',
+            description: 'Full access to the core engine, official adapters, and standard themes. For personal and open-source projects under a license compatible with the GPLv3',
+            link: '/smart-wizard/v1/docs',
+            linkText: 'Get Started Free',
+            features: [
+              'GNU General Public License v3.0 (GPLv3)',
+              'Smart Wizard Core (zero dependencies)',
+              'Official React Adapter',
+              'Official Vue Adapter',
+              'Standard Themes (Arrows, Pills, Glow)',
+              'Community Support - GitHub Discussions & Issue Tracking'
+            ],
+            tags: ['Open Source']
+          },
+          {
+            type: 'PAID',
+            name: 'Commercial',
+            price: '$49',
+            period: 'one-time for V1',
+            description: 'For developers building proprietary (closed-source) applications, commercial applications, or client project not licensed under the GPLv3.',
+            link: 'https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8',
+            linkText: 'Purchase Single Commercial License',
+            features: [
+              'Commercial License (1 Developer/1 Project)',
+              'Includes lifetime updates for Smart Wizard V1',
+              'Priority Bug Resolution (Email)',
+              'Access to Upcoming Premium Themes & Extensions'
+            ],
+            tags: ['Most Popular']
+          }
+        ]
       }
     }
   },
@@ -135,7 +184,42 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
           { icon: '🔄', title: 'Dynamic Ajax Loading', description: 'Dynamic Ajax content loading and URL hash history integration' },
           { icon: '🔌', title: 'Broad Compatibility', description: 'Compatible with jQuery >= 1.11.1, jQuery 3.x, jQuery 4.x, and jQuery Slim' },
         ],
-        screenshot: '/media/jquery-smart-wizard/v7/all-screens.png'
+        screenshot: '/media/jquery-smart-wizard/v7/all-screens.png',
+        prices: [
+          {
+            type: 'MIT',
+            name: 'Community',
+            price: 'Free',
+            period: 'forever',
+            description: 'For personal projects, open source, and standard commercial applications under the MIT License.',
+            link: 'https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE',
+            linkText: 'Get Started Free',
+            features: [
+              'MIT License',
+              'Full access to jQuery SmartWizard v7',
+              'TypeScript powered with type declarations',
+              'All built-in themes and transitions',
+              'GitHub Issues & Community Support'
+            ],
+            tags: ['Open Source']
+          },
+          {
+            type: 'PAID',
+            name: 'Commercial',
+            price: '$29',
+            period: 'one-time for V7',
+            description: 'For developers building proprietary (closed-source) applications, commercial applications, or client projects.',
+            link: 'https://tech-lab.lemonsqueezy.com/checkout/buy/8831b61d-c726-41cf-b5e7-6a60956a1ea7',
+            linkText: 'Purchase Commercial License',
+            features: [
+              'Commercial Perpetual License',
+              'No attribution required in closed-source code',
+              'Direct Priority Bug Resolution',
+              'Supports continued open-source development'
+            ],
+            tags: ['Most Popular']
+          }
+        ]
       },
       'v6': {
         subMenu: [
@@ -341,6 +425,24 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
           { icon: '🛡️', title: 'Promise-Based API', description: 'Comprehensive error handling and promise-based API' },
           { icon: '📘', title: 'TypeScript Definitions', description: 'TypeScript type definitions included' },
           { icon: '🌐', title: 'Browsers Compatible', description: 'Support on all modern browsers' },
+        ],
+        prices: [
+          {
+            type: 'MIT',
+            name: 'Community',
+            price: 'Free',
+            period: 'forever',
+            description: 'For personal projects, open source, and standard applications under the MIT License.',
+            link: 'https://github.com/techlab/copify/blob/master/LICENSE',
+            linkText: 'Get Started Free',
+            features: [
+              'MIT License',
+              'Sub-2KB zero runtime dependencies',
+              'Async Clipboard API with fallback',
+              'TypeScript type definitions included'
+            ],
+            tags: ['Open Source']
+          }
         ]
       }
     }
@@ -441,6 +543,11 @@ export function getFeaturedProduct(): ProductDefinition {
   return products.find(p => p.featured) || products[0]
 }
 
+export function getProductPrices(product: ProductDefinition, version?: string): PricePlan[] {
+  const vd = getProductVersionData(product, version)
+  return vd?.prices || []
+}
+
 export interface ProductDetails {
   id: string
   name: string
@@ -453,6 +560,7 @@ export interface ProductDetails {
   npm?: string
   metrics?: ProductMetric[]
   features?: FeatureItem[]
+  prices?: PricePlan[]
   subMenu: Record<string, ProductSubMenuItem>
   versions: string[]
   currentVersion: string
@@ -474,7 +582,8 @@ export function getProductDetails(product: ProductDefinition, version?: string):
     repository: product.repository,
     npm: product.npm,
     metrics: product.metrics,
-    features: versionDetails.features,
+    features: versionDetails?.features,
+    prices: versionDetails?.prices || [],
     // Sub menu
     subMenu: getSubMenu(versionDetails),
     // Version data

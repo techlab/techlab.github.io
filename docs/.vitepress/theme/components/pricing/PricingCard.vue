@@ -1,58 +1,108 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
+import { computed } from 'vue'
+import { withBase, useRoute } from 'vitepress'
+import { resolveRoute } from '../../utils/route'
+import type { PricePlan } from '../../data/products'
 
-defineProps<{
-  name: string
-  price: string
-  period?: string
-  description: string
-  features: string[]
-  highlighted?: boolean
-  badge?: string
-  ctaText?: string
-  ctaLink?: string
-}>()
+const route = useRoute()
+
+// Get page data reactively bound to route.path
+const routeData = computed(() => resolveRoute(route.path))
+const product = computed(() => (routeData.value?.pageData || {}) as any)
+const prices = computed<PricePlan[]>(() => {
+  return product.value?.prices || product.value?.versionDetails?.prices || []
+})
+
+function isExternal(url?: string): boolean {
+  return Boolean(url && /^https?:\/\//i.test(url))
+}
+
+function resolveLink(url?: string): string {
+  if (!url || url === '#') return '#'
+  return isExternal(url) ? url : withBase(url)
+}
+
+function isHighlighted(plan: PricePlan): boolean {
+  if ((plan as any).highlighted !== undefined) return Boolean((plan as any).highlighted)
+  if (plan.type === 'PAID') return true
+  if (Array.isArray(plan.tags)) {
+    return plan.tags.some((t: string) => /popular|commercial|recommended/i.test(t))
+  }
+  return false
+}
+
+function cleanFeature(feat: string): string {
+  if (typeof feat !== 'string') return ''
+  return feat.replace(/^[✓✔]\s*/, '')
+}
 </script>
 
 <template>
-  <div class="tl-pricing-card" :class="{ 'tl-pricing-highlighted': highlighted }">
-    <div class="tl-pcard-header">
-      <div class="tl-pcard-badges">
-        <span v-if="badge" class="tl-badge" :class="highlighted ? 'tl-badge-emerald' : 'tl-badge-blue'">
-          {{ badge }}
-        </span>
+  <div v-if="prices && prices.length > 0" class="tl-pricing-grid">
+    <div
+      v-for="(plan, idx) in prices"
+      :key="plan.name + idx"
+      class="tl-pricing-card"
+      :class="{ 'tl-pricing-highlighted': isHighlighted(plan) }"
+    >
+      <div class="tl-pcard-header">
+        <div class="tl-pcard-badges">
+          <span
+            v-for="tag in (plan.tags || [])"
+            :key="tag"
+            class="tl-badge"
+            :class="isHighlighted(plan) ? 'tl-badge-emerald' : 'tl-badge-blue'"
+          >
+            {{ tag }}
+          </span>
+        </div>
+
+        <h3 class="tl-pcard-name">{{ plan.name }}</h3>
+        <div class="tl-pcard-price-row">
+          <span class="tl-pcard-price">{{ plan.price }}</span>
+          <span v-if="plan.period" class="tl-pcard-period">{{ plan.period }}</span>
+        </div>
+        <p class="tl-pcard-desc">{{ plan.description }}</p>
       </div>
 
-      <h3 class="tl-pcard-name">{{ name }}</h3>
-      <div class="tl-pcard-price-row">
-        <span class="tl-pcard-price">{{ price }}</span>
-        <span v-if="period" class="tl-pcard-period">{{ period }}</span>
+      <ul class="tl-pcard-features">
+        <li v-for="(feat, fIdx) in plan.features" :key="fIdx" class="tl-pcard-feat-item">
+          <svg class="tl-check-svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
+            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+          <span>{{ cleanFeature(feat) }}</span>
+        </li>
+      </ul>
+
+      <div class="tl-pcard-action">
+        <a
+          :href="resolveLink(plan.link)"
+          :target="isExternal(plan.link) ? '_blank' : undefined"
+          :rel="isExternal(plan.link) ? 'noopener noreferrer' : undefined"
+          class="tl-btn tl-btn-block"
+          :class="isHighlighted(plan) ? 'tl-btn-primary tl-btn-lg' : 'tl-btn-secondary tl-btn-lg'"
+        >
+          {{ plan.linkText || 'Select Plan' }}
+        </a>
       </div>
-      <p class="tl-pcard-desc">{{ description }}</p>
-    </div>
-
-    <ul class="tl-pcard-features">
-      <li v-for="(feat, idx) in features" :key="idx" class="tl-pcard-feat-item">
-        <svg class="tl-check-svg" viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-        </svg>
-        <span>{{ feat }}</span>
-      </li>
-    </ul>
-
-    <div class="tl-pcard-action">
-      <a
-        :href="withBase(ctaLink || '#')"
-        class="tl-btn tl-btn-block"
-        :class="highlighted ? 'tl-btn-primary tl-btn-lg' : 'tl-btn-secondary tl-btn-lg'"
-      >
-        {{ ctaText || 'Select Plan' }}
-      </a>
     </div>
   </div>
 </template>
 
 <style scoped>
+.tl-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+@media (max-width: 960px) {
+  .tl-pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tl-pricing-card {
   background-color: var(--tl-surface);
   border: 1px solid var(--tl-border);
@@ -80,6 +130,9 @@ defineProps<{
 .tl-pcard-badges {
   min-height: 24px;
   margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
 }
 
 .tl-pcard-name {
