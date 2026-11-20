@@ -24,6 +24,7 @@ export interface PricePlan {
   description: string
   link: string
   linkText: string
+  highlighted?: boolean
   features: string[]
   tags?: string[]
 }
@@ -115,6 +116,7 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
             description: 'Full access to the core engine, official adapters, and standard themes. For personal and open-source projects under a license compatible with the GPLv3',
             link: '/smart-wizard/v1/docs',
             linkText: 'Get Started Free',
+            highlighted: false,
             features: [
               'GNU General Public License v3.0 (GPLv3)',
               'Smart Wizard Core (zero dependencies)',
@@ -133,6 +135,7 @@ Featuring official React and Vue 3 adapters, modular themes, and a fluent API, i
             description: 'For developers building proprietary (closed-source) applications, commercial applications, or client project not licensed under the GPLv3.',
             link: 'https://tech-lab.lemonsqueezy.com/checkout/buy/7039e9a4-e3b0-4f06-bc4e-cb9892798cc8',
             linkText: 'Purchase Single Commercial License',
+            highlighted: true,
             features: [
               'Commercial License (1 Developer/1 Project)',
               'Includes lifetime updates for Smart Wizard V1',
@@ -173,6 +176,7 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
           { type: 'home', title: 'Overview', link: '/jquery-smartwizard/v7' },
           { type: 'docs', title: 'Documentation', link: '/jquery-smartwizard/v7/docs' },
           { type: 'demo', title: 'Demo', link: '/jquery-smartwizard/v7/demo' },
+          { type: 'pricing', title: 'Pricing', link: '/jquery-smartwizard/v7/pricing' },
         ],
         features: [
           { icon: '⚡', title: 'TypeScript Powered', description: 'Fully rewritten in TypeScript (v7) with built-in type declarations' },
@@ -192,8 +196,9 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
             price: 'Free',
             period: 'forever',
             description: 'For personal projects, open source, and standard commercial applications under the MIT License.',
-            link: 'https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE',
+            link: '/jquery-smartwizard/v7/docs',
             linkText: 'Get Started Free',
+            highlighted: false,
             features: [
               'MIT License',
               'Full access to jQuery SmartWizard v7',
@@ -211,6 +216,7 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
             description: 'For developers building proprietary (closed-source) applications, commercial applications, or client projects.',
             link: 'https://tech-lab.lemonsqueezy.com/checkout/buy/8831b61d-c726-41cf-b5e7-6a60956a1ea7',
             linkText: 'Purchase Commercial License',
+            highlighted: true,
             features: [
               'Commercial Perpetual License',
               'No attribution required in closed-source code',
@@ -418,6 +424,7 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
         subMenu: [
           { type: 'home', title: 'Overview', link: '/copify/v0' },
           { type: 'docs', title: 'Documentation', link: '/copify/v0/docs' },
+          { type: 'license', title: 'License', link: '/copify/v0/license' },
         ],
         features: [
           { icon: '⚡', title: 'Zero Dependencies', description: 'Zero dependencies and sub-2KB gzipped footprint' },
@@ -433,8 +440,9 @@ Whether you’re building a simple step form or a complex workflow, Smart Wizard
             price: 'Free',
             period: 'forever',
             description: 'For personal projects, open source, and standard applications under the MIT License.',
-            link: 'https://github.com/techlab/copify/blob/master/LICENSE',
+            link: '/copify/v0/docs',
             linkText: 'Get Started Free',
+            highlighted: false,
             features: [
               'MIT License',
               'Sub-2KB zero runtime dependencies',

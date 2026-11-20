@@ -17,23 +17,16 @@ head:
 
 <div class="tl-md-container vp-doc">
 
-## License
-
-Copify JS is dual-licensed:
-
-- **Open Source (MIT)** — for personal, educational, and open-source use
-- **Commercial License** — required for commercial projects without attribution
-
 ## Links
 
 - [NPM Package](https://www.npmjs.com/package/copify)
-- [GitHub Repository](https://github.com/techlab/copify)
-- [Report Issues](https://github.com/techlab/copify/issues)
+<!-- - [GitHub Repository](https://github.com/techlab/copify) -->
+<!-- - [Report Issues](https://github.com/techlab/copify/issues) -->
 
 ## Support
 
 If you find this project useful, please consider:
-- ⭐ Starring the project on GitHub
-- 📦 Following on [NPM](https://www.npmjs.com/~dipuraj)
+- 📦 Following on [GitHub](https://github.com/techlab)
+- ❤️ Sponsor on [GitHub](https://github.com/sponsors/techlab)
 
 </div>

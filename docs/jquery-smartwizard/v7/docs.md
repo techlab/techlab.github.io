@@ -595,24 +595,6 @@ $('#smartwizard').smartWizard('setOptions', {
 });
 ```
 
-## License
-
-**jQuery SmartWizard v7** is dual-licensed:
-
-**[MIT License](https://github.com/techlab/jquery-smartwizard/blob/master/LICENSE)** — Free for personal and open-source projects.
-
-**[Commercial License](https://techlaboratory.net/jquery-smartwizard#license)** — Required for closed-source, SaaS, or any commercial projects.  
-
-> If you use **jQuery SmartWizard v7** in a commercial or client application, please purchase a commercial license.  
-> _Commercial licenses help support continued development, maintenance, and new features._
-
-<a class="btn-main" href="https://tech-lab.lemonsqueezy.com/checkout/buy/8831b61d-c726-41cf-b5e7-6a60956a1ea7">Purchase Commercial License</a>
-
-::: info 🎉 Limited-Time Deal 🎉 
-Apply coupon code `SWEET20` at checkout to get 20% discount on your purchase.
-:::
-
-
 ## Contribute
 
 If you like the project please support with your contribution.

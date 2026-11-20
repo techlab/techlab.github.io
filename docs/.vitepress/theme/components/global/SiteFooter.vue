@@ -19,8 +19,6 @@ const currentYear = computed(() => new Date().getFullYear())
           </a>
           <p class="tl-footer-mission">
             Open-source UI components and engineering utilities for building modern web applications.
-            <br/>
-            Built and maintained for over a decade.
           </p>
         </div>
 

@@ -22,15 +22,6 @@ function resolveLink(url?: string): string {
   return isExternal(url) ? url : withBase(url)
 }
 
-function isHighlighted(plan: PricePlan): boolean {
-  if ((plan as any).highlighted !== undefined) return Boolean((plan as any).highlighted)
-  if (plan.type === 'PAID') return true
-  if (Array.isArray(plan.tags)) {
-    return plan.tags.some((t: string) => /popular|commercial|recommended/i.test(t))
-  }
-  return false
-}
-
 function cleanFeature(feat: string): string {
   if (typeof feat !== 'string') return ''
   return feat.replace(/^[✓✔]\s*/, '')
@@ -43,7 +34,7 @@ function cleanFeature(feat: string): string {
       v-for="(plan, idx) in prices"
       :key="plan.name + idx"
       class="tl-pricing-card"
-      :class="{ 'tl-pricing-highlighted': isHighlighted(plan) }"
+      :class="{ 'tl-pricing-highlighted': plan.highlighted }"
     >
       <div class="tl-pcard-header">
         <div class="tl-pcard-badges">
@@ -51,7 +42,7 @@ function cleanFeature(feat: string): string {
             v-for="tag in (plan.tags || [])"
             :key="tag"
             class="tl-badge"
-            :class="isHighlighted(plan) ? 'tl-badge-emerald' : 'tl-badge-blue'"
+            :class="plan.highlighted ? 'tl-badge-emerald' : 'tl-badge-blue'"
           >
             {{ tag }}
           </span>
@@ -80,7 +71,7 @@ function cleanFeature(feat: string): string {
           :target="isExternal(plan.link) ? '_blank' : undefined"
           :rel="isExternal(plan.link) ? 'noopener noreferrer' : undefined"
           class="tl-btn tl-btn-block"
-          :class="isHighlighted(plan) ? 'tl-btn-primary tl-btn-lg' : 'tl-btn-secondary tl-btn-lg'"
+          :class="plan.highlighted ? 'tl-btn-primary tl-btn-lg' : 'tl-btn-secondary tl-btn-lg'"
         >
           {{ plan.linkText || 'Select Plan' }}
         </a>

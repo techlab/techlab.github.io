@@ -4,10 +4,6 @@ title: Smart Wizard Pricing & Commercial Licenses
 description: Licensing options for Smart Wizard. 100% Free MIT Open Source, plus Commercial Developer and Team options.
 ---
 
-<script setup>
-import PricingCard from '../../.vitepress/theme/components/pricing/PricingCard.vue'
-</script>
-
 <div class="tl-md-container tl-md-container-mt vp-doc">
 
 # Smart Wizard - Pricing & Licensing
