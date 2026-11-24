@@ -14,11 +14,9 @@ Smart Wizard is dual-licensed: 100% Free and Open Source (GPLv3) and Commercial 
 
 <PricingCard />
 
-<center>
-
-_Commercial licenses help support continued development, maintenance, and new features_
-
-</center>
+<div style="text-align: center; margin: 1rem 0; color: var(--tl-text-muted); font-style: italic;">
+Commercial licenses help support continued development, maintenance, and new features
+</div>
 
 > [!IMPORTANT] 🎉 Special Launch Offer 🎉
 > Use coupon code `EARLY20` during checkout to receive **20% discount** on your license purchase.

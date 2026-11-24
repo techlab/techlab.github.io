@@ -21,11 +21,9 @@ head:
 
 <PricingCard />
 
-<center>
-
-_Commercial licenses help support continued development, maintenance, and new features_
-
-</center>
+<div style="text-align: center; margin: 1rem 0; color: var(--tl-text-muted); font-style: italic;">
+Commercial licenses help support continued development, maintenance, and new features
+</div>
 
 > [!IMPORTANT] 🎉 Limited-Time Deal 🎉 
 > Use coupon code `SWEET20` during checkout to receive **20% discount** on your license purchase.

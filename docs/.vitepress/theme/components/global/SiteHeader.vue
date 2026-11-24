@@ -52,7 +52,9 @@ function handleClickOutside(event: MouseEvent) {
   }
 }
 
+const mounted = ref(false)
 onMounted(() => {
+  mounted.value = true
   window.addEventListener('scroll', handleScroll, { passive: true })
   document.addEventListener('click', handleClickOutside)
 })
@@ -152,7 +154,9 @@ const activeSection = computed(() => {
       <div class="tl-header-actions">
         <!-- Integrated VitePress Search -->
         <div class="tl-search-box">
-          <VPNavBarSearch />
+          <ClientOnly>
+            <VPNavBarSearch />
+          </ClientOnly>
         </div>
 
         <!-- GitHub External Link -->
@@ -174,11 +178,11 @@ const activeSection = computed(() => {
           type="button"
           class="tl-icon-btn"
           aria-label="Toggle color theme"
-          :title="isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
+          :title="mounted && isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'"
           @click="toggleTheme"
         >
           <!-- Sun Icon (shown in dark mode) -->
-          <svg v-if="isDark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <svg v-if="mounted && isDark" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
             <line x1="12" y1="1" x2="12" y2="3"></line>
             <line x1="12" y1="21" x2="12" y2="23"></line>

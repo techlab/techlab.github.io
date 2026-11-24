@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData, useRoute, Content } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import SiteHeader from '../components/global/SiteHeader.vue'
 import SiteFooter from '../components/global/SiteFooter.vue'
 import ProductNav from '../components/product/ProductNav.vue'

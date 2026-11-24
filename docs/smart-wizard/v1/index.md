@@ -10,11 +10,11 @@ description: Built from the ground up in TypeScript with zero runtime dependenci
 
 <div class="tl-md-container vp-doc">
 
-<center>
+<div style="text-align: center;">
 
 # Smart Wizard Architecture
 
-</center>
+</div>
 
 ### Packages
 

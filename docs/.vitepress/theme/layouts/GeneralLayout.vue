@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData, Content } from 'vitepress'
+import { useData } from 'vitepress'
 import SiteHeader from '../components/global/SiteHeader.vue'
 import SiteFooter from '../components/global/SiteFooter.vue'
 import Breadcrumbs from '../components/global/Breadcrumbs.vue'
