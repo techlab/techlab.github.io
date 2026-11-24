@@ -1,6 +1,6 @@
 {
-    "name": "techlaboratory-web",
-    "version": "3.0.0",
+    "name": "techlaboratory",
+    "version": "8.0.0",
     "private": true,
     "type": "module",
     "scripts": {
@@ -12,11 +12,16 @@
     "devDependencies": {
         "@tailwindcss/postcss": "^4.1.17",
         "autoprefixer": "^10.4.0",
+        "baseline-browser-mapping": "^2.11.35",
         "postcss": "^8.4.0",
         "vite": "^5.0.0",
         "vitepress": "^1.0.0-next.0"
     },
     "dependencies": {
+        "@smart-wizard/core": "^1.0.1",
+        "@smart-wizard/extension-swipe": "^1.0.1",
+        "@smart-wizard/extension-url-hash": "^1.0.1",
+        "@smart-wizard/ui": "^1.0.1",
         "@tailwindcss/vite": "^4.1.17",
         "tailwindcss": "^4.1.17"
     }

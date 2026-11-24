@@ -1,12 +1,13 @@
 ---
-home: true
-layout: home
-title: Smart react components and jQuery plugins - TechLaboratory
+layout: general
+fullWidth: true
+title: Smart components for the modern web
+description: Open-source components and practical software engineering resources for building better web applications.
+ads: false
 ---
 
 <script setup>
-import Home from './.vitepress/theme/components/Home.vue'
+import HomeView from './.vitepress/theme/components/home/HomeView.vue'
 </script>
 
-<Home />
-
+<HomeView />

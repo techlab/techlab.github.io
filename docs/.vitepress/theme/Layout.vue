@@ -1,21 +1,18 @@
-<script setup>
-import DefaultTheme from 'vitepress/theme'
-import Footer from './components/Footer.vue'
-import VersionSwitcher from './components/VersionSwitcher.vue'
+<script setup lang="ts">
+import { useData } from 'vitepress'
+import GeneralLayout from './layouts/GeneralLayout.vue'
+import ProductLayout from './layouts/ProductLayout.vue'
+import ArticleLayout from './layouts/ArticleLayout.vue'
+import NotFoundLayout from './layouts/NotFoundLayout.vue'
 
-const { Layout } = DefaultTheme
+const { frontmatter, page } = useData()
 </script>
 
 <template>
-  <div>
-    <Layout>
-      <template #doc-before>
-        <div id="carbon-ads-container"></div>
-      </template>
-      <template #aside-outline-after>
-        <VersionSwitcher />
-      </template>
-    </Layout>
-    <Footer />
-  </div>
+  <!-- Route to 404 layout first when page is not found -->
+  <NotFoundLayout v-if="page.isNotFound" />
+  <!-- Route to the correct layout based on the `layout` frontmatter key -->
+  <ProductLayout v-else-if="frontmatter.layout === 'product'" />
+  <ArticleLayout v-else-if="frontmatter.layout === 'article'" />
+  <GeneralLayout v-else />
 </template>

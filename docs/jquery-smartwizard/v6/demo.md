@@ -1,4 +1,5 @@
 ---
+layout: product
 title: jQuery SmartWizard v6 - Demos
 description: Interactive demos of jQuery SmartWizard v6
 head:
@@ -15,6 +16,8 @@ head:
     - rel: stylesheet
       href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
 ---
+
+<div class="tl-md-container tl-md-container-mt vp-doc">
 
 # jQuery SmartWizard <span class="text-gray-400">v6</span> Demos
 
@@ -503,7 +506,7 @@ This demo shows SmartWizard with RTL support for languages like Arabic, Hebrew, 
 
 <ClientOnly>
 
-<script>
+<script lang="ts">
 if (typeof window !== 'undefined') {
   // Load jQuery
   const jqueryScript = document.createElement('script');
@@ -871,3 +874,5 @@ function initializeDemos() {
 }
 </script>
 </ClientOnly>
+
+</div>

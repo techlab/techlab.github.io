@@ -1,7 +1,6 @@
 <template>
   <div v-if="versions && versions.length > 0" class="version-switcher">
-    <span class="version-label">Version:</span>
-    <select v-model="selected" @change="goToVersion">
+    <select v-model="selected" @change="goToVersion" title="Version">
       <option 
         v-for="v in versions" 
         :key="v"
@@ -44,13 +43,12 @@ watch(productData, () => {
 
 // Format version label with indicators
 function getVersionLabel(version) {
-  let label = version
+  // let label = version
+  // if (version === latestVersion.value) {
+  //   label += '^'
+  // }
   
-  if (version === latestVersion.value) {
-    label += ' (latest)'
-  }
-  
-  return label
+  return version
 }
 
 function goToVersion() {
@@ -69,19 +67,25 @@ function goToVersion() {
   router.go(withBase(newPath))
 }
 
-function getProductData(pageLink) {
-  return products.filter(product => product.pageLink === pageLink)[0] ?? null;
+function getProductData(pluginSegment) {
+  // Match by id or by the first segment of any version's home link
+  return products.find(product => {
+    if (product.id === pluginSegment) return true
+    return Object.values(product.versionData).some(v =>
+      v.subMenu.some(m => m.type === 'home' && m.link.replace(/^\/|\/$/g, '') === pluginSegment)
+    )
+  }) ?? null;
 }
 </script>
 
 <style scoped>
 .version-switcher {
-  display: flex;
+  /* display: flex;
   align-items: center;
   gap: 8px;
   padding: 8px 0;
   margin-top: 16px;
-  border-top: 1px solid var(--vp-c-divider);
+  border-top: 1px solid var(--vp-c-divider); */
 }
 
 .version-label {
@@ -93,13 +97,15 @@ function getProductData(pageLink) {
 
 .version-switcher select {
   flex: 1;
-  padding: 6px 10px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-alt);
-  border-radius: 6px;
-  font-size: 14px;
+  border: 1px solid var(--tl-brand-soft);
   cursor: pointer;
   transition: all 0.2s;
+  font-family: var(--tl-font-mono);
+  font-size: 0.6875rem;
+  color: var(--tl-brand-glow);
+  background-color: var(--tl-brand-soft);
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--tl-radius-xs);
 }
 
 .version-switcher select:hover {
