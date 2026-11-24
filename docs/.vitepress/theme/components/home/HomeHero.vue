@@ -46,7 +46,7 @@ function copyActiveCode() {
   }
 }
 
-const maintainedYear = computed(() => (new Date().getFullYear() - 2015))
+const maintainedYear = computed(() => (new Date().getFullYear() - 2010))
 </script>
 
 <template>

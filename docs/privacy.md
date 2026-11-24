@@ -1,3 +1,13 @@
+---
+layout: general
+fullWidth: true
+title: Privacy Policy
+description: Open-source components and practical software engineering resources for building better web applications.
+ads: false
+---
+
+<div class="tl-md-container vp-doc">
+
 # Privacy Policy
 
 **Last updated: January 2026**
@@ -96,3 +106,5 @@ If you have questions about this Privacy Policy, please contact us through:
 ---
 
 *This privacy policy is effective as of the date stated above and applies to all users of TechLaboratory websites and services.*
+
+</div>
