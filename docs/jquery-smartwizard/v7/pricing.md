@@ -54,6 +54,6 @@ Yes! All commercial licenses include lifetime updates for the jQuery SmartWizard
 
 ### How do I receive support?
 
-Community users can report issues and ask questions through [GitHub Discussions](https://github.com/techlab/smart-wizard/discussions). Commercial license holders receive direct email support according to their selected plan.
+Community users can report issues and ask questions through [GitHub Discussions](https://github.com/techlab/jquery-smartwizard/discussions). Commercial license holders receive direct email support according to their selected plan.
 
 </div>

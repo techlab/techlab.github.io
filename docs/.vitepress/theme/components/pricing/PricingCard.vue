@@ -83,7 +83,9 @@ function cleanFeature(feat: string): string {
 <style scoped>
 .tl-pricing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* Creates only as many 520px columns as there are items */
+  grid-template-columns: repeat(auto-fit, min(520px, 100%));
+  justify-content: center;
   gap: 2rem;
   margin: 3rem 0;
 }
