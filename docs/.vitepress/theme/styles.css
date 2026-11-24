@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "./styles/tokens.css";
+@import "./styles/theme.css";
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
@@ -9,8 +11,8 @@
   --vp-c-brand-soft: rgba(94, 168, 222, 0.1);
 
   /* Typography */
-  --vp-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --vp-font-family-mono: 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
+  --vp-font-family-base: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, 'Andale Mono', monospace;
 
   /* Logo height */
   --vp-nav-logo-height: 32px;
@@ -76,6 +78,94 @@
   .VPDoc:not(.has-sidebar) .content {
     max-width: 1600px !important;
   }
+}
+
+/* ==========================================================================
+   VitePress Markdown Typography Aligned with TechLaboratory Design System
+   ========================================================================== */
+.vp-doc {
+  font-family: var(--tl-font-sans);
+  color: var(--tl-text-secondary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.vp-doc h1 {
+  font-size: 2.25rem !important;
+  font-weight: 800 !important;
+  line-height: 1.18 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--tl-text-primary) !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.vp-doc h2 {
+  font-size: 1.75rem !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--tl-text-primary) !important;
+  border-top: 1px solid var(--tl-border-subtle) !important;
+  padding-top: 1.75rem !important;
+  margin-top: 2.75rem !important;
+  margin-bottom: 0.85rem !important;
+}
+
+.vp-doc h3 {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  line-height: 1.3 !important;
+  letter-spacing: -0.015em !important;
+  color: var(--tl-text-primary) !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.65rem !important;
+}
+
+.vp-doc h4 {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: var(--tl-text-primary) !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.vp-doc p {
+  font-size: 1rem !important;
+  line-height: 1.65 !important;
+  color: var(--tl-text-secondary) !important;
+  margin: 0.85rem 0 1.25rem 0 !important;
+}
+
+/* Lead intro paragraph immediately following H1 */
+.vp-doc h1 + p {
+  font-size: 1.125rem !important;
+  line-height: 1.6 !important;
+  color: var(--tl-text-secondary) !important;
+}
+
+.vp-doc strong,
+.vp-doc b {
+  color: var(--tl-text-primary) !important;
+  font-weight: 700 !important;
+}
+
+.vp-doc hr {
+  border: none !important;
+  border-top: 1px solid var(--tl-border) !important;
+  margin: 2.25rem 0 !important;
+}
+
+.vp-doc a {
+  color: var(--tl-brand-glow) !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color var(--tl-transition-fast);
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
 }
 
 /* Vitepress fix for sw demos */
