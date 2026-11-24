@@ -4,9 +4,7 @@ import Layout from './Layout.vue'
 import './styles.css'
 
 // Global Components
-import Badge from './components/global/Badge.vue'
 import Breadcrumbs from './components/global/Breadcrumbs.vue'
-import AdSlot from './components/global/AdSlot.vue'
 
 // Home Components
 import HomeView from './components/home/HomeView.vue'
@@ -30,9 +28,6 @@ import ProductLayout from './components/product/ProductLayout.vue'
 import PricingCard from './components/pricing/PricingCard.vue'
 import PricingTable from './components/pricing/PricingTable.vue'
 
-// Demo Components
-import DemoEmbed from './components/demo/DemoEmbed.vue'
-
 // Article Components
 import ArticleCard from './components/articles/ArticleCard.vue'
 import FeaturedArticle from './components/articles/FeaturedArticle.vue'
@@ -52,9 +47,7 @@ export default {
   Layout: Layout,
   enhanceApp({ app }: { app: App }) {
     // Global Elements
-    // app.component('Badge', Badge)
     app.component('Breadcrumbs', Breadcrumbs)
-    // app.component('AdSlot', AdSlot)
 
     // Home
     app.component('HomeView', HomeView)
@@ -77,9 +70,6 @@ export default {
     // Pricing
     app.component('PricingCard', PricingCard)
     app.component('PricingTable', PricingTable)
-
-    // Demos
-    app.component('DemoEmbed', DemoEmbed)
 
     // Articles
     app.component('ArticleCard', ArticleCard)

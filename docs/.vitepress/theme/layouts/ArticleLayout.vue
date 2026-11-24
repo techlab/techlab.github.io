@@ -4,7 +4,6 @@ import { useData, Content } from 'vitepress'
 import SiteHeader from '../components/global/SiteHeader.vue'
 import SiteFooter from '../components/global/SiteFooter.vue'
 import Breadcrumbs from '../components/global/Breadcrumbs.vue'
-import AdSlot from '../components/global/AdSlot.vue'
 import ArticleList from '../components/articles/ArticleList.vue'
 
 const { frontmatter } = useData()
@@ -35,15 +34,7 @@ const isListingPage = computed(() => frontmatter.value.articleList === true)
         </section>
 
         <div class="tl-container tl-articles-listing-wrap">
-          <div v-if="frontmatter.ads !== false" class="tl-ad-slot">
-            <AdSlot placement="content-top" />
-          </div>
-
           <ArticleList />
-
-          <div v-if="frontmatter.ads !== false" class="tl-ad-slot">
-            <AdSlot placement="content-bottom" />
-          </div>
         </div>
       </template>
 
@@ -88,18 +79,11 @@ const isListingPage = computed(() => frontmatter.value.articleList === true)
               />
             </div>
 
-            <div v-if="frontmatter.ads !== false" class="tl-ad-slot">
-              <AdSlot placement="content-top" />
-            </div>
-
             <!-- vp-doc applies VitePress markdown typography / code styles -->
             <div class="vp-doc tl-article-content">
               <Content />
             </div>
 
-            <div v-if="frontmatter.ads !== false" class="tl-ad-slot">
-              <AdSlot placement="content-bottom" />
-            </div>
           </article>
         </div>
       </template>
